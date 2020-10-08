@@ -4,7 +4,9 @@ date: 2020-09-25T21:23:00+08:00
 draft: false
 tags: ["software","javascript"]
 ---
-My friends needed an interest calculator. For the simple interest calculator, the parameters are the principal (P), annual interest rate (r), number of months (t) and an optional parameter to represent the periodic (monthly or yearly) top-up amount in addition to the principal (the initial top-up). Here's v1 of my simple interest calculator:
+My friends needed an interest calculator. For the simple interest calculator, the parameters are the principal (P), annual interest rate (r), number of months (t) and an optional parameter to represent the periodic (monthly or yearly) top-up amount in addition to the principal (the initial top-up).
+
+Here's v1 of my simple interest calculator:
 
 ```javascript
 /**

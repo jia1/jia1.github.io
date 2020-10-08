@@ -1,10 +1,10 @@
 ---
 title: "Cloudflare Workers"
-date: 2020-09-15T21:31:40+08:00
+date: 2020-09-15T21:31:00+08:00
 draft: false
 tags: ["software","domains","cloudflare"]
 ---
-It's time to put my short custom domain to good use. [Cloudflare Workers](https://developers.cloudflare.com/workers/) is a quick 'n' dirty way for me to do URL forwarding from various paths of `jiay.ee` without having to set up DNS records or page rules. The former requires domain verification, and social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
+It's time to put my short custom domain to good use. [Cloudflare Workers](https://developers.cloudflare.com/workers/) is a quick 'n' dirty way for me to do URL forwarding from various paths of `jiay.ee` without having to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
 
 My worker was named `"vanity"` for obvious reasons and it sits at `https://www.jiay.ee/*` and `https://jiay.ee/*`. Without further ado, here's my worker:
 

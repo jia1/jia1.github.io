@@ -1,6 +1,6 @@
 ---
 title: "My first yarn package"
-date: 2020-09-10T23:59:59+08:00
+date: 2020-09-10T23:59:00+08:00
 draft: false
 tags: ["software","library","javascript"]
 ---
@@ -38,4 +38,4 @@ Below are the steps to use `prettier` in your project:
 }
 ```
 
-I got to learn about `prettier` from the GovTech FormSG team. I liked this package so much I introduced it into my projects at Indeed. Bye bye `nit` code review comments!
+I got to learn about `prettier` from the GovTech FormSG team. I liked this package so much, I introduced it into my projects at Indeed. Bye bye `nit` code review comments!

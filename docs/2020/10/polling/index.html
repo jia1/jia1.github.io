@@ -142,7 +142,7 @@
     </div>
   
   <section class="row article-content">
-    <p>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&rsquo;s some harsh user experience. My team uses <a href="https://github.com/opengovsg/angular-recaptcha-fallback">a forked version of angular recaptcha</a>. I located the controller, directive and template for the form. I attached recursive <code>$timeout</code> at the controller and the directive, but as of now, I have not gotten them to work. Some possible questions, which, if answered, may help:</p>
+    <p>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&rsquo;s some harsh user experience. My team uses <a href="https://github.com/opengovsg/angular-recaptcha-fallback">a forked version of angular-recaptcha</a>. I located the controller, directive and template for the form. I attached a recursive <code>$timeout</code> at the controller and the directive, but as of now, I have not gotten them to work. Some possible questions, which, if answered, may help:</p>
 <ol>
 <li>Are <code>$scope</code> for the controller and <code>scope</code> for the directive the right ways to reference the <code>ng-model=&quot;captchaResponse&quot;</code>?</li>
 <li>Are the recursive functions placed in the appropriate spots? I first placed them at the bottom of the respective function bodies before moving them up to the top.</li>

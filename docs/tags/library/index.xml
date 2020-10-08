@@ -6,7 +6,7 @@
     <description>Recent content in library on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 10 Sep 2020 23:59:59 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Sep 2020 23:59:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/library/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>My first yarn package</title>
       <link>https://jiayee.net/2020/09/my-first-yarn-package/</link>
-      <pubDate>Thu, 10 Sep 2020 23:59:59 +0800</pubDate>
+      <pubDate>Thu, 10 Sep 2020 23:59:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/my-first-yarn-package/</guid>
       <description>I wrote my first yarn package (kinda for fun) yesterday. It&amp;rsquo;s strange how I&amp;rsquo;ve been consuming packages for the past 2 years but never went to the other side of the table i.e. writing a package. As of now, I haven&amp;rsquo;t published my package but I&amp;rsquo;m omw. So, how did I create a package? It just felt like the usual&amp;hellip; I followed the yarn docs.

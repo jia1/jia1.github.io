@@ -1,10 +1,12 @@
 ---
 title: "Data Wrangling"
-date: 2020-09-22T21:14:48+08:00
+date: 2020-09-22T21:14:00+08:00
 draft: false
 tags: ["software","nus","nushackers","cli"]
 ---
-I managed to catch one of NUS Hackers' workshops, "Hacker Tools: Data Wrangling", by Julius. I got to learn many new things since I don't use CLI for text processing. Julius' slides can be found in [his GitHub repo](https://github.com/indocomsoft/hackertools-slides/blob/master/3-data-wrangling/data-wrangling.pdf). Below is a very brief and dry summary of what I think are more important to me. If I "miss" something out, it's likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.
+I managed to catch one of NUS Hackers' workshops, "Hacker Tools: Data Wrangling" by Julius. I got to learn many new things since I don't use CLI for text processing. Julius' slides can be found in [his GitHub repo](https://github.com/indocomsoft/hackertools-slides/blob/master/3-data-wrangling/data-wrangling.pdf).
+
+Below is a very brief and dry summary of what I think are more important to me. If I "miss" something out, it's likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.
 
 ##### `cat TEXT | grep -vE REGEX`
 
@@ -12,19 +14,19 @@ Get all lines from `TEXT` which do not match `REGEX`. `-v` means invert match an
 
 ##### `cat TEXT | grep -E '.*' | sed s/REGEX/SUBSTITUTION/FLAGS`
 
-Substitute all `REGEX` matches (taking into account restrictions from `FLAGS`) from `TEXT` with `SUBSTITUTION`. `SUBSTITUTION` can be a capture group i.e. `\1`, `\2`, `\3` and so on.
+Substitute `REGEX` match(es) (while taking into account the additional conditions set by `FLAGS`) in `TEXT` with `SUBSTITUTION`. `SUBSTITUTION` can be a capture group i.e. `\1`, `\2`, `\3` and so on.
 
 ##### `| sort -nk1,2`
 
-Sort lines numerically (not lexicographically) (`-n`). Sort only by the 1st to 2nd whitespace-separated column (`-k1,2`). `-k` stands for sort key. Search for `KEYDEF` in `man sort` to find out more.
+Sort lines numerically (not lexicographically i.e. `1, 2, 10` instead of `1, 10, 2`) (`-n`). Sort only by the 1st to 2nd whitespace-separated column (`-k1,2`). `-k` stands for sort key. Search for `KEYDEF` in `man sort` to find out more.
 
 ##### `| uniq -c`
 
-Collapse adjacent lines which are duplicates of each other and prefix each unique line with the total number of lines which were collapsed into one.
+Collapse **adjacent** lines which are duplicates of each other and prefix each unique line with the total number of lines which were collapsed into one (the count).
 
 ##### `| awk '$1 == 1 && $2 ~ /^r[^ ]*t$/ { print $3 }'`
 
-`awk` is a programming language with the basic syntax of `awk PATTERN { DO THIS IF PATTERN MATCHES }`. In this case, the pattern is `$1 == 1 && $2 ~ /^r[^ ]*t$/` where `$1` and `$2` are the first and second elements with whitespace as the default delimiter. For the lines which match the pattern, print the 3rd element (`$3`). For the lines which do not match the pattern, do nothing (they do not get printed and we can count the number of matches with `| wc -l`).
+`awk` is a programming language with the basic syntax: `awk PATTERN { DO THIS IF PATTERN MATCHES }`. In the (partial) command above, the pattern is `$1 == 1 && $2 ~ /^r[^ ]*t$/` where `$1` and `$2` are the first and second elements, with whitespace as the default delimiter. For the lines which match the pattern, print the 3rd element (`$3`). For the lines which do not match the pattern, do nothing (they do not get printed and we can count the number of matches with `| wc -l`).
 
 ##### `| paste -sd, -`
 
@@ -36,7 +38,7 @@ A calculator which reads and interprets text i.e. something which can return "3"
 
 ##### `| xargs COMMAND`
 
-Standard output before the pipe gets split into whitespace-delimited arguments and fed into `COMMAND`.
+Standard output before the pipe is split into whitespace-delimited arguments and fed into `COMMAND`.
 
 ##### `cat TEXT | tr "a" "z"`
 

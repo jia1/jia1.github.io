@@ -6,7 +6,7 @@
     <description>Recent content in foundation on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 20 Sep 2020 16:26:05 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2020 16:26:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/foundation/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,16 @@
     <item>
       <title>Style Fixes 1</title>
       <link>https://jiayee.net/2020/09/style-fixes-1/</link>
-      <pubDate>Sun, 20 Sep 2020 16:26:05 +0800</pubDate>
+      <pubDate>Sun, 20 Sep 2020 16:26:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/style-fixes-1/</guid>
-      <description>Realised some unexpected styles due to Foundation&amp;rsquo;s default styles, mainly for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt;. The inline code style was fine but the same style was applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the &amp;lt;code&amp;gt; elements and found that Foundation was the one who has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store (see official docs for Syntax Highlighting).</description>
+      <description>I realised there were some unexpected styles for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; in this site due to Foundation&amp;rsquo;s default styles. The inline code style was fine but the same style was applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the &amp;lt;code&amp;gt; elements and found that Foundation was the one who has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store (see official docs for Syntax Highlighting).</description>
     </item>
     
     <item>
       <title>New Theme</title>
       <link>https://jiayee.net/2020/09/new-theme/</link>
-      <pubDate>Sat, 19 Sep 2020 12:20:59 +0800</pubDate>
+      <pubDate>Sat, 19 Sep 2020 12:20:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/new-theme/</guid>
       <description>Hello to my new theme! Yesterday was Indeed&amp;rsquo;s &amp;ldquo;You Day&amp;rdquo; and I spent the day redesigning this site. I am extremely pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to take these things into consideration:

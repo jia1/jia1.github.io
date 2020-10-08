@@ -1,6 +1,6 @@
 ---
 title: "Quick Go 3"
-date: 2020-10-01T21:02:34+08:00
+date: 2020-10-01T21:02:00+08:00
 draft: false
 tags: ["software","go","braindump"]
 ---

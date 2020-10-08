@@ -132,13 +132,13 @@
     </div>
   
   <section class="row article-content">
-    <p>A few days ago, I purchased the <a href="https://jiayee.net"><code>jiayee.net</code></a> domain. Yesterday, I purchased the <a href="https://young.jiay.ee"><code>jiay.ee</code></a> domain. It was a novel experience for me. I last &ldquo;purchased&rdquo; a domain from Freenom about 3 years ago. Back then, I had the free domain point to my AWS EC2 public IP address. This week, my custom domains are pointing towards GitHub pages and Blogspot respectively.</p>
+    <p>A few days ago, I purchased the <a href="https://jiayee.net"><code>jiayee.net</code></a> domain. Yesterday, I purchased the <a href="https://jiay.ee/blog"><code>jiay.ee</code></a> domain. It was a novel experience for me. I last &ldquo;purchased&rdquo; a domain from Freenom about 3 years ago. Back then, I had the free domain point to my AWS EC2 public IP address (this was for CS3216). This week, my custom domains are pointing towards GitHub pages and Blogger respectively.</p>
 <p>For GitHub pages, I followed a guide which is similar to <a href="https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/">this one by Rich</a>.</p>
-<ul>
+<ol>
 <li>Get a domain.</li>
 <li>Go to your GitHub pages repository and set the custom domain to the one you just purchased.</li>
-<li>Go to your domain provider&rsquo;s DNS settings (or your DNS manager like Cloudflare) and add the following records:</li>
-</ul>
+<li>Go to your domain provider&rsquo;s DNS settings (or your DNS manager, such as Cloudflare) and add the following records:</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -181,7 +181,7 @@
 </tr>
 </tbody>
 </table>
-<p>Remember to replace <code>jia1.github.io.</code> with your GitHub pages URL. Keep the trailing period as is. Here&rsquo;s the <a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration">GitHub&rsquo;s official docs</a> if you wish to find out more or verify the correctness of the steps above.</p>
+<p>Remember to replace <code>jia1.github.io.</code> with your GitHub pages URL. Keep the trailing period as is. Here&rsquo;s <a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration">GitHub&rsquo;s official docs</a> if you wish to find out more or verify the correctness of the steps above.</p>
 <p>As for Blogspot:</p>
 <table>
 <thead>
@@ -208,7 +208,7 @@
 </tbody>
 </table>
 <p>Each of the <code>xxxxxxxx</code> is a different value and is provided by Blogger. This record containing <code>xxxxxxxx</code> helps Blogger verify domain ownership. Here&rsquo;s <a href="https://support.google.com/blogger/answer/1233387">Blogger&rsquo;s help page</a>. Refer to <code>Step 2: Connect to your non-Google domain from Blogger</code>.</p>
-<p>My next step is to switch to Cloudflare&rsquo;s DNS manager instead of the domain provider&rsquo;s DNS settings as the latter&rsquo;s UI is not that ideal (i.e. requiring many clicks just to get to the DNS settings).</p>
+<p>My next step is to switch to Cloudflare&rsquo;s DNS manager, instead of continuing to manage my domains with the domain providers as the latter&rsquo;s UI are not that ideal (i.e. requiring many clicks just to get to the DNS settings).</p>
 
   </section>
   

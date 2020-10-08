@@ -8,7 +8,7 @@ To test a feature which I have been building for GovTech's FormSG, I had to mock
 
 Below is a visualisation of the "barriers" between the mock and the test:
 
-- Test calls a method. I couldn't understand why the method is not in the test folder. Update: Perhaps the actual main code is using this method too.
+- Test calls a method. I couldn't understand why the method is not in the test folder. Update: Perhaps the actual code in `src/main` is using this method too.
 - Method calls a factory method which creates an instance whose method is what I want to mock.
 - The method which I want to mock is defined in the superclass of the instance.
 

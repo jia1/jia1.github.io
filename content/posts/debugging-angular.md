@@ -12,7 +12,7 @@ Error: [$injector:modulerr] Failed to instantiate module forms due to:
 Error: [ng:areq] Argument 'directiveFactory' is required
 ```
 
-I asked my teammate if he has seen this. He said "No". My google-fu was lacking and my teammate helped me find this [relevant Stack Overflow thread](https://stackoverflow.com/questions/42217831/angularjs-error-ngareq-argument-directivefactory-is-required/42218107). Below was how I've been implementing my directives:
+I asked my teammate if he has seen this. He said, "No". My Google-fu was lacking and my teammate helped me find this [relevant Stack Overflow thread](https://stackoverflow.com/questions/42217831/angularjs-error-ngareq-argument-directivefactory-is-required/42218107). Below was how I've been implementing my directives:
 
 ```javascript
 'use strict';

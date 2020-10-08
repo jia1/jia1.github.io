@@ -6,7 +6,7 @@
     <description>Recent content in typescript on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 13 Sep 2020 22:12:18 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2020 22:12:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Rule: no-var-requires</title>
       <link>https://jiayee.net/tweets/no-var-requires/</link>
-      <pubDate>Sun, 13 Sep 2020 22:12:18 +0800</pubDate>
+      <pubDate>Sun, 13 Sep 2020 22:12:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tweets/no-var-requires/</guid>
       <description>My pre-commit hook complained because the original code had an import that looked like var module = require(&amp;quot;module&amp;quot;). The permitted ways to import are: import foo = require(&#39;foo&#39;) and &amp;ldquo;ES2015-style imports&amp;rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&amp;hellip;</description>

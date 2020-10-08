@@ -1,6 +1,6 @@
 ---
 title: "Markdown nested lists"
-date: 2020-09-16T22:03:30+08:00
+date: 2020-09-16T22:03:00+08:00
 draft: false
 tags: ["software","markdown"]
 ---

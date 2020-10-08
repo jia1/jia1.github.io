@@ -1,6 +1,6 @@
 ---
 title: "New Theme"
-date: 2020-09-19T12:20:59+08:00
+date: 2020-09-19T12:20:00+08:00
 draft: false
 tags: ["software","hugo","foundation"]
 ---

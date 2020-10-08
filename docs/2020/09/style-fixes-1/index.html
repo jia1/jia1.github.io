@@ -142,7 +142,7 @@
     </div>
   
   <section class="row article-content">
-    <p>Realised some unexpected styles due to Foundation&rsquo;s default styles, mainly for <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code>. The inline code style was fine but the same style was applied to code blocks (i.e. <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the <code>&lt;code&gt;</code> elements and found that Foundation was the one who has been styling the <code>&lt;code&gt;</code> elements on top of what Hugo has in store (see <a href="https://gohugo.io/content-management/syntax-highlighting/">official docs for Syntax Highlighting</a>).</p>
+    <p>I realised there were some unexpected styles for <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code> in this site due to Foundation&rsquo;s default styles. The inline code style was fine but the same style was applied to code blocks (i.e. <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the <code>&lt;code&gt;</code> elements and found that Foundation was the one who has been styling the <code>&lt;code&gt;</code> elements on top of what Hugo has in store (see <a href="https://gohugo.io/content-management/syntax-highlighting/">official docs for Syntax Highlighting</a>).</p>
 <p>Doing a <code>code { all: unset; }</code> was not the way because that would unset stuff that I need, such as <code>font-family</code>. I observed the code blocks in my blog posts and implemented the following styles:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">$</span><span style="color:#268bd2">code-font-color</span><span style="color:#719e07">:</span> <span style="color:#719e07">$</span><span style="color:#268bd2">background-color</span><span style="color:#719e07">;</span>
 
@@ -160,9 +160,9 @@
   <span style="color:#719e07">border</span>: <span style="color:#2aa198">0</span>;
   <span style="color:#719e07">padding</span>: <span style="color:#2aa198">0</span>;
 }
-</code></pre></div><p>I chose <code>solarized-dark</code> as the theme for my code blocks (configured in the client&rsquo;s <code>config.toml</code>). The list of themes can be found in <a href="https://xyproto.github.io/splash/docs/all.html">Chroma Style Gallery</a>.</p>
+</code></pre></div><p>I chose <code>solarized-dark</code> as the theme for my code blocks (configured in the client&rsquo;s <code>config.toml</code>). The list of themes can be found in the <a href="https://xyproto.github.io/splash/docs/all.html">Chroma Style Gallery</a>.</p>
 <p>In addition to code blocks, I also fixed the background colour for the tables. They were set to be white by Foundation. That&rsquo;s too painful for my eyes.</p>
-<p>Last but not least, I&rsquo;ve added the &ldquo;Relevant posts&rdquo; list below each post in single post view. I&rsquo;m making progress!</p>
+<p>Last but not least, I added the &ldquo;Relevant posts&rdquo; list below each post in single post view. I&rsquo;m making progress!</p>
 
   </section>
   

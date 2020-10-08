@@ -17,22 +17,22 @@
       <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/polling/</guid>
-      <description>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular recaptcha. I located the controller, directive and template for the form. I attached recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
+      <description>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
     </item>
     
     <item>
       <title>Dynamic Tooltips</title>
       <link>https://jiayee.net/2020/09/dynamic-tooltips/</link>
-      <pubDate>Fri, 25 Sep 2020 14:55:39 +0800</pubDate>
+      <pubDate>Fri, 25 Sep 2020 14:55:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
-      <description>I had a tooltip for a switch which contained 2 lines of text. The first line shows an example on how the textarea field below the switch can be populated, like &amp;ldquo;e.g. example input here&amp;rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &amp;ldquo;You need to do X before you can populate this field&amp;rdquo;.</description>
+      <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip is an example on how the textarea field below the switch can be populated, like &amp;ldquo;e.g. example input here&amp;rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &amp;ldquo;You need to do X before you can populate this field&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>Intercepting Angular Data Binding</title>
       <link>https://jiayee.net/2020/09/intercepting-angular-data-binding/</link>
-      <pubDate>Wed, 23 Sep 2020 21:40:56 +0800</pubDate>
+      <pubDate>Wed, 23 Sep 2020 21:40:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
       <description>I have two form switches. Let&amp;rsquo;s call them A and B. I was tasked to program them such that:
@@ -43,27 +43,27 @@ So, how did I solve this? I intercepted the data binding with a directive.</desc
     <item>
       <title>Rendering newlines in HTML attributes</title>
       <link>https://jiayee.net/tweets/rendering-newlines-in-html-attributes/</link>
-      <pubDate>Mon, 21 Sep 2020 22:41:32 +0800</pubDate>
+      <pubDate>Mon, 21 Sep 2020 22:41:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tweets/rendering-newlines-in-html-attributes/</guid>
       <description>Doing
-&amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; will not work but doing
+&amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; will not work, but doing
 &amp;lt;textarea placeholder=&amp;#34;{{ somethingFromScope }}&amp;#34;&amp;gt; where somethingFromScope is line1\nline2 will work as expected!</description>
     </item>
     
     <item>
       <title>Style Fixes 1</title>
       <link>https://jiayee.net/2020/09/style-fixes-1/</link>
-      <pubDate>Sun, 20 Sep 2020 16:26:05 +0800</pubDate>
+      <pubDate>Sun, 20 Sep 2020 16:26:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/style-fixes-1/</guid>
-      <description>Realised some unexpected styles due to Foundation&amp;rsquo;s default styles, mainly for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt;. The inline code style was fine but the same style was applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the &amp;lt;code&amp;gt; elements and found that Foundation was the one who has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store (see official docs for Syntax Highlighting).</description>
+      <description>I realised there were some unexpected styles for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; in this site due to Foundation&amp;rsquo;s default styles. The inline code style was fine but the same style was applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the &amp;lt;code&amp;gt; elements and found that Foundation was the one who has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store (see official docs for Syntax Highlighting).</description>
     </item>
     
     <item>
       <title>First Lighthouse Report for Jiayee.net</title>
       <link>https://jiayee.net/2020/09/first-lighthouse-report-for-jiayee.net/</link>
-      <pubDate>Sat, 19 Sep 2020 18:34:28 +0800</pubDate>
+      <pubDate>Sat, 19 Sep 2020 18:34:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/first-lighthouse-report-for-jiayee.net/</guid>
       <description>I ran my first Lighthouse report on this site. There&amp;rsquo;s a bunch of improvements to make. As of now, I managed to resolve some of them. I put up the links to the before and after Lighthouse reports at the end of this post. Please feel free to take a look at them.

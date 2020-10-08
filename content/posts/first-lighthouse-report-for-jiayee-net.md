@@ -1,6 +1,6 @@
 ---
 title: "First Lighthouse Report for Jiayee.net"
-date: 2020-09-19T18:34:28+08:00
+date: 2020-09-19T18:34:00+08:00
 draft: false
 tags: ["software","web","lighthouse"]
 ---
@@ -13,7 +13,7 @@ A summary of the improvements I made:
 1. Increase colour contrast between dark turquoise font and white smoke background.
 1. Replace the "Read more" link to "Continue reading X" where X is the title of the post.
 
-There could be more stuff that I missed out, since I'm only writing this after implementing all of these improvements. My final score is still not perfect as stuff like non-sequential headings would mean that I need to put more work into styling if I want to change the heading but retain the style (i.e. I chose `h5` after `h1` because `h2` is too big and `p` is too small).
+There could be more stuff that I missed out, since I'm only writing this after implementing all of these improvements. My final score is still not perfect, as stuff like non-sequential headings would mean that I need to put more effort into styling if I want to change the heading but retain the style (i.e. I chose `h5` after `h1` because `h2` is too big and `p` is too small).
 
 I ran the Lighthouse report for mobile after generating the reports for desktop. I knew I had to increase the size of the social media icons to make them more fat finger friendly. I knew this because I had problems tapping on the icon I want. I really should be focusing on this problem ASAP.
 

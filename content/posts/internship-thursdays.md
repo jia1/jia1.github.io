@@ -4,11 +4,11 @@ date: 2020-09-16T21:52:00+08:00
 draft: false
 tags: ["nus","braindump"]
 ---
-Last week, I had the honour to be one of the panellists for NUS CFG Internship Thursdays featuring Indeed. Here's the profile I shared:
+Last week, I had the honour to be one of the panellists for NUS CFG Internship Thursdays featuring Indeed. This is the profile I shared with NUS:
 
 Jiayee is a software engineer at Indeed. She graduated from NUS Computer Science in 2019 and joined Indeed as a fresh graduate. Before she joined Indeed, she had the opportunity to intern at various reputable companies such as SGInnovate, Visa and ViSenze. At Indeed, she gets the chance to learn from brilliant engineers in the company while indulging her passion for creating impact through technology.
 
-And here's my scripted answers for the questions asked during the panel discussion:
+And here's my answer script for the questions asked during the panel discussion:
 
 > What were your expectations of an internship?
 
@@ -18,14 +18,14 @@ And here's my scripted answers for the questions asked during the panel discussi
 1. Mentorship
     - Learn from the professionals
     - Make sure I am on the right track
-    - Not for hand-holding but to help unblock when shit hits the fan (don’t say this for real)
+    - Not for hand-holding but to help unblock when shit hits the fan (don't say this for real)
 1. Learn more about the company
     - Whether I am a good fit
 1. Confirm my choice of career
 
 > How would I have prepared for an internship differently?
 
-I wouldn’t. I strongly believe that I should focus on improving my technical skills via side projects and soft skills via school projects. This is so I can be better at what I’m interested in and stay motivated.
+I wouldn't. I strongly believe that I should focus on improving my technical skills via side projects and soft skills via school projects. This is so I can be better at what I'm interested in and stay motivated.
 And how would you know if an internship is something you are going to like? Ask about the company and internship.
 
 > What helped you receive a return offer back then?
@@ -46,7 +46,7 @@ Not receiving a return offer doesn't mean that you are bad or incompetent.
 
 Passion. Never do what you don't like.
 
-There was one question which I prepared for but it wasn't asked. Here you go:
+Last but not least, there was one question which I prepared for but it wasn't asked. Here you go:
 
 > How did you prepare for internships back then?
 

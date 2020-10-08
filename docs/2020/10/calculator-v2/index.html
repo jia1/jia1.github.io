@@ -132,7 +132,7 @@
     </div>
   
   <section class="row article-content">
-    <p>I made some changes to my compound interest calculator after reading on <a href="https://www.thecalculatorsite.com/articles/finance/future-value-formula.php">&ldquo;future value&rdquo;</a>. My calculator will allow users to specify regular deposits so that they can see for themselves the importance of every dollar added to their monthly or yearly savings and/or financial instruments.</p>
+    <p>I made some changes to my compound interest calculator after reading up on <a href="https://www.thecalculatorsite.com/articles/finance/future-value-formula.php">&ldquo;future value&rdquo;</a>. My calculator will allow users to specify regular deposits so that they can see for themselves the importance of every dollar added to their monthly or yearly savings and/or financial instruments.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">import</span> nerdamer from <span style="color:#2aa198">&#39;nerdamer/nerdamer.core&#39;</span>;
 <span style="color:#268bd2">import</span> Algebra from <span style="color:#2aa198">&#39;nerdamer/Algebra&#39;</span>;
 <span style="color:#268bd2">import</span> Calculus from <span style="color:#2aa198">&#39;nerdamer/Calculus&#39;</span>;
@@ -177,8 +177,8 @@
   <span style="color:#719e07">return</span> <span style="color:#b58900">Number</span>(solution.text());
 };
 </code></pre></div><p>Before I can mark <a href="https://github.com/calcsg/core/pull/5">my pull request</a> as ready for review, I will need to do &ldquo;Generation of amortization tables&rdquo;. Having just a table of values alone seems like a turn-off. I went to look for loan amortisation calculators and found that <a href="https://www.amortization-calc.com/">one of them</a> also generates a line graph. Even then, would this be informative?</p>
-<p>A few months ago, I used an Excel sheet to simulate my future mortgage loan which will come in 2+ years. I remember changing the deposit and loan term to see how the monthly payment and total interest vary. Could this be something any other user would want to know as well? This could be why the robo-advisors (e.g. <a href="https://endowus.com/">Endowus</a> and <a href="https://www.stashaway.sg/">StashAway</a>) have range sliders on their homepage for potential clients to simulate their potential investment returns.</p>
-<p>These sliders are frontend components. Since my tasks seem to about functionality (there&rsquo;s barely any code right now), I should write a function to return tabular data.</p>
+<p>A few months ago, I used an Excel sheet to simulate my future mortgage loan which will come in 2+ years. I remember changing the deposit and loan term to see how the monthly payment and total interest vary. Could this be something any other user would want to know as well? This could be why the robo-advisors (e.g. <a href="https://endowus.com/">Endowus</a> and <a href="https://www.stashaway.sg/">StashAway</a>) have range sliders on their homepage, for potential clients to simulate their potential investment returns.</p>
+<p>These sliders are frontend components. Since my tasks seem to be about functionality (there&rsquo;s barely any code right now), I should write a function to return tabular data.</p>
 
   </section>
   

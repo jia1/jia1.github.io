@@ -1,10 +1,10 @@
 ---
 title: "Dynamic Tooltips"
-date: 2020-09-25T14:55:39+08:00
+date: 2020-09-25T14:55:00+08:00
 draft: false
 tags: ["software","web","javascript","angular"]
 ---
-I had a tooltip for a switch which contained 2 lines of text. The first line shows an example on how the textarea field below the switch can be populated, like "e.g. example input here". The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like "You need to do X before you can populate this field". My GovTech OSS buddy suggested shortening the tooltip when the user has already fulfilled the prerequisites.
+I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip is an example on how the textarea field below the switch can be populated, like "e.g. example input here". The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like "You need to do X before you can populate this field". My GovTech OSS buddy suggested shortening the tooltip when the user fulfills the prerequisites.
 
 The tooltip was initially expressed as:
 
@@ -16,7 +16,7 @@ The tooltip was initially expressed as:
 ></i>
 ```
 
-`uib-tooltip` seems to come from [UI Bootstrap](https://angular-ui.github.io/bootstrap/#!#tooltip). Before getting to the official docs, I stumbled upon this [Stack Overflow thread](https://stackoverflow.com/questions/42057168/angular-bootstrap-tooltip-dynamic-content) which influenced my solution. I then went on to read the docs to understand the versatility of this framework.
+`uib-tooltip` seems to come from [UI Bootstrap](https://angular-ui.github.io/bootstrap/#!#tooltip). Before reading the official docs, I stumbled upon this [Stack Overflow thread](https://stackoverflow.com/questions/42057168/angular-bootstrap-tooltip-dynamic-content) which influenced my solution. I then went on to read the docs to understand the versatility of the framework behind the tooltip.
 
 Here's my solution:
 
@@ -46,7 +46,7 @@ The official docs:
 <a href="#" uib-tooltip-html="htmlTooltip">scope variable</a>
 ```
 
-On a side note, prior to this solution, I managed to make this work as well, although getting hacky:
+On a side note, prior to this solution, I managed to make this work as well, although it was getting hacky:
 
 ```html
 <i

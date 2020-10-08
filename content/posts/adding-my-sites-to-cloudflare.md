@@ -1,6 +1,6 @@
 ---
 title: "Adding my sites to Cloudflare"
-date: 2020-09-13T11:34:36+08:00
+date: 2020-09-13T11:34:00+08:00
 draft: false
 tags: ["software","domains","cloudflare"]
 ---
@@ -9,8 +9,8 @@ I added my domains to Cloudflare. Cloudflare offers many cool features which my 
 Steps for Namecheap:
 
 - Login
-- Click the "Manage" button to the right of your domain name
-- In the "Domain" tab, change "Nameservers" option from whatever it was to "Custom DNS"
+- Click the "Manage" button to the right of your domain name in the domains table
+- In the "Domain" tab, change the "Nameservers" option value from whatever it was to "Custom DNS"
 - Do your thing!
 
 Steps for Netim:
@@ -24,4 +24,4 @@ Steps for Netim:
 - Select "Custom nameservers"
 - Do your thing!
 
-Setting the DNS records directly (i.e. updating the NS records) did not help. I had to go into the specific configuration or tab for Nameservers in each of the domain providers in order to set the nameservers.
+Setting the DNS records directly (i.e. updating the NS records) did not help. I had to go into the specific configuration or tab for nameservers in each of the domain providers in order to set them up.

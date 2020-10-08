@@ -153,7 +153,7 @@
 <li>Whenever A changes, I need to check A. If A is off, force B to be off.</li>
 <li>The checks cannot happen at the controller or model because it&rsquo;d be too &ldquo;late&rdquo;.</li>
 <li>I can&rsquo;t do much at the view because the switches were imported from a library which handled <code>onClick</code>.</li>
-<li>I also needed to call the toast service when A is found to be switched off. I can put this call in the directive (along with many other things I may need in the future).</li>
+<li>I also needed to call the toast service when A is found to be switched off. I can put this call in the directive (along with the many other things I may need in the future).</li>
 </ol>
 <p>Below are some code snippets to illustrate what I did:</p>
 <p>Directive:</p>
@@ -180,14 +180,14 @@
     },
   }
 }
-</code></pre></div><p>I had to insert <code>require('relative path to directive file')</code> into <code>main.js</code>. And, as mentioned in an earlier post, <code>saveInterceptor</code> must be defined as <code>function saveInterceptor(ToastService) { ... }</code> instead of as an arrow function because the <code>.directive(...)</code> is above the function definition and we need the function hoisting from the <code>function</code> keyword.</p>
+</code></pre></div><p>I had to insert <code>require('relative path to directive file')</code> into <code>main.js</code>. And, as mentioned in an earlier post about hoisting, <code>saveInterceptor</code> must be defined as <code>function saveInterceptor(ToastService) { ... }</code> instead of an arrow function because the <code>.directive(...)</code> is above the function definition and we need the function hoisting from the <code>function</code> keyword.</p>
 <p>View:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">input</span>
   type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;checkbox&#34;</span>
-  ng-model<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;vm.A&#34;</span>
+  ng-model<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;A&#34;</span>
   save-interceptor
 /&gt;
-</code></pre></div><p>Before I end my post, I want to highlight another thing I learnt from this task. It&rsquo;s the difference between <code>$parsers</code> and <code>$formatters</code>. I got to know about the directive&rsquo;s syntax from this <a href="https://stackoverflow.com/questions/19969740/how-to-intercept-value-binding-by-ng-model-directive">Stack Overflow thread</a>. Both <code>$formatters</code> and <code>$parsers</code> were used, so I went ahead and <a href="https://stackoverflow.com/questions/22841225/ngmodel-formatters-and-parsers">looked them up</a>.</p>
+</code></pre></div><p>Before I end my post, I want to highlight another thing I learnt from this task. It&rsquo;s the difference between <code>$parsers</code> and <code>$formatters</code>. I got to know about the directive&rsquo;s syntax from this <a href="https://stackoverflow.com/questions/19969740/how-to-intercept-value-binding-by-ng-model-directive">Stack Overflow thread</a>. Both <code>$formatters</code> and <code>$parsers</code> were used, and, being curious, I went ahead and <a href="https://stackoverflow.com/questions/22841225/ngmodel-formatters-and-parsers">looked them up</a>.</p>
 <p>TL;DR: Formatters are just for appearances (model -&gt; view) and parsers are for saves (view -&gt; model). In our case, we want the parser because A and B are switches which are toggled from the view, and we want to watch what the view is passing to the model.</p>
 
   </section>

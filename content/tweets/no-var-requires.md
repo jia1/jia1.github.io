@@ -1,6 +1,6 @@
 ---
 title: "Rule: no-var-requires"
-date: 2020-09-13T22:12:18+08:00
+date: 2020-09-13T22:12:00+08:00
 draft: false
 tags: ["software","javascript","typescript"]
 ---

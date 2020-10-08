@@ -103,6 +103,62 @@
     <div class="row">
       <article>
   
+  <a href="/2020/09/style-fixes-1/">
+    <h3 class="article-title">
+  Style Fixes 1
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-20">20 Sep 2020 @ 4.26 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/hugo">
+          #hugo
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/foundation">
+          #foundation
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I realised there were some unexpected styles for &lt;code&gt; and &lt;pre&gt; in this site due to Foundation&rsquo;s default styles. The inline code style was fine but the same style was applied to code blocks (i.e. &lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the &lt;code&gt; elements and found that Foundation was the one who has been styling the &lt;code&gt; elements on top of what Hugo has in store (see official docs for Syntax Highlighting).
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/style-fixes-1/">Continue reading "Style Fixes 1"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/09/first-lighthouse-report-for-jiayee.net/">
     <h3 class="article-title">
   First Lighthouse Report for Jiayee.net
@@ -299,63 +355,6 @@ My worker was named &quot;vanity&quot; for obvious reasons and it sits at https:
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/cloudflare-workers/">Continue reading "Cloudflare Workers"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/debugging-angular/">
-    <h3 class="article-title">
-  Debugging Angular
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-14">14 Sep 2020 @ 9.29 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/web">
-          #web
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/angular">
-          #angular
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    Something could&rsquo;ve happened in the past 2 weeks while I was focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the the following error in the JavaScript console:
-Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &#39;directiveFactory&#39; is required I asked my teammate if he has seen this.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/debugging-angular/">Continue reading "Debugging Angular"</a>
   </p>
 </article>
 

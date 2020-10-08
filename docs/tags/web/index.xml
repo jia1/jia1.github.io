@@ -6,10 +6,22 @@
     <description>Recent content in web on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 05 Oct 2020 23:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Oct 2020 22:36:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redux Persist</title>
+      <link>https://jiayee.net/2020/10/redux-persist/</link>
+      <pubDate>Thu, 08 Oct 2020 22:36:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/redux-persist/</guid>
+      <description>If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
+Install redux-persist:
+yarn add redux-persist @types/redux-persist Update root reducer and store:
+// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;; import rootReducer from &amp;#39;.</description>
+    </item>
     
     <item>
       <title>Polling</title>

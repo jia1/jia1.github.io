@@ -3,22 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jiayee.net/tags/javascript/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/redux/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/10/redux-persist/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/software/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/typescript/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/web/</loc>
+    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/08-oct/</loc>
     <lastmod>2020-10-08T09:35:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2020-10-08T09:35:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/qna/</loc>
-    <lastmod>2020-10-08T09:35:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2020-10-08T09:35:00+08:00</lastmod>
   </url>
   
@@ -58,27 +93,7 @@
   </url>
   
   <url>
-    <loc>https://jiayee.net/tags/javascript/</loc>
-    <lastmod>2020-10-05T23:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/2020/10/polling/</loc>
-    <lastmod>2020-10-05T23:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/posts/</loc>
-    <lastmod>2020-10-05T23:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/software/</loc>
-    <lastmod>2020-10-05T23:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/web/</loc>
     <lastmod>2020-10-05T23:00:00+08:00</lastmod>
   </url>
   
@@ -449,11 +464,6 @@
   
   <url>
     <loc>https://jiayee.net/tweets/no-var-requires/</loc>
-    <lastmod>2020-09-13T22:12:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/typescript/</loc>
     <lastmod>2020-09-13T22:12:00+08:00</lastmod>
   </url>
   

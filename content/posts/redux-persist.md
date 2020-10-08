@@ -1,5 +1,5 @@
 ---
-title: "Redux Persist"
+title: "redux-persist"
 date: 2020-10-08T22:36:00+08:00
 draft: false
 tags: ["software","web","javascript","typescript","redux"]

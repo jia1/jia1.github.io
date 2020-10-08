@@ -1,0 +1,15 @@
+<article>
+  <!-- TODO: Find out how to differentiate between list and single view. -->
+  <a href="{{ .RelPermalink }}">
+    {{ partial "article-title.html" . }}
+  </a>
+  <div class="nar-row">
+    {{ partial "article-metadata.html" . }}
+  </div>
+  <section class="nar-row article-summary">
+    {{ .Summary }}
+  </section>
+  <p>
+    <a class="article-read-more" href="{{ .RelPermalink }}">Continue reading "{{ .Title }}"</a>
+  </p>
+</article>

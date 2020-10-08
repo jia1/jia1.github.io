@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Quick Go 2</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Quick Go 2
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-30">30 Sep 2020 @ 12.14 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/go">
+          #go
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/braindump">
+          #braindump
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>Chapter 3 and 4 were about variables (<code>var</code>, <code>const</code> and so on) and control structures (<code>for</code>, <code>if</code> and so on) respectively.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#719e07">package</span> main
+
+<span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
+
+b <span style="color:#719e07">:=</span> <span style="color:#2aa198">&#34;Hello, world!&#34;</span> <span style="color:#586e75">// Block scope
+</span><span style="color:#586e75"></span>
+<span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
+  <span style="color:#586e75">// Chapter 3: Variables
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> x <span style="color:#dc322f">string</span> = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+
+  <span style="color:#268bd2">var</span> y <span style="color:#dc322f">string</span>
+  y = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+
+  <span style="color:#586e75">// x = x + y
+</span><span style="color:#586e75"></span>  <span style="color:#586e75">// x += y
+</span><span style="color:#586e75"></span>
+  z <span style="color:#719e07">:=</span> <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+
+  <span style="color:#268bd2">var</span> a = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+
+  fmt.<span style="color:#268bd2">Println</span>(b)
+
+  <span style="color:#268bd2">const</span> c = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+
+  <span style="color:#268bd2">var</span> (
+    d = <span style="color:#2aa198">1</span>
+    e = <span style="color:#2aa198">2</span>
+    f = <span style="color:#2aa198">3</span>
+  )
+
+  <span style="color:#268bd2">var</span> input <span style="color:#dc322f">float64</span>
+  fmt.<span style="color:#268bd2">Scanf</span>(<span style="color:#2aa198">&#34;%f&#34;</span>, <span style="color:#719e07">&amp;</span>input)
+  output <span style="color:#719e07">:=</span> input <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span>
+
+  <span style="color:#586e75">// Chapter 4: Control structures
+</span><span style="color:#586e75"></span>  i <span style="color:#719e07">:=</span> <span style="color:#2aa198">1</span>
+  <span style="color:#719e07">for</span> i <span style="color:#719e07">&lt;=</span> <span style="color:#2aa198">10</span> {
+    <span style="color:#586e75">// Do something with i
+</span><span style="color:#586e75"></span>    i <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+  }
+
+  <span style="color:#719e07">for</span> i <span style="color:#719e07">:=</span> <span style="color:#2aa198">10</span>; i <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">1</span>; i<span style="color:#719e07">--</span> {
+    <span style="color:#586e75">// Do something with i
+</span><span style="color:#586e75"></span>  }
+
+  w = <span style="color:#2aa198">50</span>
+  <span style="color:#719e07">if</span> w &gt; <span style="color:#2aa198">100</span> {
+    <span style="color:#586e75">// Do something
+</span><span style="color:#586e75"></span>  } <span style="color:#719e07">else</span> <span style="color:#719e07">if</span> w &gt; <span style="color:#2aa198">50</span> {
+    <span style="color:#586e75">// Do something
+</span><span style="color:#586e75"></span>  } <span style="color:#719e07">else</span> {
+    <span style="color:#586e75">// Do something
+</span><span style="color:#586e75"></span>  }
+
+  <span style="color:#586e75">// No need to break between cases
+</span><span style="color:#586e75"></span>  j <span style="color:#719e07">:=</span> <span style="color:#2aa198">100</span>
+  <span style="color:#719e07">switch</span> j {
+    <span style="color:#719e07">case</span> <span style="color:#2aa198">0</span>:
+      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Zero&#34;</span>)
+    <span style="color:#719e07">case</span> <span style="color:#2aa198">100</span>:
+      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Hundred&#34;</span>)
+    <span style="color:#719e07">default</span>:
+      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Don&#39;t know&#34;</span>)
+  }
+}
+</code></pre></div>
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/09/quick-go-1/">
+      Quick Go 1 (#braindump)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/tweets/docker-system-prune/">
+      docker system prune -a --volumes (#docker)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/writing-calculators/">
+      Writing Calculators (#javascript)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

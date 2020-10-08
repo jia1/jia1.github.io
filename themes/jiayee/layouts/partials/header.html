@@ -1,0 +1,40 @@
+<header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="{{ .Site.BaseURL }}">
+          {{ .Site.Title }}
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        {{ .Site.Params.subtitle }}
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        {{ range .Site.Params.Social }}
+          <a href="{{ .url }}" rel="noopener" target='{{ if not (eq .name "Email") }}_blank{{ end }}'>
+            <i class="social {{ .icon }}" title="{{ .name }}"></i>
+          </a>
+        {{ end }}
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      {{ $current := . }}
+      {{ $numMenuItems := len .Site.Menus.item }}
+      {{ range .Site.Menus.item }}
+        {{ $active := (eq .Name $current.Title) }}
+        <!-- TODO: Make this configutable. -->
+        {{ $active = or $active (and (eq .Name "Blog") (in (slice "" "posts" "tags") $current.Section)) }}
+        {{ $active = or $active (and (eq .Name "\"Tweets\"") (in (slice "tweets" "tags") $current.Section)) }}
+        <li class="cell small-{{ div 12 $numMenuItems }} {{ if $active }}is-active{{ end }}">
+          <a href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

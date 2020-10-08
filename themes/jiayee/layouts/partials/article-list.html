@@ -1,0 +1,8 @@
+<div class="article-list">
+  {{ range .Paginator.Pages }}
+    <div class="row">
+      {{ partial "article-list-item.html" . }}
+    </div>
+  {{ end }}
+  {{ partial "article-next-page.html" . }}
+</div>

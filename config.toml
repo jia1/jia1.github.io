@@ -1,0 +1,21 @@
+baseURL = "https://jiayee.net"
+languageCode = "en-gb"
+theme = "jiayee"
+title = "Jiayee.net"
+
+enableRobotsTXT = true
+publishDir = "docs"
+
+Paginate = 5
+PaginatePath = ""
+
+PygmentsCodeFences = true
+PygmentsStyle = "solarized-dark"
+
+[markup]
+  [markup.highlight]
+    lineNos = false
+
+[permalinks]
+  pages = "/:slug"
+  posts = "/:year/:month/:title"

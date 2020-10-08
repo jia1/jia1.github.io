@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lighthouse on Jiayee.net</title>
+    <link>https://jiayee.net/tags/lighthouse/</link>
+    <description>Recent content in lighthouse on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 19 Sep 2020 18:34:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/lighthouse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Lighthouse Report for Jiayee.net</title>
+      <link>https://jiayee.net/2020/09/first-lighthouse-report-for-jiayee.net/</link>
+      <pubDate>Sat, 19 Sep 2020 18:34:28 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/first-lighthouse-report-for-jiayee.net/</guid>
+      <description>I ran my first Lighthouse report on this site. There&amp;rsquo;s a bunch of improvements to make. As of now, I managed to resolve some of them. I put up the links to the before and after Lighthouse reports at the end of this post. Please feel free to take a look at them.
+A summary of the improvements I made:
+ Include lang attribute to the html element i.e. &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;.</description>
+    </item>
+    
+  </channel>
+</rss>

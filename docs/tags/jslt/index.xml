@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jslt on Jiayee.net</title>
+    <link>https://jiayee.net/tags/jslt/</link>
+    <description>Recent content in jslt on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 29 Sep 2020 18:22:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/jslt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JSLT</title>
+      <link>https://jiayee.net/2020/09/jslt/</link>
+      <pubDate>Tue, 29 Sep 2020 18:22:29 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/jslt/</guid>
+      <description>My team at Indeed has a GraphQL service which can query various data sources and a Spring Boot application which fetches data from the GraphQL service and massages the retrieved JSON into a flattened and simplified format. We use JSLT to transform JSON. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
+My GraphQL query:
+query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(.</description>
+    </item>
+    
+  </channel>
+</rss>

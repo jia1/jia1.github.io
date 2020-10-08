@@ -1,0 +1,12 @@
+name = "Jiayee"
+license = "MIT"
+licenselink = ""
+description = "My theme"
+homepage = "https://jiayee.net"
+tags = []
+features = []
+min_version = "0.41"
+
+[author]
+  name = "Jiayee Lim"
+  homepage = "https://jiayee.net"

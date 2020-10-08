@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Data Wrangling</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Data Wrangling
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-22">22 Sep 2020 @ 9.14 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/nus">
+          #nus
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/nushackers">
+          #nushackers
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/cli">
+          #cli
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>I managed to catch one of NUS Hackers&rsquo; workshops, &ldquo;Hacker Tools: Data Wrangling&rdquo;, by Julius. I got to learn many new things since I don&rsquo;t use CLI for text processing. Julius&rsquo; slides can be found in <a href="https://github.com/indocomsoft/hackertools-slides/blob/master/3-data-wrangling/data-wrangling.pdf">his GitHub repo</a>. Below is a very brief and dry summary of what I think are more important to me. If I &ldquo;miss&rdquo; something out, it&rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.</p>
+<h5 id="cat-text--grep--ve-regex"><code>cat TEXT | grep -vE REGEX</code></h5>
+<p>Get all lines from <code>TEXT</code> which do not match <code>REGEX</code>. <code>-v</code> means invert match and <code>-E</code> means extended regex.</p>
+<h5 id="cat-text--grep--e---sed-sregexsubstitutionflags"><code>cat TEXT | grep -E '.*' | sed s/REGEX/SUBSTITUTION/FLAGS</code></h5>
+<p>Substitute all <code>REGEX</code> matches (taking into account restrictions from <code>FLAGS</code>) from <code>TEXT</code> with <code>SUBSTITUTION</code>. <code>SUBSTITUTION</code> can be a capture group i.e. <code>\1</code>, <code>\2</code>, <code>\3</code> and so on.</p>
+<h5 id="-sort--nk12"><code>| sort -nk1,2</code></h5>
+<p>Sort lines numerically (not lexicographically) (<code>-n</code>). Sort only by the 1st to 2nd whitespace-separated column (<code>-k1,2</code>). <code>-k</code> stands for sort key. Search for <code>KEYDEF</code> in <code>man sort</code> to find out more.</p>
+<h5 id="-uniq--c"><code>| uniq -c</code></h5>
+<p>Collapse adjacent lines which are duplicates of each other and prefix each unique line with the total number of lines which were collapsed into one.</p>
+<h5 id="-awk-1--1--2--r-t--print-3-"><code>| awk '$1 == 1 &amp;&amp; $2 ~ /^r[^ ]*t$/ { print $3 }'</code></h5>
+<p><code>awk</code> is a programming language with the basic syntax of <code>awk PATTERN { DO THIS IF PATTERN MATCHES }</code>. In this case, the pattern is <code>$1 == 1 &amp;&amp; $2 ~ /^r[^ ]*t$/</code> where <code>$1</code> and <code>$2</code> are the first and second elements with whitespace as the default delimiter. For the lines which match the pattern, print the 3rd element (<code>$3</code>). For the lines which do not match the pattern, do nothing (they do not get printed and we can count the number of matches with <code>| wc -l</code>).</p>
+<h5 id="-paste--sd--"><code>| paste -sd, -</code></h5>
+<p>Combine lines from the standard output before the pipe with the specified delimiter (<code>,</code> in this case). <code>-s</code> means serial input e.g. a single file or a bunch of text lines. <code>-d</code> means delimiter and <code>,</code> is the delimiter.</p>
+<h5 id="-bc"><code>| bc</code></h5>
+<p>A calculator which reads and interprets text i.e. something which can return &ldquo;3&rdquo; when you pass in &ldquo;1 + 2&rdquo;.</p>
+<h5 id="-xargs-command"><code>| xargs COMMAND</code></h5>
+<p>Standard output before the pipe gets split into whitespace-delimited arguments and fed into <code>COMMAND</code>.</p>
+<h5 id="cat-text--tr-a-z"><code>cat TEXT | tr &quot;a&quot; &quot;z&quot;</code></h5>
+<p>Replace (or &ldquo;translate&rdquo;) &ldquo;a&rdquo; with &ldquo;z&rdquo; in <code>TEXT</code>.</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/tweets/rendering-newlines-in-html-attributes/">
+      Rendering newlines in HTML attributes (#angular)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/style-fixes-1/">
+      Style Fixes 1 (#foundation)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/first-lighthouse-report-for-jiayee.net/">
+      First Lighthouse Report for Jiayee.net (#lighthouse)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

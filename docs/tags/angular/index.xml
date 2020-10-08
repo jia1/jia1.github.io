@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>angular on Jiayee.net</title>
+    <link>https://jiayee.net/tags/angular/</link>
+    <description>Recent content in angular on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 05 Oct 2020 23:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Polling</title>
+      <link>https://jiayee.net/2020/10/polling/</link>
+      <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/polling/</guid>
+      <description>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular recaptcha. I located the controller, directive and template for the form. I attached recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
+    </item>
+    
+    <item>
+      <title>Dynamic Tooltips</title>
+      <link>https://jiayee.net/2020/09/dynamic-tooltips/</link>
+      <pubDate>Fri, 25 Sep 2020 14:55:39 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
+      <description>I had a tooltip for a switch which contained 2 lines of text. The first line shows an example on how the textarea field below the switch can be populated, like &amp;ldquo;e.g. example input here&amp;rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &amp;ldquo;You need to do X before you can populate this field&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Intercepting Angular Data Binding</title>
+      <link>https://jiayee.net/2020/09/intercepting-angular-data-binding/</link>
+      <pubDate>Wed, 23 Sep 2020 21:40:56 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
+      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I was tasked to program them such that:
+ When A is off, B is disabled and off. When A is on, B is enabled but off.  We can safely ignore backend logic because I programmed it such that if A is off, B will be ignored.
+So, how did I solve this? I intercepted the data binding with a directive.</description>
+    </item>
+    
+    <item>
+      <title>Rendering newlines in HTML attributes</title>
+      <link>https://jiayee.net/tweets/rendering-newlines-in-html-attributes/</link>
+      <pubDate>Mon, 21 Sep 2020 22:41:32 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/rendering-newlines-in-html-attributes/</guid>
+      <description>Doing
+&amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; will not work but doing
+&amp;lt;textarea placeholder=&amp;#34;{{ somethingFromScope }}&amp;#34;&amp;gt; where somethingFromScope is line1\nline2 will work as expected!</description>
+    </item>
+    
+    <item>
+      <title>Debugging Angular</title>
+      <link>https://jiayee.net/2020/09/debugging-angular/</link>
+      <pubDate>Mon, 14 Sep 2020 21:29:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
+      <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I was focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the the following error in the JavaScript console:
+Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required I asked my teammate if he has seen this.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on Jiayee.net</title>
+    <link>https://jiayee.net/tags/javascript/</link>
+    <description>Recent content in javascript on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 05 Oct 2020 23:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Polling</title>
+      <link>https://jiayee.net/2020/10/polling/</link>
+      <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/polling/</guid>
+      <description>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular recaptcha. I located the controller, directive and template for the form. I attached recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
+    </item>
+    
+    <item>
+      <title>Calculator V2</title>
+      <link>https://jiayee.net/2020/10/calculator-v2/</link>
+      <pubDate>Sun, 04 Oct 2020 22:32:09 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/calculator-v2/</guid>
+      <description>I made some changes to my compound interest calculator after reading on &amp;ldquo;future value&amp;rdquo;. My calculator will allow users to specify regular deposits so that they can see for themselves the importance of every dollar added to their monthly or yearly savings and/or financial instruments.
+import nerdamer from &amp;#39;nerdamer/nerdamer.core&amp;#39;; import Algebra from &amp;#39;nerdamer/Algebra&amp;#39;; import Calculus from &amp;#39;nerdamer/Calculus&amp;#39;; import Solve from &amp;#39;nerdamer/Solve&amp;#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&amp;gt; { const totalAmount = solveForOneUnknownVariable( &amp;#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&amp;#39;, { p: principal.</description>
+    </item>
+    
+    <item>
+      <title>Writing Calculators</title>
+      <link>https://jiayee.net/2020/09/writing-calculators/</link>
+      <pubDate>Fri, 25 Sep 2020 21:23:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/writing-calculators/</guid>
+      <description>My friends needed an interest calculator. For the simple interest calculator, the parameters are the principal (P), annual interest rate (r), number of months (t) and an optional parameter to represent the periodic (monthly or yearly) top-up amount in addition to the principal (the initial top-up). Here&amp;rsquo;s v1 of my simple interest calculator:
+/** * Calculates simple interest. * * Uses the formula A = P(1 + rt). * * @param {Object} param Object containing parameters.</description>
+    </item>
+    
+    <item>
+      <title>Dynamic Tooltips</title>
+      <link>https://jiayee.net/2020/09/dynamic-tooltips/</link>
+      <pubDate>Fri, 25 Sep 2020 14:55:39 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
+      <description>I had a tooltip for a switch which contained 2 lines of text. The first line shows an example on how the textarea field below the switch can be populated, like &amp;ldquo;e.g. example input here&amp;rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &amp;ldquo;You need to do X before you can populate this field&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Intercepting Angular Data Binding</title>
+      <link>https://jiayee.net/2020/09/intercepting-angular-data-binding/</link>
+      <pubDate>Wed, 23 Sep 2020 21:40:56 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
+      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I was tasked to program them such that:
+ When A is off, B is disabled and off. When A is on, B is enabled but off.  We can safely ignore backend logic because I programmed it such that if A is off, B will be ignored.
+So, how did I solve this? I intercepted the data binding with a directive.</description>
+    </item>
+    
+    <item>
+      <title>Debugging Angular</title>
+      <link>https://jiayee.net/2020/09/debugging-angular/</link>
+      <pubDate>Mon, 14 Sep 2020 21:29:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
+      <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I was focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the the following error in the JavaScript console:
+Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required I asked my teammate if he has seen this.</description>
+    </item>
+    
+    <item>
+      <title>Rule: no-var-requires</title>
+      <link>https://jiayee.net/tweets/no-var-requires/</link>
+      <pubDate>Sun, 13 Sep 2020 22:12:18 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/no-var-requires/</guid>
+      <description>My pre-commit hook complained because the original code had an import that looked like var module = require(&amp;quot;module&amp;quot;). The permitted ways to import are: import foo = require(&#39;foo&#39;) and &amp;ldquo;ES2015-style imports&amp;rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Jest for the First Time</title>
+      <link>https://jiayee.net/2020/09/jest-for-the-first-time/</link>
+      <pubDate>Sun, 13 Sep 2020 21:56:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/jest-for-the-first-time/</guid>
+      <description>To test a feature which I have been building for GovTech&amp;rsquo;s FormSG, I had to mock a function in the superclass of an instance which is generated by a factory method call. I once considered stripping away the unnecessary barriers between the mock and the test, but I didn&amp;rsquo;t want to refactor a codebase which I am not too familiar with.
+Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock and the test:</description>
+    </item>
+    
+    <item>
+      <title>My first yarn package</title>
+      <link>https://jiayee.net/2020/09/my-first-yarn-package/</link>
+      <pubDate>Thu, 10 Sep 2020 23:59:59 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/my-first-yarn-package/</guid>
+      <description>I wrote my first yarn package (kinda for fun) yesterday. It&amp;rsquo;s strange how I&amp;rsquo;ve been consuming packages for the past 2 years but never went to the other side of the table i.e. writing a package. As of now, I haven&amp;rsquo;t published my package but I&amp;rsquo;m omw. So, how did I create a package? It just felt like the usual&amp;hellip; I followed the yarn docs.
+One difference (compared to my usual activities) was I couldn&amp;rsquo;t do import { .</description>
+    </item>
+    
+  </channel>
+</rss>

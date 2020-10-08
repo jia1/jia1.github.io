@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Custom domains</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Custom domains
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-11">11 Sep 2020 @ 1.10 am</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/domains">
+          #domains
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>A few days ago, I purchased the <a href="https://jiayee.net"><code>jiayee.net</code></a> domain. Yesterday, I purchased the <a href="https://young.jiay.ee"><code>jiay.ee</code></a> domain. It was a novel experience for me. I last &ldquo;purchased&rdquo; a domain from Freenom about 3 years ago. Back then, I had the free domain point to my AWS EC2 public IP address. This week, my custom domains are pointing towards GitHub pages and Blogspot respectively.</p>
+<p>For GitHub pages, I followed a guide which is similar to <a href="https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/">this one by Rich</a>.</p>
+<ul>
+<li>Get a domain.</li>
+<li>Go to your GitHub pages repository and set the custom domain to the one you just purchased.</li>
+<li>Go to your domain provider&rsquo;s DNS settings (or your DNS manager like Cloudflare) and add the following records:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Host</th>
+<th align="left">Value</th>
+<th align="left">TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">A</td>
+<td align="left">@</td>
+<td align="left">185.199.108.153</td>
+<td align="left">Up to you</td>
+</tr>
+<tr>
+<td align="left">A</td>
+<td align="left">@</td>
+<td align="left">185.199.109.153</td>
+<td align="left">Up to you</td>
+</tr>
+<tr>
+<td align="left">A</td>
+<td align="left">@</td>
+<td align="left">185.199.110.153</td>
+<td align="left">Up to you</td>
+</tr>
+<tr>
+<td align="left">A</td>
+<td align="left">@</td>
+<td align="left">185.199.111.153</td>
+<td align="left">Up to you</td>
+</tr>
+<tr>
+<td align="left">CNAME</td>
+<td align="left">www</td>
+<td align="left">jia1.github.io.</td>
+<td align="left">Up to you</td>
+</tr>
+</tbody>
+</table>
+<p>Remember to replace <code>jia1.github.io.</code> with your GitHub pages URL. Keep the trailing period as is. Here&rsquo;s the <a href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#about-custom-domain-configuration">GitHub&rsquo;s official docs</a> if you wish to find out more or verify the correctness of the steps above.</p>
+<p>As for Blogspot:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Host</th>
+<th align="left">Value</th>
+<th align="left">TTL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">CNAME</td>
+<td align="left">xxxxxxxx</td>
+<td align="left">xxxxxxxx</td>
+<td align="left">Up to you</td>
+</tr>
+<tr>
+<td align="left">CNAME</td>
+<td align="left">www</td>
+<td align="left">ghs.google.com.</td>
+<td align="left">Up to you</td>
+</tr>
+</tbody>
+</table>
+<p>Each of the <code>xxxxxxxx</code> is a different value and is provided by Blogger. This record containing <code>xxxxxxxx</code> helps Blogger verify domain ownership. Here&rsquo;s <a href="https://support.google.com/blogger/answer/1233387">Blogger&rsquo;s help page</a>. Refer to <code>Step 2: Connect to your non-Google domain from Blogger</code>.</p>
+<p>My next step is to switch to Cloudflare&rsquo;s DNS manager instead of the domain provider&rsquo;s DNS settings as the latter&rsquo;s UI is not that ideal (i.e. requiring many clicks just to get to the DNS settings).</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/09/my-first-yarn-package/">
+      My first yarn package (#javascript)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

@@ -1,0 +1,19 @@
+<section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      <!-- Copied from https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/ -->
+      {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+      {{ $dateTimeDisplay := .Site.Params.dateTimeDisplayFormat | default "2 Jan 2006 @ 3.04 pm" }}
+      <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateTimeDisplay }}</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      <!-- Copied from https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/ -->
+      {{ range .Params.tags }}
+        {{ $href := print (absURL "tags/") (urlize .) }}
+        <a href="{{ $href }}">
+          #{{ . }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

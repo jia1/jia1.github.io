@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on Jiayee.net</title>
+    <link>https://jiayee.net/tags/typescript/</link>
+    <description>Recent content in typescript on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 13 Sep 2020 22:12:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rule: no-var-requires</title>
+      <link>https://jiayee.net/tweets/no-var-requires/</link>
+      <pubDate>Sun, 13 Sep 2020 22:12:18 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/no-var-requires/</guid>
+      <description>My pre-commit hook complained because the original code had an import that looked like var module = require(&amp;quot;module&amp;quot;). The permitted ways to import are: import foo = require(&#39;foo&#39;) and &amp;ldquo;ES2015-style imports&amp;rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

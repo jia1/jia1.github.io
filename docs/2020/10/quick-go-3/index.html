@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Quick Go 3</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Quick Go 3
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-01">1 Oct 2020 @ 9.02 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/go">
+          #go
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/braindump">
+          #braindump
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>Chapter 5 and 6 were about basic data structures (like array, slice and map) and functions respectively.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#719e07">package</span> main
+
+<span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
+
+<span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
+  <span style="color:#586e75">// Chapter 5: Arrays, slices and maps
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> x [<span style="color:#2aa198">5</span>]<span style="color:#dc322f">int</span>
+  x[<span style="color:#2aa198">4</span>] = <span style="color:#2aa198">100</span>
+  fmt.<span style="color:#268bd2">Println</span>(x)
+
+  <span style="color:#586e75">// No coercing when there is a division operation involving a float64 and int
+</span><span style="color:#586e75"></span>  <span style="color:#586e75">// i.e. (mismatched types float64 and int)
+</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Should do a / float64(b)
+</span><span style="color:#586e75"></span>
+  <span style="color:#268bd2">var</span> total <span style="color:#dc322f">float64</span> = <span style="color:#2aa198">0</span>
+  <span style="color:#719e07">for</span> i, value <span style="color:#719e07">:=</span> <span style="color:#719e07">range</span> x {
+    total <span style="color:#719e07">+=</span> value
+  }
+  <span style="color:#586e75">// Different from Python&#39;s range
+</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Compiler will complain &#34;i declared and not used&#34;, so we must rename unused variables to &#39;_&#39;
+</span><span style="color:#586e75"></span>
+  y <span style="color:#719e07">:=</span> [<span style="color:#2aa198">3</span>]<span style="color:#dc322f">float64</span>{
+    <span style="color:#2aa198">1</span>,
+    <span style="color:#2aa198">2</span>,
+    <span style="color:#2aa198">3</span>,
+  }
+
+  <span style="color:#586e75">// Slice of length 0
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> z []<span style="color:#dc322f">float64</span>
+  <span style="color:#586e75">// Slice of length 5 but is associated with an array of length 10
+</span><span style="color:#586e75"></span>  a <span style="color:#719e07">:=</span> <span style="color:#b58900">make</span>([]<span style="color:#dc322f">float64</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">10</span>)
+  b <span style="color:#719e07">:=</span> x[<span style="color:#2aa198">0</span>:<span style="color:#2aa198">5</span>]
+  c <span style="color:#719e07">:=</span> x[:<span style="color:#2aa198">5</span>]
+  d <span style="color:#719e07">:=</span> x[<span style="color:#2aa198">0</span>:]
+  e <span style="color:#719e07">:=</span> x[:]
+
+  slice <span style="color:#719e07">:=</span> <span style="color:#b58900">append</span>(y, <span style="color:#2aa198">8</span>, <span style="color:#2aa198">9</span>) <span style="color:#586e75">// [1, 2, 3, 8, 9]
+</span><span style="color:#586e75"></span>  dst <span style="color:#719e07">:=</span> [<span style="color:#2aa198">1</span>]<span style="color:#dc322f">float64</span>{<span style="color:#2aa198">0</span>}
+  <span style="color:#b58900">copy</span>(slice, dst)
+  <span style="color:#586e75">// dst is now [1]
+</span><span style="color:#586e75"></span>  <span style="color:#586e75">// min(len(slice), len(dst)) is copied over
+</span><span style="color:#586e75"></span>
+  <span style="color:#268bd2">var</span> g <span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span> <span style="color:#586e75">// {[key: string]: int}
+</span><span style="color:#586e75"></span>  g = <span style="color:#b58900">make</span>(<span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span>)
+  <span style="color:#586e75">// Or just g := make(map[string]int) without the variable declaration
+</span><span style="color:#586e75"></span>  g[<span style="color:#2aa198">&#34;someKey&#34;</span>] = <span style="color:#2aa198">0</span>
+  <span style="color:#586e75">// delete(g, &#34;someKey&#34;)
+</span><span style="color:#586e75"></span>  lookupResult, lookupSucceeded <span style="color:#719e07">:=</span> g[<span style="color:#2aa198">&#34;someKey&#34;</span>]
+  <span style="color:#719e07">if</span> result, ok <span style="color:#719e07">:=</span> g[<span style="color:#2aa198">&#34;someKey&#34;</span>]; ok {
+    fmt.<span style="color:#268bd2">Printlnt</span>(result, ok)
+  }
+
+  h <span style="color:#719e07">:=</span> <span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">string</span>{
+    <span style="color:#2aa198">&#34;someKey&#34;</span>: <span style="color:#2aa198">&#34;someValue&#34;</span>,
+  }
+  <span style="color:#586e75">// map[string]map[string]string is a nested map of strings with two levels of keys
+</span><span style="color:#586e75"></span>
+  <span style="color:#586e75">// Chapter 6: Functions
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">func</span> <span style="color:#268bd2">average</span>(xs []<span style="color:#dc322f">float64</span>) {
+    <span style="color:#586e75">// panic(&#34;To be implemented&#34;)
+</span><span style="color:#586e75"></span>    <span style="color:#586e75">// Lazy to implement
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> <span style="color:#2aa198">123</span>, <span style="color:#2aa198">&#34;No error&#34;</span>
+  }
+
+  avg, <span style="color:#dc322f">error</span> <span style="color:#719e07">:=</span> <span style="color:#268bd2">average</span>([<span style="color:#2aa198">1</span>]<span style="color:#dc322f">float64</span>{<span style="color:#2aa198">123</span>})
+
+  <span style="color:#268bd2">func</span> <span style="color:#268bd2">add</span>(args <span style="color:#719e07">...</span><span style="color:#dc322f">int</span>) {
+    total <span style="color:#719e07">:=</span> <span style="color:#2aa198">0</span>
+    <span style="color:#719e07">for</span> _, arg <span style="color:#719e07">:=</span> <span style="color:#719e07">range</span> args {
+      total <span style="color:#719e07">+=</span> arg
+    }
+    <span style="color:#719e07">return</span> total
+  }
+
+  <span style="color:#268bd2">add</span>(<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>)
+  <span style="color:#268bd2">add</span>([]<span style="color:#dc322f">int</span>{<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>}<span style="color:#719e07">...</span>)
+
+  <span style="color:#586e75">// Stopped at Closure
+</span><span style="color:#586e75"></span>}
+</code></pre></div>
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/09/quick-go-2/">
+      Quick Go 2 (#braindump)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/quick-go-1/">
+      Quick Go 1 (#braindump)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/tweets/docker-system-prune/">
+      docker system prune -a --volumes (#docker)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

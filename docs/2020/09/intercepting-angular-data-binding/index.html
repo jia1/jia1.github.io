@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Intercepting Angular Data Binding</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Intercepting Angular Data Binding
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-23">23 Sep 2020 @ 9.40 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>I have two form switches. Let&rsquo;s call them A and B. I was tasked to program them such that:</p>
+<ol>
+<li>When A is off, B is disabled and off.</li>
+<li>When A is on, B is enabled but off.</li>
+</ol>
+<p>We can safely ignore backend logic because I programmed it such that if A is off, B will be ignored.</p>
+<p>So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me! The directive was a sweet spot:</p>
+<ol>
+<li>Whenever A changes, I need to check A. If A is off, force B to be off.</li>
+<li>The checks cannot happen at the controller or model because it&rsquo;d be too &ldquo;late&rdquo;.</li>
+<li>I can&rsquo;t do much at the view because the switches were imported from a library which handled <code>onClick</code>.</li>
+<li>I also needed to call the toast service when A is found to be switched off. I can put this call in the directive (along with many other things I may need in the future).</li>
+</ol>
+<p>Below are some code snippets to illustrate what I did:</p>
+<p>Directive:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">angular
+  .module(<span style="color:#2aa198">&#39;forms&#39;</span>)
+  .directive(<span style="color:#2aa198">&#39;saveInterceptor&#39;</span>, [
+    <span style="color:#2aa198">&#39;ToastService&#39;</span>,
+    saveInterceptor,
+  ])
+
+<span style="color:#268bd2">function</span> saveInterceptor(ToastService) {
+  <span style="color:#719e07">return</span> {
+    require<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;ngModel&#39;</span>,
+    link<span style="color:#719e07">:</span> (scope, elem, attr, ngModel) =&gt; {
+      ngModel.$parsers.push((inputValue) =&gt; {
+        <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>inputValue) { <span style="color:#586e75">// If A is off
+</span><span style="color:#586e75"></span>          ToastService.show(
+            <span style="color:#2aa198">&#39;Some message.&#39;</span>,
+          )
+        }
+        scope.B <span style="color:#719e07">=</span> <span style="color:#cb4b16">false</span> <span style="color:#586e75">// B is switched off whenever A changes
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">return</span> inputValue <span style="color:#586e75">// Do not mutate A
+</span><span style="color:#586e75"></span>      })
+    },
+  }
+}
+</code></pre></div><p>I had to insert <code>require('relative path to directive file')</code> into <code>main.js</code>. And, as mentioned in an earlier post, <code>saveInterceptor</code> must be defined as <code>function saveInterceptor(ToastService) { ... }</code> instead of as an arrow function because the <code>.directive(...)</code> is above the function definition and we need the function hoisting from the <code>function</code> keyword.</p>
+<p>View:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">input</span>
+  type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;checkbox&#34;</span>
+  ng-model<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;vm.A&#34;</span>
+  save-interceptor
+/&gt;
+</code></pre></div><p>Before I end my post, I want to highlight another thing I learnt from this task. It&rsquo;s the difference between <code>$parsers</code> and <code>$formatters</code>. I got to know about the directive&rsquo;s syntax from this <a href="https://stackoverflow.com/questions/19969740/how-to-intercept-value-binding-by-ng-model-directive">Stack Overflow thread</a>. Both <code>$formatters</code> and <code>$parsers</code> were used, so I went ahead and <a href="https://stackoverflow.com/questions/22841225/ngmodel-formatters-and-parsers">looked them up</a>.</p>
+<p>TL;DR: Formatters are just for appearances (model -&gt; view) and parsers are for saves (view -&gt; model). In our case, we want the parser because A and B are switches which are toggled from the view, and we want to watch what the view is passing to the model.</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/09/debugging-angular/">
+      Debugging Angular (#angular)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/tweets/rendering-newlines-in-html-attributes/">
+      Rendering newlines in HTML attributes (#angular)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/style-fixes-1/">
+      Style Fixes 1 (#foundation)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

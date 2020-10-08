@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Quick Go 1</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Quick Go 1
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-28">28 Sep 2020 @ 10.43 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/go">
+          #go
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/braindump">
+          #braindump
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>It was a very busy weekend for me. Last Saturday, I went out to catch up with my friends and I went to shop for an e-book reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport so a couple of hours went into travelling too. Over the weekend, I also had to set up my e-book reader. In addition to my HumbleBundle books, I borrowed some books from NLB via OverDrive too.</p>
+<p>One of my HumbleBundle books was about Go. Since this site is powered by Hugo (I hope I can remember to add the &ldquo;Powered by Hugo&rdquo; statement above/below the copyright soon), it&rsquo;d be good to be exposed to its concepts, styles and syntax.</p>
+<p>Here&rsquo;s one of my <code>.go</code> files:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#586e75">// Chapter 1: My first program
+</span><span style="color:#586e75"></span><span style="color:#719e07">package</span> main
+
+<span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
+
+<span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
+  fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;1 + 1 =&#34;</span>, <span style="color:#2aa198">1.0</span> <span style="color:#719e07">+</span> <span style="color:#2aa198">1</span>)
+  fmt.<span style="color:#268bd2">Println</span>(<span style="color:#b58900">len</span>(<span style="color:#2aa198">&#34;Hello, world!&#34;</span>))
+  fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Hello, world!&#34;</span>[<span style="color:#2aa198">1</span>]) <span style="color:#586e75">// prints 101
+</span><span style="color:#586e75"></span>  fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Hello, &#34;</span> <span style="color:#719e07">+</span> <span style="color:#2aa198">&#34;world!&#34;</span>)
+  fmt.<span style="color:#268bd2">Println</span>(<span style="color:#cb4b16">true</span> <span style="color:#719e07">&amp;&amp;</span> !(<span style="color:#cb4b16">true</span> <span style="color:#719e07">||</span> <span style="color:#cb4b16">false</span>))
+}
+
+<span style="color:#586e75">// Chapter 2: Types
+</span><span style="color:#586e75">// int8  up to int64
+</span><span style="color:#586e75">// uint8 up to uint64
+</span><span style="color:#586e75"></span>
+<span style="color:#586e75">// byte = uint8
+</span><span style="color:#586e75">// rune = int32
+</span><span style="color:#586e75">// 1 byte = 8 bits
+</span><span style="color:#586e75">// 1 kb = 1024 bytes
+</span><span style="color:#586e75">// 1 mb = 1024 kb
+</span><span style="color:#586e75"></span>
+<span style="color:#586e75">// uint, int and uintptr sizes are machine-dependent (use int)
+</span><span style="color:#586e75">// There are other values such as NaN, +infinity and -infinity
+</span><span style="color:#586e75">// float32 and float64 (use float64)
+</span><span style="color:#586e75">// complex64 and complex128
+</span><span style="color:#586e75"></span>
+<span style="color:#586e75">// Double-quoted strings cannot contain newlines but allow special escape sequences
+</span><span style="color:#586e75">// i.e. \n gets replaced with a real newline.
+</span><span style="color:#586e75">// Backtick strings are allowed
+</span></code></pre></div><p>I am also reading about design patterns in the context of JavaScript and jQuery. There&rsquo;s so much to read and I&rsquo;m so glad I purchased this e-book reader to avoid the glare I&rsquo;ve been getting from my usual screens! Perhaps I should write a gadget review after one week or so?</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/09/writing-calculators/">
+      Writing Calculators (#javascript)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/dynamic-tooltips/">
+      Dynamic Tooltips (#angular)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/intercepting-angular-data-binding/">
+      Intercepting Angular Data Binding (#angular)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

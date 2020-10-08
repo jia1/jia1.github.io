@@ -1,0 +1,46 @@
+[menu]
+  [[menu.item]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+  [[menu.item]]
+    name = "\"Tweets\""
+    url = "/tweets"
+    weight = 2
+  [[menu.item]]
+    name = "About"
+    url = "/about"
+    weight = 3
+
+[params]
+  contentTypesWithDate = ["posts", "tweets"]
+  copyrightOwner = "Jiayee Lim"
+  copyrightYears = ""
+  dateTimeDisplayFormat = "2 Jan 2006 @ 3.04 pm"
+  siteDescription = "My tech learning diary"
+  subtitle = "My learning diary"
+
+[[params.social]]
+  name = "Email"
+  url = "mailto:me@jiayee.net"
+  icon = "icon-mail-alt"
+[[params.social]]
+  name = "Resume"
+  url = "/resume.pdf"
+  icon = "icon-doc-text-inv"
+[[params.social]]
+  name = "Facebook"
+  url = "https://facebook.com/profile.php?id=100001087143682"
+  icon = "icon-facebook-official"
+[[params.social]]
+  name = "GitHub"
+  url = "https://github.com/jia1"
+  icon = "icon-github-circled"
+[[params.social]]
+  name = "LinkedIn"
+  url = "https://linkedin.com/in/jia10"
+  icon = "icon-linkedin-squared"
+[[params.social]]
+  name = "Steam"
+  url = "https://steamcommunity.com/id/jiayee"
+  icon = "icon-steam-squared"

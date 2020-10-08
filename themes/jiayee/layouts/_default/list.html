@@ -1,0 +1,5 @@
+{{ define "main" }}
+<!-- TODO: Make section parameter configurable. -->
+{{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Section" "==" "posts") }}
+{{ partial "article-list.html" . }}
+{{ end }}

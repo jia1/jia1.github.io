@@ -1,0 +1,78 @@
+$dark-turquoise: #195953;
+// $norm-turquoise: #26867C; // Fails WCAG AA
+// $lite-turquoise: #33B3A6; // Fails WCAG AA
+
+$background-color: #F5F5F5;
+$table-background-color: #DBDBDB;
+
+$font-color: #333333;
+$code-font-color: $background-color;
+
+body {
+  background-color: $background-color;
+  color: $font-color;
+  margin-top: 2rem;
+}
+
+a {
+  color: $dark-turquoise !important;
+}
+
+nav {
+  border-bottom: 2px solid $dark-turquoise;
+}
+
+@media(max-width: 768px) {
+  i {
+    font-size: 24px;
+  }
+}
+
+th {
+  background-color: #F1F1F1; // Foundation's 5% darkening of white
+}
+
+tr {
+  background-color: $table-background-color;
+}
+
+pre {
+  margin-bottom: 1em; // Follow Foundation's margin for p
+  padding: 1em;
+  // Use the following paddings if lineNos = true for [markup][markup.highlight]
+  // padding: 1em 0;
+  // padding-right: 1em;
+}
+
+pre > code {
+  background-color: transparent;
+  color: $code-font-color;
+  border: 0;
+  padding: 0;
+}
+
+footer {
+  color: $dark-turquoise;
+  font-weight: bold;
+}
+
+.menu .is-active > a {
+  background-color: transparent;
+  border-bottom: 2px solid $dark-turquoise;
+}
+
+.row {
+  margin-bottom: 2rem;
+}
+
+.nar-row {
+  margin-bottom: 1rem;
+}
+
+.nav-page:hover {
+  border-bottom: 2px solid $dark-turquoise;
+}
+
+.article-content a {
+  text-decoration: underline;
+}

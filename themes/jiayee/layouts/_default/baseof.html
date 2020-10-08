@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{- partial "head.html" . -}}
+  <body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row">
+            {{- partial "header.html" . -}}
+          </section>
+          <section class="row">
+            {{- block "main" . }}
+            {{- end }}
+          </section>
+          <section class="row">
+            {{- partial "footer.html" . -}}
+          </section>
+        </div>
+      </div>
+    </div>
+    {{- partial "scripts.html" . -}}
+  </body>
+</html>

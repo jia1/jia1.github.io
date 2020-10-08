@@ -1,0 +1,18 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ with $related }}
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	{{ range . }}
+	<li>
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }} (#{{ index (last 1 .Params.Tags) 0 }})
+      <!-- {{ printf "#%s" (delimit .Params.Tags ", #") }} -->
+    </a>
+  </li>
+	{{ end }}
+</ul>
+</section>
+{{ end }}

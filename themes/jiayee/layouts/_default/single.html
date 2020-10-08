@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article>
+  <!-- TODO: Find out how to differentiate between list and single view. -->
+  {{ if in .Site.Params.contentTypesWithDate .Type }}
+    <div class="nar-row">
+      {{ partial "article-title.html" . }}
+      {{ partial "article-metadata.html" . }}
+    </div>
+  {{ end }}
+  <section class="row article-content">
+    {{ .Content }}
+  </section>
+  {{ partial "article-related.html" . }}
+</article>
+{{ end }}

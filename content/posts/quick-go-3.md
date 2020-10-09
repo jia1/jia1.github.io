@@ -4,7 +4,7 @@ date: 2020-10-01T21:02:00+08:00
 draft: false
 tags: ["software","go","braindump"]
 ---
-Chapter 5 and 6 were about basic data structures (like array, slice and map) and functions respectively.
+Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
 
 ```go
 package main
@@ -26,7 +26,7 @@ func main() {
     total += value
   }
   // Different from Python's range
-  // Compiler will complain "i declared and not used", so we must rename unused variables to '_'
+  // Compiler will complain "i declared and not used", so we must rename unused variables to '_'.
 
   y := [3]float64{
     1,
@@ -36,7 +36,7 @@ func main() {
 
   // Slice of length 0
   var z []float64
-  // Slice of length 5 but is associated with an array of length 10
+  // Slice of length 5 but associated with an array of length 10
   a := make([]float64, 5, 10)
   b := x[0:5]
   c := x[:5]
@@ -47,11 +47,11 @@ func main() {
   dst := [1]float64{0}
   copy(slice, dst)
   // dst is now [1]
-  // min(len(slice), len(dst)) is copied over
+  // Copy over min(len(slice), len(dst)) elements
 
   var g map[string]int // {[key: string]: int}
   g = make(map[string]int)
-  // Or just g := make(map[string]int) without the variable declaration
+  // Or g := make(map[string]int) without the variable declaration
   g["someKey"] = 0
   // delete(g, "someKey")
   lookupResult, lookupSucceeded := g["someKey"]

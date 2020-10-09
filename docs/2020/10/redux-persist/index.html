@@ -191,8 +191,8 @@
     <span style="color:#719e07">&lt;</span>/Provider&gt;
   );
 };
-</code></pre></div><p><code>initialStore</code> will then be highlighted by the TypeScript type checker because it is of type <code>YourReduxStoreModel</code> and does not contain <code>_persist</code> key and other keys related to <code>redux-persist</code>. This is a <a href="https://github.com/rt2zz/redux-persist/issues/1169">known issue</a>. For a quick fix, I added the missing keys to <code>YourReduxStoreModel</code>.</p>
-<p>Then, if you wish to access <code>persistor</code> in other parts of the codebase without having to pass <code>persistor</code> around, <a href="https://github.com/rt2zz/redux-persist/issues/349">the author recommends</a> accessing the <code>persistor</code> through the config instead, like:</p>
+</code></pre></div><p>The TypeScript type checker will then highlight <code>initialStore</code> because its type is <code>YourReduxStoreModel</code>. It does not contain <code>_persist</code> key and other keys related to <code>redux-persist</code>. This is a <a href="https://github.com/rt2zz/redux-persist/issues/1169">known issue</a>. For a quick fix, I added the missing keys to <code>YourReduxStoreModel</code>.</p>
+<p>To access <code>persistor</code> elsewhere, <a href="https://github.com/rt2zz/redux-persist/issues/349">the author recommends</a> accessing it through the config.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Copied from https://github.com/rt2zz/redux-persist/issues/349
 </span><span style="color:#586e75"></span><span style="color:#268bd2">import</span> { purgeStoredState } from <span style="color:#2aa198">&#39;redux-persist&#39;</span>;
 <span style="color:#268bd2">import</span> { persistConfig } from <span style="color:#2aa198">&#39;relative path to your persistConfig&#39;</span>;

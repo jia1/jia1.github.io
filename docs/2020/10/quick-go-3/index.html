@@ -137,7 +137,7 @@
     </div>
   
   <section class="row article-content">
-    <p>Chapter 5 and 6 were about basic data structures (like array, slice and map) and functions respectively.</p>
+    <p>Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#719e07">package</span> main
 
 <span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
@@ -157,7 +157,7 @@
     total <span style="color:#719e07">+=</span> value
   }
   <span style="color:#586e75">// Different from Python&#39;s range
-</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Compiler will complain &#34;i declared and not used&#34;, so we must rename unused variables to &#39;_&#39;
+</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Compiler will complain &#34;i declared and not used&#34;, so we must rename unused variables to &#39;_&#39;.
 </span><span style="color:#586e75"></span>
   y <span style="color:#719e07">:=</span> [<span style="color:#2aa198">3</span>]<span style="color:#dc322f">float64</span>{
     <span style="color:#2aa198">1</span>,
@@ -167,7 +167,7 @@
 
   <span style="color:#586e75">// Slice of length 0
 </span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> z []<span style="color:#dc322f">float64</span>
-  <span style="color:#586e75">// Slice of length 5 but is associated with an array of length 10
+  <span style="color:#586e75">// Slice of length 5 but associated with an array of length 10
 </span><span style="color:#586e75"></span>  a <span style="color:#719e07">:=</span> <span style="color:#b58900">make</span>([]<span style="color:#dc322f">float64</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">10</span>)
   b <span style="color:#719e07">:=</span> x[<span style="color:#2aa198">0</span>:<span style="color:#2aa198">5</span>]
   c <span style="color:#719e07">:=</span> x[:<span style="color:#2aa198">5</span>]
@@ -178,11 +178,11 @@
 </span><span style="color:#586e75"></span>  dst <span style="color:#719e07">:=</span> [<span style="color:#2aa198">1</span>]<span style="color:#dc322f">float64</span>{<span style="color:#2aa198">0</span>}
   <span style="color:#b58900">copy</span>(slice, dst)
   <span style="color:#586e75">// dst is now [1]
-</span><span style="color:#586e75"></span>  <span style="color:#586e75">// min(len(slice), len(dst)) is copied over
+</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Copy over min(len(slice), len(dst)) elements
 </span><span style="color:#586e75"></span>
   <span style="color:#268bd2">var</span> g <span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span> <span style="color:#586e75">// {[key: string]: int}
 </span><span style="color:#586e75"></span>  g = <span style="color:#b58900">make</span>(<span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span>)
-  <span style="color:#586e75">// Or just g := make(map[string]int) without the variable declaration
+  <span style="color:#586e75">// Or g := make(map[string]int) without the variable declaration
 </span><span style="color:#586e75"></span>  g[<span style="color:#2aa198">&#34;someKey&#34;</span>] = <span style="color:#2aa198">0</span>
   <span style="color:#586e75">// delete(g, &#34;someKey&#34;)
 </span><span style="color:#586e75"></span>  lookupResult, lookupSucceeded <span style="color:#719e07">:=</span> g[<span style="color:#2aa198">&#34;someKey&#34;</span>]

@@ -133,11 +133,11 @@
   
   <section class="row article-content">
     <p>A few days ago, I purchased the <a href="https://jiayee.net"><code>jiayee.net</code></a> domain. Yesterday, I purchased the <a href="https://jiay.ee/blog"><code>jiay.ee</code></a> domain. It was a novel experience for me. I last &ldquo;purchased&rdquo; a domain from Freenom about 3 years ago. Back then, I had the free domain point to my AWS EC2 public IP address (this was for CS3216). This week, my custom domains are pointing towards GitHub pages and Blogger respectively.</p>
-<p>For GitHub pages, I followed a guide which is similar to <a href="https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/">this one by Rich</a>.</p>
+<p>For GitHub pages, I followed a guide which is like <a href="https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/">this one by Rich</a>.</p>
 <ol>
 <li>Get a domain.</li>
-<li>Go to your GitHub pages repository and set the custom domain to the one you just purchased.</li>
-<li>Go to your domain provider&rsquo;s DNS settings (or your DNS manager, such as Cloudflare) and add the following records:</li>
+<li>Go to your GitHub pages repository and set the custom domain to the one you purchased.</li>
+<li>Go to your DNS settings and add the following records:</li>
 </ol>
 <table>
 <thead>
@@ -207,7 +207,7 @@
 </tr>
 </tbody>
 </table>
-<p>Each of the <code>xxxxxxxx</code> is a different value and is provided by Blogger. This record containing <code>xxxxxxxx</code> helps Blogger verify domain ownership. Here&rsquo;s <a href="https://support.google.com/blogger/answer/1233387">Blogger&rsquo;s help page</a>. Refer to <code>Step 2: Connect to your non-Google domain from Blogger</code>.</p>
+<p>Each of the <code>xxxxxxxx</code> is a different value, provided by Blogger. This record containing <code>xxxxxxxx</code> helps Blogger verify domain ownership. Here&rsquo;s <a href="https://support.google.com/blogger/answer/1233387">Blogger&rsquo;s help page</a>. Refer to <code>Step 2: Connect to your non-Google domain from Blogger</code>.</p>
 <p>My next step is to switch to Cloudflare&rsquo;s DNS manager, instead of continuing to manage my domains with the domain providers as the latter&rsquo;s UI are not that ideal (i.e. requiring many clicks just to get to the DNS settings).</p>
 
   </section>

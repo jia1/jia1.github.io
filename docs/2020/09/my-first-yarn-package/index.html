@@ -137,31 +137,31 @@
     </div>
   
   <section class="row article-content">
-    <p>I wrote my first yarn package (kinda for fun) yesterday. It&rsquo;s strange how I&rsquo;ve been consuming packages for the past 2 years but never went to the other side of the table i.e. writing a package. As of now, I haven&rsquo;t published my package but I&rsquo;m omw. So, how did I create a package? It just felt like the usual&hellip; I followed the <a href="https://classic.yarnpkg.com/en/docs/creating-a-package/">yarn docs</a>.</p>
-<p>One difference (compared to my usual activities) was I couldn&rsquo;t do <code>import { ... } from './blah'</code> and <code>export const blah = ...</code>. It&rsquo;s because Babel isn&rsquo;t around to transpile these. At work, webpack was already configured by DevOps and I can do anything that&rsquo;s ES6. Here, I only have myself and it does not make sense to bloat my package with stuff that do not add functionality. And so I stuck with <code>const blah = require('./blah')</code> and <code>module.exports = { blah }</code>.</p>
-<p>Thinking back, I recalled I added <code>prettier</code> into the package since I&rsquo;m a sucker for tidiness. Although <code>prettier</code> does not contribute to the functionality of the package, it contributes to my sanity. I&rsquo;m not sure if I should remove it before release&hellip;? Maybe not! However, I really should change these Git hook dependencies to <code>devDependencies</code>.</p>
+    <p>I wrote my first yarn package (kind of for fun) yesterday. It&rsquo;s strange how I&rsquo;ve been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven&rsquo;t published my package, but I&rsquo;m omw. So, how did I create a package? It just felt like the usual&hellip; I followed the <a href="https://classic.yarnpkg.com/en/docs/creating-a-package/">yarn docs</a>.</p>
+<p>One difference (compared to my usual activities) was I couldn&rsquo;t do <code>import { ... } from './blah'</code> and <code>export const blah = ...</code>. It&rsquo;s because Babel isn&rsquo;t around to transpile these. At work, webpack was already configured by DevOps, and I can do anything that&rsquo;s ES6. Here, I only have myself, and it does not make sense to bloat my package with things that do not add functionality. And so I stuck with <code>const blah = require('./blah')</code> and <code>module.exports = { blah }</code>.</p>
+<p>Thinking back, I recalled I added <code>prettier</code> into the package since I&rsquo;m a sucker for tidiness. Although <code>prettier</code> does not contribute to the functionality, it contributes to my sanity. I&rsquo;m not sure if I should remove it before release&hellip;? At the very least, I should change these Git hook dependencies to <code>devDependencies</code>.</p>
 <p>Below are the steps to use <code>prettier</code> in your project:</p>
 <ul>
-<li><code>yarn add --dev husky lint-staged prettier</code></li>
+<li><code>yarn add --dev husky lint-staged prettier</code>.</li>
 <li>Insert the following configurations into <code>package.json</code>:</li>
 </ul>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#268bd2">&#34;husky&#34;</span>: {
-    <span style="color:#268bd2">&#34;hooks&#34;</span>: {
-      <span style="color:#268bd2">&#34;pre-commit&#34;</span>: <span style="color:#2aa198">&#34;lint-staged&#34;</span>
-    }
-  },
-  <span style="color:#268bd2">&#34;lint-staged&#34;</span>: {
-    <span style="color:#268bd2">&#34;**/*&#34;</span>: <span style="color:#2aa198">&#34;prettier --write --ignore-unknown&#34;</span>
-  }
+ <span style="color:#268bd2">&#34;husky&#34;</span>: {
+ <span style="color:#268bd2">&#34;hooks&#34;</span>: {
+ <span style="color:#268bd2">&#34;pre-commit&#34;</span>: <span style="color:#2aa198">&#34;lint-staged&#34;</span>
+ }
+ },
+ <span style="color:#268bd2">&#34;lint-staged&#34;</span>: {
+ <span style="color:#268bd2">&#34;**/*&#34;</span>: <span style="color:#2aa198">&#34;prettier --write --ignore-unknown&#34;</span>
+ }
 }
 </code></pre></div><p><code>&quot;**/*&quot;</code> refers to the files to run the script (i.e. <code>prettier --write ...</code>) on. If you wish to be more specific, you can have configurations like:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#268bd2">&#34;lint-staged&#34;</span>: {
-    <span style="color:#268bd2">&#34;*.{css,scss,ts,tsx}&#34;</span>: <span style="color:#2aa198">&#34;prettier --write&#34;</span>
-  }
+ <span style="color:#268bd2">&#34;lint-staged&#34;</span>: {
+ <span style="color:#268bd2">&#34;*.{css,scss,ts,tsx}&#34;</span>: <span style="color:#2aa198">&#34;prettier --write&#34;</span>
+ }
 }
-</code></pre></div><p>I got to learn about <code>prettier</code> from the GovTech FormSG team. I liked this package so much, I introduced it into my projects at Indeed. Bye bye <code>nit</code> code review comments!</p>
+</code></pre></div><p>I got to learn about <code>prettier</code> from the GovTech FormSG team. I liked this package so much I introduced it into my projects at Indeed. Bye-bye <code>nit</code> code review comments!</p>
 
   </section>
   

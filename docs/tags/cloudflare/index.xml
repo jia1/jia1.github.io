@@ -17,8 +17,8 @@
       <pubDate>Tue, 15 Sep 2020 21:31:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/cloudflare-workers/</guid>
-      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;lsquo;n&amp;rsquo; dirty way for me to do URL forwarding from various paths of jiay.ee without having to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
-My worker was named &amp;quot;vanity&amp;quot; for obvious reasons and it sits at https://www.</description>
+      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;lsquo;n&amp;rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
+My worker&amp;rsquo;s name was &amp;quot;vanity&amp;quot; for obvious reasons and it sits at https://www.</description>
     </item>
     
     <item>
@@ -27,7 +27,8 @@ My worker was named &amp;quot;vanity&amp;quot; for obvious reasons and it sits a
       <pubDate>Sun, 13 Sep 2020 11:34:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/adding-my-sites-to-cloudflare/</guid>
-      <description>I added my domains to Cloudflare. Cloudflare offers many cool features which my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see web traffic analytics, set up DNSSEC, configure network transport options and/or optimisations, run speed tests on my site, configure caching, run JavaScript workers and even restrict image hotlinking. This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.</description>
+      <description>I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see features such as:
+ Web traffic analytics Set up DNSSEC Configure network transport options and/or optimisations Run speed tests on my site Configure caching Run JavaScript workers Restrict image hotlinking  This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.</description>
     </item>
     
   </channel>

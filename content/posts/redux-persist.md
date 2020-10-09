@@ -57,9 +57,9 @@ const App = () => {
 };
 ```
 
-`initialStore` will then be highlighted by the TypeScript type checker because it is of type `YourReduxStoreModel` and does not contain `_persist` key and other keys related to `redux-persist`. This is a [known issue](https://github.com/rt2zz/redux-persist/issues/1169). For a quick fix, I added the missing keys to `YourReduxStoreModel`.
+The TypeScript type checker will then highlight `initialStore` because its type is `YourReduxStoreModel`. It does not contain `_persist` key and other keys related to `redux-persist`. This is a [known issue](https://github.com/rt2zz/redux-persist/issues/1169). For a quick fix, I added the missing keys to `YourReduxStoreModel`.
 
-Then, if you wish to access `persistor` in other parts of the codebase without having to pass `persistor` around, [the author recommends](https://github.com/rt2zz/redux-persist/issues/349) accessing the `persistor` through the config instead, like:
+To access `persistor` elsewhere, [the author recommends](https://github.com/rt2zz/redux-persist/issues/349) accessing it through the config.
 
 ```typescript
 // Copied from https://github.com/rt2zz/redux-persist/issues/349

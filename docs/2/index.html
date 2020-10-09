@@ -143,7 +143,7 @@
 
   </div>
   <section class="nar-row article-summary">
-    It was a very busy weekend for me. Last Saturday, I went out to catch up with my friends and I went to shop for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. In addition to my HumbleBundle books, I borrowed some books from NLB via OverDrive.
+    It was a busy weekend for me. Last Saturday, I went out to catch up with my friends, and I went shopping for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport, so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. Besides my HumbleBundle books, I borrowed some books from NLB via OverDrive.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/quick-go-1/">Continue reading "Quick Go 1"</a>
@@ -189,9 +189,9 @@
 
   </div>
   <section class="nar-row article-summary">
-    My friends needed an interest calculator. For the simple interest calculator, the parameters are the principal (P), annual interest rate (r), number of months (t) and an optional parameter to represent the periodic (monthly or yearly) top-up amount in addition to the principal (the initial top-up).
-Here&rsquo;s v1 of my simple interest calculator:
-/** * Calculates simple interest. * * Uses the formula A = P(1 + rt). * * @param {Object} param Object containing parameters.
+    My friends needed an interest calculator. For the simple interest calculator, the parameters are:
+ The principal (P), Annual interest rate (r), Number of months (t), and An optional parameter to represent a periodic top-up amount.  Here&rsquo;s v1 of my simple interest calculator:
+/** * Calculates simple interest. * * Uses the formula A = P(1 + rt). * * @param {Object} param Object containing parameters. * @param {Number} param.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/writing-calculators/">Continue reading "Writing Calculators"</a>
@@ -247,7 +247,9 @@ Here&rsquo;s v1 of my simple interest calculator:
 
   </div>
   <section class="nar-row article-summary">
-    I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip is an example on how the textarea field below the switch can be populated, like &ldquo;e.g. example input here&rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &ldquo;You need to do X before you can populate this field&rdquo;.
+    I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
+At first, the tooltip looked like:
+&lt;i class=&#34;...&#34; uib-tooltip=&#34;Here&#39;s the one and only static tooltip!&#34; tooltip-trigger=&#34;&#39;click mouseenter&#39;&#34; &gt;&lt;/i&gt; uib-tooltip seems to come from UI Bootstrap.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/dynamic-tooltips/">Continue reading "Dynamic Tooltips"</a>
@@ -303,9 +305,9 @@ Here&rsquo;s v1 of my simple interest calculator:
 
   </div>
   <section class="nar-row article-summary">
-    I have two form switches. Let&rsquo;s call them A and B. I was tasked to program them such that:
- When A is off, B is disabled and off. When A is on, B is enabled but off.  We can safely ignore backend logic because I programmed it such that if A is off, B will be ignored.
-So, how did I solve this? I intercepted the data binding with a directive.
+    I have two form switches. Let&rsquo;s call them A and B. I had to program them such that:
+ When A is off, disable and switch B off. When A is on, disable and switch B off.  We can ignore backend logic because I programmed it such that if A is off, ignore B.
+So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/intercepting-angular-data-binding/">Continue reading "Intercepting Angular Data Binding"</a>
@@ -361,8 +363,8 @@ So, how did I solve this? I intercepted the data binding with a directive.
 
   </div>
   <section class="nar-row article-summary">
-    I managed to catch one of NUS Hackers&rsquo; workshops, &ldquo;Hacker Tools: Data Wrangling&rdquo; by Julius. I got to learn many new things since I don&rsquo;t use CLI for text processing. Julius&rsquo; slides can be found in his GitHub repo.
-Below is a very brief and dry summary of what I think are more important to me. If I &ldquo;miss&rdquo; something out, it&rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.
+    I managed to catch one of the NUS Hackers&rsquo; workshops, &ldquo;Hacker Tools: Data Wrangling&rdquo; by Julius. I got to learn many new things since I don&rsquo;t use CLI for text processing. Julius&rsquo; slides are in his GitHub repo.
+Below is a very brief and dry summary of what is more important to me. If I &ldquo;miss&rdquo; something out, it&rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/data-wrangling/">Continue reading "Data Wrangling"</a>

@@ -17,7 +17,7 @@
       <pubDate>Sun, 20 Sep 2020 16:26:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/style-fixes-1/</guid>
-      <description>I realised there were some unexpected styles for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; in this site due to Foundation&amp;rsquo;s default styles. The inline code style was fine but the same style was applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the &amp;lt;code&amp;gt; elements and found that Foundation was the one who has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store (see official docs for Syntax Highlighting).</description>
+      <description>I discovered there were some unexpected styles for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; in this site. This is due to Foundation&amp;rsquo;s default styles. The inline code style was fine, but the same style applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;), and that was not fine. There was also insufficient margin and padding for the code blocks. I inspected the &amp;lt;code&amp;gt; elements. I found out that Foundation was the culprit. It has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store.</description>
     </item>
     
     <item>
@@ -26,8 +26,8 @@
       <pubDate>Sat, 19 Sep 2020 12:20:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/new-theme/</guid>
-      <description>Hello to my new theme! Yesterday was Indeed&amp;rsquo;s &amp;ldquo;You Day&amp;rdquo; and I spent the day redesigning this site. I am extremely pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to take these things into consideration:
- Little clutter Consistent margin between sections (2rem between sections and 1rem between post metadata and content) Just 3 font sizes (Foundation&amp;rsquo;s h1, h3 and h5) Just 3 colours (background colour: #F5F5F5, font colour: #333333 and dark turquoise: #26867C) Reduction of eye strain with lower contrast of colours Colour-blind friendly  Through this experience, I gained more exposure to Hugo and Foundation.</description>
+      <description>Hello to my new theme! Indeed&amp;rsquo;s &amp;ldquo;You Day&amp;rdquo; was yesterday, and I spent the day redesigning this site. I am very pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to consider these things:
+ Little clutter Consistent margin between sections. The margin was 2rem between sections and 1rem between post metadata and content. Only 3 font sizes (Foundation&amp;rsquo;s h1, h3 and h5) Only 3 colours (background colour: #F5F5F5, font colour: #333333 and dark turquoise: #26867C) Reduction of eye strain with lower contrast of colours Colour-blind friendly  Through this experience, I gained more exposure to Hugo and Foundation.</description>
     </item>
     
   </channel>

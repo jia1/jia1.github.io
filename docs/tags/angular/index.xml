@@ -26,7 +26,9 @@
       <pubDate>Fri, 25 Sep 2020 14:55:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
-      <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip is an example on how the textarea field below the switch can be populated, like &amp;ldquo;e.g. example input here&amp;rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &amp;ldquo;You need to do X before you can populate this field&amp;rdquo;.</description>
+      <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
+At first, the tooltip looked like:
+&amp;lt;i class=&amp;#34;...&amp;#34; uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34; tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
     </item>
     
     <item>
@@ -35,9 +37,9 @@
       <pubDate>Wed, 23 Sep 2020 21:40:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
-      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I was tasked to program them such that:
- When A is off, B is disabled and off. When A is on, B is enabled but off.  We can safely ignore backend logic because I programmed it such that if A is off, B will be ignored.
-So, how did I solve this? I intercepted the data binding with a directive.</description>
+      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
+ When A is off, disable and switch B off. When A is on, disable and switch B off.  We can ignore backend logic because I programmed it such that if A is off, ignore B.
+So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!</description>
     </item>
     
     <item>
@@ -57,8 +59,8 @@ So, how did I solve this? I intercepted the data binding with a directive.</desc
       <pubDate>Mon, 14 Sep 2020 21:29:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
-      <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I was focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the the following error in the JavaScript console:
-Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required I asked my teammate if he has seen this.</description>
+      <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
+Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required My Google-fu was lacking.</description>
     </item>
     
   </channel>

@@ -4,7 +4,7 @@ date: 2020-09-30T12:14:00+08:00
 draft: false
 tags: ["software","go","braindump"]
 ---
-Chapter 3 and 4 were about variables (`var`, `const` and so on) and control structures (`for`, `if` and so on) respectively.
+Chapter 3 and 4 were about variables (`var`, `const` and so on) and control structures (`for`, `if` and so on).
 
 ```go
 package main

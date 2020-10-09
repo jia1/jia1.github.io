@@ -265,7 +265,9 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
 
   </div>
   <section class="nar-row article-summary">
-    I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip is an example on how the textarea field below the switch can be populated, like &ldquo;e.g. example input here&rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &ldquo;You need to do X before you can populate this field&rdquo;.
+    I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
+At first, the tooltip looked like:
+&lt;i class=&#34;...&#34; uib-tooltip=&#34;Here&#39;s the one and only static tooltip!&#34; tooltip-trigger=&#34;&#39;click mouseenter&#39;&#34; &gt;&lt;/i&gt; uib-tooltip seems to come from UI Bootstrap.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/dynamic-tooltips/">Continue reading "Dynamic Tooltips"</a>
@@ -321,9 +323,9 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
 
   </div>
   <section class="nar-row article-summary">
-    I have two form switches. Let&rsquo;s call them A and B. I was tasked to program them such that:
- When A is off, B is disabled and off. When A is on, B is enabled but off.  We can safely ignore backend logic because I programmed it such that if A is off, B will be ignored.
-So, how did I solve this? I intercepted the data binding with a directive.
+    I have two form switches. Let&rsquo;s call them A and B. I had to program them such that:
+ When A is off, disable and switch B off. When A is on, disable and switch B off.  We can ignore backend logic because I programmed it such that if A is off, ignore B.
+So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/intercepting-angular-data-binding/">Continue reading "Intercepting Angular Data Binding"</a>

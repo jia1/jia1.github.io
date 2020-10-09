@@ -60,7 +60,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       <guid>https://jiayee.net/tweets/06-oct-2020-qna/</guid>
       <description>Do you have any new friends?
- In a few minutes, if all goes well, perhaps! I&amp;rsquo;m joining my office&amp;rsquo;s &amp;ldquo;Random Lunch Connect&amp;rdquo; today and on Friday.</description>
+ In a few minutes, if all goes well, yes! I&amp;rsquo;m joining my office&amp;rsquo;s &amp;ldquo;Random Lunch Connect&amp;rdquo; today and on Friday.</description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       <pubDate>Sun, 04 Oct 2020 22:32:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/calculator-v2/</guid>
-      <description>I made some changes to my compound interest calculator after reading up on &amp;ldquo;future value&amp;rdquo;. My calculator will allow users to specify regular deposits so that they can see for themselves the importance of every dollar added to their monthly or yearly savings and/or financial instruments.
+      <description>I made some changes to my compound interest calculator after reading up on &amp;ldquo;future value&amp;rdquo;. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
 import nerdamer from &amp;#39;nerdamer/nerdamer.core&amp;#39;; import Algebra from &amp;#39;nerdamer/Algebra&amp;#39;; import Calculus from &amp;#39;nerdamer/Calculus&amp;#39;; import Solve from &amp;#39;nerdamer/Solve&amp;#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&amp;gt; { const totalAmount = solveForOneUnknownVariable( &amp;#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&amp;#39;, { p: principal.</description>
     </item>
     
@@ -128,8 +128,8 @@ import nerdamer from &amp;#39;nerdamer/nerdamer.core&amp;#39;; import Algebra fr
       <pubDate>Thu, 01 Oct 2020 21:02:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/quick-go-3/</guid>
-      <description>Chapter 5 and 6 were about basic data structures (like array, slice and map) and functions respectively.
-package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, slices and maps  var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int  // i.e. (mismatched types float64 and int)  // Should do a / float64(b)  var total float64 = 0 for i, value := range x { total += value } // Different from Python&amp;#39;s range  // Compiler will complain &amp;#34;i declared and not used&amp;#34;, so we must rename unused variables to &amp;#39;_&amp;#39;  y := [3]float64{ 1, 2, 3, } // Slice of length 0  var z []float64 // Slice of length 5 but is associated with an array of length 10  a := make([]float64, 5, 10) b := x[0:5] c := x[:5] d := x[0:] e := x[:] slice := append(y, 8, 9) // [1, 2, 3, 8, 9]  dst := [1]float64{0} copy(slice, dst) // dst is now [1]  // min(len(slice), len(dst)) is copied over  var g map[string]int // {[key: string]: int}  g = make(map[string]int) // Or just g := make(map[string]int) without the variable declaration  g[&amp;#34;someKey&amp;#34;] = 0 // delete(g, &amp;#34;someKey&amp;#34;)  lookupResult, lookupSucceeded := g[&amp;#34;someKey&amp;#34;] if result, ok := g[&amp;#34;someKey&amp;#34;]; ok { fmt.</description>
+      <description>Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
+package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, slices and maps  var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int  // i.e. (mismatched types float64 and int)  // Should do a / float64(b)  var total float64 = 0 for i, value := range x { total += value } // Different from Python&amp;#39;s range  // Compiler will complain &amp;#34;i declared and not used&amp;#34;, so we must rename unused variables to &amp;#39;_&amp;#39;.</description>
     </item>
     
     <item>
@@ -148,7 +148,7 @@ package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, sl
       <pubDate>Wed, 30 Sep 2020 12:14:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/quick-go-2/</guid>
-      <description>Chapter 3 and 4 were about variables (var, const and so on) and control structures (for, if and so on) respectively.
+      <description>Chapter 3 and 4 were about variables (var, const and so on) and control structures (for, if and so on).
 package main import &amp;#34;fmt&amp;#34; b := &amp;#34;Hello, world!&amp;#34; // Block scope  func main() { // Chapter 3: Variables  var x string = &amp;#34;Hello, world!&amp;#34; var y string y = &amp;#34;Hello, world!&amp;#34; // x = x + y  // x += y  z := &amp;#34;Hello, world!&amp;#34; var a = &amp;#34;Hello, world!</description>
     </item>
     
@@ -188,7 +188,7 @@ Start small. Materialise the plan for your adjustments (e.g. make a planning she
       <pubDate>Mon, 28 Sep 2020 22:43:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/quick-go-1/</guid>
-      <description>It was a very busy weekend for me. Last Saturday, I went out to catch up with my friends and I went to shop for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. In addition to my HumbleBundle books, I borrowed some books from NLB via OverDrive.</description>
+      <description>It was a busy weekend for me. Last Saturday, I went out to catch up with my friends, and I went shopping for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport, so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. Besides my HumbleBundle books, I borrowed some books from NLB via OverDrive.</description>
     </item>
     
     <item>
@@ -198,7 +198,7 @@ Start small. Materialise the plan for your adjustments (e.g. make a planning she
       
       <guid>https://jiayee.net/tweets/28-sep-2020-qna/</guid>
       <description>How hungry are you right now?
- I&amp;rsquo;m like 55% full now. Had a cup of water and a red apple when I woke up. Then, I exercised, showered, drank a cup of water and had a green apple. Just a moment ago, I ate my in-laws&amp;rsquo; peanut pancakes from yesterday and I drank another cup of water. Should get more water plus a cup of milk. I&amp;rsquo;m all set for the day!</description>
+ I&amp;rsquo;m like 55% full now. Had a cup of water and a red apple when I woke up. Then, I exercised, showered, drank a cup of water and had a green apple. And a moment ago, I ate my in-laws&amp;rsquo; peanut pancakes from yesterday, and I drank another cup of water. Should get more water plus a cup of milk. I&amp;rsquo;m all set for the day!</description>
     </item>
     
     <item>
@@ -208,7 +208,7 @@ Start small. Materialise the plan for your adjustments (e.g. make a planning she
       
       <guid>https://jiayee.net/tweets/27-sep-2020-qna/</guid>
       <description>Do you handle rejection well?
- Usually, no, and that&amp;rsquo;s why I feel so miserable so easily. I wish I can handle rejection well.</description>
+ Usually, no, and that&amp;rsquo;s why it&amp;rsquo;s so easy for me to get so miserable. I wish I can handle rejection well.</description>
     </item>
     
     <item>
@@ -227,9 +227,9 @@ Start small. Materialise the plan for your adjustments (e.g. make a planning she
       <pubDate>Fri, 25 Sep 2020 21:23:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/writing-calculators/</guid>
-      <description>My friends needed an interest calculator. For the simple interest calculator, the parameters are the principal (P), annual interest rate (r), number of months (t) and an optional parameter to represent the periodic (monthly or yearly) top-up amount in addition to the principal (the initial top-up).
-Here&amp;rsquo;s v1 of my simple interest calculator:
-/** * Calculates simple interest. * * Uses the formula A = P(1 + rt). * * @param {Object} param Object containing parameters.</description>
+      <description>My friends needed an interest calculator. For the simple interest calculator, the parameters are:
+ The principal (P), Annual interest rate (r), Number of months (t), and An optional parameter to represent a periodic top-up amount.  Here&amp;rsquo;s v1 of my simple interest calculator:
+/** * Calculates simple interest. * * Uses the formula A = P(1 + rt). * * @param {Object} param Object containing parameters. * @param {Number} param.</description>
     </item>
     
     <item>
@@ -238,7 +238,9 @@ Here&amp;rsquo;s v1 of my simple interest calculator:
       <pubDate>Fri, 25 Sep 2020 14:55:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
-      <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip is an example on how the textarea field below the switch can be populated, like &amp;ldquo;e.g. example input here&amp;rdquo;. The second line reminds a user that certain prerequisites need to be fulfilled before the textarea field appears and is ready to receive input (hidden otherwise), like &amp;ldquo;You need to do X before you can populate this field&amp;rdquo;.</description>
+      <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
+At first, the tooltip looked like:
+&amp;lt;i class=&amp;#34;...&amp;#34; uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34; tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
     </item>
     
     <item>
@@ -259,7 +261,7 @@ I&amp;rsquo;m doing things which I have the necessary skills for but lack experi
       
       <guid>https://jiayee.net/tweets/24-sep-2020-qna/</guid>
       <description>When was the last time you went dancing?
- If you consider random movement of limbs as dancing, then it&amp;rsquo;s during the Indeed Holiday Party last year.</description>
+ If you consider the random movement of limbs as dancing, then it would be during the Indeed Holiday Party last year.</description>
     </item>
     
     <item>
@@ -268,9 +270,9 @@ I&amp;rsquo;m doing things which I have the necessary skills for but lack experi
       <pubDate>Wed, 23 Sep 2020 21:40:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
-      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I was tasked to program them such that:
- When A is off, B is disabled and off. When A is on, B is enabled but off.  We can safely ignore backend logic because I programmed it such that if A is off, B will be ignored.
-So, how did I solve this? I intercepted the data binding with a directive.</description>
+      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
+ When A is off, disable and switch B off. When A is on, disable and switch B off.  We can ignore backend logic because I programmed it such that if A is off, ignore B.
+So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!</description>
     </item>
     
     <item>
@@ -289,8 +291,8 @@ So, how did I solve this? I intercepted the data binding with a directive.</desc
       <pubDate>Tue, 22 Sep 2020 21:14:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/data-wrangling/</guid>
-      <description>I managed to catch one of NUS Hackers&amp;rsquo; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&amp;rsquo; slides can be found in his GitHub repo.
-Below is a very brief and dry summary of what I think are more important to me. If I &amp;ldquo;miss&amp;rdquo; something out, it&amp;rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.</description>
+      <description>I managed to catch one of the NUS Hackers&amp;rsquo; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&amp;rsquo; slides are in his GitHub repo.
+Below is a very brief and dry summary of what is more important to me. If I &amp;ldquo;miss&amp;rdquo; something out, it&amp;rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.</description>
     </item>
     
     <item>
@@ -342,7 +344,7 @@ Below is a very brief and dry summary of what I think are more important to me. 
       <pubDate>Sun, 20 Sep 2020 16:26:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/style-fixes-1/</guid>
-      <description>I realised there were some unexpected styles for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; in this site due to Foundation&amp;rsquo;s default styles. The inline code style was fine but the same style was applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;) and that was not fine. There was also insufficient margin and padding for the code blocks. I went to inspect the &amp;lt;code&amp;gt; elements and found that Foundation was the one who has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store (see official docs for Syntax Highlighting).</description>
+      <description>I discovered there were some unexpected styles for &amp;lt;code&amp;gt; and &amp;lt;pre&amp;gt; in this site. This is due to Foundation&amp;rsquo;s default styles. The inline code style was fine, but the same style applied to code blocks (i.e. &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;...&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;), and that was not fine. There was also insufficient margin and padding for the code blocks. I inspected the &amp;lt;code&amp;gt; elements. I found out that Foundation was the culprit. It has been styling the &amp;lt;code&amp;gt; elements on top of what Hugo has in store.</description>
     </item>
     
     <item>
@@ -362,8 +364,8 @@ A summary of the improvements I made:
       <pubDate>Sat, 19 Sep 2020 12:20:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/new-theme/</guid>
-      <description>Hello to my new theme! Yesterday was Indeed&amp;rsquo;s &amp;ldquo;You Day&amp;rdquo; and I spent the day redesigning this site. I am extremely pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to take these things into consideration:
- Little clutter Consistent margin between sections (2rem between sections and 1rem between post metadata and content) Just 3 font sizes (Foundation&amp;rsquo;s h1, h3 and h5) Just 3 colours (background colour: #F5F5F5, font colour: #333333 and dark turquoise: #26867C) Reduction of eye strain with lower contrast of colours Colour-blind friendly  Through this experience, I gained more exposure to Hugo and Foundation.</description>
+      <description>Hello to my new theme! Indeed&amp;rsquo;s &amp;ldquo;You Day&amp;rdquo; was yesterday, and I spent the day redesigning this site. I am very pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to consider these things:
+ Little clutter Consistent margin between sections. The margin was 2rem between sections and 1rem between post metadata and content. Only 3 font sizes (Foundation&amp;rsquo;s h1, h3 and h5) Only 3 colours (background colour: #F5F5F5, font colour: #333333 and dark turquoise: #26867C) Reduction of eye strain with lower contrast of colours Colour-blind friendly  Through this experience, I gained more exposure to Hugo and Foundation.</description>
     </item>
     
     <item>
@@ -383,7 +385,7 @@ A summary of the improvements I made:
       
       <guid>https://jiayee.net/tweets/18-sep-2020-qna/</guid>
       <description>A decision you made today?
- I decided to spend my Indeed &amp;ldquo;You&amp;rdquo; day today creating a theme for this website! Yay~</description>
+ I decided to spend my Indeed &amp;ldquo;You&amp;rdquo; day today to create a theme for this website! Yay~</description>
     </item>
     
     <item>
@@ -431,8 +433,8 @@ Jiayee is a software engineer at Indeed. She graduated from NUS Computer Science
       <pubDate>Tue, 15 Sep 2020 21:31:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/cloudflare-workers/</guid>
-      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;lsquo;n&amp;rsquo; dirty way for me to do URL forwarding from various paths of jiay.ee without having to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
-My worker was named &amp;quot;vanity&amp;quot; for obvious reasons and it sits at https://www.</description>
+      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;lsquo;n&amp;rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
+My worker&amp;rsquo;s name was &amp;quot;vanity&amp;quot; for obvious reasons and it sits at https://www.</description>
     </item>
     
     <item>
@@ -443,7 +445,7 @@ My worker was named &amp;quot;vanity&amp;quot; for obvious reasons and it sits a
       <guid>https://jiayee.net/tweets/15-sep-2020-qna/</guid>
       <description>Who are the most important people in your life?
  Family and friends (not just any friend and certainly not acquaintances).
-A real friend doesn&amp;rsquo;t have to be one whom I interact with every living moment but he/she has to be someone I click with and someone who is/was there for me. Now, if only they thought the same of me.</description>
+A real friend doesn&amp;rsquo;t have to be one whom I interact with every living moment. But he/she has to be someone I click with and someone who is/was there for me. Now, if only they thought the same of me.</description>
     </item>
     
     <item>
@@ -452,8 +454,8 @@ A real friend doesn&amp;rsquo;t have to be one whom I interact with every living
       <pubDate>Mon, 14 Sep 2020 21:29:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
-      <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I was focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the the following error in the JavaScript console:
-Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required I asked my teammate if he has seen this.</description>
+      <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
+Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required My Google-fu was lacking.</description>
     </item>
     
     <item>
@@ -481,7 +483,7 @@ Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to:
       <pubDate>Sun, 13 Sep 2020 21:56:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/jest-for-the-first-time/</guid>
-      <description>To test a feature which I have been building for GovTech&amp;rsquo;s FormSG, I had to mock a function in the superclass of an instance which is generated by a factory method call. I once considered stripping away the unnecessary barriers between the mock and the test, but I didn&amp;rsquo;t want to refactor a codebase which I am not too familiar with.
+      <description>I needed to test a feature which I have been building for GovTech&amp;rsquo;s FormSG. To test it, I had to mock a function in the superclass of an instance generated by a factory method call. I once considered stripping away the barriers between the mock and the test. But, I didn&amp;rsquo;t want to refactor a codebase which I am not too familiar with.
 Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock and the test:</description>
     </item>
     
@@ -491,7 +493,8 @@ Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock 
       <pubDate>Sun, 13 Sep 2020 11:34:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/adding-my-sites-to-cloudflare/</guid>
-      <description>I added my domains to Cloudflare. Cloudflare offers many cool features which my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see web traffic analytics, set up DNSSEC, configure network transport options and/or optimisations, run speed tests on my site, configure caching, run JavaScript workers and even restrict image hotlinking. This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.</description>
+      <description>I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see features such as:
+ Web traffic analytics Set up DNSSEC Configure network transport options and/or optimisations Run speed tests on my site Configure caching Run JavaScript workers Restrict image hotlinking  This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.</description>
     </item>
     
     <item>
@@ -521,7 +524,7 @@ Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock 
       
       <guid>https://jiayee.net/2020/09/custom-domains/</guid>
       <description>A few days ago, I purchased the jiayee.net domain. Yesterday, I purchased the jiay.ee domain. It was a novel experience for me. I last &amp;ldquo;purchased&amp;rdquo; a domain from Freenom about 3 years ago. Back then, I had the free domain point to my AWS EC2 public IP address (this was for CS3216). This week, my custom domains are pointing towards GitHub pages and Blogger respectively.
-For GitHub pages, I followed a guide which is similar to this one by Rich.</description>
+For GitHub pages, I followed a guide which is like this one by Rich.</description>
     </item>
     
     <item>
@@ -540,7 +543,7 @@ For GitHub pages, I followed a guide which is similar to this one by Rich.</desc
       <pubDate>Thu, 10 Sep 2020 23:59:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/my-first-yarn-package/</guid>
-      <description>I wrote my first yarn package (kinda for fun) yesterday. It&amp;rsquo;s strange how I&amp;rsquo;ve been consuming packages for the past 2 years but never went to the other side of the table i.e. writing a package. As of now, I haven&amp;rsquo;t published my package but I&amp;rsquo;m omw. So, how did I create a package? It just felt like the usual&amp;hellip; I followed the yarn docs.
+      <description>I wrote my first yarn package (kind of for fun) yesterday. It&amp;rsquo;s strange how I&amp;rsquo;ve been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven&amp;rsquo;t published my package, but I&amp;rsquo;m omw. So, how did I create a package? It just felt like the usual&amp;hellip; I followed the yarn docs.
 One difference (compared to my usual activities) was I couldn&amp;rsquo;t do import { .</description>
     </item>
     

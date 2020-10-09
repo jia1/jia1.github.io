@@ -17,8 +17,8 @@
       <pubDate>Thu, 01 Oct 2020 21:02:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/quick-go-3/</guid>
-      <description>Chapter 5 and 6 were about basic data structures (like array, slice and map) and functions respectively.
-package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, slices and maps  var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int  // i.e. (mismatched types float64 and int)  // Should do a / float64(b)  var total float64 = 0 for i, value := range x { total += value } // Different from Python&amp;#39;s range  // Compiler will complain &amp;#34;i declared and not used&amp;#34;, so we must rename unused variables to &amp;#39;_&amp;#39;  y := [3]float64{ 1, 2, 3, } // Slice of length 0  var z []float64 // Slice of length 5 but is associated with an array of length 10  a := make([]float64, 5, 10) b := x[0:5] c := x[:5] d := x[0:] e := x[:] slice := append(y, 8, 9) // [1, 2, 3, 8, 9]  dst := [1]float64{0} copy(slice, dst) // dst is now [1]  // min(len(slice), len(dst)) is copied over  var g map[string]int // {[key: string]: int}  g = make(map[string]int) // Or just g := make(map[string]int) without the variable declaration  g[&amp;#34;someKey&amp;#34;] = 0 // delete(g, &amp;#34;someKey&amp;#34;)  lookupResult, lookupSucceeded := g[&amp;#34;someKey&amp;#34;] if result, ok := g[&amp;#34;someKey&amp;#34;]; ok { fmt.</description>
+      <description>Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
+package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, slices and maps  var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int  // i.e. (mismatched types float64 and int)  // Should do a / float64(b)  var total float64 = 0 for i, value := range x { total += value } // Different from Python&amp;#39;s range  // Compiler will complain &amp;#34;i declared and not used&amp;#34;, so we must rename unused variables to &amp;#39;_&amp;#39;.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@ package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, sl
       <pubDate>Wed, 30 Sep 2020 12:14:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/quick-go-2/</guid>
-      <description>Chapter 3 and 4 were about variables (var, const and so on) and control structures (for, if and so on) respectively.
+      <description>Chapter 3 and 4 were about variables (var, const and so on) and control structures (for, if and so on).
 package main import &amp;#34;fmt&amp;#34; b := &amp;#34;Hello, world!&amp;#34; // Block scope  func main() { // Chapter 3: Variables  var x string = &amp;#34;Hello, world!&amp;#34; var y string y = &amp;#34;Hello, world!&amp;#34; // x = x + y  // x += y  z := &amp;#34;Hello, world!&amp;#34; var a = &amp;#34;Hello, world!</description>
     </item>
     
@@ -37,7 +37,7 @@ package main import &amp;#34;fmt&amp;#34; b := &amp;#34;Hello, world!&amp;#34; /
       <pubDate>Mon, 28 Sep 2020 22:43:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/quick-go-1/</guid>
-      <description>It was a very busy weekend for me. Last Saturday, I went out to catch up with my friends and I went to shop for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. In addition to my HumbleBundle books, I borrowed some books from NLB via OverDrive.</description>
+      <description>It was a busy weekend for me. Last Saturday, I went out to catch up with my friends, and I went shopping for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport, so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. Besides my HumbleBundle books, I borrowed some books from NLB via OverDrive.</description>
     </item>
     
     <item>

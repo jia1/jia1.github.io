@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>english on Jiayee.net</title>
+    <link>https://jiayee.net/tags/english/</link>
+    <description>Recent content in english on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 09 Oct 2020 14:27:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fixed my writing</title>
+      <link>https://jiayee.net/tweets/fixed-my-writing/</link>
+      <pubDate>Fri, 09 Oct 2020 14:27:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/fixed-my-writing/</guid>
+      <description>Grammarly and Hemingway were a huge help! Thank you!</description>
+    </item>
+    
+  </channel>
+</rss>

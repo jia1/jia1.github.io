@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>finance on Jiayee.net</title>
+    <link>https://jiayee.net/tags/finance/</link>
+    <description>Recent content in finance on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 11 Oct 2020 22:59:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/finance/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Seedly</title>
+      <link>https://jiayee.net/tweets/seedly/</link>
+      <pubDate>Sun, 11 Oct 2020 22:59:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/seedly/</guid>
+      <description>Spent my Sunday evening giving back to the Seedly community.</description>
+    </item>
+    
+  </channel>
+</rss>

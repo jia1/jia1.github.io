@@ -6,10 +6,20 @@
     <description>Recent content in Tweets on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 09 Oct 2020 14:27:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Oct 2020 11:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tweets/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Today&#39;s Q&amp;A for Jiayee (12 Oct 2020)</title>
+      <link>https://jiayee.net/tweets/12-oct-2020-qna/</link>
+      <pubDate>Mon, 12 Oct 2020 11:11:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/12-oct-2020-qna/</guid>
+      <description>One word for today.
+ Fresh.</description>
+    </item>
     
     <item>
       <title>Fixed my writing</title>

@@ -1,7 +1,7 @@
 ---
 title: "Auto-configuring controllers and repositories"
 date: 2020-09-08T21:01:00+08:00
-draft: true
+draft: false
 tags: ["software","library","java","spring"]
 ---
 I auto-configured Spring Boot REST controllers by adding their names to the `spring.factories` file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).

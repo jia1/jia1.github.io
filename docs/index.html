@@ -215,9 +215,9 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
     <div class="row">
       <article>
   
-  <a href="/2020/10/polling/">
+  <a href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">
     <h3 class="article-title">
-  Polling
+  Challenges of a multi-step flow with permalinks
 </h3>
 
   </a>
@@ -228,7 +228,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       
       
-      <time datetime="2020-10-05">5 Oct 2020 @ 11.00 pm</time>
+      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -249,8 +249,8 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
         </a>
       
         
-        <a href="https://jiayee.net/tags/angular">
-          #angular
+        <a href="https://jiayee.net/tags/react">
+          #react
         </a>
       
     </div>
@@ -259,10 +259,11 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
 
   </div>
   <section class="nar-row article-summary">
-    There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.
+    I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&rsquo;s post for the context. The edge cases are:
+ Forms which need data from the preceding forms Dynamic form links  I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/polling/">Continue reading "Polling"</a>
+    <a class="article-read-more" href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">Continue reading "Challenges of a multi-step flow with permalinks"</a>
   </p>
 </article>
 
@@ -271,9 +272,9 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
     <div class="row">
       <article>
   
-  <a href="/2020/10/calculator-v2/">
+  <a href="/2020/10/string.format-equivalent-in-typescript/">
     <h3 class="article-title">
-  Calculator V2
+  String.format equivalent in TypeScript
 </h3>
 
   </a>
@@ -284,7 +285,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       
       
-      <time datetime="2020-10-04">4 Oct 2020 @ 10.32 pm</time>
+      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -299,17 +300,22 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
           #javascript
         </a>
       
+        
+        <a href="https://jiayee.net/tags/typescript">
+          #typescript
+        </a>
+      
     </div>
   </div>
 </section>
 
   </div>
   <section class="nar-row article-summary">
-    I made some changes to my compound interest calculator after reading up on &ldquo;future value&rdquo;. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
-import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;nerdamer/Algebra&#39;; import Calculus from &#39;nerdamer/Calculus&#39;; import Solve from &#39;nerdamer/Solve&#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&gt; { const totalAmount = solveForOneUnknownVariable( &#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&#39;, { p: principal.
+    While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&rsquo;t need to). I didn&rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&lt;string, string&gt;) =&gt; { const variables = Array.from(values.keys()).map(key =&gt; &#39;:&#39; + key).
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/calculator-v2/">Continue reading "Calculator V2"</a>
+    <a class="article-read-more" href="/2020/10/string.format-equivalent-in-typescript/">Continue reading "String.format equivalent in TypeScript"</a>
   </p>
 </article>
 
@@ -318,9 +324,9 @@ import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;
     <div class="row">
       <article>
   
-  <a href="/2020/10/quick-go-3/">
+  <a href="/2020/10/multi-step-forms/">
     <h3 class="article-title">
-  Quick Go 3
+  Multi-step forms
 </h3>
 
   </a>
@@ -331,7 +337,7 @@ import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;
       
       
       
-      <time datetime="2020-10-01">1 Oct 2020 @ 9.02 pm</time>
+      <time datetime="2020-10-06">6 Oct 2020 @ 9.48 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -342,13 +348,18 @@ import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;
         </a>
       
         
-        <a href="https://jiayee.net/tags/go">
-          #go
+        <a href="https://jiayee.net/tags/web">
+          #web
         </a>
       
         
-        <a href="https://jiayee.net/tags/braindump">
-          #braindump
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/react">
+          #react
         </a>
       
     </div>
@@ -357,11 +368,11 @@ import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;
 
   </div>
   <section class="nar-row article-summary">
-    Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
-package main import &#34;fmt&#34; func main() { // Chapter 5: Arrays, slices and maps  var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int  // i.e. (mismatched types float64 and int)  // Should do a / float64(b)  var total float64 = 0 for i, value := range x { total += value } // Different from Python&#39;s range  // Compiler will complain &#34;i declared and not used&#34;, so we must rename unused variables to &#39;_&#39;.
+    I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
+ If we do not do anything, we will need to insert &lt;ProgressBar .../&gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/quick-go-3/">Continue reading "Quick Go 3"</a>
+    <a class="article-read-more" href="/2020/10/multi-step-forms/">Continue reading "Multi-step forms"</a>
   </p>
 </article>
 

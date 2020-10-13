@@ -1,7 +1,7 @@
 ---
 title: "Spring Boot Auto-configuration"
 date: 2020-09-07T20:22:00+08:00
-draft: true
+draft: false
 tags: ["software","library","java","spring"]
 ---
 Every time I use Spring Security, I have to copy and paste a lot of boilerplate code. What if I made the boilerplate code configurable? I decided to venture into this idea.

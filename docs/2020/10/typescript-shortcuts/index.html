@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>TypeScript Shortcuts</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  TypeScript Shortcuts
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-01">1 Oct 2020 @ 7.01 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/typescript">
+          #typescript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F <code>TYPESCRIPT_SHORTCUT_1</code> and <code>TYPESCRIPT_SHORTCUT_2</code> to get to the code.</p>
+<p>Context: Yesterday, I did not invest time into inverting a TypeScript <code>Map&lt;string, string&gt;</code>. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.</p>
+<p>Here&rsquo;s the new original code:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } from <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
+<span style="color:#268bd2">import</span> Utf8 from <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
+
+<span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
+<span style="color:#268bd2">const</span> substitutionsAfterEncryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+    [<span style="color:#2aa198">&#39;+&#39;</span>, <span style="color:#2aa198">&#39;-&#39;</span>],
+    [<span style="color:#2aa198">&#39;/&#39;</span>, <span style="color:#2aa198">&#39;_&#39;</span>],
+    [<span style="color:#2aa198">&#39;=&#39;</span>, <span style="color:#2aa198">&#39;~&#39;</span>],
+]);
+<span style="color:#268bd2">const</span> substitutionsBeforeDecryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+    [<span style="color:#2aa198">&#39;-&#39;</span>, <span style="color:#2aa198">&#39;+&#39;</span>],
+    [<span style="color:#2aa198">&#39;_&#39;</span>, <span style="color:#2aa198">&#39;/&#39;</span>],
+    [<span style="color:#2aa198">&#39;~&#39;</span>, <span style="color:#2aa198">&#39;=&#39;</span>],
+]);
+
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> encrypt <span style="color:#719e07">=</span> (plaintext: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#268bd2">const</span> encrypted <span style="color:#719e07">=</span> AES.encrypt(plaintext, passphrase).toString();
+    <span style="color:#719e07">return</span> encrypted.replace(
+        <span style="color:#dc322f">/[+/=]/g</span>,
+        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> substitutionsAfterEncryption.get(match) <span style="color:#719e07">??</span> match
+    );
+};
+
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> decrypt <span style="color:#719e07">=</span> (cipher: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#268bd2">const</span> toDecrypt <span style="color:#719e07">=</span> cipher.replace(
+        <span style="color:#dc322f">/[-_~]/g</span>,
+        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> substitutionsBeforeDecryption.get(match) <span style="color:#719e07">??</span> match
+    );
+    <span style="color:#719e07">return</span> AES.decrypt(toDecrypt, passphrase).toString(Utf8);
+};
+</code></pre></div><p>Here&rsquo;s the updated code:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } from <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
+<span style="color:#268bd2">import</span> Utf8 from <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
+
+<span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
+<span style="color:#268bd2">const</span> encodeMap <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+    [<span style="color:#2aa198">&#39;+&#39;</span>, <span style="color:#2aa198">&#39;-&#39;</span>],
+    [<span style="color:#2aa198">&#39;/&#39;</span>, <span style="color:#2aa198">&#39;_&#39;</span>],
+    [<span style="color:#2aa198">&#39;=&#39;</span>, <span style="color:#2aa198">&#39;~&#39;</span>],
+]);
+<span style="color:#586e75">// Inverting a map in TypeScript is more problematic than in JavaScript.
+</span><span style="color:#586e75">// The extra .map call is to tell TypeScript that it is dealing with an
+</span><span style="color:#586e75">// iterable of 2-tuples instead of string[][].
+</span><span style="color:#586e75">// See https://github.com/microsoft/TypeScript/issues/8936.
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> decodeMap <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map(
+    <span style="color:#b58900">Array</span>.from(encodeMap, (tuple) <span style="color:#719e07">=&gt;</span> tuple.reverse()).map<span style="color:#719e07">&lt;</span>[<span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span>]<span style="color:#719e07">&gt;</span>((array) <span style="color:#719e07">=&gt;</span> [
+        array[<span style="color:#2aa198">0</span>],
+        array[<span style="color:#2aa198">1</span>],
+    ])
+);
+
+<span style="color:#268bd2">const</span> replaceSymbols <span style="color:#719e07">=</span> (cipher: <span style="color:#dc322f">string</span>, substitutionMap: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt;) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#268bd2">const</span> symbols <span style="color:#719e07">=</span> <span style="color:#b58900">Array</span>.from(substitutionMap.keys()).join(<span style="color:#2aa198">&#39;&#39;</span>);
+    <span style="color:#719e07">return</span> cipher.replace(
+        <span style="color:#719e07">new</span> <span style="color:#b58900">RegExp</span>(<span style="color:#586e75">`[</span><span style="color:#2aa198">${</span>symbols<span style="color:#2aa198">}</span><span style="color:#586e75">]`</span>, <span style="color:#2aa198">&#39;g&#39;</span>),
+        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> substitutionMap.get(match) <span style="color:#719e07">??</span> match
+    );
+};
+
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> encrypt <span style="color:#719e07">=</span> (plaintext: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> replaceSymbols(AES.encrypt(plaintext, passphrase).toString(), encodeMap);
+};
+
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> decrypt <span style="color:#719e07">=</span> (cipher: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> AES.decrypt(replaceSymbols(cipher, decodeMap), passphrase).toString(Utf8);
+};
+</code></pre></div><p>While I failed to shorten the code, I reduced the number of literals. I&rsquo;m left with <code>encodeMap</code> and the regex now. From this experience, I figured out why I could not invert a map like <a href="https://stackoverflow.com/questions/56550463/invert-a-map-object">how it&rsquo;s done in JavaScript</a>. It&rsquo;s a <a href="https://github.com/microsoft/TypeScript/issues/8936">typing ambiguity</a> (refer to the comments above).</p>
+<p>So, to invert a map in TypeScript, do:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_1: Inverting a map
+</span><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_INVERT, KEY_TYPE and VALUE_TYPE.
+</span><span style="color:#586e75"></span><span style="color:#719e07">new</span> Map(
+    <span style="color:#b58900">Array</span>.from(THE_MAP_YOU_WANT_TO_INVERT, (tuple) <span style="color:#719e07">=&gt;</span> tuple.reverse()).map<span style="color:#719e07">&lt;</span>[VALUE_TYPE, KEY_TYPE]<span style="color:#719e07">&gt;</span>((array) <span style="color:#719e07">=&gt;</span> [
+        array[<span style="color:#2aa198">0</span>],
+        array[<span style="color:#2aa198">1</span>],
+    ])
+)
+</code></pre></div><p>Later in the day, I was firefighting a bug. I realised that I was the one who introduced the regression that went unnoticed for a while. At least I got to clean up my own mess&hellip; The bug occurred because I was iterating through a TypeScript map keys <a href="https://stackoverflow.com/questions/36467369/looping-through-an-object-and-changing-all-values">the JavaScript (wrong) way</a>.</p>
+<p>The wrong way:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_COPY and &#39;BLAH&#39;.
+</span><span style="color:#586e75">// You shouldn&#39;t be copying this anyway.
+</span><span style="color:#586e75"></span><span style="color:#b58900">Object</span>.keys(
+    THE_MAP_YOU_WANT_TO_COPY
+).reduce((accumulator, key) <span style="color:#719e07">=&gt;</span> {
+    accumulator.set(key, <span style="color:#2aa198">&#39;BLAH&#39;</span>));
+    <span style="color:#719e07">return</span> accumulator;
+}, <span style="color:#719e07">new</span> Map&lt;<span style="color:#268bd2">string</span>, string&gt;());
+</code></pre></div><p>Correct way:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_2: Copying a map and overriding the values of the copy
+</span><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_COPY and &#39;BLAH&#39;.
+</span><span style="color:#586e75"></span><span style="color:#b58900">Array</span>.from(
+    THE_MAP_YOU_WANT_TO_COPY.keys()
+).reduce((accumulator, key) <span style="color:#719e07">=&gt;</span> {
+    accumulator.set(key, <span style="color:#2aa198">&#39;BLAH&#39;</span>));
+    <span style="color:#719e07">return</span> accumulator;
+}, <span style="color:#719e07">new</span> Map&lt;<span style="color:#268bd2">string</span>, string&gt;());
+</code></pre></div><p>So much for copying. I hope I can more careful with these in the future.</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/09/cryptojs-and-url/">
+      CryptoJS and URL (#typescript)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/tweets/no-var-requires/">
+      Rule: no-var-requires (#typescript)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/writing-calculators/">
+      Writing Calculators (#javascript)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Multi-step forms</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Multi-step forms
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-06">6 Oct 2020 @ 9.48 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/react">
+          #react
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:</p>
+<ol>
+<li>If we do not do anything, we will need to insert <code>&lt;ProgressBar .../&gt;</code> and the like into every form component.</li>
+<li>Sharing the forms/pages across other flows which do not need to progress bar is difficult.</li>
+<li>The form flow will become more obscure. This is because the flow is not grouped or labelled with anything related to a multi-step form.</li>
+</ol>
+<p>I came up with the following two designs:</p>
+<p>Design #1:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } from <span style="color:#2aa198">&#39;react&#39;</span>;
+<span style="color:#268bd2">import</span> { RouteComponentProps } from <span style="color:#2aa198">&#39;@reach/router&#39;</span>;
+
+<span style="color:#268bd2">import</span> <span style="color:#2aa198">&#39;./style.css&#39;</span>; <span style="color:#586e75">// .hide { display: none; }
+</span><span style="color:#586e75"></span>
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">interface</span> Props <span style="color:#268bd2">extends</span> RouteComponentProps {
+    stepPage: <span style="color:#dc322f">FC</span>;
+    stepNumber: <span style="color:#dc322f">number</span>;
+    stepLinks: <span style="color:#dc322f">string</span>[];
+}
+
+<span style="color:#268bd2">const</span> hasPrevious <span style="color:#719e07">=</span> (stepNumber: <span style="color:#dc322f">number</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> stepNumber <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span>;
+};
+
+<span style="color:#268bd2">const</span> hasNext <span style="color:#719e07">=</span> (stepNumber: <span style="color:#dc322f">number</span>, steps: <span style="color:#dc322f">string</span>[]) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> stepNumber <span style="color:#719e07">&lt;</span> steps.length <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>;
+};
+
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepFormPageTemplate: <span style="color:#dc322f">FC</span>&lt;<span style="color:#268bd2">Props</span>&gt; <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> (
+        &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span>&gt;
+            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-page&#34;</span>&gt;
+                &lt;<span style="color:#268bd2">props.stepPage</span> /&gt;
+            &lt;/<span style="color:#268bd2">div</span>&gt;
+            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span>&gt;
+                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasPrevious(props.stepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
+                    <span style="color:#586e75">// Insert button here
+</span><span style="color:#586e75"></span>                &lt;/<span style="color:#268bd2">div</span>&gt;
+                &lt;<span style="color:#268bd2">div</span>
+                    className<span style="color:#719e07">=</span>{hasNext(props.stepNumber, props.stepLinks) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}
+                &gt;
+                    <span style="color:#586e75">// Insert button here
+</span><span style="color:#586e75"></span>                &lt;/<span style="color:#268bd2">div</span>&gt;
+            &lt;/<span style="color:#268bd2">div</span>&gt;
+        &lt;/<span style="color:#268bd2">div</span>&gt;
+    );
+};
+</code></pre></div><p>A quick look at Design #1 will tell you that I need to repeat <code>stepLinks</code> in every <code>&lt;MultiStepFormPageTemplate /&gt;</code>. This is very repetitive. However, I can mitigate the repetition by defining <code>const stepLinks</code>. Still, it isn&rsquo;t nice. Moreover, I need to configure <code>stepNumber</code>, at least for this design draft. This makes the component vulnerable to configuration errors. For example, duplicate <code>stepNumber</code> despite the same <code>stepLinks</code>. There is a little too much control given to the developer.</p>
+<p>One redeeming(?) feature about this design is that each form can exist on its own with its permalink. Another redeeming feature would be minimal modifications to the existing forms. What comes to mind immediately is the extension of the <code>onSubmit</code> handlers for each of the forms. These handlers need to route users to the next step link.</p>
+<p>Last but not least, query parameters can pass data from one form to another. A Redux persistence middleware is not needed (yet). The step navigation buttons need to preserve these query parameters. They also need to append them to the appropriate step link.</p>
+<p>Design #2:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } from <span style="color:#2aa198">&#39;react&#39;</span>;
+<span style="color:#268bd2">import</span> { RouteComponentProps } from <span style="color:#2aa198">&#39;@reach/router&#39;</span>;
+
+<span style="color:#268bd2">import</span> <span style="color:#2aa198">&#39;./style.css&#39;</span>; <span style="color:#586e75">// .hide { display: none; }
+</span><span style="color:#586e75"></span>
+<span style="color:#268bd2">interface</span> Props <span style="color:#268bd2">extends</span> RouteComponentProps {
+    components: <span style="color:#dc322f">FC</span>[];
+}
+
+<span style="color:#268bd2">const</span> hasPrevious <span style="color:#719e07">=</span> (stepNumber: <span style="color:#dc322f">number</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> stepNumber <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span>;
+};
+
+<span style="color:#268bd2">const</span> hasNext <span style="color:#719e07">=</span> (stepNumber: <span style="color:#dc322f">number</span>, steps: <span style="color:#dc322f">any</span>[]) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> stepNumber <span style="color:#719e07">&lt;</span> steps.length <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>;
+};
+
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepForm: <span style="color:#dc322f">FC</span>&lt;<span style="color:#268bd2">Props</span>&gt; <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#586e75">// The component defines currentStepNumber, goToPreviousStep and goToNextStep.
+</span><span style="color:#586e75"></span>    <span style="color:#586e75">// currentStepNumber refers to the current step number in the multi-step form while
+</span><span style="color:#586e75"></span>    <span style="color:#586e75">// goToPreviousStep and goToNextStep are handlers which help the user navigate
+</span><span style="color:#586e75"></span>    <span style="color:#586e75">// between adjacent steps.
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> (
+        &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span>&gt;
+            <span style="color:#586e75">// Multi-step frontend main component opening tag here
+</span><span style="color:#586e75"></span>                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
+                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-component&#34;</span>&gt;
+                    {props.components <span style="color:#719e07">&amp;&amp;</span>
+                        props.components.map((FormComponent: <span style="color:#dc322f">FC</span>) <span style="color:#719e07">=&gt;</span> {
+                            <span style="color:#719e07">return</span> (
+                                <span style="color:#586e75">// Multi-step frontend sub-component opening tag here
+</span><span style="color:#586e75"></span>                                    &lt;<span style="color:#268bd2">FormComponent</span> /&gt;
+                                <span style="color:#586e75">// Multi-step frontend sub-component closing tag here
+</span><span style="color:#586e75"></span>                            );
+                        })}
+                &lt;/<span style="color:#268bd2">div</span>&gt;
+                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span>&gt;
+                    &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasPrevious(currentStepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
+                        &lt;<span style="color:#268bd2">button</span> onClick<span style="color:#719e07">=</span>{goToPreviousStep}&gt;
+                            Previous
+                        &lt;/<span style="color:#268bd2">button</span>&gt;
+                    &lt;/<span style="color:#268bd2">div</span>&gt;
+                    &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasNext(currentStepNumber, props.components) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
+                        &lt;<span style="color:#268bd2">button</span> onClick<span style="color:#719e07">=</span>{goToNextStep}&gt;
+                            Next
+                        &lt;/<span style="color:#268bd2">button</span>&gt;
+                    &lt;/<span style="color:#268bd2">div</span>&gt;
+                &lt;/<span style="color:#268bd2">div</span>&gt;
+            <span style="color:#586e75">// Multi-step frontend main component closing tag here
+</span><span style="color:#586e75"></span>        &lt;/<span style="color:#268bd2">div</span>&gt;
+    );
+};
+</code></pre></div><p>This design is a more conventional way of building multi-step forms. Each step appears/disappears, depending on the user&rsquo;s progress. As such, each step will not have its permalink. Redux can help pass data from one form to another without modifying the child components.</p>
+<p>As with the first design, I will need to extend the <code>onSubmit</code> handlers for the same reasons.</p>
+<p>Both designs seem to apply the template design pattern. I hope I can work on either of them or even a third design. I want to ease the creation and maintenance of multi-step form flows. I should also revise my knowledge of design patterns and principles again. This is so that I can continue to add value and not just LoC.</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/10/polling/">
+      Polling (#angular)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/dynamic-tooltips/">
+      Dynamic Tooltips (#angular)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/intercepting-angular-data-binding/">
+      Intercepting Angular Data Binding (#angular)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

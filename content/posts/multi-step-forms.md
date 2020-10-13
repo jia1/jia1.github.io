@@ -1,7 +1,7 @@
 ---
 title: "Multi-step forms"
 date: 2020-10-06T21:48:00+08:00
-draft: true
+draft: false
 tags: ["software","web","javascript","react"]
 ---
 I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:

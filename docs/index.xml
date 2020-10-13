@@ -112,6 +112,26 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
     </item>
     
     <item>
+      <title>Challenges of a multi-step flow with permalinks</title>
+      <link>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</link>
+      <pubDate>Wed, 07 Oct 2020 22:50:28 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</guid>
+      <description>I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&amp;rsquo;s post for the context. The edge cases are:
+ Forms which need data from the preceding forms Dynamic form links  I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.</description>
+    </item>
+    
+    <item>
+      <title>String.format equivalent in TypeScript</title>
+      <link>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</link>
+      <pubDate>Wed, 07 Oct 2020 22:50:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</guid>
+      <description>While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&amp;rsquo;t need to). I didn&amp;rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&amp;lt;string, string&amp;gt;) =&amp;gt; { const variables = Array.from(values.keys()).map(key =&amp;gt; &amp;#39;:&amp;#39; + key).</description>
+    </item>
+    
+    <item>
       <title>Today&#39;s Q&amp;A for Jiayee (07 Oct 2020)</title>
       <link>https://jiayee.net/tweets/07-oct-2020-qna/</link>
       <pubDate>Wed, 07 Oct 2020 12:11:00 +0800</pubDate>
@@ -119,6 +139,16 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       <guid>https://jiayee.net/tweets/07-oct-2020-qna/</guid>
       <description>Are you happy with your choices today?
  I&amp;rsquo;m still on the fence! (Root cause)</description>
+    </item>
+    
+    <item>
+      <title>Multi-step forms</title>
+      <link>https://jiayee.net/2020/10/multi-step-forms/</link>
+      <pubDate>Tue, 06 Oct 2020 21:48:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
+      <description>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
+ If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.</description>
     </item>
     
     <item>
@@ -201,6 +231,17 @@ package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, sl
     </item>
     
     <item>
+      <title>TypeScript Shortcuts</title>
+      <link>https://jiayee.net/2020/10/typescript-shortcuts/</link>
+      <pubDate>Thu, 01 Oct 2020 19:01:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/typescript-shortcuts/</guid>
+      <description>TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F TYPESCRIPT_SHORTCUT_1 and TYPESCRIPT_SHORTCUT_2 to get to the code.
+Context: Yesterday, I did not invest time into inverting a TypeScript Map&amp;lt;string, string&amp;gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
+Here&amp;rsquo;s the new original code:</description>
+    </item>
+    
+    <item>
       <title>Today&#39;s Q&amp;A for Jiayee (01 Oct 2020)</title>
       <link>https://jiayee.net/tweets/01-oct-2020-qna/</link>
       <pubDate>Thu, 01 Oct 2020 11:13:00 +0800</pubDate>
@@ -208,6 +249,16 @@ package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, sl
       <guid>https://jiayee.net/tweets/01-oct-2020-qna/</guid>
       <description>What are you a geek about?
  Japanese singers and voice actors!</description>
+    </item>
+    
+    <item>
+      <title>CryptoJS and URL</title>
+      <link>https://jiayee.net/2020/09/cryptojs-and-url/</link>
+      <pubDate>Wed, 30 Sep 2020 19:17:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/cryptojs-and-url/</guid>
+      <description>Like this Stack Overflow thread, I needed to encrypt some string which will become part of a URL. However, there was a slash in one of the encrypted strings, like c3ViamVjdHM/X2Q9MQ==. Feel free to decode this. It&amp;rsquo;s something I copied from the internet.
+I thought there would be a lot of symbols in the Base64 alphabet at first (I was wrong). I didn&amp;rsquo;t want to deal with them and set up a giant substitution map, like a Map&amp;lt;string, string&amp;gt;.</description>
     </item>
     
     <item>
@@ -238,6 +289,17 @@ Start small. Materialise the plan for your adjustments (e.g. make a planning she
       
       <guid>https://jiayee.net/tweets/docker-system-prune/</guid>
       <description>I&amp;rsquo;ve finally encountered this on my MacBook Air: no space left on device. And&amp;hellip; docker system prune -a --volumes to the rescue! (Relevant Stack Overflow thread)</description>
+    </item>
+    
+    <item>
+      <title>JSLT</title>
+      <link>https://jiayee.net/2020/09/jslt/</link>
+      <pubDate>Tue, 29 Sep 2020 18:22:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/jslt/</guid>
+      <description>I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
+My GraphQL query:
+query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:</description>
     </item>
     
     <item>
@@ -457,6 +519,17 @@ A summary of the improvements I made:
     </item>
     
     <item>
+      <title>No qualifying bean</title>
+      <link>https://jiayee.net/2020/09/no-qualifying-bean/</link>
+      <pubDate>Thu, 17 Sep 2020 15:23:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/no-qualifying-bean/</guid>
+      <description>In one of my previous posts, I avoided auto-configuring primitives. Otherwise, the No qualifying bean error will occur. Today, I couldn&amp;rsquo;t avoid that anymore. I had to auto-configure a boolean so that the consumer can enable or disable a feature in application.yml.
+So, how did I resolve this issue? I used @Value(&amp;quot;{someKey:someDefault}&amp;quot;) final boolean someFlag in the caller constructor.
+Before that, I tried attaching only @Bean to the getter, but it didn&amp;rsquo;t work out.</description>
+    </item>
+    
+    <item>
       <title>Today&#39;s Q&amp;A for Jiayee (17 Sep 2020)</title>
       <link>https://jiayee.net/tweets/17-sep-2020-qna/</link>
       <pubDate>Thu, 17 Sep 2020 15:20:00 +0800</pubDate>
@@ -626,6 +699,16 @@ One difference (compared to my usual activities) was I couldn&amp;rsquo;t do imp
     </item>
     
     <item>
+      <title>Almost done with the custom starter</title>
+      <link>https://jiayee.net/2020/09/almost-done-with-the-custom-starter/</link>
+      <pubDate>Wed, 09 Sep 2020 12:18:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/almost-done-with-the-custom-starter/</guid>
+      <description>I was right. I forgot to enable the Mongo repository. And it wasn&amp;rsquo;t only that. I had two Mongo configuration classes. One in the consumer and another in the custom starter. I needed only one. I removed the configuration class from the custom starter. Then, I enabled the custom starter&amp;rsquo;s repository in the consumer&amp;rsquo;s configuration class. Below is an idea of how my configuration class looks like:
+@EnableMongoRepositories(basePackages = { &amp;#34;yourTLD.</description>
+    </item>
+    
+    <item>
       <title>Today&#39;s Q&amp;A for Jiayee (09 Sep 2020)</title>
       <link>https://jiayee.net/tweets/09-sep-2020-qna/</link>
       <pubDate>Wed, 09 Sep 2020 09:40:00 +0800</pubDate>
@@ -646,6 +729,17 @@ One difference (compared to my usual activities) was I couldn&amp;rsquo;t do imp
     </item>
     
     <item>
+      <title>Auto-configuring controllers and repositories</title>
+      <link>https://jiayee.net/2020/09/auto-configuring-controllers-and-repositories/</link>
+      <pubDate>Tue, 08 Sep 2020 21:01:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/auto-configuring-controllers-and-repositories/</guid>
+      <description>I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).
+I then ran the consumer&amp;rsquo;s codebase and used Postman to hit the newly-offered endpoints. Below is the response seen in Postman:
+{ &amp;#34;error&amp;#34;: { &amp;#34;IllegalArgumentException&amp;#34;: &amp;#34;Couldn&amp;#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&amp;#34; } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&amp;rsquo;s logs.</description>
+    </item>
+    
+    <item>
       <title>Today&#39;s Q&amp;A for Jiayee (07 Sep 2020)</title>
       <link>https://jiayee.net/tweets/07-sep-2020-qna/</link>
       <pubDate>Mon, 07 Sep 2020 20:30:00 +0800</pubDate>
@@ -653,6 +747,16 @@ One difference (compared to my usual activities) was I couldn&amp;rsquo;t do imp
       <guid>https://jiayee.net/tweets/07-sep-2020-qna/</guid>
       <description>What&amp;rsquo;s the newest thing you&amp;rsquo;re wearing today?
  My wedding ring.</description>
+    </item>
+    
+    <item>
+      <title>Spring Boot Auto-configuration</title>
+      <link>https://jiayee.net/2020/09/spring-boot-auto-configuration/</link>
+      <pubDate>Mon, 07 Sep 2020 20:22:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/09/spring-boot-auto-configuration/</guid>
+      <description>Every time I use Spring Security, I have to copy and paste a lot of boilerplate code. What if I made the boilerplate code configurable? I decided to venture into this idea.
+At first, I extracted only the method body which configures HttpSecurity. So I got myself something like a utility library. But this meant there was still some boilerplate code outside of the library. This approach required consumers to define their own configuration classes (annotated with @Configuration).</description>
     </item>
     
     <item>

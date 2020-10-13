@@ -1,7 +1,7 @@
 ---
 title: "TypeScript Shortcuts"
 date: 2020-10-01T19:01:00+08:00
-draft: true
+draft: false
 tags: ["software","javascript","typescript"]
 ---
 TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F `TYPESCRIPT_SHORTCUT_1` and `TYPESCRIPT_SHORTCUT_2` to get to the code.

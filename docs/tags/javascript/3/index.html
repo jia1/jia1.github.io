@@ -101,9 +101,9 @@
     <div class="row">
       <article>
   
-  <a href="/2020/09/my-first-yarn-package/">
+  <a href="/2020/09/dynamic-tooltips/">
     <h3 class="article-title">
-  My first yarn package
+  Dynamic Tooltips
 </h3>
 
   </a>
@@ -114,7 +114,7 @@
       
       
       
-      <time datetime="2020-09-10">10 Sep 2020 @ 11.59 pm</time>
+      <time datetime="2020-09-25">25 Sep 2020 @ 2.55 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -125,13 +125,18 @@
         </a>
       
         
-        <a href="https://jiayee.net/tags/library">
-          #library
+        <a href="https://jiayee.net/tags/web">
+          #web
         </a>
       
         
         <a href="https://jiayee.net/tags/javascript">
           #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
         </a>
       
     </div>
@@ -140,11 +145,235 @@
 
   </div>
   <section class="nar-row article-summary">
-    I wrote my first yarn package (kind of for fun) yesterday. It&rsquo;s strange how I&rsquo;ve been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven&rsquo;t published my package, but I&rsquo;m omw. So, how did I create a package? It just felt like the usual&hellip; I followed the yarn docs.
-One difference (compared to my usual activities) was I couldn&rsquo;t do import { .
+    I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
+At first, the tooltip looked like:
+&lt;i class=&#34;...&#34; uib-tooltip=&#34;Here&#39;s the one and only static tooltip!&#34; tooltip-trigger=&#34;&#39;click mouseenter&#39;&#34; &gt;&lt;/i&gt; uib-tooltip seems to come from UI Bootstrap.
   </section>
   <p>
-    <a class="article-read-more" href="/2020/09/my-first-yarn-package/">Continue reading "My first yarn package"</a>
+    <a class="article-read-more" href="/2020/09/dynamic-tooltips/">Continue reading "Dynamic Tooltips"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
+  <a href="/2020/09/intercepting-angular-data-binding/">
+    <h3 class="article-title">
+  Intercepting Angular Data Binding
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-23">23 Sep 2020 @ 9.40 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I have two form switches. Let&rsquo;s call them A and B. I had to program them such that:
+ When A is off, disable and switch B off. When A is on, disable and switch B off.  We can ignore backend logic because I programmed it such that if A is off, ignore B.
+So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/intercepting-angular-data-binding/">Continue reading "Intercepting Angular Data Binding"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
+  <a href="/2020/09/debugging-angular/">
+    <h3 class="article-title">
+  Debugging Angular
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-14">14 Sep 2020 @ 9.29 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    Something could&rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
+Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &#39;directiveFactory&#39; is required My Google-fu was lacking.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/debugging-angular/">Continue reading "Debugging Angular"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
+  <a href="/tweets/no-var-requires/">
+    <h3 class="article-title">
+  Rule: no-var-requires
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-13">13 Sep 2020 @ 10.12 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/typescript">
+          #typescript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    My pre-commit hook complained because the original code had an import that looked like var module = require(&quot;module&quot;). The permitted ways to import are: import foo = require('foo') and &ldquo;ES2015-style imports&rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&hellip;
+  </section>
+  <p>
+    <a class="article-read-more" href="/tweets/no-var-requires/">Continue reading "Rule: no-var-requires"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
+  <a href="/2020/09/jest-for-the-first-time/">
+    <h3 class="article-title">
+  Jest for the First Time
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-13">13 Sep 2020 @ 9.56 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/testing">
+          #testing
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/jest">
+          #jest
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I needed to test a feature which I have been building for GovTech&rsquo;s FormSG. To test it, I had to mock a function in the superclass of an instance generated by a factory method call. I once considered stripping away the barriers between the mock and the test. But, I didn&rsquo;t want to refactor a codebase which I am not too familiar with.
+Below is a visualisation of the &ldquo;barriers&rdquo; between the mock and the test:
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/jest-for-the-first-time/">Continue reading "Jest for the First Time"</a>
   </p>
 </article>
 
@@ -160,6 +389,10 @@ One difference (compared to my usual activities) was I couldn&rsquo;t do import 
     
   </div>
   <div class="cell small-6 text-right">
+    
+      <a class="nav-page" href="/tags/javascript/4/">
+        Next page
+      </a>
     
   </div>
 </section>

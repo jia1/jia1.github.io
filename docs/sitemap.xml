@@ -148,6 +148,21 @@
   </url>
   
   <url>
+    <loc>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</loc>
+    <lastmod>2020-10-07T22:50:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/react/</loc>
+    <lastmod>2020-10-07T22:50:28+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</loc>
+    <lastmod>2020-10-07T22:50:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/07-oct/</loc>
     <lastmod>2020-10-07T12:11:00+08:00</lastmod>
   </url>
@@ -155,6 +170,11 @@
   <url>
     <loc>https://jiayee.net/tweets/07-oct-2020-qna/</loc>
     <lastmod>2020-10-07T12:11:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/10/multi-step-forms/</loc>
+    <lastmod>2020-10-06T21:48:00+08:00</lastmod>
   </url>
   
   <url>
@@ -238,6 +258,11 @@
   </url>
   
   <url>
+    <loc>https://jiayee.net/2020/10/typescript-shortcuts/</loc>
+    <lastmod>2020-10-01T19:01:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/01-oct/</loc>
     <lastmod>2020-10-01T11:13:00+08:00</lastmod>
   </url>
@@ -245,6 +270,11 @@
   <url>
     <loc>https://jiayee.net/tweets/01-oct-2020-qna/</loc>
     <lastmod>2020-10-01T11:13:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/09/cryptojs-and-url/</loc>
+    <lastmod>2020-09-30T19:17:00+08:00</lastmod>
   </url>
   
   <url>
@@ -270,6 +300,21 @@
   <url>
     <loc>https://jiayee.net/tweets/docker-system-prune/</loc>
     <lastmod>2020-09-29T21:15:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/09/jslt/</loc>
+    <lastmod>2020-09-29T18:22:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/jslt/</loc>
+    <lastmod>2020-09-29T18:22:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/json/</loc>
+    <lastmod>2020-09-29T18:22:00+08:00</lastmod>
   </url>
   
   <url>
@@ -468,6 +513,21 @@
   </url>
   
   <url>
+    <loc>https://jiayee.net/tags/java/</loc>
+    <lastmod>2020-09-17T15:23:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/09/no-qualifying-bean/</loc>
+    <lastmod>2020-09-17T15:23:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/spring/</loc>
+    <lastmod>2020-09-17T15:23:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/17-sep/</loc>
     <lastmod>2020-09-17T15:20:00+08:00</lastmod>
   </url>
@@ -623,6 +683,11 @@
   </url>
   
   <url>
+    <loc>https://jiayee.net/2020/09/almost-done-with-the-custom-starter/</loc>
+    <lastmod>2020-09-09T12:18:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/09-sep/</loc>
     <lastmod>2020-09-09T09:40:00+08:00</lastmod>
   </url>
@@ -643,6 +708,11 @@
   </url>
   
   <url>
+    <loc>https://jiayee.net/2020/09/auto-configuring-controllers-and-repositories/</loc>
+    <lastmod>2020-09-08T21:01:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/07-sep/</loc>
     <lastmod>2020-09-07T20:30:00+08:00</lastmod>
   </url>
@@ -650,6 +720,11 @@
   <url>
     <loc>https://jiayee.net/tweets/07-sep-2020-qna/</loc>
     <lastmod>2020-09-07T20:30:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/09/spring-boot-auto-configuration/</loc>
+    <lastmod>2020-09-07T20:22:00+08:00</lastmod>
   </url>
   
   <url>

@@ -1,7 +1,7 @@
 ---
 title: "JSLT"
 date: 2020-09-29T18:22:00+08:00
-draft: true
+draft: false
 tags: ["software","json","jslt"]
 ---
 I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of [JSLT](https://github.com/schibsted/jslt). Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:

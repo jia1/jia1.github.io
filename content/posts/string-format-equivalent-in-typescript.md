@@ -1,7 +1,7 @@
 ---
 title: "String.format equivalent in TypeScript"
 date: 2020-10-07T22:50:00+08:00
-draft: true
+draft: false
 tags: ["software","javascript","typescript"]
 ---
 While working on a problem during work, I thought I needed a way to do a `String.format` equivalent operation in TypeScript (it turns out I didn't need to). I didn't want to install Lodash (50 kB for `_.template` alone) or sprintf (40 kB), so I came up with the following:

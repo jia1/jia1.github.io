@@ -24,6 +24,26 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
     </item>
     
     <item>
+      <title>Challenges of a multi-step flow with permalinks</title>
+      <link>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</link>
+      <pubDate>Wed, 07 Oct 2020 22:50:28 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</guid>
+      <description>I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&amp;rsquo;s post for the context. The edge cases are:
+ Forms which need data from the preceding forms Dynamic form links  I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.</description>
+    </item>
+    
+    <item>
+      <title>Multi-step forms</title>
+      <link>https://jiayee.net/2020/10/multi-step-forms/</link>
+      <pubDate>Tue, 06 Oct 2020 21:48:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
+      <description>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
+ If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.</description>
+    </item>
+    
+    <item>
       <title>Polling</title>
       <link>https://jiayee.net/2020/10/polling/</link>
       <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>

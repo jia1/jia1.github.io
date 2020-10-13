@@ -1,7 +1,7 @@
 ---
 title: "No qualifying bean"
 date: 2020-09-17T15:23:00+08:00
-draft: true
+draft: false
 tags: ["software","java","spring"]
 ---
 In one of my previous posts, I avoided auto-configuring primitives. Otherwise, the `No qualifying bean` error will occur. Today, I couldn't avoid that anymore. I had to auto-configure a `boolean` so that the consumer can enable or disable a feature in `application.yml`.

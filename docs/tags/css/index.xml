@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css on Jiayee.net</title>
+    <link>https://jiayee.net/tags/css/</link>
+    <description>Recent content in css on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 14 Oct 2020 18:04:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Center</title>
+      <link>https://jiayee.net/2020/10/center/</link>
+      <pubDate>Wed, 14 Oct 2020 18:04:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/center/</guid>
+      <description>Why &amp;ldquo;Center&amp;rdquo; instead of &amp;ldquo;Centre&amp;rdquo;? Well, that&amp;rsquo;s because &amp;ldquo;center&amp;rdquo; is the version used in CSS.
+There were moments in my life when I wanted to give up writing in British English. There are so many other people using American English&amp;hellip; except for me. Programming languages are expressed using American English as well. I felt like a rebel for naming my variables in British English, but that&amp;rsquo;s what I&amp;rsquo;ve learnt in school.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -169,24 +169,24 @@
     <span style="color:#719e07">return</span> stepNumber <span style="color:#719e07">&lt;</span> steps.length <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>;
 };
 
-<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepFormPageTemplate: <span style="color:#dc322f">FC</span>&lt;<span style="color:#268bd2">Props</span>&gt; <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepFormPageTemplate: <span style="color:#dc322f">FC</span><span style="color:#719e07">&lt;</span>Props<span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
     <span style="color:#719e07">return</span> (
-        &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span>&gt;
-            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
-            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-page&#34;</span>&gt;
-                &lt;<span style="color:#268bd2">props.stepPage</span> /&gt;
-            &lt;/<span style="color:#268bd2">div</span>&gt;
-            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span>&gt;
-                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasPrevious(props.stepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
+        <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span><span style="color:#719e07">&gt;</span>
+            <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span><span style="color:#719e07">&gt;&lt;</span>/div&gt;
+            <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-page&#34;</span><span style="color:#719e07">&gt;</span>
+                <span style="color:#719e07">&lt;</span>props.stepPage <span style="color:#719e07">/&gt;</span>
+            <span style="color:#719e07">&lt;</span>/div&gt;
+            <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span><span style="color:#719e07">&gt;</span>
+                <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span>{hasPrevious(props.stepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}<span style="color:#719e07">&gt;</span>
                     <span style="color:#586e75">// Insert button here
-</span><span style="color:#586e75"></span>                &lt;/<span style="color:#268bd2">div</span>&gt;
-                &lt;<span style="color:#268bd2">div</span>
+</span><span style="color:#586e75"></span>                <span style="color:#719e07">&lt;</span>/div&gt;
+                <span style="color:#719e07">&lt;</span>div
                     className<span style="color:#719e07">=</span>{hasNext(props.stepNumber, props.stepLinks) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}
-                &gt;
+                <span style="color:#719e07">&gt;</span>
                     <span style="color:#586e75">// Insert button here
-</span><span style="color:#586e75"></span>                &lt;/<span style="color:#268bd2">div</span>&gt;
-            &lt;/<span style="color:#268bd2">div</span>&gt;
-        &lt;/<span style="color:#268bd2">div</span>&gt;
+</span><span style="color:#586e75"></span>                <span style="color:#719e07">&lt;</span>/div&gt;
+            <span style="color:#719e07">&lt;</span>/div&gt;
+        <span style="color:#719e07">&lt;</span>/div&gt;
     );
 };
 </code></pre></div><p>A quick look at Design #1 will tell you that I need to repeat <code>stepLinks</code> in every <code>&lt;MultiStepFormPageTemplate /&gt;</code>. This is very repetitive. However, I can mitigate the repetition by defining <code>const stepLinks</code>. Still, it isn&rsquo;t nice. Moreover, I need to configure <code>stepNumber</code>, at least for this design draft. This makes the component vulnerable to configuration errors. For example, duplicate <code>stepNumber</code> despite the same <code>stepLinks</code>. There is a little too much control given to the developer.</p>
@@ -210,39 +210,39 @@
     <span style="color:#719e07">return</span> stepNumber <span style="color:#719e07">&lt;</span> steps.length <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>;
 };
 
-<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepForm: <span style="color:#dc322f">FC</span>&lt;<span style="color:#268bd2">Props</span>&gt; <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepForm: <span style="color:#dc322f">FC</span><span style="color:#719e07">&lt;</span>Props<span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
     <span style="color:#586e75">// The component defines currentStepNumber, goToPreviousStep and goToNextStep.
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// currentStepNumber refers to the current step number in the multi-step form while
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// goToPreviousStep and goToNextStep are handlers which help the user navigate
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// between adjacent steps.
 </span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> (
-        &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span>&gt;
+        <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span><span style="color:#719e07">&gt;</span>
             <span style="color:#586e75">// Multi-step frontend main component opening tag here
-</span><span style="color:#586e75"></span>                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
-                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-component&#34;</span>&gt;
+</span><span style="color:#586e75"></span>                <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span><span style="color:#719e07">&gt;&lt;</span>/div&gt;
+                <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-component&#34;</span><span style="color:#719e07">&gt;</span>
                     {props.components <span style="color:#719e07">&amp;&amp;</span>
                         props.components.map((FormComponent: <span style="color:#dc322f">FC</span>) <span style="color:#719e07">=&gt;</span> {
                             <span style="color:#719e07">return</span> (
                                 <span style="color:#586e75">// Multi-step frontend sub-component opening tag here
-</span><span style="color:#586e75"></span>                                    &lt;<span style="color:#268bd2">FormComponent</span> /&gt;
+</span><span style="color:#586e75"></span>                                    <span style="color:#719e07">&lt;</span>FormComponent <span style="color:#719e07">/&gt;</span>
                                 <span style="color:#586e75">// Multi-step frontend sub-component closing tag here
 </span><span style="color:#586e75"></span>                            );
                         })}
-                &lt;/<span style="color:#268bd2">div</span>&gt;
-                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span>&gt;
-                    &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasPrevious(currentStepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
-                        &lt;<span style="color:#268bd2">button</span> onClick<span style="color:#719e07">=</span>{goToPreviousStep}&gt;
+                <span style="color:#719e07">&lt;</span>/div&gt;
+                <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span><span style="color:#719e07">&gt;</span>
+                    <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span>{hasPrevious(currentStepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}<span style="color:#719e07">&gt;</span>
+                        <span style="color:#719e07">&lt;</span>button onClick<span style="color:#719e07">=</span>{goToPreviousStep}<span style="color:#719e07">&gt;</span>
                             Previous
-                        &lt;/<span style="color:#268bd2">button</span>&gt;
-                    &lt;/<span style="color:#268bd2">div</span>&gt;
-                    &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasNext(currentStepNumber, props.components) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
-                        &lt;<span style="color:#268bd2">button</span> onClick<span style="color:#719e07">=</span>{goToNextStep}&gt;
+                        <span style="color:#719e07">&lt;</span>/button&gt;
+                    <span style="color:#719e07">&lt;</span>/div&gt;
+                    <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span>{hasNext(currentStepNumber, props.components) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}<span style="color:#719e07">&gt;</span>
+                        <span style="color:#719e07">&lt;</span>button onClick<span style="color:#719e07">=</span>{goToNextStep}<span style="color:#719e07">&gt;</span>
                             Next
-                        &lt;/<span style="color:#268bd2">button</span>&gt;
-                    &lt;/<span style="color:#268bd2">div</span>&gt;
-                &lt;/<span style="color:#268bd2">div</span>&gt;
+                        <span style="color:#719e07">&lt;</span>/button&gt;
+                    <span style="color:#719e07">&lt;</span>/div&gt;
+                <span style="color:#719e07">&lt;</span>/div&gt;
             <span style="color:#586e75">// Multi-step frontend main component closing tag here
-</span><span style="color:#586e75"></span>        &lt;/<span style="color:#268bd2">div</span>&gt;
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">&lt;</span>/div&gt;
     );
 };
 </code></pre></div><p>This design is a more conventional way of building multi-step forms. Each step appears/disappears, depending on the user&rsquo;s progress. As such, each step will not have its permalink. Redux can help pass data from one form to another without modifying the child components.</p>

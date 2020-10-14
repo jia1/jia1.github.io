@@ -144,12 +144,12 @@
 <span style="color:#268bd2">import</span> Utf8 from <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
 
 <span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
-<span style="color:#268bd2">const</span> substitutionsAfterEncryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+<span style="color:#268bd2">const</span> substitutionsAfterEncryption: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
     [<span style="color:#2aa198">&#39;+&#39;</span>, <span style="color:#2aa198">&#39;-&#39;</span>],
     [<span style="color:#2aa198">&#39;/&#39;</span>, <span style="color:#2aa198">&#39;_&#39;</span>],
     [<span style="color:#2aa198">&#39;=&#39;</span>, <span style="color:#2aa198">&#39;~&#39;</span>],
 ]);
-<span style="color:#268bd2">const</span> substitutionsBeforeDecryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+<span style="color:#268bd2">const</span> substitutionsBeforeDecryption: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
     [<span style="color:#2aa198">&#39;-&#39;</span>, <span style="color:#2aa198">&#39;+&#39;</span>],
     [<span style="color:#2aa198">&#39;_&#39;</span>, <span style="color:#2aa198">&#39;/&#39;</span>],
     [<span style="color:#2aa198">&#39;~&#39;</span>, <span style="color:#2aa198">&#39;=&#39;</span>],
@@ -191,7 +191,7 @@
     ])
 );
 
-<span style="color:#268bd2">const</span> replaceSymbols <span style="color:#719e07">=</span> (cipher: <span style="color:#dc322f">string</span>, substitutionMap: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt;) <span style="color:#719e07">=&gt;</span> {
+<span style="color:#268bd2">const</span> replaceSymbols <span style="color:#719e07">=</span> (cipher: <span style="color:#dc322f">string</span>, substitutionMap: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span>) <span style="color:#719e07">=&gt;</span> {
     <span style="color:#268bd2">const</span> symbols <span style="color:#719e07">=</span> <span style="color:#b58900">Array</span>.from(substitutionMap.keys()).join(<span style="color:#2aa198">&#39;&#39;</span>);
     <span style="color:#719e07">return</span> cipher.replace(
         <span style="color:#719e07">new</span> <span style="color:#b58900">RegExp</span>(<span style="color:#586e75">`[</span><span style="color:#2aa198">${</span>symbols<span style="color:#2aa198">}</span><span style="color:#586e75">]`</span>, <span style="color:#2aa198">&#39;g&#39;</span>),
@@ -225,7 +225,7 @@
 ).reduce((accumulator, key) <span style="color:#719e07">=&gt;</span> {
     accumulator.set(key, <span style="color:#2aa198">&#39;BLAH&#39;</span>));
     <span style="color:#719e07">return</span> accumulator;
-}, <span style="color:#719e07">new</span> Map&lt;<span style="color:#268bd2">string</span>, string&gt;());
+}, <span style="color:#719e07">new</span> Map<span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span>());
 </code></pre></div><p>Correct way:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_2: Copying a map and overriding the values of the copy
 </span><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_COPY and &#39;BLAH&#39;.
@@ -234,7 +234,7 @@
 ).reduce((accumulator, key) <span style="color:#719e07">=&gt;</span> {
     accumulator.set(key, <span style="color:#2aa198">&#39;BLAH&#39;</span>));
     <span style="color:#719e07">return</span> accumulator;
-}, <span style="color:#719e07">new</span> Map&lt;<span style="color:#268bd2">string</span>, string&gt;());
+}, <span style="color:#719e07">new</span> Map<span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span>());
 </code></pre></div><p>So much for copying. I hope I can more careful with these in the future.</p>
 
   </section>

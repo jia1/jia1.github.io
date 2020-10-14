@@ -766,4 +766,8 @@
     <loc>https://jiayee.net/categories/</loc>
   </url>
   
+  <url>
+    <loc>https://jiayee.net/tweets/purge/</loc>
+  </url>
+  
 </urlset>

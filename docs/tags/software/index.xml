@@ -366,5 +366,14 @@ I then ran the consumer&amp;rsquo;s codebase and used Postman to hit the newly-o
 At first, I extracted only the method body which configures HttpSecurity. So I got myself something like a utility library. But this meant there was still some boilerplate code outside of the library. This approach required consumers to define their own configuration classes (annotated with @Configuration).</description>
     </item>
     
+    <item>
+      <title>Purge</title>
+      <link>https://jiayee.net/tweets/purge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiayee.net/tweets/purge/</guid>
+      <description>I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</description>
+    </item>
+    
   </channel>
 </rss>

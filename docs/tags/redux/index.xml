@@ -23,5 +23,14 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
 // Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;; import rootReducer from &amp;#39;.</description>
     </item>
     
+    <item>
+      <title>Purge</title>
+      <link>https://jiayee.net/tweets/purge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jiayee.net/tweets/purge/</guid>
+      <description>I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</description>
+    </item>
+    
   </channel>
 </rss>

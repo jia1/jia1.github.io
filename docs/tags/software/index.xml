@@ -6,10 +6,24 @@
     <description>Recent content in software on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 15 Oct 2020 19:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2020 19:11:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/software/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Some Similarities</title>
+      <link>https://jiayee.net/2020/10/some-similarities/</link>
+      <pubDate>Thu, 15 Oct 2020 19:11:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/some-similarities/</guid>
+      <description>This
+.some-class { display: flex; flex-direction: column; justify-content: center; min-height: 20rem; } and this
+.some-class { display: flex; align-items: center; min-height: 20rem; } appear the same to me.
+CSS-Tricks says,
+ You can think of align-items as the justify-content version for the cross-axis (perpendicular to the main-axis).
+ </description>
+    </item>
     
     <item>
       <title>Redux Poof!</title>

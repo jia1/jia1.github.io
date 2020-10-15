@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
   
   <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
-  <title>Purge</title>
+  <title>Redux Poof!</title>
 </head>
 <body>
     <div class="grid-container">
@@ -65,7 +65,7 @@
         
         
         
-        <li class="cell small-4 ">
+        <li class="cell small-4 is-active">
           <a href="/">
             Blog
           </a>
@@ -75,7 +75,7 @@
         
         
         
-        <li class="cell small-4 is-active">
+        <li class="cell small-4 ">
           <a href="/tweets">
             &#34;Tweets&#34;
           </a>
@@ -101,7 +101,7 @@
   
     <div class="nar-row">
       <h3 class="article-title">
-  Purge
+  Redux Poof!
 </h3>
 
       <section class="article-metadata">
@@ -110,7 +110,7 @@
       
       
       
-      <time datetime="0001-01-01">1 Jan 0001 @ 12.00 am</time>
+      <time datetime="2020-10-15">15 Oct 2020 @ 7.00 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -137,7 +137,13 @@
     </div>
   
   <section class="row article-content">
-    <p><a href="https://github.com/rt2zz/redux-persist/issues/238">I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</a></p>
+    <p>I was at Page A. Page A calls an API and stores the response in the Redux store. After some clicking, I was routed to Page B. I expected to retrieve the API response stored by Page A. But it wasn&rsquo;t there! The culprit was <code>&lt;a href ...&gt;</code>. I should be using <code>Link</code> or <code>navigate(...)</code> instead.</p>
+<p>When I refreshed Page B after getting there via <code>Link</code>, the store went poof again. To prevent that from happening, I can do the following:</p>
+<ol>
+<li>Use <code>redux-persist</code> and persist Redux stores beyond page loads and refreshes. But that would mean I need to maintain and guarantee freshness.</li>
+<li>Call the API in Page B too. That does not sit right with me because network calls are expensive. Perhaps I can look into caching API responses with <code>axios</code> adapter?</li>
+</ol>
+<p>Last but not least, <a href="https://stackoverflow.com/questions/44246856/redux-loses-state-when-navigating-to-another-page">this is something that I consulted</a>. Hope that helps!</p>
 
   </section>
   
@@ -149,15 +155,15 @@
 <ul>
 	
 	<li>
-    <a href="/2020/10/redux-poof/">
-      Redux Poof! (#redux)
+    <a href="/2020/10/redux-persist/">
+      redux-persist (#redux)
       
     </a>
   </li>
 	
 	<li>
-    <a href="/2020/10/redux-persist/">
-      redux-persist (#redux)
+    <a href="/tweets/purge/">
+      Purge (#redux)
       
     </a>
   </li>

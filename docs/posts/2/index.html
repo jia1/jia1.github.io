@@ -103,6 +103,58 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/string.format-equivalent-in-typescript/">
+    <h3 class="article-title">
+  String.format equivalent in TypeScript
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/typescript">
+          #typescript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&rsquo;t need to). I didn&rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&lt;string, string&gt;) =&gt; { const variables = Array.from(values.keys()).map(key =&gt; &#39;:&#39; + key).
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/string.format-equivalent-in-typescript/">Continue reading "String.format equivalent in TypeScript"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/multi-step-forms/">
     <h3 class="article-title">
   Multi-step forms
@@ -307,59 +359,6 @@ package main import &#34;fmt&#34; func main() { // Chapter 5: Arrays, slices and
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/quick-go-3/">Continue reading "Quick Go 3"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/typescript-shortcuts/">
-    <h3 class="article-title">
-  TypeScript Shortcuts
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-01">1 Oct 2020 @ 7.01 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/typescript">
-          #typescript
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F TYPESCRIPT_SHORTCUT_1 and TYPESCRIPT_SHORTCUT_2 to get to the code.
-Context: Yesterday, I did not invest time into inverting a TypeScript Map&lt;string, string&gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
-Here&rsquo;s the new original code:
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/typescript-shortcuts/">Continue reading "TypeScript Shortcuts"</a>
   </p>
 </article>
 

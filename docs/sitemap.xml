@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://jiayee.net/tags/html/</loc>
-    <lastmod>2020-10-15T19:16:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/</loc>
     <lastmod>2020-10-15T19:16:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jiayee.net/tweets/need-an-extra-whitespace/</loc>
+    <lastmod>2020-10-15T19:16:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/react/</loc>
     <lastmod>2020-10-15T19:16:00+08:00</lastmod>
   </url>
   
@@ -204,11 +204,6 @@
   
   <url>
     <loc>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</loc>
-    <lastmod>2020-10-07T22:50:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/react/</loc>
     <lastmod>2020-10-07T22:50:28+08:00</lastmod>
   </url>
   

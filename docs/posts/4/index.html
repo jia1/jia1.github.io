@@ -103,6 +103,59 @@
     <div class="row">
       <article>
   
+  <a href="/2020/09/jslt/">
+    <h3 class="article-title">
+  JSLT
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-29">29 Sep 2020 @ 6.22 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/json">
+          #json
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/jslt">
+          #jslt
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
+My GraphQL query:
+query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/jslt/">Continue reading "JSLT"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/09/quick-go-1/">
     <h3 class="article-title">
   Quick Go 1
@@ -310,63 +363,6 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/intercepting-angular-data-binding/">Continue reading "Intercepting Angular Data Binding"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/data-wrangling/">
-    <h3 class="article-title">
-  Data Wrangling
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-22">22 Sep 2020 @ 9.14 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/nus">
-          #nus
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/nushackers">
-          #nushackers
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/cli">
-          #cli
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I managed to catch one of the NUS Hackers&rsquo; workshops, &ldquo;Hacker Tools: Data Wrangling&rdquo; by Julius. I got to learn many new things since I don&rsquo;t use CLI for text processing. Julius&rsquo; slides are in his GitHub repo.
-Below is a very brief and dry summary of what is more important to me. If I &ldquo;miss&rdquo; something out, it&rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/data-wrangling/">Continue reading "Data Wrangling"</a>
   </p>
 </article>
 

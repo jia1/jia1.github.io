@@ -6,10 +6,20 @@
     <description>Recent content in software on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 15 Oct 2020 19:16:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 19:30:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/software/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Captcha isValid()</title>
+      <link>https://jiayee.net/2020/10/captcha-isvalid/</link>
+      <pubDate>Sun, 18 Oct 2020 19:30:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/captcha-isvalid/</guid>
+      <description>I needed the client to check for the captcha failure when a user loads a form. In the captchaService abstraction for angular-recaptcha, there was isValid() which does:
+/** * Check if response has been set, assuming captcha is enabled */ this.isValid = () =&amp;gt; this.response || !this.enabled; I had a way to trigger the captcha failure: In the same WiFi network, I accessed a form from localhost through my mobile phone.</description>
+    </item>
     
     <item>
       <title>Need an extra whitespace?</title>

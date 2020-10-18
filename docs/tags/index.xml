@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 18 Oct 2020 19:05:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 18 Oct 2020 19:30:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>angular</title>
+      <link>https://jiayee.net/tags/angular/</link>
+      <pubDate>Sun, 18 Oct 2020 19:30:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://jiayee.net/tags/software/</link>
+      <pubDate>Sun, 18 Oct 2020 19:30:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://jiayee.net/tags/web/</link>
+      <pubDate>Sun, 18 Oct 2020 19:30:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/web/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>18-oct</title>
@@ -57,29 +84,11 @@
     </item>
     
     <item>
-      <title>software</title>
-      <link>https://jiayee.net/tags/software/</link>
-      <pubDate>Thu, 15 Oct 2020 19:16:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>css</title>
       <link>https://jiayee.net/tags/css/</link>
       <pubDate>Thu, 15 Oct 2020 19:11:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://jiayee.net/tags/web/</link>
-      <pubDate>Thu, 15 Oct 2020 19:11:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/web/</guid>
       <description></description>
     </item>
     
@@ -224,15 +233,6 @@
       <pubDate>Tue, 06 Oct 2020 11:57:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/06-oct/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>angular</title>
-      <link>https://jiayee.net/tags/angular/</link>
-      <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/angular/</guid>
       <description></description>
     </item>
     

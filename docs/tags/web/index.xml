@@ -18,7 +18,7 @@
       
       <guid>https://jiayee.net/2020/10/captcha-isvalid/</guid>
       <description>I needed the client to check for the captcha failure when a user loads a form. In the captchaService abstraction for angular-recaptcha, there was isValid() which does:
-/** * Check if response has been set, assuming captcha is enabled */ this.isValid = () =&amp;gt; this.response || !this.enabled; I had a way to trigger the captcha failure: In the same WiFi network, I accessed a form from localhost through my mobile phone.</description>
+/** * Check if the response has been set, assuming captcha is enabled. */ this.isValid = () =&amp;gt; this.response || !this.enabled; I had a way to trigger the captcha failure. In the same WiFi network, I accessed a form from localhost through my mobile phone.</description>
     </item>
     
     <item>
@@ -53,6 +53,15 @@ When I refreshed Page B after getting there via Link, the store went poof again.
       <guid>https://jiayee.net/2020/10/center/</guid>
       <description>Why &amp;ldquo;Center&amp;rdquo; instead of &amp;ldquo;Centre&amp;rdquo;? Well, that&amp;rsquo;s because &amp;ldquo;center&amp;rdquo; is the version used in CSS.
 There were moments in my life when I wanted to give up writing in British English. There are so many other people using American English&amp;hellip; except for me. Programming languages are expressed using American English as well. I felt like a rebel for naming my variables in British English, but that&amp;rsquo;s what I&amp;rsquo;ve learnt in school.</description>
+    </item>
+    
+    <item>
+      <title>Purge</title>
+      <link>https://jiayee.net/tweets/purge/</link>
+      <pubDate>Wed, 14 Oct 2020 18:00:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/purge/</guid>
+      <description>I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</description>
     </item>
     
     <item>
@@ -157,15 +166,6 @@ A summary of the improvements I made:
       <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
       <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
 Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required My Google-fu was lacking.</description>
-    </item>
-    
-    <item>
-      <title>Purge</title>
-      <link>https://jiayee.net/tweets/purge/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jiayee.net/tweets/purge/</guid>
-      <description>I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</description>
     </item>
     
   </channel>

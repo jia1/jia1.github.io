@@ -22,6 +22,15 @@ When I refreshed Page B after getting there via Link, the store went poof again.
     </item>
     
     <item>
+      <title>Purge</title>
+      <link>https://jiayee.net/tweets/purge/</link>
+      <pubDate>Wed, 14 Oct 2020 18:00:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/purge/</guid>
+      <description>I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</description>
+    </item>
+    
+    <item>
       <title>redux-persist</title>
       <link>https://jiayee.net/2020/10/redux-persist/</link>
       <pubDate>Thu, 08 Oct 2020 22:36:00 +0800</pubDate>
@@ -31,15 +40,6 @@ When I refreshed Page B after getting there via Link, the store went poof again.
 Install redux-persist:
 yarn add redux-persist @types/redux-persist Update root reducer and store:
 // Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;; import rootReducer from &amp;#39;.</description>
-    </item>
-    
-    <item>
-      <title>Purge</title>
-      <link>https://jiayee.net/tweets/purge/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jiayee.net/tweets/purge/</guid>
-      <description>I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</description>
     </item>
     
   </channel>

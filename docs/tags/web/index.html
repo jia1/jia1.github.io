@@ -141,7 +141,7 @@
   </div>
   <section class="nar-row article-summary">
     I needed the client to check for the captcha failure when a user loads a form. In the captchaService abstraction for angular-recaptcha, there was isValid() which does:
-/** * Check if response has been set, assuming captcha is enabled */ this.isValid = () =&gt; this.response || !this.enabled; I had a way to trigger the captcha failure: In the same WiFi network, I accessed a form from localhost through my mobile phone.
+/** * Check if the response has been set, assuming captcha is enabled. */ this.isValid = () =&gt; this.response || !this.enabled; I had a way to trigger the captcha failure. In the same WiFi network, I accessed a form from localhost through my mobile phone.
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/captcha-isvalid/">Continue reading "Captcha isValid()"</a>
@@ -313,9 +313,9 @@ There were moments in my life when I wanted to give up writing in British Englis
     <div class="row">
       <article>
   
-  <a href="/2020/10/redux-persist/">
+  <a href="/tweets/purge/">
     <h3 class="article-title">
-  redux-persist
+  Purge
 </h3>
 
   </a>
@@ -326,7 +326,7 @@ There were moments in my life when I wanted to give up writing in British Englis
       
       
       
-      <time datetime="2020-10-08">8 Oct 2020 @ 10.36 pm</time>
+      <time datetime="2020-10-14">14 Oct 2020 @ 6.00 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -342,16 +342,6 @@ There were moments in my life when I wanted to give up writing in British Englis
         </a>
       
         
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/typescript">
-          #typescript
-        </a>
-      
-        
         <a href="https://jiayee.net/tags/redux">
           #redux
         </a>
@@ -362,13 +352,10 @@ There were moments in my life when I wanted to give up writing in British Englis
 
   </div>
   <section class="nar-row article-summary">
-    If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
-Install redux-persist:
-yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &#39;react-redux&#39;; import { createStore, Store } from &#39;redux&#39;; import { persistReducer, persistStore } from &#39;redux-persist&#39;; import storage from &#39;redux-persist/lib/storage&#39;; import rootReducer from &#39;.
+    I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/redux-persist/">Continue reading "redux-persist"</a>
+    <a class="article-read-more" href="/tweets/purge/">Continue reading "Purge"</a>
   </p>
 </article>
 

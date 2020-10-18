@@ -101,6 +101,62 @@
     <div class="row">
       <article>
   
+  <a href="/2020/09/style-fixes-1/">
+    <h3 class="article-title">
+  Style Fixes 1
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-20">20 Sep 2020 @ 4.26 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/hugo">
+          #hugo
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/foundation">
+          #foundation
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I discovered there were some unexpected styles for &lt;code&gt; and &lt;pre&gt; in this site. This is due to Foundation&rsquo;s default styles. The inline code style was fine, but the same style applied to code blocks (i.e. &lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;), and that was not fine. There was also insufficient margin and padding for the code blocks. I inspected the &lt;code&gt; elements. I found out that Foundation was the culprit. It has been styling the &lt;code&gt; elements on top of what Hugo has in store.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/style-fixes-1/">Continue reading "Style Fixes 1"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/09/first-lighthouse-report-for-jiayee.net/">
     <h3 class="article-title">
   First Lighthouse Report for Jiayee.net
@@ -297,58 +353,6 @@ Before that, I tried attaching only @Bean to the getter, but it didn&rsquo;t wor
   </section>
   <p>
     <a class="article-read-more" href="/tweets/markdown-nested-lists/">Continue reading "Markdown nested lists"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/cloudflare-workers/">
-    <h3 class="article-title">
-  Cloudflare Workers
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-15">15 Sep 2020 @ 9.31 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/domains">
-          #domains
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/cloudflare">
-          #cloudflare
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    It&rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &lsquo;n&rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
-My worker&rsquo;s name was &quot;vanity&quot; for obvious reasons and it sits at https://www.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/cloudflare-workers/">Continue reading "Cloudflare Workers"</a>
   </p>
 </article>
 

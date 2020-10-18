@@ -1,6 +1,6 @@
 ---
 title: "Purge"
-date: 2020-10-14T18:012:00+08:00
+date: 2020-10-14T18:00:00+08:00
 draft: false
 tags: ["software","web","redux"]
 ---

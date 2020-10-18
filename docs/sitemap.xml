@@ -123,6 +123,11 @@
   </url>
   
   <url>
+    <loc>https://jiayee.net/tweets/purge/</loc>
+    <lastmod>2020-10-14T18:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/14-oct/</loc>
     <lastmod>2020-10-14T17:38:00+08:00</lastmod>
   </url>
@@ -824,10 +829,6 @@
   
   <url>
     <loc>https://jiayee.net/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tweets/purge/</loc>
   </url>
   
 </urlset>

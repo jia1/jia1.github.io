@@ -174,12 +174,12 @@
 <span style="color:#268bd2">import</span> Utf8 from <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
 
 <span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
-<span style="color:#268bd2">const</span> substitutionsAfterEncryption: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+<span style="color:#268bd2">const</span> substitutionsAfterEncryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
     [<span style="color:#2aa198">&#39;+&#39;</span>, <span style="color:#2aa198">&#39;-&#39;</span>],
     [<span style="color:#2aa198">&#39;/&#39;</span>, <span style="color:#2aa198">&#39;_&#39;</span>],
     [<span style="color:#2aa198">&#39;=&#39;</span>, <span style="color:#2aa198">&#39;~&#39;</span>],
 ]);
-<span style="color:#268bd2">const</span> substitutionsBeforeDecryption: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+<span style="color:#268bd2">const</span> substitutionsBeforeDecryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
     [<span style="color:#2aa198">&#39;-&#39;</span>, <span style="color:#2aa198">&#39;+&#39;</span>],
     [<span style="color:#2aa198">&#39;_&#39;</span>, <span style="color:#2aa198">&#39;/&#39;</span>],
     [<span style="color:#2aa198">&#39;=&#39;</span>, <span style="color:#2aa198">&#39;~&#39;</span>],

@@ -173,7 +173,7 @@
 
 <span style="color:#268bd2">const</span> persistedReducer <span style="color:#719e07">=</span> persistReducer(persistConfig, rootReducer)
 
-<span style="color:#268bd2">const</span> configureStore<span style="color:#719e07">:</span> () <span style="color:#719e07">=&gt;</span> Store<span style="color:#719e07">&lt;</span>YourReduxStoreModel<span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
+<span style="color:#268bd2">const</span> configureStore<span style="color:#719e07">:</span> () <span style="color:#719e07">=&gt;</span> Store&lt;<span style="color:#268bd2">YourReduxStoreModel</span>&gt; <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
   <span style="color:#268bd2">let</span> store <span style="color:#719e07">=</span> createStore(persistedReducer, initialStore, applyMiddleware(thunk));
   <span style="color:#268bd2">let</span> persistor <span style="color:#719e07">=</span> persistStore(store);
   <span style="color:#719e07">return</span> { store, persistor };
@@ -184,11 +184,11 @@
 
 <span style="color:#268bd2">const</span> App <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
   <span style="color:#719e07">return</span> (
-    <span style="color:#719e07">&lt;</span>Provider store<span style="color:#719e07">=</span>{store}<span style="color:#719e07">&gt;</span>
-      <span style="color:#719e07">&lt;</span>PersistGate loading<span style="color:#719e07">=</span>{<span style="color:#cb4b16">null</span>} persistor<span style="color:#719e07">=</span>{persistor}<span style="color:#719e07">&gt;</span>
-        <span style="color:#719e07">&lt;</span>Blah <span style="color:#719e07">/&gt;</span>
-      <span style="color:#719e07">&lt;</span>/PersistGate&gt;
-    <span style="color:#719e07">&lt;</span>/Provider&gt;
+    &lt;<span style="color:#268bd2">Provider</span> store<span style="color:#719e07">=</span>{store}&gt;
+      &lt;<span style="color:#268bd2">PersistGate</span> loading<span style="color:#719e07">=</span>{<span style="color:#cb4b16">null</span>} persistor<span style="color:#719e07">=</span>{persistor}&gt;
+        &lt;<span style="color:#268bd2">Blah</span> /&gt;
+      &lt;/<span style="color:#268bd2">PersistGate</span>&gt;
+    &lt;/<span style="color:#268bd2">Provider</span>&gt;
   );
 };
 </code></pre></div><p>The TypeScript type checker will then highlight <code>initialStore</code> because its type is <code>YourReduxStoreModel</code>. It does not contain <code>_persist</code> key and other keys related to <code>redux-persist</code>. This is a <a href="https://github.com/rt2zz/redux-persist/issues/1169">known issue</a>. For a quick fix, I added the missing keys to <code>YourReduxStoreModel</code>.</p>

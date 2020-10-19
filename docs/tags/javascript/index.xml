@@ -6,10 +6,21 @@
     <description>Recent content in javascript on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 13 Oct 2020 19:11:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 19 Oct 2020 22:30:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Constants</title>
+      <link>https://jiayee.net/2020/10/constants/</link>
+      <pubDate>Mon, 19 Oct 2020 22:30:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/constants/</guid>
+      <description>I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, this practice is frowned upon. In JavaScript, it seemed alright.
+The answer which received the bounty recommended the following:
+// Warning: This answer was written in 2014. module.exports = Object.freeze({ MY_CONSTANT: &amp;#39;some value&amp;#39;, ANOTHER_CONSTANT: &amp;#39;another value&amp;#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.</description>
+    </item>
     
     <item>
       <title>Javascript heap limit</title>

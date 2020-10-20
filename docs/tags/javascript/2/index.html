@@ -101,6 +101,58 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/string.format-equivalent-in-typescript/">
+    <h3 class="article-title">
+  String.format equivalent in TypeScript
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/typescript">
+          #typescript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&rsquo;t need to). I didn&rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&lt;string, string&gt;) =&gt; { const variables = Array.from(values.keys()).map(key =&gt; &#39;:&#39; + key).
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/string.format-equivalent-in-typescript/">Continue reading "String.format equivalent in TypeScript"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/multi-step-forms/">
     <h3 class="article-title">
   Multi-step forms
@@ -306,58 +358,6 @@ Here&rsquo;s the new original code:
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/typescript-shortcuts/">Continue reading "TypeScript Shortcuts"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/cryptojs-and-url/">
-    <h3 class="article-title">
-  CryptoJS and URL
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-30">30 Sep 2020 @ 7.17 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/typescript">
-          #typescript
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    Like this Stack Overflow thread, I needed to encrypt some string which will become part of a URL. However, there was a slash in one of the encrypted strings, like c3ViamVjdHM/X2Q9MQ==. Feel free to decode this. It&rsquo;s something I copied from the internet.
-I thought there would be a lot of symbols in the Base64 alphabet at first (I was wrong). I didn&rsquo;t want to deal with them and set up a giant substitution map, like a Map&lt;string, string&gt;.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/cryptojs-and-url/">Continue reading "CryptoJS and URL"</a>
   </p>
 </article>
 

@@ -151,9 +151,9 @@ addEventListener(<span style="color:#2aa198">&#39;fetch&#39;</span>, event =&gt;
   event.respondWith(handleRequest(event.request));
 });
 
-async <span style="color:#268bd2">function</span> handleRequest(request) {
-  <span style="color:#268bd2">const</span> exec <span style="color:#719e07">=</span> await regex.exec(request.url);
-  <span style="color:#268bd2">const</span> path <span style="color:#719e07">=</span> await exec <span style="color:#719e07">?</span> exec[<span style="color:#2aa198">1</span>].toLowerCase() <span style="color:#719e07">:</span> defaultPath;
+<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> handleRequest(request) {
+  <span style="color:#268bd2">const</span> exec <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> regex.exec(request.url);
+  <span style="color:#268bd2">const</span> path <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> exec <span style="color:#719e07">?</span> exec[<span style="color:#2aa198">1</span>].toLowerCase() <span style="color:#719e07">:</span> defaultPath;
   <span style="color:#719e07">return</span> Response.redirect(links[path] <span style="color:#719e07">||</span> links[defaultPath], <span style="color:#2aa198">302</span>);
 }
 </code></pre></div><p>So <a href="http://jiay.ee/steam"><code>jiay.ee/steam</code></a> goes to my Steam profile. Give it a try. Last but not least, if you find your worker still stuck at an old version, clear your browser cache.</p>

@@ -140,8 +140,8 @@
     <p>Like this <a href="https://stackoverflow.com/questions/43399093/encrypt-cryptojs-without-special-characters">Stack Overflow thread</a>, I needed to encrypt some string which will become part of a URL. However, there was a slash in one of the encrypted strings, like <code>c3ViamVjdHM/X2Q9MQ==</code>. Feel free to decode this. It&rsquo;s something I copied from the internet.</p>
 <p>I thought there would be a lot of symbols in the Base64 alphabet at first (I was wrong). I didn&rsquo;t want to deal with them and set up a giant substitution map, like a <code>Map&lt;string, string&gt;</code>. As such, I converted the encrypted string to hex and did the necessary reversal at decryption. It seemed inappropriate because it&rsquo;s another dependency (see the <code>enc</code> import) and a possible performance bottleneck. (Afterwards, I went to validate my concerns. I found this <a href="https://stackoverflow.com/questions/26943420/which-is-faster-hex-encoding-or-base64-encoding">Stack Overflow thread</a>.)</p>
 <p>Original code:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
-<span style="color:#268bd2">import</span> Utf8 <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } from <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
+<span style="color:#268bd2">import</span> Utf8 from <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
 
 <span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
 
@@ -153,8 +153,8 @@
     <span style="color:#719e07">return</span> AES.decrypt(cipher, passphrase).toString(Utf8);
 };
 </code></pre></div><p>My initial solution:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES, enc } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
-<span style="color:#268bd2">import</span> Utf8 <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES, enc } from <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
+<span style="color:#268bd2">import</span> Utf8 from <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
 
 <span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
 
@@ -170,16 +170,16 @@
     <span style="color:#719e07">return</span> AES.decrypt(toDecrypt, passphrase).toString(Utf8);
 };
 </code></pre></div><p>Feeling uncertain about my initial solution, I looked up the Base64 alphabet. <code>+</code>, <code>/</code> and <code>=</code> are the only non-alphanumeric symbols in the Base64 alphabet. That&rsquo;s very manageable. I then transformed my solution into:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
-<span style="color:#268bd2">import</span> Utf8 <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } from <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
+<span style="color:#268bd2">import</span> Utf8 from <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
 
 <span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
-<span style="color:#268bd2">const</span> substitutionsAfterEncryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+<span style="color:#268bd2">const</span> substitutionsAfterEncryption: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
     [<span style="color:#2aa198">&#39;+&#39;</span>, <span style="color:#2aa198">&#39;-&#39;</span>],
     [<span style="color:#2aa198">&#39;/&#39;</span>, <span style="color:#2aa198">&#39;_&#39;</span>],
     [<span style="color:#2aa198">&#39;=&#39;</span>, <span style="color:#2aa198">&#39;~&#39;</span>],
 ]);
-<span style="color:#268bd2">const</span> substitutionsBeforeDecryption: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt; <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
+<span style="color:#268bd2">const</span> substitutionsBeforeDecryption: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Map([
     [<span style="color:#2aa198">&#39;-&#39;</span>, <span style="color:#2aa198">&#39;+&#39;</span>],
     [<span style="color:#2aa198">&#39;_&#39;</span>, <span style="color:#2aa198">&#39;/&#39;</span>],
     [<span style="color:#2aa198">&#39;=&#39;</span>, <span style="color:#2aa198">&#39;~&#39;</span>],
@@ -189,14 +189,14 @@
     <span style="color:#268bd2">const</span> encrypted <span style="color:#719e07">=</span> AES.encrypt(plaintext, passphrase).toString();
     <span style="color:#719e07">return</span> encrypted.replace(
         <span style="color:#dc322f">/[+/=]/g</span>,
-        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> substitutionsAfterEncryption.<span style="color:#268bd2">get</span>(match) <span style="color:#719e07">??</span> match
+        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> substitutionsAfterEncryption.get(match) <span style="color:#719e07">??</span> match
     );
 };
 
 <span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> decrypt <span style="color:#719e07">=</span> (cipher: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> {
     <span style="color:#268bd2">const</span> toDecrypt <span style="color:#719e07">=</span> cipher.replace(
         <span style="color:#dc322f">/[-_~]/g</span>,
-        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> substitutionsBeforeDecryption.<span style="color:#268bd2">get</span>(match) <span style="color:#719e07">??</span> match
+        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> substitutionsBeforeDecryption.get(match) <span style="color:#719e07">??</span> match
     );
     <span style="color:#719e07">return</span> AES.decrypt(toDecrypt, passphrase).toString(Utf8);
 };

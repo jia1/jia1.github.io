@@ -6,7 +6,21 @@
     <description>Recent content on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 25 Oct 2020 21:41:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Oct 2020 06:51:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Today&#39;s Q&amp;A for Jiayee (26 Oct 2020)</title>
+      <link>https://jiayee.net/tweets/26-oct-2020-qna/</link>
+      <pubDate>Mon, 26 Oct 2020 06:51:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/26-oct-2020-qna/</guid>
+      <description>How do you feel about your body?
+ Healthier because of a healthier lifestyle now.</description>
+    </item>
+    
     <item>
       <title>Today&#39;s Q&amp;A for Jiayee (25 Oct 2020)</title>
       <link>https://jiayee.net/tweets/25-oct-2020-qna/</link>
@@ -528,7 +542,7 @@ query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: s
       
       <guid>https://jiayee.net/tweets/28-sep-2020-qna/</guid>
       <description>How hungry are you right now?
- I&amp;rsquo;m like 55% full now. Had a cup of water and a red apple when I woke up. Then, I exercised, showered, drank a cup of water and had a green apple. And a moment ago, I ate my in-laws&#39; peanut pancakes from yesterday, and I drank another cup of water. Should get more water plus a cup of milk. I&amp;rsquo;m all set for the day!</description>
+ I&amp;rsquo;m like 55% full now. Had a cup of water and a red apple when I woke up. Then, I exercised, showered, drank a cup of water and had a green apple. And a moment ago, I ate my in-laws&amp;rsquo; peanut pancakes from yesterday, and I drank another cup of water. Should get more water plus a cup of milk. I&amp;rsquo;m all set for the day!</description>
     </item>
     
     <item>
@@ -621,7 +635,7 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
       <pubDate>Tue, 22 Sep 2020 21:14:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/data-wrangling/</guid>
-      <description>I managed to catch one of the NUS Hackers&#39; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&#39; slides are in his GitHub repo.
+      <description>I managed to catch one of the NUS Hackers&amp;rsquo; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&amp;rsquo; slides are in his GitHub repo.
 Below is a very brief and dry summary of what is more important to me. If I &amp;ldquo;miss&amp;rdquo; something out, it&amp;rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.</description>
     </item>
     

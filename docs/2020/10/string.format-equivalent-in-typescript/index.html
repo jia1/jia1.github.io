@@ -139,11 +139,11 @@
   <section class="row article-content">
     <p>While working on a problem during work, I thought I needed a way to do a <code>String.format</code> equivalent operation in TypeScript (it turns out I didn&rsquo;t need to). I didn&rsquo;t want to install Lodash (50 kB for <code>_.template</code> alone) or sprintf (40 kB), so I came up with the following:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Warning: Untested code
-</span><span style="color:#586e75"></span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> compileTemplate <span style="color:#719e07">=</span> (template: <span style="color:#dc322f">string</span>, values: <span style="color:#dc322f">Map</span>&lt;<span style="color:#268bd2">string</span>, string&gt;) <span style="color:#719e07">=&gt;</span> {
-    <span style="color:#268bd2">const</span> variables <span style="color:#719e07">=</span> <span style="color:#b58900">Array</span>.<span style="color:#268bd2">from</span>(values.keys()).map(key <span style="color:#719e07">=&gt;</span> <span style="color:#2aa198">&#39;:&#39;</span> <span style="color:#719e07">+</span> key).join(<span style="color:#2aa198">&#39;|&#39;</span>);
+</span><span style="color:#586e75"></span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> compileTemplate <span style="color:#719e07">=</span> (template: <span style="color:#dc322f">string</span>, values: <span style="color:#dc322f">Map</span><span style="color:#719e07">&lt;</span><span style="color:#dc322f">string</span>, <span style="color:#dc322f">string</span><span style="color:#719e07">&gt;</span>) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#268bd2">const</span> variables <span style="color:#719e07">=</span> <span style="color:#b58900">Array</span>.from(values.keys()).map(key <span style="color:#719e07">=&gt;</span> <span style="color:#2aa198">&#39;:&#39;</span> <span style="color:#719e07">+</span> key).join(<span style="color:#2aa198">&#39;|&#39;</span>);
     <span style="color:#719e07">return</span> template.replace(
         <span style="color:#719e07">new</span> <span style="color:#b58900">RegExp</span>(variables, <span style="color:#2aa198">&#39;g&#39;</span>),
-        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> values.<span style="color:#268bd2">get</span>(match.substr(<span style="color:#2aa198">1</span>)) <span style="color:#719e07">??</span> match
+        (match: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> values.get(match.substr(<span style="color:#2aa198">1</span>)) <span style="color:#719e07">??</span> match
     );
 };
 </code></pre></div><p>There are the Stack Overflow threads I consulted:</p>

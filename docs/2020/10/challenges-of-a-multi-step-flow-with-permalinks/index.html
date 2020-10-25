@@ -161,12 +161,12 @@
 <span style="color:#719e07">return</span> (
   {stepLinks <span style="color:#719e07">&amp;&amp;</span> stepLinks.map(([component, stepLink], stepNumber) <span style="color:#719e07">=&gt;</span> {
     <span style="color:#719e07">return</span> (
-      &lt;<span style="color:#268bd2">MultiStepFormPageTemplate</span>
-        path<span style="color:#719e07">=</span>{stepLink} // A Reach router prop
-        stepPage<span style="color:#719e07">=</span>{component}
+      <span style="color:#719e07">&lt;</span>MultiStepFormPageTemplate
+        path<span style="color:#719e07">=</span>{stepLink} <span style="color:#586e75">// A Reach router prop
+</span><span style="color:#586e75"></span>        stepPage<span style="color:#719e07">=</span>{component}
         stepNumber<span style="color:#719e07">=</span>{stepNumber}
         stepLinks<span style="color:#719e07">=</span>{stepLinks}
-      /&gt;
+      <span style="color:#719e07">/&gt;</span>
     );
   })}
 );
@@ -180,8 +180,8 @@
 <p>The multi-step component libraries I know of in the wild are not suitable. They compel me to conduct an overhaul and/or major copypasta of the current codebase. For instance, the libraries can come with their own frontend components. Users will need to reorganise the form into a JSON object. I used one a few years ago, for a closed source codebase. It was crazy - bulky and many LoC.</p>
 <p>I don&rsquo;t want to give up.</p>
 <p>There isn&rsquo;t much development to <code>MultiStepFormPageTemplate</code>. I created an additional prop interface and preserved query parameters. Here&rsquo;s the code:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>;
-<span style="color:#268bd2">import</span> { navigate, RouteComponentProps, useLocation } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;@reach/router&#39;</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } from <span style="color:#2aa198">&#39;react&#39;</span>;
+<span style="color:#268bd2">import</span> { navigate, RouteComponentProps, useLocation } from <span style="color:#2aa198">&#39;@reach/router&#39;</span>;
 
 <span style="color:#586e75">// Form component props must extend from HasRedirectOnSubmit
 </span><span style="color:#586e75"></span><span style="color:#268bd2">export</span> <span style="color:#268bd2">interface</span> HasRedirectOnSubmit <span style="color:#268bd2">extends</span> RouteComponentProps {
@@ -189,7 +189,7 @@
 }
 
 <span style="color:#268bd2">interface</span> Props <span style="color:#268bd2">extends</span> RouteComponentProps {
-    stepPage: <span style="color:#dc322f">FC</span>&lt;<span style="color:#268bd2">HasRedirectOnSubmit</span>&gt;;
+    stepPage: <span style="color:#dc322f">FC</span><span style="color:#719e07">&lt;</span>HasRedirectOnSubmit<span style="color:#719e07">&gt;</span>;
     stepNumber: <span style="color:#dc322f">number</span>;
     stepLinks: <span style="color:#dc322f">string</span>[];
 }
@@ -210,37 +210,37 @@
 };
 
 <span style="color:#268bd2">const</span> goToStep <span style="color:#719e07">=</span> (stepLink: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> {
-    <span style="color:#719e07">return</span> <span style="color:#268bd2">async</span> (e<span style="color:#719e07">:</span> { preventDefault<span style="color:#719e07">:</span> () <span style="color:#719e07">=&gt;</span> <span style="color:#719e07">void</span> }) <span style="color:#719e07">=&gt;</span> {
+    <span style="color:#719e07">return</span> async (e<span style="color:#719e07">:</span> { preventDefault<span style="color:#719e07">:</span> () <span style="color:#719e07">=&gt;</span> <span style="color:#719e07">void</span> }) <span style="color:#719e07">=&gt;</span> {
         <span style="color:#719e07">if</span> (stepLink) {
-            <span style="color:#719e07">await</span> navigate(stepLink);
+            await navigate(stepLink);
         }
     };
 };
 
-<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepFormPageTemplate: <span style="color:#dc322f">FC</span>&lt;<span style="color:#268bd2">Props</span>&gt; <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepFormPageTemplate: <span style="color:#dc322f">FC</span><span style="color:#719e07">&lt;</span>Props<span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> (props: <span style="color:#dc322f">Props</span>) <span style="color:#719e07">=&gt;</span> {
     <span style="color:#586e75">// These lines preserve the query params.
 </span><span style="color:#586e75"></span>    <span style="color:#268bd2">const</span> queryString <span style="color:#719e07">=</span> useLocation().search;
     <span style="color:#268bd2">const</span> previousStepLink <span style="color:#719e07">=</span> props.stepLinks[props.stepNumber <span style="color:#719e07">-</span> <span style="color:#2aa198">1</span>] <span style="color:#719e07">+</span> queryString;
     <span style="color:#268bd2">const</span> nextStepLink <span style="color:#719e07">=</span> getNextStepLink(props.stepNumber, props.stepLinks) <span style="color:#719e07">+</span> queryString;
     <span style="color:#719e07">return</span> (
-        &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span>&gt;
-            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span>&gt;&lt;/<span style="color:#268bd2">div</span>&gt;
-            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-page&#34;</span>&gt;
-                &lt;<span style="color:#268bd2">props.stepPage</span> nextStepLink<span style="color:#719e07">=</span>{nextStepLink} /&gt;
-            &lt;/<span style="color:#268bd2">div</span>&gt;
-            &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span>&gt;
-                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasPrevStep(props.stepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
-                    &lt;<span style="color:#268bd2">button</span> onClick<span style="color:#719e07">=</span>{goToStep(previousStepLink)}&gt;
+        <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;multi-step-form&#34;</span><span style="color:#719e07">&gt;</span>
+            <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;progress-bar&#34;</span><span style="color:#719e07">&gt;&lt;</span>/div&gt;
+            <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;form-page&#34;</span><span style="color:#719e07">&gt;</span>
+                <span style="color:#719e07">&lt;</span>props.stepPage nextStepLink<span style="color:#719e07">=</span>{nextStepLink} <span style="color:#719e07">/&gt;</span>
+            <span style="color:#719e07">&lt;</span>/div&gt;
+            <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;step-navigation&#34;</span><span style="color:#719e07">&gt;</span>
+                <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span>{hasPrevStep(props.stepNumber) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}<span style="color:#719e07">&gt;</span>
+                    <span style="color:#719e07">&lt;</span>button onClick<span style="color:#719e07">=</span>{goToStep(previousStepLink)}<span style="color:#719e07">&gt;</span>
                         Previous
-                    &lt;/<span style="color:#268bd2">button</span>&gt;
-                &lt;/<span style="color:#268bd2">div</span>&gt;
-                &lt;<span style="color:#268bd2">div</span> className<span style="color:#719e07">=</span>{hasNextStep(props.stepNumber, props.stepLinks) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}&gt;
-                    &lt;<span style="color:#268bd2">button</span> onClick<span style="color:#719e07">=</span>{goToStep(nextStepLink)}&gt;
+                    <span style="color:#719e07">&lt;</span>/button&gt;
+                <span style="color:#719e07">&lt;</span>/div&gt;
+                <span style="color:#719e07">&lt;</span>div className<span style="color:#719e07">=</span>{hasNextStep(props.stepNumber, props.stepLinks) <span style="color:#719e07">?</span> <span style="color:#2aa198">&#39;show&#39;</span> <span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;hide&#39;</span>}<span style="color:#719e07">&gt;</span>
+                    <span style="color:#719e07">&lt;</span>button onClick<span style="color:#719e07">=</span>{goToStep(nextStepLink)}<span style="color:#719e07">&gt;</span>
                         Next
-                    &lt;/<span style="color:#268bd2">button</span>&gt;
-                &lt;/<span style="color:#268bd2">div</span>&gt;
-            &lt;/<span style="color:#268bd2">div</span>&gt;
-        &lt;/<span style="color:#268bd2">div</span>&gt;
+                    <span style="color:#719e07">&lt;</span>/button&gt;
+                <span style="color:#719e07">&lt;</span>/div&gt;
+            <span style="color:#719e07">&lt;</span>/div&gt;
+        <span style="color:#719e07">&lt;</span>/div&gt;
     );
 };
 </code></pre></div>

@@ -6,10 +6,16 @@
     <description>Recent content in software on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 20 Oct 2020 15:25:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://jiayee.net/tags/software/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 27 Oct 2020 20:51:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some Git</title>
+      <link>https://jiayee.net/2020/10/some-git/</link>
+      <pubDate>Tue, 27 Oct 2020 20:51:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/some-git/</guid>
+      <description>I did not realise my pull request was between branches of the same repository. Not sure if my friend realised. I moved the feature branch&amp;rsquo;s latest updates to my fork&amp;rsquo;s feature branch. I then made another pull request. I used the following commands to straighten things out:
+# Create a local branch with the same name as the origin remote feature branch git checkout -b feat/simple-compound-interest-calculators # Pull in the changes from the origin remote git pull # Set the upstream to the origin remote feature branch git branch --set-upstream-to=origin/feat/simple-compound-interest-calculators feat/simple-compound-interest-calculators # Check the remotes and their URLs git remote -v # Add the remote for my fork git remote add jiayee git@github.</description>
+    </item>
     
     <item>
       <title>Ready for review</title>
@@ -274,7 +280,7 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
       <pubDate>Tue, 22 Sep 2020 21:14:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/data-wrangling/</guid>
-      <description>I managed to catch one of the NUS Hackers&amp;rsquo; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&amp;rsquo; slides are in his GitHub repo.
+      <description>I managed to catch one of the NUS Hackers&#39; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&#39; slides are in his GitHub repo.
 Below is a very brief and dry summary of what is more important to me. If I &amp;ldquo;miss&amp;rdquo; something out, it&amp;rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.</description>
     </item>
     

@@ -3,22 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jiayee.net/tags/git/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/software/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/10/some-git/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/27-oct/</loc>
     <lastmod>2020-10-27T07:42:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2020-10-27T07:42:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/qna/</loc>
-    <lastmod>2020-10-27T07:42:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2020-10-27T07:42:00+08:00</lastmod>
   </url>
   
@@ -93,22 +113,12 @@
   </url>
   
   <url>
-    <loc>https://jiayee.net/tags/java/</loc>
-    <lastmod>2020-10-20T15:25:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/javascript/</loc>
     <lastmod>2020-10-20T15:25:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://jiayee.net/tweets/ready-for-review/</loc>
-    <lastmod>2020-10-20T15:25:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/software/</loc>
     <lastmod>2020-10-20T15:25:00+08:00</lastmod>
   </url>
   
@@ -124,11 +134,6 @@
   
   <url>
     <loc>https://jiayee.net/2020/10/constants/</loc>
-    <lastmod>2020-10-19T22:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/posts/</loc>
     <lastmod>2020-10-19T22:30:00+08:00</lastmod>
   </url>
   
@@ -700,6 +705,11 @@
   <url>
     <loc>https://jiayee.net/tweets/18-sep-2020-qna/</loc>
     <lastmod>2020-09-18T09:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/java/</loc>
+    <lastmod>2020-09-17T15:23:00+08:00</lastmod>
   </url>
   
   <url>

@@ -6,11 +6,7 @@
     <description>Recent content in lighthouse on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 19 Sep 2020 18:34:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://jiayee.net/tags/lighthouse/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 Sep 2020 18:34:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/lighthouse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First Lighthouse Report for Jiayee.net</title>
       <link>https://jiayee.net/2020/09/first-lighthouse-report-for-jiayee.net/</link>

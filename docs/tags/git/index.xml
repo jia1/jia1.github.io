@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Jiayee.net</title>
+    <link>https://jiayee.net/tags/git/</link>
+    <description>Recent content in git on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 27 Oct 2020 20:51:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Some Git</title>
+      <link>https://jiayee.net/2020/10/some-git/</link>
+      <pubDate>Tue, 27 Oct 2020 20:51:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/some-git/</guid>
+      <description>I did not realise my pull request was between branches of the same repository. Not sure if my friend realised. I moved the feature branch&amp;rsquo;s latest updates to my fork&amp;rsquo;s feature branch. I then made another pull request. I used the following commands to straighten things out:
+# Create a local branch with the same name as the origin remote feature branch git checkout -b feat/simple-compound-interest-calculators # Pull in the changes from the origin remote git pull # Set the upstream to the origin remote feature branch git branch --set-upstream-to=origin/feat/simple-compound-interest-calculators feat/simple-compound-interest-calculators # Check the remotes and their URLs git remote -v # Add the remote for my fork git remote add jiayee git@github.</description>
+    </item>
+    
+  </channel>
+</rss>

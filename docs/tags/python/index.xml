@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on Jiayee.net</title>
+    <link>https://jiayee.net/tags/python/</link>
+    <description>Recent content in python on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 28 Oct 2020 22:06:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://jiayee.net/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>pip uninstall All</title>
+      <link>https://jiayee.net/2020/10/pip-uninstall-all/</link>
+      <pubDate>Wed, 28 Oct 2020 22:06:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/10/pip-uninstall-all/</guid>
+      <description>I found a one-liner which can uninstall all pip packages:
+pip3 freeze | grep -v &amp;#34;^-e&amp;#34; | xargs sudo pip3 uninstall -y I used to do the following:
+pip3 freeze &amp;gt; reqs.txt sudo pip3 uninstall -r reqs.txt I didn&amp;rsquo;t realise I could do pip uninstall -r reqs.txt -y and get rid of those confirmation questions. And I&amp;rsquo;m pretty sure I messed up the actual requirements file at least once when adopting this approach.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,22 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jiayee.net/tags/books/</loc>
+    <lastmod>2020-10-29T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2020-10-29T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2020-10-29T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/10/power-listening-by-bernard-t-ferrari/</loc>
+    <lastmod>2020-10-29T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/software/</loc>
+    <lastmod>2020-10-29T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2020-10-29T11:37:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/29-oct/</loc>
     <lastmod>2020-10-29T11:36:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2020-10-29T11:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/qna/</loc>
-    <lastmod>2020-10-29T11:36:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2020-10-29T11:36:00+08:00</lastmod>
   </url>
   
@@ -30,6 +50,41 @@
   <url>
     <loc>https://jiayee.net/tweets/</loc>
     <lastmod>2020-10-29T11:36:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/cli/</loc>
+    <lastmod>2020-10-28T22:06:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/10/pip-uninstall-all/</loc>
+    <lastmod>2020-10-28T22:06:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/python/</loc>
+    <lastmod>2020-10-28T22:06:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/28-oct/</loc>
+    <lastmod>2020-10-28T22:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tweets/28-oct-2020-qna/</loc>
+    <lastmod>2020-10-28T22:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/git/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/10/some-git/</loc>
+    <lastmod>2020-10-27T20:51:00+08:00</lastmod>
   </url>
   
   <url>
@@ -118,11 +173,6 @@
   </url>
   
   <url>
-    <loc>https://jiayee.net/tags/software/</loc>
-    <lastmod>2020-10-20T15:25:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/20-oct/</loc>
     <lastmod>2020-10-20T14:06:00+08:00</lastmod>
   </url>
@@ -134,11 +184,6 @@
   
   <url>
     <loc>https://jiayee.net/2020/10/constants/</loc>
-    <lastmod>2020-10-19T22:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/posts/</loc>
     <lastmod>2020-10-19T22:30:00+08:00</lastmod>
   </url>
   
@@ -605,11 +650,6 @@
   <url>
     <loc>https://jiayee.net/tweets/23-sep-2020-qna/</loc>
     <lastmod>2020-09-23T10:38:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/cli/</loc>
-    <lastmod>2020-09-22T21:14:00+08:00</lastmod>
   </url>
   
   <url>

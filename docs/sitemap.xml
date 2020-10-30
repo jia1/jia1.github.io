@@ -23,11 +23,6 @@
   </url>
   
   <url>
-    <loc>https://jiayee.net/tags/software/</loc>
-    <lastmod>2020-10-30T15:54:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/</loc>
     <lastmod>2020-10-30T15:54:00+08:00</lastmod>
   </url>
@@ -74,6 +69,11 @@
   
   <url>
     <loc>https://jiayee.net/tags/python/</loc>
+    <lastmod>2020-10-28T22:06:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/software/</loc>
     <lastmod>2020-10-28T22:06:00+08:00</lastmod>
   </url>
   

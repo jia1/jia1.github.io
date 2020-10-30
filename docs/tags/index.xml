@@ -6,26 +6,26 @@
     <description>Recent content in Tags on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 29 Oct 2020 11:37:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2020 11:15:00 +0800</lastBuildDate>
     
 	<atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>books</title>
-      <link>https://jiayee.net/tags/books/</link>
-      <pubDate>Thu, 29 Oct 2020 11:37:00 +0800</pubDate>
+      <title>30-oct</title>
+      <link>https://jiayee.net/tags/30-oct/</link>
+      <pubDate>Fri, 30 Oct 2020 11:15:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tags/books/</guid>
+      <guid>https://jiayee.net/tags/30-oct/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>software</title>
-      <link>https://jiayee.net/tags/software/</link>
-      <pubDate>Thu, 29 Oct 2020 11:37:00 +0800</pubDate>
+      <title>qna</title>
+      <link>https://jiayee.net/tags/qna/</link>
+      <pubDate>Fri, 30 Oct 2020 11:15:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tags/software/</guid>
+      <guid>https://jiayee.net/tags/qna/</guid>
       <description></description>
     </item>
     
@@ -35,15 +35,6 @@
       <pubDate>Thu, 29 Oct 2020 11:36:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/29-oct/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>qna</title>
-      <link>https://jiayee.net/tags/qna/</link>
-      <pubDate>Thu, 29 Oct 2020 11:36:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/qna/</guid>
       <description></description>
     </item>
     
@@ -62,6 +53,15 @@
       <pubDate>Wed, 28 Oct 2020 22:06:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://jiayee.net/tags/software/</link>
+      <pubDate>Wed, 28 Oct 2020 22:06:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/software/</guid>
       <description></description>
     </item>
     

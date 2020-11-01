@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-	<meta name="generator" content="Hugo 0.68.3" />
+	<meta name="generator" content="Hugo 0.76.5" />
   <meta charset="UTF-8">
   <meta name="description" content="My tech learning diary">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -104,6 +104,58 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/string.format-equivalent-in-typescript/">
+    <h3 class="article-title">
+  String.format equivalent in TypeScript
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/typescript">
+          #typescript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&rsquo;t need to). I didn&rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&lt;string, string&gt;) =&gt; { const variables = Array.from(values.keys()).map(key =&gt; &#39;:&#39; + key).
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/string.format-equivalent-in-typescript/">Continue reading "String.format equivalent in TypeScript"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">
     <h3 class="article-title">
   Challenges of a multi-step flow with permalinks
@@ -153,58 +205,6 @@
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">Continue reading "Challenges of a multi-step flow with permalinks"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/string.format-equivalent-in-typescript/">
-    <h3 class="article-title">
-  String.format equivalent in TypeScript
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/typescript">
-          #typescript
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&rsquo;t need to). I didn&rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
-// Warning: Untested code export const compileTemplate = (template: string, values: Map&lt;string, string&gt;) =&gt; { const variables = Array.from(values.keys()).map(key =&gt; &#39;:&#39; + key).
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/string.format-equivalent-in-typescript/">Continue reading "String.format equivalent in TypeScript"</a>
   </p>
 </article>
 

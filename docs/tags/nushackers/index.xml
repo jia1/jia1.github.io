@@ -6,18 +6,14 @@
     <description>Recent content in nushackers on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 22 Sep 2020 21:14:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://jiayee.net/tags/nushackers/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 22 Sep 2020 21:14:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/nushackers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Wrangling</title>
       <link>https://jiayee.net/2020/09/data-wrangling/</link>
       <pubDate>Tue, 22 Sep 2020 21:14:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/data-wrangling/</guid>
-      <description>I managed to catch one of the NUS Hackers&amp;rsquo; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&amp;rsquo; slides are in his GitHub repo.
+      <description>I managed to catch one of the NUS Hackers&#39; workshops, &amp;ldquo;Hacker Tools: Data Wrangling&amp;rdquo; by Julius. I got to learn many new things since I don&amp;rsquo;t use CLI for text processing. Julius&#39; slides are in his GitHub repo.
 Below is a very brief and dry summary of what is more important to me. If I &amp;ldquo;miss&amp;rdquo; something out, it&amp;rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.</description>
     </item>
     

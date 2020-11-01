@@ -1,6 +1,6 @@
 ---
 title: "Challenges of a multi-step flow with permalinks"
-date: 2020-10-07T22:50:28+08:00
+date: 2020-10-07T22:50:00+08:00
 draft: false
 tags: ["software","web","javascript","react"]
 ---

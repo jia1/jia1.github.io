@@ -6,11 +6,7 @@
     <description>Recent content in braindump on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 01 Oct 2020 21:02:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://jiayee.net/tags/braindump/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 01 Oct 2020 21:02:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/braindump/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Go 3</title>
       <link>https://jiayee.net/2020/10/quick-go-3/</link>

@@ -2,7 +2,7 @@
 title: "Power Listening by Bernard T Ferrari"
 date: 2020-10-30T15:54:00+08:00
 draft: false
-tags: ["books"]
+tags: ["books","eq"]
 ---
 I've been borrowing ebooks from NLB ever since I bought my Kobo. I find it difficult to listen in Zoom meetings, so I hope to learn something from this book named "Power Listening" by Bernard T. Ferrari. I also have difficulty remembering things, so I summarised my takeaways below. I recommend reading the book and penning down notes so that you can appreciate the art of listening based on real-world examples and remember what you need to do to be a good listener.
 

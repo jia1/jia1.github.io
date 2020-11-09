@@ -3,22 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jiayee.net/tags/angular/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/javascript/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/2020/11/recaptcha-on-error/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/software/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/web/</loc>
+    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/09-nov/</loc>
     <lastmod>2020-11-09T10:10:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2020-11-09T10:10:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/qna/</loc>
-    <lastmod>2020-11-09T10:10:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2020-11-09T10:10:00+08:00</lastmod>
   </url>
   
@@ -69,11 +99,6 @@
   
   <url>
     <loc>https://jiayee.net/tags/eq/</loc>
-    <lastmod>2020-11-05T18:23:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/posts/</loc>
     <lastmod>2020-11-05T18:23:00+08:00</lastmod>
   </url>
   
@@ -188,11 +213,6 @@
   </url>
   
   <url>
-    <loc>https://jiayee.net/tags/software/</loc>
-    <lastmod>2020-10-28T22:06:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tags/28-oct/</loc>
     <lastmod>2020-10-28T22:00:00+08:00</lastmod>
   </url>
@@ -283,11 +303,6 @@
   </url>
   
   <url>
-    <loc>https://jiayee.net/tags/javascript/</loc>
-    <lastmod>2020-10-20T15:25:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tweets/ready-for-review/</loc>
     <lastmod>2020-10-20T15:25:00+08:00</lastmod>
   </url>
@@ -318,17 +333,7 @@
   </url>
   
   <url>
-    <loc>https://jiayee.net/tags/angular/</loc>
-    <lastmod>2020-10-18T19:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/2020/10/captcha-isvalid/</loc>
-    <lastmod>2020-10-18T19:30:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/web/</loc>
     <lastmod>2020-10-18T19:30:00+08:00</lastmod>
   </url>
   

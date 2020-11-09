@@ -6,7 +6,7 @@ tags: ["books","eq"]
 ---
 ## Section 3: "Reaping the Benefits"
 
-This section connects better listening and information management to better decision-making and benefits which can span across entire organisations.
+This section connects better listening and information management to better decision-making and benefits that can span entire organisations.
 
 #### Chapter 12: "Connecting Better *Listening* to Better *Judgment*"
 
@@ -15,7 +15,7 @@ Learning from others and constantly reconstructing ideas leads to discoveries an
 #### Chapter 13: "Changing Your Organisation through Listening"
 
 - "Foster a more disciplined and productive organisation."
-    - The example raised was the organisation of organisation-wide meetings in which speakers are expected to be well-prepared and adhere to strict requirements.
+    - The example raised was the organisation of organisation-wide meetings. In these meetings, speakers need to be well-prepared and adhere to strict requirements.
 - "Ensure the free and open flow of information and ideas."
     - Show appreciation and address CP's concerns.
 - "Establish a reverence for fact-based discussions."

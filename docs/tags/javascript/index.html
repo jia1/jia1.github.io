@@ -101,6 +101,64 @@
     <div class="row">
       <article>
   
+  <a href="/2020/11/recaptcha-on-error/">
+    <h3 class="article-title">
+  reCaptcha on-error
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-11-09">9 Nov 2020 @ 6.20 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    Polling wasn&rsquo;t effective because:
+ Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+{ &#34;scripts&#34;: { &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/11/recaptcha-on-error/">Continue reading "reCaptcha on-error"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/tweets/ready-for-review/">
     <h3 class="article-title">
   Ready for review
@@ -298,63 +356,6 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/redux-persist/">Continue reading "redux-persist"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">
-    <h3 class="article-title">
-  Challenges of a multi-step flow with permalinks
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/web">
-          #web
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/react">
-          #react
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&rsquo;s post for the context. The edge cases are:
- Forms which need data from the preceding forms Dynamic form links  I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">Continue reading "Challenges of a multi-step flow with permalinks"</a>
   </p>
 </article>
 

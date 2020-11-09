@@ -6,7 +6,18 @@
     <description>Recent content in javascript on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 20 Oct 2020 15:25:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 18:20:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>reCaptcha on-error</title>
+      <link>https://jiayee.net/2020/11/recaptcha-on-error/</link>
+      <pubDate>Mon, 09 Nov 2020 18:20:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
+      <description>Polling wasn&amp;rsquo;t effective because:
+ Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+{ &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
+    </item>
+    
     <item>
       <title>Ready for review</title>
       <link>https://jiayee.net/tweets/ready-for-review/</link>

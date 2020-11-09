@@ -6,16 +6,27 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 05 Nov 2020 18:23:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2020 18:20:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>reCaptcha on-error</title>
+      <link>https://jiayee.net/2020/11/recaptcha-on-error/</link>
+      <pubDate>Mon, 09 Nov 2020 18:20:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
+      <description>Polling wasn&amp;rsquo;t effective because:
+ Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+{ &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
+    </item>
+    
     <item>
       <title>Reaping the Benefits</title>
       <link>https://jiayee.net/2020/11/reaping-the-benefits/</link>
       <pubDate>Thu, 05 Nov 2020 18:23:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/11/reaping-the-benefits/</guid>
-      <description>Section 3: &amp;ldquo;Reaping the Benefits&amp;rdquo; This section connects better listening and information management to better decision-making and benefits which can span across entire organisations.
+      <description>Section 3: &amp;ldquo;Reaping the Benefits&amp;rdquo; This section connects better listening and information management to better decision-making and benefits that can span entire organisations.
 Chapter 12: &amp;ldquo;Connecting Better Listening to Better Judgment&amp;rdquo; Learning from others and constantly reconstructing ideas leads to discoveries and insights.
-Chapter 13: &amp;ldquo;Changing Your Organisation through Listening&amp;rdquo;  &amp;ldquo;Foster a more disciplined and productive organisation.&amp;rdquo;  The example raised was the organisation of organisation-wide meetings in which speakers are expected to be well-prepared and adhere to strict requirements.</description>
+Chapter 13: &amp;ldquo;Changing Your Organisation through Listening&amp;rdquo;  &amp;ldquo;Foster a more disciplined and productive organisation.&amp;rdquo;  The example raised was the organisation of organisation-wide meetings. In these meetings, speakers need to be well-prepared and adhere to strict requirements.</description>
     </item>
     
     <item>
@@ -26,7 +37,7 @@ Chapter 13: &amp;ldquo;Changing Your Organisation through Listening&amp;rdquo;  
       <guid>https://jiayee.net/2020/11/sorting-the-chaos/</guid>
       <description>Section 2: &amp;ldquo;Sorting the Chaos&amp;rdquo; This section breaks down information from general business problems into suggested components. It also lists the questions to ask ourselves so that we remain focused and productive.
 Suggested information compartments:
- Mandate Plan Team Execution Personal  Chapter 7: &amp;ldquo;What Is the Mandate?&amp;rdquo;  &amp;ldquo;Why are we here?&amp;rdquo; (Vision, mission, agenda, etc.)  So that we do not lose track and get mesmerised by less important things   &amp;ldquo;Are there any misalignments?</description>
+ Mandate Plan Team Execution Personal  Chapter 7: &amp;ldquo;What Is the Mandate?&amp;rdquo;  &amp;ldquo;Why are we here?&amp;rdquo; (Vision, mission, agenda, etc.)   So that we do not lose track and get mesmerised by less important things   &amp;ldquo;Are there any misalignments?</description>
     </item>
     
     <item>

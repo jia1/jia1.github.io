@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
   
   <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
-  <title>Categories</title>
+  <title>web</title>
 </head>
 <body>
     <div class="grid-container">
@@ -65,7 +65,7 @@
         
         
         
-        <li class="cell small-4 ">
+        <li class="cell small-4 is-active">
           <a href="/">
             Blog
           </a>
@@ -75,7 +75,7 @@
         
         
         
-        <li class="cell small-4 ">
+        <li class="cell small-4 is-active">
           <a href="/tweets">
             &#34;Tweets&#34;
           </a>
@@ -96,16 +96,14 @@
 </header>
 </section>
           <section class="row">
-
-
 <div class="article-list">
   
     <div class="row">
       <article>
   
-  <a href="/2020/09/auto-configuring-controllers-and-repositories/">
+  <a href="/2020/09/debugging-angular/">
     <h3 class="article-title">
-  Auto-configuring controllers and repositories
+  Debugging Angular
 </h3>
 
   </a>
@@ -116,7 +114,7 @@
       
       
       
-      <time datetime="2020-09-08">8 Sep 2020 @ 9.01 pm</time>
+      <time datetime="2020-09-14">14 Sep 2020 @ 9.29 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -127,18 +125,18 @@
         </a>
       
         
-        <a href="https://jiayee.net/tags/library">
-          #library
+        <a href="https://jiayee.net/tags/web">
+          #web
         </a>
       
         
-        <a href="https://jiayee.net/tags/java">
-          #java
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
         </a>
       
         
-        <a href="https://jiayee.net/tags/spring">
-          #spring
+        <a href="https://jiayee.net/tags/angular">
+          #angular
         </a>
       
     </div>
@@ -147,69 +145,11 @@
 
   </div>
   <section class="nar-row article-summary">
-    I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).
-I then ran the consumer&rsquo;s codebase and used Postman to hit the newly-offered endpoints. Below is the response seen in Postman:
-{ &#34;error&#34;: { &#34;IllegalArgumentException&#34;: &#34;Couldn&#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&#34; } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&rsquo;s logs.
+    Something could&rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
+Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &#39;directiveFactory&#39; is required My Google-fu was lacking.
   </section>
   <p>
-    <a class="article-read-more" href="/2020/09/auto-configuring-controllers-and-repositories/">Continue reading "Auto-configuring controllers and repositories"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/spring-boot-auto-configuration/">
-    <h3 class="article-title">
-  Spring Boot Auto-configuration
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-07">7 Sep 2020 @ 8.22 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/library">
-          #library
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/spring">
-          #spring
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    Every time I use Spring Security, I have to copy and paste a lot of boilerplate code. What if I made the boilerplate code configurable? I decided to venture into this idea.
-At first, I extracted only the method body which configures HttpSecurity. So I got myself something like a utility library. But this meant there was still some boilerplate code outside of the library. This approach required consumers to define their own configuration classes (annotated with @Configuration).
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/spring-boot-auto-configuration/">Continue reading "Spring Boot Auto-configuration"</a>
+    <a class="article-read-more" href="/2020/09/debugging-angular/">Continue reading "Debugging Angular"</a>
   </p>
 </article>
 
@@ -219,7 +159,7 @@ At first, I extracted only the method body which configures HttpSecurity. So I g
   
   <div class="cell small-6">
     
-      <a class="nav-page" href="/categories/8/">
+      <a class="nav-page" href="/tags/web/3/">
         Previous page
       </a>
     

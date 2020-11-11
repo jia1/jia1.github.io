@@ -101,6 +101,111 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/quick-go-3/">
+    <h3 class="article-title">
+  Quick Go 3
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-01">1 Oct 2020 @ 9.02 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/go">
+          #go
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/braindump">
+          #braindump
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
+package main import &#34;fmt&#34; func main() { // Chapter 5: Arrays, slices and maps  var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int  // i.e. (mismatched types float64 and int)  // Should do a / float64(b)  var total float64 = 0 for i, value := range x { total += value } // Different from Python&#39;s range  // Compiler will complain &#34;i declared and not used&#34;, so we must rename unused variables to &#39;_&#39;.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/quick-go-3/">Continue reading "Quick Go 3"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
+  <a href="/2020/10/typescript-shortcuts/">
+    <h3 class="article-title">
+  TypeScript Shortcuts
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-01">1 Oct 2020 @ 7.01 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/typescript">
+          #typescript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F TYPESCRIPT_SHORTCUT_1 and TYPESCRIPT_SHORTCUT_2 to get to the code.
+Context: Yesterday, I did not invest time into inverting a TypeScript Map&lt;string, string&gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
+Here&rsquo;s the new original code:
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/typescript-shortcuts/">Continue reading "TypeScript Shortcuts"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/09/cryptojs-and-url/">
     <h3 class="article-title">
   CryptoJS and URL
@@ -243,110 +348,6 @@ package main import &#34;fmt&#34; b := &#34;Hello, world!&#34; // Block scope  f
   </section>
   <p>
     <a class="article-read-more" href="/tweets/docker-system-prune/">Continue reading "docker system prune -a --volumes"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/jslt/">
-    <h3 class="article-title">
-  JSLT
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-29">29 Sep 2020 @ 6.22 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/json">
-          #json
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/jslt">
-          #jslt
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
-My GraphQL query:
-query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/jslt/">Continue reading "JSLT"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/quick-go-1/">
-    <h3 class="article-title">
-  Quick Go 1
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-28">28 Sep 2020 @ 10.43 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/go">
-          #go
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/braindump">
-          #braindump
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    It was a busy weekend for me. Last Saturday, I went out to catch up with my friends, and I went shopping for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport, so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. Besides my HumbleBundle books, I borrowed some books from NLB via OverDrive.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/quick-go-1/">Continue reading "Quick Go 1"</a>
   </p>
 </article>
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>guava on Jiayee.net</title>
+    <link>https://jiayee.net/tags/guava/</link>
+    <description>Recent content in guava on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 11 Nov 2020 19:38:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/guava/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Iterator to Stream</title>
+      <link>https://jiayee.net/tweets/iterator-to-stream/</link>
+      <pubDate>Wed, 11 Nov 2020 19:38:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/iterator-to-stream/</guid>
+      <description>With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&amp;rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
+Stream&amp;lt;String&amp;gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.</description>
+    </item>
+    
+  </channel>
+</rss>

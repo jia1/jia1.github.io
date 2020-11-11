@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 09 Nov 2020 18:20:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Nov 2020 20:43:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sticky</title>
+      <link>https://jiayee.net/2020/11/sticky/</link>
+      <pubDate>Wed, 11 Nov 2020 20:43:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/11/sticky/</guid>
+      <description>I found myself entangled in CSS. I needed app-header to stick to the top at all times. I also needed template-header to be right beneath app-header at all times. Lastly, embedded-content should begin immediately after template-header and should not be sticky. Here&amp;rsquo;s how the page organisation might look like:
+&amp;lt;div class=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;app-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;app-content&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-container&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;embedded-content&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; The simplest approach is to place app-header and template-header inside a single div.</description>
+    </item>
+    
     <item>
       <title>reCaptcha on-error</title>
       <link>https://jiayee.net/2020/11/recaptcha-on-error/</link>

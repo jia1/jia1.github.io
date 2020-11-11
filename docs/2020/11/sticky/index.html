@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Sticky</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Sticky
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-11-11">11 Nov 2020 @ 8.43 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/css">
+          #css
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>I found myself entangled in CSS. I needed <code>app-header</code> to stick to the top at all times. I also needed <code>template-header</code> to be right beneath <code>app-header</code> at all times. Lastly, <code>embedded-content</code> should begin immediately after <code>template-header</code> and should not be sticky. Here&rsquo;s how the page organisation might look like:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;app&#34;</span>&gt;
+  &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;app-header&#34;</span>&gt;
+    <span style="color:#586e75">&lt;!-- Content --&gt;</span>
+  &lt;/<span style="color:#268bd2">div</span>&gt;
+  &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;app-content&#34;</span>&gt;
+    &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;template-container&#34;</span>&gt;
+      &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;template-header&#34;</span>&gt;
+        <span style="color:#586e75">&lt;!-- Content --&gt;</span>
+      &lt;/<span style="color:#268bd2">div</span>&gt;
+      &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;embedded-content&#34;</span>&gt;
+        <span style="color:#586e75">&lt;!-- Content --&gt;</span>
+      &lt;/<span style="color:#268bd2">div</span>&gt;
+    &lt;/<span style="color:#268bd2">div</span>&gt;
+  &lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">div</span>&gt;
+</code></pre></div><p>The simplest approach is to place <code>app-header</code> and <code>template-header</code> inside a single <code>div</code>. Then, we will only need to stick one element at the top. However, <code>app-header</code> and <code>app-content</code> are independent of each other. They are of different scopes in React. Here&rsquo;s my initial approach:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#268bd2">app-header</span> {
+  <span style="color:#719e07">position</span>: <span style="color:#cb4b16">sticky</span>;
+  <span style="color:#719e07">top</span>: <span style="color:#2aa198">0</span>;
+  <span style="color:#719e07">width</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">vw</span>;
+  <span style="color:#719e07">z-index</span>: <span style="color:#2aa198">1</span>;
+}
+
+.<span style="color:#268bd2">app-content</span> {
+  <span style="color:#719e07">margin-top</span>: <span style="color:#2aa198">70</span><span style="color:#dc322f">px</span>;
+}
+
+.<span style="color:#268bd2">template-header</span> {
+  <span style="color:#719e07">padding</span>: <span style="color:#2aa198">2</span><span style="color:#dc322f">px</span>;
+  <span style="color:#719e07">position</span>: <span style="color:#cb4b16">fixed</span>; <span style="color:#586e75">/* Changing to position: sticky; did not work for me. */</span>
+  <span style="color:#719e07">top</span>: <span style="color:#2aa198">56</span><span style="color:#dc322f">px</span>;
+  <span style="color:#719e07">z-index</span>: <span style="color:#2aa198">1</span>;
+}
+</code></pre></div><p>Having <code>margin-top: 70px</code> and <code>top: 56px</code> was disturbing. Depending on the viewport, the height of <code>app-header</code> changes due to overflow. A quick fix for <code>top: 56px</code> is to use media queries. But, I&rsquo;d want to defer that. The overflow problem may no longer apply when the content in <code>app-header</code> gets condensed into something like a hamburger button.</p>
+<p>As for <code>margin-top: 70px</code>, it becomes a problem when there are pages without <code>template-container</code>. They look like:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;app&#34;</span>&gt;
+  &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;app-header&#34;</span>&gt;
+    <span style="color:#586e75">&lt;!-- Content --&gt;</span>
+  &lt;/<span style="color:#268bd2">div</span>&gt;
+  &lt;<span style="color:#268bd2">div</span> class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;app-content&#34;</span>&gt;
+    <span style="color:#586e75">&lt;!-- Content --&gt;</span>
+  &lt;/<span style="color:#268bd2">div</span>&gt;
+&lt;/<span style="color:#268bd2">div</span>&gt;
+</code></pre></div><p>This poses a problem because <code>margin-top: 70px</code> means there will be a space between <code>app-header</code> and <code>app-content</code>. In a world where CSS can do whatever we want, we can have <code>app-content</code> conditionally choose a style based on the presence of <code>template-container</code>. But for now, <a href="https://stackoverflow.com/questions/21252551/apply-style-to-parent-if-it-has-child-with-css">this ideal approach isn&rsquo;t possible</a>.</p>
+<p>A quick remedy for <code>margin-top: 70px</code> is to refactor pages without <code>template-container</code> to now have a header of a similar height. Sounds quick but I expect this to be rather tedious.</p>
+<p>Update: Changing the <code>position</code> value for <code>template-header</code> to <code>sticky</code> didn&rsquo;t work at first because of the superfluous <code>margin-top: 70px</code>. Here&rsquo;s the simplified solution:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#268bd2">app-header</span> {
+  <span style="color:#719e07">position</span>: <span style="color:#cb4b16">sticky</span>;
+  <span style="color:#719e07">top</span>: <span style="color:#2aa198">0</span>;
+  <span style="color:#719e07">width</span>: <span style="color:#2aa198">100</span><span style="color:#dc322f">vw</span>;
+  <span style="color:#719e07">z-index</span>: <span style="color:#2aa198">1</span>;
+}
+
+.<span style="color:#268bd2">template-header</span> {
+  <span style="color:#719e07">padding</span>: <span style="color:#2aa198">2</span><span style="color:#dc322f">px</span>;
+  <span style="color:#719e07">position</span>: <span style="color:#cb4b16">sticky</span>;
+  <span style="color:#719e07">top</span>: <span style="color:#2aa198">56</span><span style="color:#dc322f">px</span>;
+  <span style="color:#719e07">z-index</span>: <span style="color:#2aa198">1</span>;
+}
+</code></pre></div><p>I will sign off this post with <a href="https://caniuse.com/css-sticky">a caniuse lookup</a>.</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/10/some-similarities/">
+      Some Similarities (#css)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/center/">
+      Center (#css)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/11/recaptcha-on-error/">
+      reCaptcha on-error (#angular)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

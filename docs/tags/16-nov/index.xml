@@ -6,7 +6,16 @@
     <description>Recent content in 16-nov on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 16 Nov 2020 21:43:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/16-nov/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Nov 2020 21:45:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/16-nov/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cherry-pick</title>
+      <link>https://jiayee.net/tweets/cherry-pick/</link>
+      <pubDate>Mon, 16 Nov 2020 21:45:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tweets/cherry-pick/</guid>
+      <description>I committed one commit to the wrong branch. Running git cherry-pick wrongBranch at the right branch did the trick.</description>
+    </item>
+    
     <item>
       <title>Today&#39;s Q&amp;A for Jiayee (16 Nov 2020)</title>
       <link>https://jiayee.net/tweets/16-nov-2020-qna/</link>

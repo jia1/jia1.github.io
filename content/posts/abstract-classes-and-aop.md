@@ -61,6 +61,6 @@ public class MyAspect extends MyAbstractAspect<MyModel> {
 }
 ```
 
-In the end, I scrapped the hierarchy. There was no more `MyAbstractAspect` and `MyAspect` contained all the functionality that was needed. Still, I could not get `MyAspect` and my child controller to work together. Tried various pointcut expressions but to no avail. [Someone else seemed to have tried the same thing](https://coderanch.com/t/524963/frameworks/pointcut-method-parent-abstract-class) and it didn't seem to work out well either.
+In the end, I scrapped the hierarchy. There was no more `MyAbstractAspect`, and `MyAspect` contained all the functionality that was needed. Still, I could not get `MyAspect` and my child controller to work together. Tried various pointcut expressions but to no avail. [Someone else seemed to have tried the same thing](https://coderanch.com/t/524963/frameworks/pointcut-method-parent-abstract-class) and it didn't seem to work out well either.
 
 Time was getting short, so I conceded and settled with a generic class which extended `ApplicationEvent`. I wanted to publish events via AOP. And now... another road bump. The listener couldn't listen due to [type erasure](https://spring.io/blog/2015/02/11/better-application-events-in-spring-framework-4-2). As suggested by [a kind soul](https://stackoverflow.com/questions/35883022/spring-generic-application-event-failing-to-reach-destination), I had my application event class implement `ResolvableTypeProvider`, and everything finally fell into place.

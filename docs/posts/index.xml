@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 15 Nov 2020 22:40:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Nov 2020 21:30:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Abstract classes and AOP</title>
+      <link>https://jiayee.net/2020/11/abstract-classes-and-aop/</link>
+      <pubDate>Tue, 17 Nov 2020 21:30:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/11/abstract-classes-and-aop/</guid>
+      <description>I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I could not make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
+// MyAbstractController public abstract class MyAbstractController&amp;lt;T extends UniversalModel&amp;gt; { private final .</description>
+    </item>
+    
     <item>
       <title>Super Thinking Chapter 01</title>
       <link>https://jiayee.net/2020/11/super-thinking-chapter-01/</link>

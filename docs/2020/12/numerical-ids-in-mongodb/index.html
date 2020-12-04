@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Numerical IDs in MongoDB</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Numerical IDs in MongoDB
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-12-04">4 Dec 2020 @ 8.27 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/java">
+          #java
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/spring">
+          #spring
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/mongo">
+          #mongo
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>Auto-generated IDs in MongoDB are &ldquo;strange&rdquo; strings. I quote &ldquo;strange&rdquo; because they are actually <a href="https://stackoverflow.com/questions/5817795/how-are-mongodbs-objectids-generated">derived not out of nowhere</a> despite looking like they had nothing to do with anything. But to users, these IDs are strange.</p>
+<p>I had a collection of documents with a <code>name</code> property. Originally, <code>name</code> was annotated with <code>@Id</code>. But it meant that I could not change the value of <code>name</code>. <code>name</code> was also annotated with regex validation (<code>@Pattern(...)</code>) so that I do not have to deal with URL-unsafe characters. That meant that <code>name</code> can no longer be a phrase like &ldquo;My new document&rdquo;. To users, &ldquo;My new document&rdquo; is definitely more readable than &ldquo;MyNewDocument&rdquo;.</p>
+<p>I wanted <code>name</code> to be mutable and be of any string. As such, <code>name</code> can no longer be annotated with <code>@Id</code> and <code>@Pattern</code>. I don&rsquo;t want to URL-encode and URL-decode strings. Since I no longer want the <code>name</code> property of my documents to be <code>@Id</code>, I needed an alternative ID that is still presentable. While relational databases like MySQL offer that automatically, <a href="https://stackoverflow.com/questions/38084238/mongodb-second-id-field-with-auto-increment">it isn&rsquo;t the case with MongoDB</a>.</p>
+<p>I went on to create a counter collection. It was a pain because I managed to break the counting with various scenarios under the sun. What happens if either counter collection, target collection or both collections are missing?</p>
+<p>One of the first things that came to mind was to find a way to intercept insert and save calls. I did not want to modify the controller because ID generation and management ought to be the repository&rsquo;s responsibility. At first, I googled how I could override <code>MongoRepository</code> methods. I came across various answers, <a href="https://medium.com/clarityai-engineering/overriding-default-methods-of-spring-mongorepository-e7ca6a637132">one of which mentioned interface composition</a>. It seemed complex, so I did not pursue it. I then stumbled upon <a href="https://stackoverflow.com/questions/43648479/change-or-override-default-behavior-of-mongorepository-savedocument">another answer talked about &ldquo;lifecycle events&rdquo;</a>. SGTM.</p>
+<p>I referred to the <a href="https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/#mongodb.mapping-usage.events">official docs</a> and built my lifecycle method. I overrode <code>onBeforeSave</code>, but my newly-created documents still did not have their IDs. So glad that <a href="https://stackoverflow.com/questions/49536371/onbeforesave-gets-called-but-nothing-happens">someone else encountered this issue too</a> and I switched to overriding <code>onBeforeConvert</code>. Everything works now.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">package</span> blah<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> org.springframework.context.annotation.Configuration<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.springframework.data.mongodb.core.mapping.event.BeforeConvertEvent<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> your models and repositories<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> java.util.Optional<span style="color:#719e07">;</span>
+
+<span style="color:#268bd2">@Configuration</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyModelRepositoryInterceptor</span> <span style="color:#268bd2">extends</span> AbstractMongoEventListener<span style="color:#719e07">&lt;</span>MyModel<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
+    <span style="color:#586e75">// Inject your repositories here
+</span><span style="color:#586e75"></span>
+    <span style="color:#268bd2">@Override</span>
+    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">onBeforeConvert</span><span style="color:#719e07">(</span>BeforeConvertEvent<span style="color:#719e07">&lt;</span>MyModel<span style="color:#719e07">&gt;</span> event<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        <span style="color:#268bd2">final</span> MyModel myModel <span style="color:#719e07">=</span> event<span style="color:#719e07">.</span>getSource<span style="color:#719e07">();</span>
+        <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>myModel<span style="color:#719e07">.</span>getId<span style="color:#719e07">()</span> <span style="color:#719e07">==</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">)</span> <span style="color:#719e07">{</span> <span style="color:#586e75">// If ID is null (e.g. create)
+</span><span style="color:#586e75"></span>            <span style="color:#268bd2">final</span> Optional<span style="color:#719e07">&lt;</span>MyCounter<span style="color:#719e07">&gt;</span> myCounterOptional <span style="color:#719e07">=</span> myCounterRepository
+                <span style="color:#719e07">.</span>findById<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;anything that differentiates your model from the rest&#34;</span><span style="color:#719e07">);</span>
+            <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>myCounterOptional<span style="color:#719e07">.</span>isPresent<span style="color:#719e07">())</span> <span style="color:#719e07">{</span> <span style="color:#586e75">// ID counter for MyModel exists, use it.
+</span><span style="color:#586e75"></span>                <span style="color:#268bd2">final</span> MyCounter myCounter <span style="color:#719e07">=</span> myCounterOptional<span style="color:#719e07">.</span>get<span style="color:#719e07">();</span>
+                myCounter<span style="color:#719e07">.</span>setLastID<span style="color:#719e07">(</span>myCounter<span style="color:#719e07">.</span>getLastID<span style="color:#719e07">()</span> <span style="color:#719e07">+</span> 1<span style="color:#719e07">);</span> <span style="color:#586e75">// Update new last ID
+</span><span style="color:#586e75"></span>                myCounterRepository<span style="color:#719e07">.</span>save<span style="color:#719e07">(</span>myCounter<span style="color:#719e07">);</span>
+                myModel<span style="color:#719e07">.</span>setId<span style="color:#719e07">(</span>myCounter<span style="color:#719e07">.</span>getLastID<span style="color:#719e07">());</span>
+                <span style="color:#586e75">// No need to call myModelRepository.save here because we are intercepting this very call.
+</span><span style="color:#586e75"></span>                <span style="color:#586e75">// myModelRepository.save will execute after this function returns.
+</span><span style="color:#586e75"></span>            <span style="color:#719e07">}</span> <span style="color:#719e07">else</span> <span style="color:#719e07">{</span> <span style="color:#586e75">// No ID counter for MyModel, make one
+</span><span style="color:#586e75"></span>                <span style="color:#268bd2">final</span> <span style="color:#dc322f">long</span> lastID <span style="color:#719e07">=</span> myModelRepository<span style="color:#719e07">.</span>count<span style="color:#719e07">()</span> <span style="color:#719e07">&gt;</span> 0 <span style="color:#586e75">// If collection is empty or does not exist
+</span><span style="color:#586e75"></span>                    <span style="color:#719e07">?</span> <span style="color:#719e07">(</span>myModelRepository<span style="color:#719e07">.</span>findTopByOrderByIdDesc<span style="color:#719e07">().</span>getId<span style="color:#719e07">()</span> <span style="color:#719e07">+</span> 1<span style="color:#719e07">)</span> <span style="color:#586e75">// Get document with largest ID and add 1 to it.
+</span><span style="color:#586e75"></span>                    <span style="color:#719e07">:</span> 1L<span style="color:#719e07">;</span> <span style="color:#586e75">// Starting from 1 makes more sense outside of SWE.
+</span><span style="color:#586e75"></span>                <span style="color:#586e75">// Perhaps I should have used .save instead, but .insert worked for me too.
+</span><span style="color:#586e75"></span>                myCounterRepository<span style="color:#719e07">.</span>insert<span style="color:#719e07">(</span>MyCounter<span style="color:#719e07">.</span>builder<span style="color:#719e07">()</span>
+                        <span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;anything that differentiates your model from the rest&#34;</span><span style="color:#719e07">)</span>
+                        <span style="color:#719e07">.</span>lastID<span style="color:#719e07">(</span>lastID<span style="color:#719e07">)</span>
+                        <span style="color:#719e07">.</span>build<span style="color:#719e07">());</span>
+                myModel<span style="color:#719e07">.</span>setId<span style="color:#719e07">(</span>lastID<span style="color:#719e07">);</span>
+            <span style="color:#719e07">}</span>
+        <span style="color:#719e07">}</span>
+        <span style="color:#586e75">// If ID is not null (e.g. read one, update, delete), we don&#39;t have to count any IDs.
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>As for how I got <code>findTopByOrderByIdDesc</code>, I didn&rsquo;t manage to construct it by myself via the query method auto-complete feature in my IDE. I found the answer on <a href="https://stackoverflow.com/questions/38716936/get-last-created-document-in-mongodb-using-spring-data-repository">Stack Overflow</a>.</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2020/11/abstract-classes-and-aop/">
+      Abstract classes and AOP (#aop)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/no-qualifying-bean/">
+      No qualifying bean (#spring)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/almost-done-with-the-custom-starter/">
+      Almost done with the custom starter (#spring)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

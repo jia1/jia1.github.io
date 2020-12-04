@@ -104,6 +104,53 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/javascript-heap-limit/">
+    <h3 class="article-title">
+  Javascript heap limit
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-13">13 Oct 2020 @ 7.11 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    For the past week, I could not fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase did not rebuild and remained stale. This issue does not happen to everyone. I am using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
+Notice the line above the last which says, FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/javascript-heap-limit/">Continue reading "Javascript heap limit"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/redux-persist/">
     <h3 class="article-title">
   redux-persist
@@ -326,62 +373,6 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/multi-step-forms/">Continue reading "Multi-step forms"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/polling/">
-    <h3 class="article-title">
-  Polling
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-05">5 Oct 2020 @ 11.00 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/web">
-          #web
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/angular">
-          #angular
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/polling/">Continue reading "Polling"</a>
   </p>
 </article>
 

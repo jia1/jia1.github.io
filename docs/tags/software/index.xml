@@ -6,7 +6,17 @@
     <description>Recent content in software on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 17 Nov 2020 21:30:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Dec 2020 20:27:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Numerical IDs in MongoDB</title>
+      <link>https://jiayee.net/2020/12/numerical-ids-in-mongodb/</link>
+      <pubDate>Fri, 04 Dec 2020 20:27:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2020/12/numerical-ids-in-mongodb/</guid>
+      <description>Auto-generated IDs in MongoDB are &amp;ldquo;strange&amp;rdquo; strings. I quote &amp;ldquo;strange&amp;rdquo; because they are actually derived not out of nowhere despite looking like they had nothing to do with anything. But to users, these IDs are strange.
+I had a collection of documents with a name property. Originally, name was annotated with @Id. But it meant that I could not change the value of name. name was also annotated with regex validation (@Pattern(.</description>
+    </item>
+    
     <item>
       <title>Abstract classes and AOP</title>
       <link>https://jiayee.net/2020/11/abstract-classes-and-aop/</link>

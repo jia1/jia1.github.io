@@ -8,11 +8,11 @@ With Google Guava, you can transform an `Iterator` into a `Stream` with `Streams
 
 ```java
 Stream<String> stream = StreamSupport.stream(
-  Spliterators.spliteratorUnknownSize(
-    iterator,
-    Spliterator.ORDERED
-  ),
-  false
+    Spliterators.spliteratorUnknownSize(
+        iterator,
+        Spliterator.ORDERED
+    ),
+    false
 );
 ```
 

@@ -8,8 +8,8 @@ I was right. I forgot to enable the Mongo repository. And it wasn't only that. I
 
 ```java
 @EnableMongoRepositories(basePackages = {
-        "yourTLD.yourOrg.yourProject.somePackageInConsumerContainingRepositories",
-        "yourTLD.yourOrg.yourProject.somePackageInCustomStarterContainingRepositories",
+    "yourTLD.yourOrg.yourProject.somePackageInConsumerContainingRepositories",
+    "yourTLD.yourOrg.yourProject.somePackageInCustomStarterContainingRepositories",
 })
 public class SomeMongoConfigurationClassInConsumer {
     ...

@@ -50,9 +50,9 @@ public class MyModelRepositoryInterceptor extends AbstractMongoEventListener<MyM
                     : 1L; // Starting from 1 makes more sense outside of SWE.
                 // Perhaps I should have used .save instead, but .insert worked for me too.
                 myCounterRepository.insert(MyCounter.builder()
-                        .id("anything that differentiates your model from the rest")
-                        .lastID(lastID)
-                        .build());
+                    .id("anything that differentiates your model from the rest")
+                    .lastID(lastID)
+                    .build());
                 myModel.setId(lastID);
             }
         }

@@ -181,9 +181,9 @@
 </span><span style="color:#586e75"></span>                    <span style="color:#719e07">:</span> 1L<span style="color:#719e07">;</span> <span style="color:#586e75">// Starting from 1 makes more sense outside of SWE.
 </span><span style="color:#586e75"></span>                <span style="color:#586e75">// Perhaps I should have used .save instead, but .insert worked for me too.
 </span><span style="color:#586e75"></span>                myCounterRepository<span style="color:#719e07">.</span>insert<span style="color:#719e07">(</span>MyCounter<span style="color:#719e07">.</span>builder<span style="color:#719e07">()</span>
-                        <span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;anything that differentiates your model from the rest&#34;</span><span style="color:#719e07">)</span>
-                        <span style="color:#719e07">.</span>lastID<span style="color:#719e07">(</span>lastID<span style="color:#719e07">)</span>
-                        <span style="color:#719e07">.</span>build<span style="color:#719e07">());</span>
+                    <span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;anything that differentiates your model from the rest&#34;</span><span style="color:#719e07">)</span>
+                    <span style="color:#719e07">.</span>lastID<span style="color:#719e07">(</span>lastID<span style="color:#719e07">)</span>
+                    <span style="color:#719e07">.</span>build<span style="color:#719e07">());</span>
                 myModel<span style="color:#719e07">.</span>setId<span style="color:#719e07">(</span>lastID<span style="color:#719e07">);</span>
             <span style="color:#719e07">}</span>
         <span style="color:#719e07">}</span>

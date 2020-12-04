@@ -101,6 +101,116 @@
     <div class="row">
       <article>
   
+  <a href="/tweets/iterator-to-stream/">
+    <h3 class="article-title">
+  Iterator to Stream
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-11-11">11 Nov 2020 @ 7.38 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/java">
+          #java
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/guava">
+          #guava
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
+Stream&lt;String&gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.
+  </section>
+  <p>
+    <a class="article-read-more" href="/tweets/iterator-to-stream/">Continue reading "Iterator to Stream"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
+  <a href="/2020/11/recaptcha-on-error/">
+    <h3 class="article-title">
+  reCaptcha on-error
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-11-09">9 Nov 2020 @ 6.20 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/web">
+          #web
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    Polling wasn&rsquo;t effective because:
+ Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+{ &#34;scripts&#34;: { &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/11/recaptcha-on-error/">Continue reading "reCaptcha on-error"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/pip-uninstall-all/">
     <h3 class="article-title">
   pip uninstall All
@@ -239,106 +349,6 @@ pip3 freeze &gt; reqs.txt sudo pip3 uninstall -r reqs.txt I didn&rsquo;t realise
   </section>
   <p>
     <a class="article-read-more" href="/tweets/ready-for-review/">Continue reading "Ready for review"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/constants/">
-    <h3 class="article-title">
-  Constants
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-19">19 Oct 2020 @ 10.30 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, this practice is frowned upon. In JavaScript, it seemed alright.
-The answer which received the bounty recommended the following:
-// Warning: This answer was written in 2014. module.exports = Object.freeze({ MY_CONSTANT: &#39;some value&#39;, ANOTHER_CONSTANT: &#39;another value&#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/constants/">Continue reading "Constants"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/captcha-isvalid/">
-    <h3 class="article-title">
-  Captcha isValid()
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-18">18 Oct 2020 @ 7.30 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/web">
-          #web
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/angular">
-          #angular
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I needed the client to check for the captcha failure when a user loads a form. In the captchaService abstraction for angular-recaptcha, there was isValid() which does:
-/** * Check if the response has been set, assuming captcha is enabled. */ this.isValid = () =&gt; this.response || !this.enabled; I had a way to trigger the captcha failure. In the same WiFi network, I accessed a form from localhost through my mobile phone.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/captcha-isvalid/">Continue reading "Captcha isValid()"</a>
   </p>
 </article>
 

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Reach Router Match</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-4 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-4 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Reach Router Match
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-12-04">4 Dec 2020 @ 9.10 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/react">
+          #react
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/reach">
+          #reach
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>I use Reach Router. I have a component which isn&rsquo;t a child of <code>Router</code>, so it does not have the <code>useLocation</code> hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing <a href="https://github.com/reach/router/issues/318">Jacek&rsquo;s hint</a>:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">div</span>&gt;
+  &lt;<span style="color:#268bd2">Match</span> path<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;/*&#34;</span>&gt;
+    {(props) =&gt; (
+      &lt;<span style="color:#268bd2">MyComponent</span>
+        path<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;/*&#34;</span>
+        match<span style="color:#719e07">=</span><span style="color:#2aa198">{props.match</span> ?? &#39;&#39;}
+      /&gt;
+    )}
+  &lt;/<span style="color:#268bd2">Match</span>&gt;
+  &lt;<span style="color:#268bd2">Router</span>&gt;
+    ...
+  &lt;/<span style="color:#268bd2">Router</span>&gt;
+&lt;/<span style="color:#268bd2">div</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">interface</span> Props {
+  match<span style="color:#719e07">:</span> any;
+}
+
+<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MyComponent<span style="color:#719e07">:</span> FC<span style="color:#719e07">&lt;</span>Props<span style="color:#719e07">&gt;</span> <span style="color:#719e07">=</span> (props<span style="color:#719e07">:</span> Props) =&gt; {
+  <span style="color:#268bd2">const</span> pathname <span style="color:#719e07">=</span> props.match[<span style="color:#2aa198">&#39;*&#39;</span>];
+  <span style="color:#586e75">// Do your thing!
+</span><span style="color:#586e75"></span>};
+</code></pre></div><p>The <a href="https://reach.tech/router/api/Match">official docs</a> was really brief. I did a <code>console.log(props.match)</code> to see what&rsquo;s actually being passed from <code>Match</code> to <code>MyComponent</code> and found that <code>'*'</code> was a key whose value is whatever that comes after the match.</p>
+<p>For instance, if we have <code>&lt;Match path=&quot;/blah/*&quot;&gt;</code> and the URL is actually <code>/blah/a/long/path</code>, then <code>props.match['*']</code> is <code>a/long/path</code>.</p>
+<p>There are other keys besides <code>'*'</code> but I don&rsquo;t need them so it&rsquo;s up to you to explore them yourself!</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/tweets/need-an-extra-whitespace/">
+      Need an extra whitespace? (#react)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">
+      Challenges of a multi-step flow with permalinks (#react)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/multi-step-forms/">
+      Multi-step forms (#react)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2020
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

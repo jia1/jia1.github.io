@@ -11,6 +11,10 @@
     name = "About"
     url = "/about"
     weight = 3
+  [[menu.item]]
+    name = "Referral codes"
+    url = "/promo"
+    weight = 3
 
 [params]
   contentTypesWithDate = ["posts", "tweets"]

@@ -3,32 +3,52 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jiayee.net/tags/02-feb/</loc>
+    <lastmod>2021-02-02T20:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2021-02-02T20:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/qna/</loc>
+    <lastmod>2021-02-02T20:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2021-02-02T20:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tweets/02-feb-2021-qna/</loc>
+    <lastmod>2021-02-02T20:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/tweets/</loc>
+    <lastmod>2021-02-02T20:59:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/pages/</loc>
+    <lastmod>2021-02-02T20:40:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jiayee.net/promo/</loc>
+    <lastmod>2021-02-02T20:40:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jiayee.net/tags/07-dec/</loc>
     <lastmod>2020-12-07T19:38:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2020-12-07T19:38:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/qna/</loc>
-    <lastmod>2020-12-07T19:38:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tags/</loc>
-    <lastmod>2020-12-07T19:38:00+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jiayee.net/tweets/07-dec-2020-qna/</loc>
-    <lastmod>2020-12-07T19:38:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/tweets/</loc>
     <lastmod>2020-12-07T19:38:00+08:00</lastmod>
   </url>
   
@@ -1439,11 +1459,6 @@
   
   <url>
     <loc>https://jiayee.net/tweets/hello-world/</loc>
-    <lastmod>2020-09-07T19:20:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jiayee.net/pages/</loc>
     <lastmod>2020-09-07T19:20:00+08:00</lastmod>
   </url>
   

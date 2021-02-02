@@ -1,0 +1,20 @@
+---
+title: "Promo"
+date: 2021-02-02T20:40:00+08:00
+draft: false
+---
+#### DBS PayLah!
+
+Have you tried using PayLah!? Get $3 when you sign up with my referral code **JIAUPE043**. T&Cs apply.
+
+#### Endowus
+
+Endowus is a MAS-licensed investment advisor that helps us invest our CPF, SRS, and cash savings in globally diversified portfolios. When you sign up and fund your account, we each get $10,000 in assets advised for free for 6 months. https://endowus.com/invite?code=H0ZTY
+
+#### InteractiveBrokers
+
+Get up to $1000 of free IBKR stock when opening an account at Interactive Brokers! Sign up with my link. https://ibkr.com/referral/jiayee664
+
+#### Shopee
+
+Use my referral code **JIAYE237** to get $10.00 off your first purchase! Download Shopee now and enjoy hot deals at the best prices! https://shp.ee/ahjxmxv?smtt=0.0.10

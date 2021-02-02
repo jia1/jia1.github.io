@@ -13,8 +13,8 @@
     weight = 3
   [[menu.item]]
     name = "Referral codes"
-    url = "/promo"
-    weight = 3
+    url = "/referral-codes"
+    weight = 4
 
 [params]
   contentTypesWithDate = ["posts", "tweets"]

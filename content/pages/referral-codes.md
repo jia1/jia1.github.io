@@ -1,5 +1,5 @@
 ---
-title: "Promo"
+title: "Referral codes"
 date: 2021-02-02T20:40:00+08:00
 draft: false
 ---

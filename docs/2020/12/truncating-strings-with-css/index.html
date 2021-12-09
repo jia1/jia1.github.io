@@ -146,7 +146,7 @@
 <p>My teammate shared an answer he found at <a href="https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/">CSS-Tricks</a>. If I recall, it didn&rsquo;t work out for me because of the way the containers were styled. I had no control over that and I didn&rsquo;t want to control that, so I scoured the internet for more answers.</p>
 <p><a href="https://stackoverflow.com/questions/5269713/css-ellipsis-on-second-line">Below the accepted answer of this Stack Overflow thread</a> was the answer which worked out for me.</p>
 <p>One of the newer comments mentioned that <code>text-overflow: ellipsis;</code> wasn&rsquo;t needed anymore. Hurrah! The following worked out for me:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#268bd2">text-two-lines</span> {
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#268bd2">text-two-lines</span> {
   <span style="color:#719e07">overflow</span>: <span style="color:#cb4b16">hidden</span>;
   <span style="color:#719e07">display</span>: <span style="color:#719e07">-webkit-</span>box;
   <span style="color:#719e07">-webkit-</span>line-clamp: <span style="color:#2aa198">2</span>;

@@ -144,20 +144,20 @@
   <section class="row article-content">
     <p>I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, <a href="https://stackoverflow.com/questions/66066/what-is-the-best-way-to-implement-constants-in-java">this practice is frowned upon</a>. In JavaScript, <a href="https://stackoverflow.com/questions/8595509/how-do-you-share-constants-in-nodejs-modules">it seemed alright</a>.</p>
 <p>The answer which received the bounty recommended the following:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#586e75">// Warning: This answer was written in 2014.
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#586e75">// Warning: This answer was written in 2014.
 </span><span style="color:#586e75"></span>module.exports <span style="color:#719e07">=</span> <span style="color:#b58900">Object</span>.freeze({
   MY_CONSTANT<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;some value&#39;</span>,
   ANOTHER_CONSTANT<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;another value&#39;</span>
 });
 </code></pre></div><p>It was my first time encountering <code>Object.freeze</code>, so I went to google for <a href="https://stackoverflow.com/questions/33124058/object-freeze-vs-const">the difference between <code>Object.freeze</code> and <code>const</code></a>. TL;DR: <code>Object.freeze</code> prevents further writing to the keys and their values (with exceptions). Nested keys are exempt from this.</p>
 <p>If you <a href="https://stackoverflow.com/a/39398990">scroll a little further down</a> the thread about sharing JavaScript constants, you will see:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">const</span> FOO <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;bar&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">const</span> FOO <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;bar&#39;</span>;
 
 module.exports <span style="color:#719e07">=</span> {
   FOO
 }
 </code></pre></div><p>That led to my final answer:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> TOTAL_MONTHS_PER_YEAR <span style="color:#719e07">=</span> <span style="color:#2aa198">12</span>;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> TOTAL_MONTHS_PER_YEAR <span style="color:#719e07">=</span> <span style="color:#2aa198">12</span>;
 
 <span style="color:#586e75">// import { TOTAL_MONTHS_PER_YEAR } from &#39;./constants&#39;;
 </span></code></pre></div><p>This method of managing constants is not reviewed by my team yet. Will keep you posted, but it will be some time before I request for another review&hellip;</p>

@@ -167,7 +167,7 @@
 </ol>
 <p>Below are some code snippets to illustrate what I did:</p>
 <p>Directive:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">angular
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">angular
   .module(<span style="color:#2aa198">&#39;forms&#39;</span>)
   .directive(<span style="color:#2aa198">&#39;saveInterceptor&#39;</span>, [
     <span style="color:#2aa198">&#39;ToastService&#39;</span>,
@@ -192,7 +192,7 @@
 }
 </code></pre></div><p>I had to insert <code>require('relative path to directive file')</code> into <code>main.js</code>. And, as mentioned in an earlier post about hoisting, <code>saveInterceptor</code> must be defined as <code>function saveInterceptor(ToastService) { ... }</code> instead of an arrow function. This is because the <code>.directive(...)</code> is above the function definition. As such, we need the function hoisting from the <code>function</code> keyword.</p>
 <p>View:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">input</span>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">input</span>
   type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;checkbox&#34;</span>
   ng-model<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;A&#34;</span>
   save-interceptor

@@ -160,7 +160,7 @@
 <p>I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.</p>
 <p>On the other hand, building dynamic form links for step navigation is still a huge headache for me.</p>
 <p>This is how you configure <code>MultiStepFormPageTemplate</code> in the routing configuration file:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Warning: I wrote these lines without any help from the compiler.
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Warning: I wrote these lines without any help from the compiler.
 </span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> stepLinks <span style="color:#719e07">=</span> [
   [PageComponent1, <span style="color:#2aa198">&#39;/path1&#39;</span>],
   [PageComponent2, <span style="color:#2aa198">&#39;/path1/:param1&#39;</span>],
@@ -190,7 +190,7 @@
 <p>The multi-step component libraries I know of in the wild are not suitable. They compel me to conduct an overhaul and/or major copypasta of the current codebase. For instance, the libraries can come with their own frontend components. Users will need to reorganise the form into a JSON object. I used one a few years ago, for a closed source codebase. It was crazy - bulky and many LoC.</p>
 <p>I don&rsquo;t want to give up.</p>
 <p>There isn&rsquo;t much development to <code>MultiStepFormPageTemplate</code>. I created an additional prop interface and preserved query parameters. Here&rsquo;s the code:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>;
 <span style="color:#268bd2">import</span> { navigate, RouteComponentProps, useLocation } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;@reach/router&#39;</span>;
 
 <span style="color:#586e75">// Form component props must extend from HasRedirectOnSubmit

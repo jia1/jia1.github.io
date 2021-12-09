@@ -148,9 +148,9 @@
   
   <section class="row article-content">
     <p>Doing</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">textarea</span> placeholder<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;line1\nline2&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">textarea</span> placeholder<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;line1\nline2&#34;</span>&gt;
 </code></pre></div><p>will not work, but doing</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">textarea</span> placeholder<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;{{ somethingFromScope }}&#34;</span>&gt;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">textarea</span> placeholder<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;{{ somethingFromScope }}&#34;</span>&gt;
 </code></pre></div><p>where <code>somethingFromScope</code> is <code>line1\nline2</code> will work as expected!</p>
 
   </section>

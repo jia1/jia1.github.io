@@ -160,7 +160,7 @@
 <li>The superclass of the instance defines the method which I want to mock.</li>
 </ul>
 <p>At first, I made the mistake of calling <code>jest.mock(...)</code> on the superclass. When I mocked the child class and overrode the target method in the child class with the mock, the tests passed.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#586e75">// Suppose I&#39;m mocking someMethod() of Blah in Blah.js:
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#586e75">// Suppose I&#39;m mocking someMethod() of Blah in Blah.js:
 </span><span style="color:#586e75">// In the folder containing Blah.js, create __mocks__/Blah.js:
 </span><span style="color:#586e75"></span><span style="color:#268bd2">class</span> Blah <span style="color:#268bd2">extends</span> BlahParent {
  <span style="color:#586e75">// Paste original code of Blah here
@@ -176,7 +176,7 @@
 <span style="color:#586e75">// Everything else remains the same
 </span></code></pre></div><p>I was critical of this approach because I had to copy code from the real child class. What if the implementation of the real child class changes? The mock wouldn&rsquo;t get updated.</p>
 <p>My buddy recommended the following changes to the test file:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">import</span> Blah from <span style="color:#2aa198">&#39;./Blah&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">import</span> Blah from <span style="color:#2aa198">&#39;./Blah&#39;</span>;
 <span style="color:#268bd2">import</span> { mocked } from <span style="color:#2aa198">&#39;ts-jest/utils&#39;</span>;
 
 jest.mock(<span style="color:#2aa198">&#39;./Blah&#39;</span>)
@@ -184,7 +184,7 @@ jest.mock(<span style="color:#2aa198">&#39;./Blah&#39;</span>)
 MockBlah.someMethod.mockReturnValue(<span style="color:#2aa198">&#39;Whatever I want.&#39;</span>);
 </code></pre></div><p>I got the following error: <code>Property 'someMethod' does not exist on type 'MockedObjectDeep&lt;typeof Blah&gt;'</code>. After some googling, I got reminded of the <code>prototype</code> field in JavaScript objects. I guess I should be using <code>MockBlah.prototype.someMethod</code> instead.</p>
 <p>In contrast, <a href="https://stackoverflow.com/questions/50091438/jest-how-to-mock-one-specific-method-of-a-class">Stack Overflow users recommended using <code>spyOn</code> and <code>mockImplementation</code> to mock a function</a>.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">jest.spyOn(Blah.prototype, <span style="color:#2aa198">&#39;someMethod&#39;</span>).mockImplementation(() =&gt; <span style="color:#2aa198">&#39;Whatever I want.&#39;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">jest.spyOn(Blah.prototype, <span style="color:#2aa198">&#39;someMethod&#39;</span>).mockImplementation(() =&gt; <span style="color:#2aa198">&#39;Whatever I want.&#39;</span>);
 <span style="color:#586e75">// Test code here
 </span></code></pre></div><p>I also read the <a href="https://jestjs.io/docs/en/jest-object#jestspyonobject-methodname">Jest docs</a> to confirm my findings. In contrast, I did not verify the cause of the <code>Property does not exist on type</code> error. Would you do the honours&hellip;?</p>
 

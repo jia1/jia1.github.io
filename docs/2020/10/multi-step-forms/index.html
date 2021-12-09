@@ -160,7 +160,7 @@
 </ol>
 <p>I came up with the following two designs:</p>
 <p>Design #1:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>;
 <span style="color:#268bd2">import</span> { RouteComponentProps } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;@reach/router&#39;</span>;
 
 <span style="color:#268bd2">import</span> <span style="color:#2aa198">&#39;./style.css&#39;</span>; <span style="color:#586e75">// .hide { display: none; }
@@ -203,7 +203,7 @@
 <p>One redeeming(?) feature about this design is that each form can exist on its own with its permalink. Another redeeming feature would be minimal modifications to the existing forms. What comes to mind immediately is the extension of the <code>onSubmit</code> handlers for each of the forms. These handlers need to route users to the next step link.</p>
 <p>Last but not least, query parameters can pass data from one form to another. A Redux persistence middleware is not needed (yet). The step navigation buttons need to preserve these query parameters. They also need to append them to the appropriate step link.</p>
 <p>Design #2:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> React, { FC } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>;
 <span style="color:#268bd2">import</span> { RouteComponentProps } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;@reach/router&#39;</span>;
 
 <span style="color:#268bd2">import</span> <span style="color:#2aa198">&#39;./style.css&#39;</span>; <span style="color:#586e75">// .hide { display: none; }

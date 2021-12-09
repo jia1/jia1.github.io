@@ -159,9 +159,9 @@
   <section class="row article-content">
     <p>If you need your Redux store to last beyond a page load or refresh, look no further! <a href="https://github.com/rt2zz/redux-persist">redux-persist</a> is here to the rescue. Based on <a href="https://medium.com/@dharacharolap/get-rid-of-data-consistency-with-the-redux-persist-86559e96de32">this guide</a> and <a href="https://levelup.gitconnected.com/persisting-your-react-application-state-with-redux-and-typescript-51e4e66c4e53">this guide</a>, you need to update your reducers and store to enjoy persistence:</p>
 <p>Install <code>redux-persist</code>:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yarn add redux-persist @types/redux-persist
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yarn add redux-persist @types/redux-persist
 </code></pre></div><p>Update root reducer and store:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Copied from the official README and edited
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Copied from the official README and edited
 </span><span style="color:#586e75"></span><span style="color:#268bd2">import</span> { Provider } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react-redux&#39;</span>;
 <span style="color:#268bd2">import</span> { createStore, Store } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux&#39;</span>;
 <span style="color:#268bd2">import</span> { persistReducer, persistStore } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist&#39;</span>;
@@ -203,7 +203,7 @@
 };
 </code></pre></div><p>The TypeScript type checker will then highlight <code>initialStore</code> because its type is <code>YourReduxStoreModel</code>. It does not contain <code>_persist</code> key and other keys related to <code>redux-persist</code>. This is a <a href="https://github.com/rt2zz/redux-persist/issues/1169">known issue</a>. For a quick fix, I added the missing keys to <code>YourReduxStoreModel</code>.</p>
 <p>To access <code>persistor</code> elsewhere, <a href="https://github.com/rt2zz/redux-persist/issues/349">the author recommends</a> accessing it through the config.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Copied from https://github.com/rt2zz/redux-persist/issues/349
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Copied from https://github.com/rt2zz/redux-persist/issues/349
 </span><span style="color:#586e75"></span><span style="color:#268bd2">import</span> { purgeStoredState } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist&#39;</span>;
 <span style="color:#268bd2">import</span> { persistConfig } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;relative path to your persistConfig&#39;</span>;
 

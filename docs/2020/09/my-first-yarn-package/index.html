@@ -155,7 +155,7 @@
 <li><code>yarn add --dev husky lint-staged prettier</code>.</li>
 <li>Insert the following configurations into <code>package.json</code>:</li>
 </ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
  <span style="color:#268bd2">&#34;husky&#34;</span>: {
  <span style="color:#268bd2">&#34;hooks&#34;</span>: {
  <span style="color:#268bd2">&#34;pre-commit&#34;</span>: <span style="color:#2aa198">&#34;lint-staged&#34;</span>
@@ -166,7 +166,7 @@
  }
 }
 </code></pre></div><p><code>&quot;**/*&quot;</code> refers to the files to run the script (i.e. <code>prettier --write ...</code>) on. If you wish to be more specific, you can have configurations like:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
  <span style="color:#268bd2">&#34;lint-staged&#34;</span>: {
  <span style="color:#268bd2">&#34;*.{css,scss,ts,tsx}&#34;</span>: <span style="color:#2aa198">&#34;prettier --write&#34;</span>
  }

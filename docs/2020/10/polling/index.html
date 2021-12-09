@@ -159,13 +159,13 @@
 <li>Are the recursive functions themselves behaving as intended?</li>
 </ol>
 <p>Here&rsquo;s the code for my recursive function:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">(<span style="color:#268bd2">function</span> tick() {
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">(<span style="color:#268bd2">function</span> tick() {
   console.debug($scope.captchaResponse);
   <span style="color:#586e75">// Do something when captchaResponse is a failure
 </span><span style="color:#586e75"></span>  $timeout(tick, <span style="color:#2aa198">1000</span>);
 })();
 </code></pre></div><p>Here&rsquo;s the code for the HTML template:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">div</span>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">div</span>
   vc-recaptcha
   ng-model<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;captchaResponse&#34;</span>
   key<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;...&#34;</span>

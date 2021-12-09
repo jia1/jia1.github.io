@@ -149,7 +149,7 @@
   <section class="row article-content">
     <p>I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of <a href="https://github.com/schibsted/jslt">JSLT</a>. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:</p>
 <p>My GraphQL query:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#268bd2">query</span> <span style="color:#268bd2">MyQuery</span>(<span style="color:#268bd2">...</span>) {
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-graphql" data-lang="graphql"><span style="color:#268bd2">query</span> <span style="color:#268bd2">MyQuery</span>(<span style="color:#268bd2">...</span>) {
   arrayA: <span style="color:#268bd2">someModel</span>(<span style="color:#268bd2">...</span>) {
     someInnerModel {
       id
@@ -162,7 +162,7 @@
   }
 }
 </code></pre></div><p>Expected JSON response from GraphQL service:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#268bd2">&#34;data&#34;</span>: {
     <span style="color:#268bd2">&#34;arrayA&#34;</span>: [
       {
@@ -191,13 +191,13 @@
   }
 }
 </code></pre></div><p>We want the final JSON to look like:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
   {
     <span style="color:#268bd2">&#34;id&#34;</span>: <span style="color:#2aa198">1</span>
   }
 ]
 </code></pre></div><p>JSLT has built-in functions but they are very simple ones. At first glance, it may seem impossible to do de-duplication and array intersection. However, it is possible to do these tasks with good knowledge of JavaScript objects. Without further ado, here&rsquo;s my JSLT snippet:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">def <span style="color:#268bd2">removeDuplicates</span><span style="color:#719e07">(</span>array<span style="color:#719e07">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">def <span style="color:#268bd2">removeDuplicates</span><span style="color:#719e07">(</span>array<span style="color:#719e07">)</span>
   let object <span style="color:#719e07">=</span> <span style="color:#719e07">{</span><span style="color:#719e07">for</span> <span style="color:#719e07">(</span>$array<span style="color:#719e07">)</span> string<span style="color:#719e07">(.)</span> <span style="color:#719e07">:</span> <span style="color:#719e07">.}</span>
   <span style="color:#719e07">[</span><span style="color:#719e07">for</span> <span style="color:#719e07">(</span>$object<span style="color:#719e07">)</span> <span style="color:#719e07">.</span>value<span style="color:#719e07">]</span>
 

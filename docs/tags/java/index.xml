@@ -6,7 +6,17 @@
     <description>Recent content in java on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 11 Feb 2021 20:57:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Dec 2021 13:30:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>File Upload to Spring Boot</title>
+      <link>https://jiayee.net/2021/12/file-upload-to-spring-boot/</link>
+      <pubDate>Fri, 10 Dec 2021 13:30:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2021/12/file-upload-to-spring-boot/</guid>
+      <description>Implementing file uploads through GraphQL was something I never managed to succeed in. Got embroiled in type incompatibilities. And eventually, I gave up and implemented a separate but simple API endpoint just for file uploads.
+So here&amp;rsquo;s the design: The user clicks &amp;ldquo;Submit&amp;rdquo;. The files get uploaded first. Upon upload, the server returns IDs. And the rest of the form data plus the returned IDs are sent to the GraphQL endpoint.</description>
+    </item>
+    
     <item>
       <title>Spring Boot Interceptors</title>
       <link>https://jiayee.net/2021/02/spring-boot-interceptors/</link>

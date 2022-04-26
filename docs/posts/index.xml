@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 10 Dec 2021 13:30:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Apr 2022 21:10:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Core React Training Day 1</title>
+      <link>https://jiayee.net/2022/04/core-react-training-day-1/</link>
+      <pubDate>Tue, 26 Apr 2022 21:10:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
+      <description>I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
+The exercises were very manageable and I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
+ Babel is not part of React but it was helpful to know how Babel makes our lives easier by understanding and transforming JSX.</description>
+    </item>
+    
     <item>
       <title>File Upload to Spring Boot</title>
       <link>https://jiayee.net/2021/12/file-upload-to-spring-boot/</link>

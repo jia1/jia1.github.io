@@ -153,7 +153,7 @@
   
   <section class="row article-content">
     <p>I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I could not make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">// MyAbstractController
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">// MyAbstractController
 </span><span style="color:#586e75"></span><span style="color:#268bd2">public</span> <span style="color:#268bd2">abstract</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAbstractController</span><span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> UniversalModel<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
     <span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> <span style="color:#719e07">...</span> repository<span style="color:#719e07">;</span>
 
@@ -176,7 +176,7 @@
     <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><p>And so, all seemed well&hellip;, until I had to integrate AOP. My ideal aspect was one that could inherit basic functionality from its abstract parent. But <a href="https://stackoverflow.com/questions/42607015/emulate-annotation-inheritance-for-interfaces-and-methods-with-aspectj">JVM would not allow it</a>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">// MyAbstractAspect
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">// MyAbstractAspect
 </span><span style="color:#586e75"></span><span style="color:#268bd2">@Aspect</span>
 <span style="color:#268bd2">@Component</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAbstractAspect</span><span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
@@ -243,7 +243,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

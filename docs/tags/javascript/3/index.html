@@ -111,6 +111,53 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/calculator-v2/">
+    <h3 class="article-title">
+  Calculator V2
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-04">4 Oct 2020 @ 10.32 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I made some changes to my compound interest calculator after reading up on &ldquo;future value&rdquo;. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
+import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;nerdamer/Algebra&#39;; import Calculus from &#39;nerdamer/Calculus&#39;; import Solve from &#39;nerdamer/Solve&#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&gt; { const totalAmount = solveForOneUnknownVariable( &#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&#39;, { p: principal.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/calculator-v2/">Continue reading "Calculator V2"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/typescript-shortcuts/">
     <h3 class="article-title">
   TypeScript Shortcuts
@@ -319,64 +366,6 @@ At first, the tooltip looked like:
 
     </div>
   
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/intercepting-angular-data-binding/">
-    <h3 class="article-title">
-  Intercepting Angular Data Binding
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-23">23 Sep 2020 @ 9.40 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/web">
-          #web
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/angular">
-          #angular
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I have two form switches. Let&rsquo;s call them A and B. I had to program them such that:
- When A is off, disable and switch B off. When A is on, disable and switch B off.  We can ignore backend logic because I programmed it such that if A is off, ignore B.
-So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/intercepting-angular-data-binding/">Continue reading "Intercepting Angular Data Binding"</a>
-  </p>
-</article>
-
-    </div>
-  
   <section class="grid-x grid-margin-x">
   
   <div class="cell small-6">
@@ -401,7 +390,7 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

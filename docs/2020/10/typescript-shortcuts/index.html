@@ -150,7 +150,7 @@
     <p>TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F <code>TYPESCRIPT_SHORTCUT_1</code> and <code>TYPESCRIPT_SHORTCUT_2</code> to get to the code.</p>
 <p>Context: Yesterday, I did not invest time into inverting a TypeScript <code>Map&lt;string, string&gt;</code>. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.</p>
 <p>Here&rsquo;s the new original code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
 <span style="color:#268bd2">import</span> Utf8 <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
 
 <span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
@@ -181,7 +181,7 @@
     <span style="color:#719e07">return</span> AES.decrypt(toDecrypt, passphrase).toString(Utf8);
 };
 </code></pre></div><p>Here&rsquo;s the updated code:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">import</span> { AES } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
 <span style="color:#268bd2">import</span> Utf8 <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
 
 <span style="color:#268bd2">const</span> passphrase <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blah&#39;</span>;
@@ -218,7 +218,7 @@
 };
 </code></pre></div><p>While I failed to shorten the code, I reduced the number of literals. I&rsquo;m left with <code>encodeMap</code> and the regex now. From this experience, I figured out why I could not invert a map like <a href="https://stackoverflow.com/questions/56550463/invert-a-map-object">how it&rsquo;s done in JavaScript</a>. It&rsquo;s a <a href="https://github.com/microsoft/TypeScript/issues/8936">typing ambiguity</a> (refer to the comments above).</p>
 <p>So, to invert a map in TypeScript, do:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_1: Inverting a map
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_1: Inverting a map
 </span><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_INVERT, KEY_TYPE and VALUE_TYPE.
 </span><span style="color:#586e75"></span><span style="color:#719e07">new</span> Map(
     <span style="color:#b58900">Array</span>.<span style="color:#268bd2">from</span>(THE_MAP_YOU_WANT_TO_INVERT, (tuple) <span style="color:#719e07">=&gt;</span> tuple.reverse()).map<span style="color:#719e07">&lt;</span>[VALUE_TYPE, KEY_TYPE]<span style="color:#719e07">&gt;</span>((array) <span style="color:#719e07">=&gt;</span> [
@@ -228,7 +228,7 @@
 )
 </code></pre></div><p>Later in the day, I was firefighting a bug. I realised that I was the one who introduced the regression that went unnoticed for a while. At least I got to clean up my own mess&hellip; The bug occurred because I was iterating through a TypeScript map keys <a href="https://stackoverflow.com/questions/36467369/looping-through-an-object-and-changing-all-values">the JavaScript (wrong) way</a>.</p>
 <p>The wrong way:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_COPY and &#39;BLAH&#39;.
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_COPY and &#39;BLAH&#39;.
 </span><span style="color:#586e75">// You shouldn&#39;t be copying this anyway.
 </span><span style="color:#586e75"></span><span style="color:#b58900">Object</span>.keys(
     THE_MAP_YOU_WANT_TO_COPY
@@ -237,7 +237,7 @@
     <span style="color:#719e07">return</span> accumulator;
 }, <span style="color:#719e07">new</span> Map&lt;<span style="color:#268bd2">string</span>, string&gt;());
 </code></pre></div><p>Correct way:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_2: Copying a map and overriding the values of the copy
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_2: Copying a map and overriding the values of the copy
 </span><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_COPY and &#39;BLAH&#39;.
 </span><span style="color:#586e75"></span><span style="color:#b58900">Array</span>.<span style="color:#268bd2">from</span>(
     THE_MAP_YOU_WANT_TO_COPY.keys()
@@ -286,7 +286,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

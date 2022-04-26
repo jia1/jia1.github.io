@@ -154,20 +154,20 @@
   <section class="row article-content">
     <p>I auto-configured Spring Boot REST controllers by adding their names to the <code>spring.factories</code> file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).</p>
 <p>I then ran the consumer&rsquo;s codebase and used Postman to hit the newly-offered endpoints. Below is the response seen in Postman:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#268bd2">&#34;error&#34;</span>: {
     <span style="color:#268bd2">&#34;IllegalArgumentException&#34;</span>: <span style="color:#2aa198">&#34;Couldn&#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&#34;</span>
   }
 }
 </code></pre></div><p>I thought the Mongo repository was not auto-configured, so I went to check the consumer&rsquo;s logs.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Finished Spring Data repository scanning in x ms. Found <span style="color:#2aa198">1</span> MongoDB repository interfaces.
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Finished Spring Data repository scanning in x ms. Found <span style="color:#2aa198">1</span> MongoDB repository interfaces.
 Finished Spring Data repository scanning in x ms. Found <span style="color:#2aa198">1</span> MongoDB repository interfaces.
 Finished Spring Data repository scanning in x ms. Found <span style="color:#2aa198">2</span> Reactive MongoDB repository interfaces.
 </code></pre></div><p>I conjectured the first &ldquo;1 MongoDB repository interfaces&rdquo; came from the auto-configured repository. When I removed the custom starter from <code>build.gradle</code>, there were only logs for 3 repositories. This behaviour supported my hypothesis.</p>
 <p>(You may be wondering why there are reactive Mongo repositories. It&rsquo;s because we are transitioning from a reactive codebase to a non-reactive one.)</p>
 <p>However, there was no other useful information as the consumer did not log any errors. The MongoDB provisioner was a massive platform with a ton of logs. I did not know which one to check and whether I should even check those logs. I proceeded to scrutinise both the consumer and the custom starter&rsquo;s codebases.</p>
 <p>This line piqued my curiosity:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">@EnableMongoRepositories</span><span style="color:#719e07">(</span>value <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;yourTLD.yourOrg.yourProject.somePackageContainingRepositories&#34;</span><span style="color:#719e07">)</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">@EnableMongoRepositories</span><span style="color:#719e07">(</span>value <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;yourTLD.yourOrg.yourProject.somePackageContainingRepositories&#34;</span><span style="color:#719e07">)</span>
 </code></pre></div><p>It did not point to the custom starter&rsquo;s package containing the auto-configured repository. This could be why I received the <code>IllegalArgumentException</code> error.</p>
 
   </section>
@@ -195,7 +195,7 @@ Finished Spring Data repository scanning in x ms. Found <span style="color:#2aa1
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

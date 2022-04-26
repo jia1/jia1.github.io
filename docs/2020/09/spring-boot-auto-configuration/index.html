@@ -158,7 +158,7 @@
 <p>Giving so much &ldquo;freedom&rdquo; to the client offers more room for misunderstanding. As such, I looked into whether I could extract more code into the library. I then stumbled upon <a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-developing-auto-configuration">Spring Boot Auto-configuration</a>.</p>
 <p>Auto-configuration sounded just like the thing I needed - not a library but a custom starter. Consumers only need to specify their configurations in the <code>application.yml</code> file. There is little room for misunderstanding.</p>
 <p>First, I annotated my configuration classes with <code>@Configuration</code> and <code>@ConfigurationProperties(&quot;someKey&quot;)</code>. Then, I created <code>src/main/resources/META-INF/spring.factories</code>. Afterwards, I wrote something like the following into <code>spring.factories</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">org.springframework.boot.autoconfigure.EnableAutoConfiguration<span style="color:#719e07">=</span><span style="color:#cb4b16">\
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">org.springframework.boot.autoconfigure.EnableAutoConfiguration<span style="color:#719e07">=</span><span style="color:#cb4b16">\
 </span><span style="color:#cb4b16"></span>  yourTLD.yourOrg.yourProject.somePackage.SomeConfigClass,<span style="color:#cb4b16">\
 </span><span style="color:#cb4b16"></span>  yourTLD.yourOrg.yourProject.somePackage.SomeConfigClass2
 </code></pre></div><p>I was more or less done, but there were some things I have not / will not solve:</p>
@@ -177,7 +177,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

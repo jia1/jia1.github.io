@@ -154,7 +154,7 @@
   <section class="row article-content">
     <p>I discovered there were some unexpected styles for <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code> in this site. This is due to Foundation&rsquo;s default styles. The inline code style was fine, but the same style applied to code blocks (i.e. <code>&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;</code>), and that was not fine. There was also insufficient margin and padding for the code blocks. I inspected the <code>&lt;code&gt;</code> elements. I found out that Foundation was the culprit. It has been styling the <code>&lt;code&gt;</code> elements on top of what Hugo has in store. Refer to <a href="https://gohugo.io/content-management/syntax-highlighting/">official docs for Syntax Highlighting</a> for more information.</p>
 <p>Doing a <code>code { all: unset; }</code> was not the way because that would unset stuff that I need, such as <code>font-family</code>. I observed the code blocks in my blog posts and implemented the following styles:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">$</span><span style="color:#268bd2">code-font-color</span><span style="color:#719e07">:</span> <span style="color:#719e07">$</span><span style="color:#268bd2">background-color</span><span style="color:#719e07">;</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#719e07">$</span><span style="color:#268bd2">code-font-color</span><span style="color:#719e07">:</span> <span style="color:#719e07">$</span><span style="color:#268bd2">background-color</span><span style="color:#719e07">;</span>
 
 <span style="color:#268bd2">pre</span> {
  <span style="color:#719e07">margin-bottom</span>: <span style="color:#2aa198">1</span><span style="color:#dc322f">em</span>; // Follow Foundation&#39;s margin for p
@@ -213,7 +213,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

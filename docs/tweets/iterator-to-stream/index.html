@@ -148,7 +148,7 @@
   
   <section class="row article-content">
     <p>With Google Guava, you can transform an <code>Iterator</code> into a <code>Stream</code> with <code>Streams.stream(...)</code>. But that API is only available from Guava 21. If you don&rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your <code>Iterator</code> to a <code>Stream</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Stream<span style="color:#719e07">&lt;</span>String<span style="color:#719e07">&gt;</span> stream <span style="color:#719e07">=</span> StreamSupport<span style="color:#719e07">.</span>stream<span style="color:#719e07">(</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Stream<span style="color:#719e07">&lt;</span>String<span style="color:#719e07">&gt;</span> stream <span style="color:#719e07">=</span> StreamSupport<span style="color:#719e07">.</span>stream<span style="color:#719e07">(</span>
     Spliterators<span style="color:#719e07">.</span>spliteratorUnknownSize<span style="color:#719e07">(</span>
         iterator<span style="color:#719e07">,</span>
         Spliterator<span style="color:#719e07">.</span>ORDERED
@@ -196,7 +196,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

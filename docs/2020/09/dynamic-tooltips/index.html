@@ -154,20 +154,20 @@
   <section class="row article-content">
     <p>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.</p>
 <p>At first, the tooltip looked like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">i</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">i</span>
   class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;...&#34;</span>
   uib-tooltip<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Here&#39;s the one and only static tooltip!&#34;</span>
   tooltip-trigger<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;&#39;click mouseenter&#39;&#34;</span>
 &gt;&lt;/<span style="color:#268bd2">i</span>&gt;
 </code></pre></div><p><code>uib-tooltip</code> seems to come from <a href="https://angular-ui.github.io/bootstrap/#!#tooltip">UI Bootstrap</a>. Before reading the official docs, I stumbled upon this <a href="https://stackoverflow.com/questions/42057168/angular-bootstrap-tooltip-dynamic-content">Stack Overflow thread</a>. It influenced my solution. I then went on to read the docs to understand the versatility of the framework behind the tooltip.</p>
 <p>Here&rsquo;s my solution:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">i</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">i</span>
   class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;...&#34;</span>
   uib-tooltip-html<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;myDynamicTooltip&#34;</span>
   tooltip-trigger<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;&#39;click mouseenter&#39;&#34;</span>
 &gt;&lt;/<span style="color:#268bd2">i</span>&gt;
 </code></pre></div><p>Controller:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">$scope.$watch(<span style="color:#2aa198">&#39;the controller property which the textarea ng-model is bound to&#39;</span>, (newValue) =&gt; {
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">$scope.$watch(<span style="color:#2aa198">&#39;the controller property which the textarea ng-model is bound to&#39;</span>, (newValue) =&gt; {
   <span style="color:#719e07">if</span> (newValue) {
     $scope.myDynamicTooltip <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;Short tooltip&#39;</span>;
   } <span style="color:#719e07">else</span> {
@@ -175,15 +175,15 @@
   }
 });
 </code></pre></div><p>The official docs:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;#&#34;</span> uib-tooltip-html<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;htmlTooltip&#34;</span>&gt;scope variable&lt;/<span style="color:#268bd2">a</span>&gt;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;#&#34;</span> uib-tooltip-html<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;htmlTooltip&#34;</span>&gt;scope variable&lt;/<span style="color:#268bd2">a</span>&gt;
 </code></pre></div><p>On a side note, before coming up with this solution, I managed to make this work as well, although it was getting hacky:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">i</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">i</span>
   class<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;...&#34;</span>
   uib-tooltip-html<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;&#39;{{ $scope.textAreaInput ? &#39;Short tooltip&#39; : &#39;Long tooltip&#39; }}&#39;&#34;</span>
   tooltip-trigger<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;&#39;click mouseenter&#39;&#34;</span>
 &gt;&lt;/<span style="color:#268bd2">i</span>&gt;
 </code></pre></div><p>The official docs:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;#&#34;</span> uib-tooltip-html<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;&#39;static. {{dynamicTooltipText}}. &lt;b&gt;bold.&lt;/b&gt;&#39;&#34;</span>&gt;inline string&lt;/<span style="color:#268bd2">a</span>&gt;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;#&#34;</span> uib-tooltip-html<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;&#39;static. {{dynamicTooltipText}}. &lt;b&gt;bold.&lt;/b&gt;&#39;&#34;</span>&gt;inline string&lt;/<span style="color:#268bd2">a</span>&gt;
 </code></pre></div><p>I was hesitant to introduce logic into the view. My buddy also suggested delegating the conditional logic to the controller.</p>
 
   </section>
@@ -225,7 +225,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

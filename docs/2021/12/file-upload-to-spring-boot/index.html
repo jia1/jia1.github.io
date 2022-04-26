@@ -150,7 +150,7 @@
     <p>Implementing file uploads through GraphQL was something I never managed to succeed in. Got embroiled in type incompatibilities. And eventually, I gave up and implemented a separate but simple API endpoint just for file uploads.</p>
 <p>So here&rsquo;s the design: The user clicks &ldquo;Submit&rdquo;. The files get uploaded first. Upon upload, the server returns IDs. And the rest of the form data plus the returned IDs are sent to the GraphQL endpoint.</p>
 <p>This is how the backend controller looks like:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">@RestController</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">@RestController</span>
 <span style="color:#268bd2">@RequestMapping</span><span style="color:#719e07">(</span><span style="color:#2aa198">&#34;/&#34;</span><span style="color:#719e07">)</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyFileController</span> <span style="color:#719e07">{</span>
     <span style="color:#719e07">...</span>
@@ -171,7 +171,7 @@
 </span><span style="color:#586e75"></span>    <span style="color:#719e07">}</span>
 <span style="color:#719e07">}</span>
 </code></pre></div><p>And this is how you send files over from the frontend:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">const</span> upload <span style="color:#719e07">=</span> <span style="color:#268bd2">async</span> (files: <span style="color:#dc322f">File</span>[]) <span style="color:#719e07">=&gt;</span> {
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">const</span> upload <span style="color:#719e07">=</span> <span style="color:#268bd2">async</span> (files: <span style="color:#dc322f">File</span>[]) <span style="color:#719e07">=&gt;</span> {
     <span style="color:#268bd2">const</span> formData <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FormData();
     <span style="color:#719e07">for</span> (<span style="color:#268bd2">let</span> i <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>; i <span style="color:#719e07">&lt;</span> files.length; i<span style="color:#719e07">++</span>) {
         formData.append(<span style="color:#2aa198">&#39;files&#39;</span>, files[i]);
@@ -219,7 +219,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2021
+  Copyright &copy; 2022
   Jiayee Lim.
 </footer>
 </section>

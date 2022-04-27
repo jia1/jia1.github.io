@@ -148,14 +148,14 @@
   
   <section class="row article-content">
     <p>I found a one-liner which can uninstall all <code>pip</code> packages:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip3 freeze | grep -v <span style="color:#2aa198">&#34;^-e&#34;</span> | xargs sudo pip3 uninstall -y
-</code></pre></div><p>I used to do the following:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip3 freeze &gt; reqs.txt
-sudo pip3 uninstall -r reqs.txt
-</code></pre></div><p>I didn&rsquo;t realise I could do <code>pip uninstall -r reqs.txt -y</code> and get rid of those confirmation questions. And I&rsquo;m pretty sure I messed up the actual requirements file at least once when adopting this approach.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip3 freeze | grep -v <span style="color:#2aa198">&#34;^-e&#34;</span> | xargs sudo pip3 uninstall -y
+</span></span></code></pre></div><p>I used to do the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip3 freeze &gt; reqs.txt
+</span></span><span style="display:flex;"><span>sudo pip3 uninstall -r reqs.txt
+</span></span></code></pre></div><p>I didn&rsquo;t realise I could do <code>pip uninstall -r reqs.txt -y</code> and get rid of those confirmation questions. And I&rsquo;m pretty sure I messed up the actual requirements file at least once when adopting this approach.</p>
 <p>The one-liner for the two commands (without messing up the real file) is:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pip3 uninstall -y -r &lt; <span style="color:#719e07">(</span>pip3 freeze<span style="color:#719e07">)</span>
-</code></pre></div><p>Many thanks to the <a href="https://stackoverflow.com/questions/11248073/what-is-the-easiest-way-to-remove-all-packages-installed-by-pip">Stack Overflow community</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo pip3 uninstall -y -r &lt; <span style="color:#719e07">(</span>pip3 freeze<span style="color:#719e07">)</span>
+</span></span></code></pre></div><p>Many thanks to the <a href="https://stackoverflow.com/questions/11248073/what-is-the-easiest-way-to-remove-all-packages-installed-by-pip">Stack Overflow community</a>.</p>
 
   </section>
   

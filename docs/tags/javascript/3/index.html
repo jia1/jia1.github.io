@@ -146,7 +146,7 @@
   </div>
   <section class="nar-row article-summary">
     I made some changes to my compound interest calculator after reading up on &ldquo;future value&rdquo;. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
-import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;nerdamer/Algebra&#39;; import Calculus from &#39;nerdamer/Calculus&#39;; import Solve from &#39;nerdamer/Solve&#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&gt; { const totalAmount = solveForOneUnknownVariable( &#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&#39;, { p: principal.
+import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;nerdamer/Algebra&#39;; import Calculus from &#39;nerdamer/Calculus&#39;; import Solve from &#39;nerdamer/Solve&#39;;  const totalMonthsPerYear = 12;  export const calcCompoundInterest = ({  principal,  depositAmountPerMonth = 0,  interestRatePerAnnum,  compoundRatePerMonth = 1,  totalMonths, }) =&gt; {  const totalAmount = solveForOneUnknownVariable(  &#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&#39;,  {  p: principal.
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/calculator-v2/">Continue reading "Calculator V2"</a>
@@ -357,7 +357,7 @@ I thought there would be a lot of symbols in the Base64 alphabet at first (I was
   <section class="nar-row article-summary">
     I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
 At first, the tooltip looked like:
-&lt;i class=&#34;...&#34; uib-tooltip=&#34;Here&#39;s the one and only static tooltip!&#34; tooltip-trigger=&#34;&#39;click mouseenter&#39;&#34; &gt;&lt;/i&gt; uib-tooltip seems to come from UI Bootstrap.
+&lt;i  class=&#34;...&#34;  uib-tooltip=&#34;Here&#39;s the one and only static tooltip!&#34;  tooltip-trigger=&#34;&#39;click mouseenter&#39;&#34; &gt;&lt;/i&gt; uib-tooltip seems to come from UI Bootstrap.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/dynamic-tooltips/">Continue reading "Dynamic Tooltips"</a>

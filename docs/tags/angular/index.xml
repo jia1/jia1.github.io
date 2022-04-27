@@ -15,7 +15,7 @@
       <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
       <description>Polling wasn&amp;rsquo;t effective because:
  Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
-{ &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
+{  &amp;#34;scripts&amp;#34;: {  &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34;  } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
       <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
 At first, the tooltip looked like:
-&amp;lt;i class=&amp;#34;...&amp;#34; uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34; tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
+&amp;lt;i  class=&amp;#34;...&amp;#34;  uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34;  tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
     </item>
     
     <item>

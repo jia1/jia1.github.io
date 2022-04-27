@@ -151,7 +151,7 @@
   </div>
   <section class="nar-row article-summary">
     I found myself entangled in CSS. I needed app-header to stick to the top at all times. I also needed template-header to be right beneath app-header at all times. Lastly, embedded-content should begin immediately after template-header and should not be sticky. Here&rsquo;s how the page organisation might look like:
-&lt;div class=&#34;app&#34;&gt; &lt;div class=&#34;app-header&#34;&gt; &lt;!-- Content --&gt; &lt;/div&gt; &lt;div class=&#34;app-content&#34;&gt; &lt;div class=&#34;template-container&#34;&gt; &lt;div class=&#34;template-header&#34;&gt; &lt;!-- Content --&gt; &lt;/div&gt; &lt;div class=&#34;embedded-content&#34;&gt; &lt;!-- Content --&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; The simplest approach is to place app-header and template-header inside a single div.
+&lt;div class=&#34;app&#34;&gt;  &lt;div class=&#34;app-header&#34;&gt;  &lt;!-- Content --&gt;  &lt;/div&gt;  &lt;div class=&#34;app-content&#34;&gt;  &lt;div class=&#34;template-container&#34;&gt;  &lt;div class=&#34;template-header&#34;&gt;  &lt;!
   </section>
   <p>
     <a class="article-read-more" href="/2020/11/sticky/">Continue reading "Sticky"</a>
@@ -209,7 +209,7 @@
   <section class="nar-row article-summary">
     Polling wasn&rsquo;t effective because:
  Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
-{ &#34;scripts&#34;: { &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
+{  &#34;scripts&#34;: {  &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34;  } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
   </section>
   <p>
     <a class="article-read-more" href="/2020/11/recaptcha-on-error/">Continue reading "reCaptcha on-error"</a>
@@ -313,8 +313,8 @@
   </div>
   <section class="nar-row article-summary">
     This
-.some-class { display: flex; flex-direction: column; justify-content: center; min-height: 20rem; } and this
-.some-class { display: flex; align-items: center; min-height: 20rem; } appear the same to me.
+.some-class {  display: flex;  flex-direction: column;  justify-content: center;  min-height: 20rem; } and this
+.some-class {  display: flex;  align-items: center;  min-height: 20rem; } appear the same to me.
 CSS-Tricks says,
  You can think of align-items as the justify-content version for the cross-axis (perpendicular to the main-axis).
  

@@ -143,50 +143,50 @@
   
   <section class="row article-content">
     <p>I made some changes to my compound interest calculator after reading up on <a href="https://www.thecalculatorsite.com/articles/finance/future-value-formula.php">&ldquo;future value&rdquo;</a>. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">import</span> nerdamer from <span style="color:#2aa198">&#39;nerdamer/nerdamer.core&#39;</span>;
-<span style="color:#268bd2">import</span> Algebra from <span style="color:#2aa198">&#39;nerdamer/Algebra&#39;</span>;
-<span style="color:#268bd2">import</span> Calculus from <span style="color:#2aa198">&#39;nerdamer/Calculus&#39;</span>;
-<span style="color:#268bd2">import</span> Solve from <span style="color:#2aa198">&#39;nerdamer/Solve&#39;</span>;
-
-<span style="color:#268bd2">const</span> totalMonthsPerYear <span style="color:#719e07">=</span> <span style="color:#2aa198">12</span>;
-
-<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> calcCompoundInterest <span style="color:#719e07">=</span> ({
-  principal,
-  depositAmountPerMonth <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>,
-  interestRatePerAnnum,
-  compoundRatePerMonth <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>,
-  totalMonths,
-}) =&gt; {
-  <span style="color:#268bd2">const</span> totalAmount <span style="color:#719e07">=</span> solveForOneUnknownVariable(
-    <span style="color:#2aa198">&#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&#39;</span>,
-    {
-      p<span style="color:#719e07">:</span> principal.toString(),
-      q<span style="color:#719e07">:</span> depositAmountPerMonth.toString(),
-      r<span style="color:#719e07">:</span> (interestRatePerAnnum <span style="color:#719e07">/</span> totalMonthsPerYear).toString(),
-      n<span style="color:#719e07">:</span> compoundRatePerMonth.toString(),
-      t<span style="color:#719e07">:</span> totalMonths.toString(),
-    },
-    <span style="color:#2aa198">&#39;a&#39;</span>,
-    principal,
-  );
-  <span style="color:#719e07">return</span> {
-    totalAmount,
-    totalInterest<span style="color:#719e07">:</span>
-      totalAmount <span style="color:#719e07">-</span> (principal <span style="color:#719e07">+</span> depositAmountPerMonth <span style="color:#719e07">*</span> totalMonths),
-  };
-};
-
-<span style="color:#268bd2">const</span> solveForOneUnknownVariable <span style="color:#719e07">=</span> (
-  equationString,
-  knownValues,
-  unknownVariable,
-  defaultValue,
-) =&gt; {
-  <span style="color:#268bd2">const</span> equation <span style="color:#719e07">=</span> nerdamer(equationString).evaluate(knownValues);
-  <span style="color:#268bd2">const</span> solution <span style="color:#719e07">=</span> equation.solveFor(unknownVariable);
-  <span style="color:#719e07">return</span> <span style="color:#b58900">Number</span>(solution.text());
-};
-</code></pre></div><p>Before I can mark <a href="https://github.com/calcsg/core/pull/5">my pull request</a> as ready for review, I will need to do &ldquo;Generation of amortisation tables&rdquo;. Having just a table of values alone seems like a turn-off. I went to look for loan amortisation calculators and found that <a href="https://www.amortization-calc.com/">one of them</a> also generates a line graph. Even then, would this be informative?</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#268bd2">import</span> nerdamer from <span style="color:#2aa198">&#39;nerdamer/nerdamer.core&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> Algebra from <span style="color:#2aa198">&#39;nerdamer/Algebra&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> Calculus from <span style="color:#2aa198">&#39;nerdamer/Calculus&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> Solve from <span style="color:#2aa198">&#39;nerdamer/Solve&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> totalMonthsPerYear <span style="color:#719e07">=</span> <span style="color:#2aa198">12</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> calcCompoundInterest <span style="color:#719e07">=</span> ({
+</span></span><span style="display:flex;"><span>  principal,
+</span></span><span style="display:flex;"><span>  depositAmountPerMonth <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>,
+</span></span><span style="display:flex;"><span>  interestRatePerAnnum,
+</span></span><span style="display:flex;"><span>  compoundRatePerMonth <span style="color:#719e07">=</span> <span style="color:#2aa198">1</span>,
+</span></span><span style="display:flex;"><span>  totalMonths,
+</span></span><span style="display:flex;"><span>}) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">const</span> totalAmount <span style="color:#719e07">=</span> solveForOneUnknownVariable(
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&#39;</span>,
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      p<span style="color:#719e07">:</span> principal.toString(),
+</span></span><span style="display:flex;"><span>      q<span style="color:#719e07">:</span> depositAmountPerMonth.toString(),
+</span></span><span style="display:flex;"><span>      r<span style="color:#719e07">:</span> (interestRatePerAnnum <span style="color:#719e07">/</span> totalMonthsPerYear).toString(),
+</span></span><span style="display:flex;"><span>      n<span style="color:#719e07">:</span> compoundRatePerMonth.toString(),
+</span></span><span style="display:flex;"><span>      t<span style="color:#719e07">:</span> totalMonths.toString(),
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;a&#39;</span>,
+</span></span><span style="display:flex;"><span>    principal,
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> {
+</span></span><span style="display:flex;"><span>    totalAmount,
+</span></span><span style="display:flex;"><span>    totalInterest<span style="color:#719e07">:</span>
+</span></span><span style="display:flex;"><span>      totalAmount <span style="color:#719e07">-</span> (principal <span style="color:#719e07">+</span> depositAmountPerMonth <span style="color:#719e07">*</span> totalMonths),
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> solveForOneUnknownVariable <span style="color:#719e07">=</span> (
+</span></span><span style="display:flex;"><span>  equationString,
+</span></span><span style="display:flex;"><span>  knownValues,
+</span></span><span style="display:flex;"><span>  unknownVariable,
+</span></span><span style="display:flex;"><span>  defaultValue,
+</span></span><span style="display:flex;"><span>) =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">const</span> equation <span style="color:#719e07">=</span> nerdamer(equationString).evaluate(knownValues);
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">const</span> solution <span style="color:#719e07">=</span> equation.solveFor(unknownVariable);
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> <span style="color:#b58900">Number</span>(solution.text());
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Before I can mark <a href="https://github.com/calcsg/core/pull/5">my pull request</a> as ready for review, I will need to do &ldquo;Generation of amortisation tables&rdquo;. Having just a table of values alone seems like a turn-off. I went to look for loan amortisation calculators and found that <a href="https://www.amortization-calc.com/">one of them</a> also generates a line graph. Even then, would this be informative?</p>
 <p>A few months ago, I used an Excel sheet to simulate my future mortgage loan that will come in 2+ years. I remember changing the deposit and loan term to see how the monthly payment and total interest vary. Could this be something any other user would want to know as well? This could be why Robo-advisor platforms have range sliders on their homepages. Potential clients get to use these sliders to simulate their potential investment returns.</p>
 <p>These sliders are frontend components. But, since my tasks seem to focus on functionality, I should write a function to return tabular data.</p>
 

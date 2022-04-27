@@ -148,19 +148,19 @@
   
   <section class="row article-content">
     <p>I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.</p>
-<p>The exercises were very manageable and I learnt the most from the instructor&rsquo;s detailed explanation of how React works:</p>
+<p>The exercises were very manageable. I learnt the most from the instructor&rsquo;s detailed explanation of how React works:</p>
 <ul>
-<li>Babel is not part of React but it was helpful to know how Babel makes our lives easier by understanding and transforming JSX. I found <a href="https://stackoverflow.com/questions/41713966/how-babel-and-jsx-related-or-differ">a StackOverflow thread</a> which describes the relationship between these technologies.
+<li>Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX. I found <a href="https://stackoverflow.com/questions/41713966/how-babel-and-jsx-related-or-differ">a StackOverflow thread</a> which describes the relationship between these technologies.
 <ul>
-<li>I learnt that Babel evaluates <code>&lt;div&gt;</code> to a string due to the first letter being a lower-case letter. On the other hand, when we call <code>React.createElement</code> with <code>&lt;App/&gt;</code> as argument, Babel will simply pass the reference into the function since it begins with an upper-case letter.</li>
+<li>I learnt that Babel evaluates <code>&lt;div&gt;</code> to a string due to the first letter being a lower-case letter. On the other hand, when we call <code>React.createElement</code> with <code>&lt;App/&gt;</code> as an argument, Babel will pass the reference to <code>&lt;App/&gt;</code> into <code>React.createElement</code> since <code>App</code> begins with an upper-case letter.</li>
 </ul>
 </li>
 </ul>
 <!-- raw HTML omitted -->
 <ul>
-<li>I took JSX for granted and mistakenly thought it was part of React. JSX can be used in other UI libraries.
+<li>I took JSX for granted and thought it was part of React. Other UI libraries use JSX too.
 <ul>
-<li>I learnt that JSX is syntax sugar for nested function calls of <code>React.createElement('someDiv', null, React.createElement(...))</code>. If not for JSX, we would need to have several of such nested function calls to build composable UI.</li>
+<li>I learnt that JSX is syntax sugar for nested function calls. For example: <code>React.createElement('someDiv', null, React.createElement(...))</code>. If not for JSX, we would need to have several of such nested function calls to build composable UI.</li>
 <li>Some JSX attributes are metadata for React and do not go into the HTML code. For example, <code>onClick</code>.</li>
 </ul>
 </li>
@@ -175,10 +175,10 @@
 <li><code>&lt;Button icon={FaTrash}&gt;</code> (i.e. passing in a component)</li>
 </ul>
 </li>
-<li>Inside <code>Button</code>, the icon could be referenced as either <code>{icon}</code> or <code>&lt;Icon/&gt;</code>. To make <code>icon</code> become <code>Icon</code>, use named destructuring of <code>props</code>.</li>
+<li>Depending on the implementation of <code>Button</code>, we can refer to the icon as <code>{icon}</code> or <code>&lt;Icon/&gt;</code>. To make <code>icon</code> become <code>Icon</code>, use named destructuring of <code>props</code>.</li>
 <li>Passing in components may not be ideal since we do not want to pass its config in as props.
 <ul>
-<li><code>&lt;Button icon={...} iconColor={...}&gt;</code> contains props applied to components of varying levels of abstraction. It is untidy and we would not have known if <code>Button</code> expects <code>icon</code> to be configured before or after it is passed into <code>Button</code>.</li>
+<li><code>&lt;Button icon={...} iconColor={...}&gt;</code> contains props applied to components of varying levels of abstraction. It is untidy and we would not have known if <code>Button</code> expects us to configure <code>icon</code> outside or inside of <code>Button</code>.</li>
 </ul>
 </li>
 </ul>
@@ -188,10 +188,10 @@
 <ul>
 <li>Each child in a list should have a unique <code>key</code> prop.
 <ul>
-<li>I always see this in my console but I never really bothered to figure out why. And I did the one thing which the instructor advised against - setting <code>key</code> to be the index of the element in the list.</li>
+<li>I always see this in my console but I did not bother to figure out why. And I did the one thing which the instructor advised against - setting <code>key</code> to be the index of the element in the list.</li>
 <li>The <code>key</code> prop allows React to run a diff on virtual DOMs.</li>
-<li>If, between the two virtual DOMs, we remove an element in the middle of the list, the indices of the elements are no longer constant. This reduces the performance of the diff function.</li>
-<li>Random numbers as <code>key</code> are not ideal either as the random numbers are re-generated each re-render, in addition to having a small chance of collision.</li>
+<li>When we remove an element in the middle of the list, the indices of the elements are no longer constant. This reduces the performance of the diff function.</li>
+<li>Random numbers as <code>key</code> are not ideal either. Each re-render regenerates the random numbers and these numbers have a small chance of collision.</li>
 <li>As such, React prefers keys in this order: Good keys, no keys, bad keys.</li>
 </ul>
 </li>
@@ -203,8 +203,8 @@
 <li>For instance, by clicking on a button like this <code>&lt;Button onClick={() =&gt; setMyState(...)}&gt;</code>.</li>
 <li><code>const [myState, setMyState] = useState({key1: 'val1', key2: 'val2'});</code>
 <ul>
-<li>If we want to use a collection of data (arrays or objects) as the state via <code>useState</code>, we need to do: <code>setMyState({...myState, yourAffectedKey: newVal})</code>.</li>
-<li>This is because, when we call <code>setMyState</code>, the component gets regenerated along with the brand new state constants.</li>
+<li>If we want to use a collection of data (arrays or objects) as the state, do: <code>setMyState({...myState, yourAffectedKey: newVal})</code>.</li>
+<li>We do this because the component gets regenerated along with the brand new state constants when we call <code>setMyState</code>.</li>
 </ul>
 </li>
 </ul>
@@ -212,7 +212,7 @@
 </ul>
 <!-- raw HTML omitted -->
 <ul>
-<li>A slow function in our functional component should be memoised with a memoising hook (i.e. <code>useMemo</code>) so that we do not rerun it upon re-render.
+<li>We should memoise slow functions with <code>useMemo</code> so that we do not rerun it upon re-render.
 <ul>
 <li>From <a href="https://reactjs.org/docs/hooks-reference.html#usememo">the docs</a>, the hook accepts a dependency array as its second parameter. The function is re-computed if anything in the dependency array changes.
 <ul>
@@ -230,18 +230,21 @@
 <ul>
 <li>There is only one re-render per event loop.
 <ul>
-<li>If we run multiple <code>setMyState</code> in a function, there will only be 1 re-render.</li>
-<li>This also means any statement within the function/scope that runs immediately after <code>setMyState</code> should not expect to retrieve the updated state.</li>
+<li>If we run multiple <code>setMyState</code> in a function, there will only be 1 re-render.
+<ul>
+<li>This means that subsequent statements in the same function should not expect to retrieve the latest state.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <!-- raw HTML omitted -->
 <ul>
-<li><a href="https://stackoverflow.com/questions/58288286/what-is-derived-state-in-react-and-why-is-it-important">Derived states are discouraged</a>.</li>
+<li><a href="https://stackoverflow.com/questions/58288286/what-is-derived-state-in-react-and-why-is-it-important">Derived states</a>.</li>
 </ul>
 <!-- raw HTML omitted -->
 <ul>
-<li>React hooks must be called in the exact same order in every component re-render.
+<li>React hooks must be called in the same order in every component re-render.
 <ul>
 <li>As such, we cannot put hooks inside conditionals.</li>
 </ul>
@@ -253,7 +256,7 @@
 </ul>
 <!-- raw HTML omitted -->
 <ul>
-<li>React does not have two-way binding nor observables. It is based on immutability.
+<li>React does not have two-way binding or observables. It works with immutability.
 <ul>
 <li>To share state between siblings, lift state to the nearest common ancestor.</li>
 <li>To pass information down through several nodes, consider <code>useContext</code> over prop-drilling. <code>ContextProvider</code> can provide information to consumers far down the tree.</li>
@@ -270,7 +273,7 @@
 <ul>
 <li><code>&lt;input type=&quot;type&quot;&gt;</code> = uncontrolled</li>
 <li><code>&lt;input type=&quot;type&quot; value=&quot;&quot;&gt;</code> = controlled but needs an <code>onChange</code> handler</li>
-<li><code>&lt;input type=&quot;type&quot; onChange=&quot;&quot;&gt;</code> = not considered to be controlled</li>
+<li><code>&lt;input type=&quot;type&quot; onChange=&quot;&quot;&gt;</code> = uncontrolled</li>
 </ul>
 </li>
 </ul>
@@ -280,7 +283,7 @@
 </ul>
 <!-- raw HTML omitted -->
 <ul>
-<li><code>useRef</code> allows users to safely reference the DOM and not cause unintended changes elsewhere</li>
+<li><code>useRef</code> allows users to reference the DOM and not cause unintended changes elsewhere</li>
 </ul>
 <!-- raw HTML omitted -->
 <ul>
@@ -294,7 +297,7 @@
 <ul>
 <li><a href="https://reactjs.org/docs/react-api.html#reactlazy">React.lazy</a>
 <ul>
-<li><code>lazy(() =&gt; import('./SomeComponent'));</code> returns an object which could become a component and used in code but is not a component yet</li>
+<li><code>lazy(() =&gt; import('./SomeComponent'));</code> returns an object which could become a component but is not a component yet.</li>
 <li>Supported by <a href="https://reactjs.org/docs/react-api.html#reactsuspense">React.suspense</a>
 <ul>
 <li>If something is not loaded yet, we render the <code>fallback</code>.</li>

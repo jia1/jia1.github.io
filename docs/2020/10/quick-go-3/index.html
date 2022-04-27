@@ -148,86 +148,86 @@
   
   <section class="row article-content">
     <p>Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#719e07">package</span> main
-
-<span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
-
-<span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
-  <span style="color:#586e75">// Chapter 5: Arrays, slices and maps
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> x [<span style="color:#2aa198">5</span>]<span style="color:#dc322f">int</span>
-  x[<span style="color:#2aa198">4</span>] = <span style="color:#2aa198">100</span>
-  fmt.<span style="color:#268bd2">Println</span>(x)
-
-  <span style="color:#586e75">// No coercing when there is a division operation involving a float64 and int
-</span><span style="color:#586e75"></span>  <span style="color:#586e75">// i.e. (mismatched types float64 and int)
-</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Should do a / float64(b)
-</span><span style="color:#586e75"></span>
-  <span style="color:#268bd2">var</span> total <span style="color:#dc322f">float64</span> = <span style="color:#2aa198">0</span>
-  <span style="color:#719e07">for</span> i, value <span style="color:#719e07">:=</span> <span style="color:#719e07">range</span> x {
-    total <span style="color:#719e07">+=</span> value
-  }
-  <span style="color:#586e75">// Different from Python&#39;s range
-</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Compiler will complain &#34;i declared and not used&#34;, so we must rename unused variables to &#39;_&#39;.
-</span><span style="color:#586e75"></span>
-  y <span style="color:#719e07">:=</span> [<span style="color:#2aa198">3</span>]<span style="color:#dc322f">float64</span>{
-    <span style="color:#2aa198">1</span>,
-    <span style="color:#2aa198">2</span>,
-    <span style="color:#2aa198">3</span>,
-  }
-
-  <span style="color:#586e75">// Slice of length 0
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> z []<span style="color:#dc322f">float64</span>
-  <span style="color:#586e75">// Slice of length 5 but associated with an array of length 10
-</span><span style="color:#586e75"></span>  a <span style="color:#719e07">:=</span> <span style="color:#b58900">make</span>([]<span style="color:#dc322f">float64</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">10</span>)
-  b <span style="color:#719e07">:=</span> x[<span style="color:#2aa198">0</span>:<span style="color:#2aa198">5</span>]
-  c <span style="color:#719e07">:=</span> x[:<span style="color:#2aa198">5</span>]
-  d <span style="color:#719e07">:=</span> x[<span style="color:#2aa198">0</span>:]
-  e <span style="color:#719e07">:=</span> x[:]
-
-  slice <span style="color:#719e07">:=</span> <span style="color:#b58900">append</span>(y, <span style="color:#2aa198">8</span>, <span style="color:#2aa198">9</span>) <span style="color:#586e75">// [1, 2, 3, 8, 9]
-</span><span style="color:#586e75"></span>  dst <span style="color:#719e07">:=</span> [<span style="color:#2aa198">1</span>]<span style="color:#dc322f">float64</span>{<span style="color:#2aa198">0</span>}
-  <span style="color:#b58900">copy</span>(slice, dst)
-  <span style="color:#586e75">// dst is now [1]
-</span><span style="color:#586e75"></span>  <span style="color:#586e75">// Copy over min(len(slice), len(dst)) elements
-</span><span style="color:#586e75"></span>
-  <span style="color:#268bd2">var</span> g <span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span> <span style="color:#586e75">// {[key: string]: int}
-</span><span style="color:#586e75"></span>  g = <span style="color:#b58900">make</span>(<span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span>)
-  <span style="color:#586e75">// Or g := make(map[string]int) without the variable declaration
-</span><span style="color:#586e75"></span>  g[<span style="color:#2aa198">&#34;someKey&#34;</span>] = <span style="color:#2aa198">0</span>
-  <span style="color:#586e75">// delete(g, &#34;someKey&#34;)
-</span><span style="color:#586e75"></span>  lookupResult, lookupSucceeded <span style="color:#719e07">:=</span> g[<span style="color:#2aa198">&#34;someKey&#34;</span>]
-  <span style="color:#719e07">if</span> result, ok <span style="color:#719e07">:=</span> g[<span style="color:#2aa198">&#34;someKey&#34;</span>]; ok {
-    fmt.<span style="color:#268bd2">Printlnt</span>(result, ok)
-  }
-
-  h <span style="color:#719e07">:=</span> <span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">string</span>{
-    <span style="color:#2aa198">&#34;someKey&#34;</span>: <span style="color:#2aa198">&#34;someValue&#34;</span>,
-  }
-  <span style="color:#586e75">// map[string]map[string]string is a nested map of strings with two levels of keys
-</span><span style="color:#586e75"></span>
-  <span style="color:#586e75">// Chapter 6: Functions
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">func</span> <span style="color:#268bd2">average</span>(xs []<span style="color:#dc322f">float64</span>) {
-    <span style="color:#586e75">// panic(&#34;To be implemented&#34;)
-</span><span style="color:#586e75"></span>    <span style="color:#586e75">// Lazy to implement
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> <span style="color:#2aa198">123</span>, <span style="color:#2aa198">&#34;No error&#34;</span>
-  }
-
-  avg, <span style="color:#dc322f">error</span> <span style="color:#719e07">:=</span> <span style="color:#268bd2">average</span>([<span style="color:#2aa198">1</span>]<span style="color:#dc322f">float64</span>{<span style="color:#2aa198">123</span>})
-
-  <span style="color:#268bd2">func</span> <span style="color:#268bd2">add</span>(args <span style="color:#719e07">...</span><span style="color:#dc322f">int</span>) {
-    total <span style="color:#719e07">:=</span> <span style="color:#2aa198">0</span>
-    <span style="color:#719e07">for</span> _, arg <span style="color:#719e07">:=</span> <span style="color:#719e07">range</span> args {
-      total <span style="color:#719e07">+=</span> arg
-    }
-    <span style="color:#719e07">return</span> total
-  }
-
-  <span style="color:#268bd2">add</span>(<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>)
-  <span style="color:#268bd2">add</span>([]<span style="color:#dc322f">int</span>{<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>}<span style="color:#719e07">...</span>)
-
-  <span style="color:#586e75">// Stopped at Closure
-</span><span style="color:#586e75"></span>}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#719e07">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Chapter 5: Arrays, slices and maps
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> x [<span style="color:#2aa198">5</span>]<span style="color:#dc322f">int</span>
+</span></span><span style="display:flex;"><span>  x[<span style="color:#2aa198">4</span>] = <span style="color:#2aa198">100</span>
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#268bd2">Println</span>(x)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// No coercing when there is a division operation involving a float64 and int
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#586e75">// i.e. (mismatched types float64 and int)
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#586e75">// Should do a / float64(b)
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">var</span> total <span style="color:#dc322f">float64</span> = <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">for</span> i, value <span style="color:#719e07">:=</span> <span style="color:#719e07">range</span> x {
+</span></span><span style="display:flex;"><span>    total <span style="color:#719e07">+=</span> value
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Different from Python&#39;s range
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#586e75">// Compiler will complain &#34;i declared and not used&#34;, so we must rename unused variables to &#39;_&#39;.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span>  y <span style="color:#719e07">:=</span> [<span style="color:#2aa198">3</span>]<span style="color:#dc322f">float64</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">1</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">2</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">3</span>,
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Slice of length 0
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> z []<span style="color:#dc322f">float64</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Slice of length 5 but associated with an array of length 10
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  a <span style="color:#719e07">:=</span> <span style="color:#b58900">make</span>([]<span style="color:#dc322f">float64</span>, <span style="color:#2aa198">5</span>, <span style="color:#2aa198">10</span>)
+</span></span><span style="display:flex;"><span>  b <span style="color:#719e07">:=</span> x[<span style="color:#2aa198">0</span>:<span style="color:#2aa198">5</span>]
+</span></span><span style="display:flex;"><span>  c <span style="color:#719e07">:=</span> x[:<span style="color:#2aa198">5</span>]
+</span></span><span style="display:flex;"><span>  d <span style="color:#719e07">:=</span> x[<span style="color:#2aa198">0</span>:]
+</span></span><span style="display:flex;"><span>  e <span style="color:#719e07">:=</span> x[:]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  slice <span style="color:#719e07">:=</span> <span style="color:#b58900">append</span>(y, <span style="color:#2aa198">8</span>, <span style="color:#2aa198">9</span>) <span style="color:#586e75">// [1, 2, 3, 8, 9]
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  dst <span style="color:#719e07">:=</span> [<span style="color:#2aa198">1</span>]<span style="color:#dc322f">float64</span>{<span style="color:#2aa198">0</span>}
+</span></span><span style="display:flex;"><span>  <span style="color:#b58900">copy</span>(slice, dst)
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// dst is now [1]
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#586e75">// Copy over min(len(slice), len(dst)) elements
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">var</span> g <span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span> <span style="color:#586e75">// {[key: string]: int}
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  g = <span style="color:#b58900">make</span>(<span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">int</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Or g := make(map[string]int) without the variable declaration
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  g[<span style="color:#2aa198">&#34;someKey&#34;</span>] = <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// delete(g, &#34;someKey&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  lookupResult, lookupSucceeded <span style="color:#719e07">:=</span> g[<span style="color:#2aa198">&#34;someKey&#34;</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">if</span> result, ok <span style="color:#719e07">:=</span> g[<span style="color:#2aa198">&#34;someKey&#34;</span>]; ok {
+</span></span><span style="display:flex;"><span>    fmt.<span style="color:#268bd2">Printlnt</span>(result, ok)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  h <span style="color:#719e07">:=</span> <span style="color:#268bd2">map</span>[<span style="color:#dc322f">string</span>]<span style="color:#dc322f">string</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#34;someKey&#34;</span>: <span style="color:#2aa198">&#34;someValue&#34;</span>,
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// map[string]map[string]string is a nested map of strings with two levels of keys
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Chapter 6: Functions
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#268bd2">func</span> <span style="color:#268bd2">average</span>(xs []<span style="color:#dc322f">float64</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// panic(&#34;To be implemented&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>    <span style="color:#586e75">// Lazy to implement
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> <span style="color:#2aa198">123</span>, <span style="color:#2aa198">&#34;No error&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  avg, <span style="color:#dc322f">error</span> <span style="color:#719e07">:=</span> <span style="color:#268bd2">average</span>([<span style="color:#2aa198">1</span>]<span style="color:#dc322f">float64</span>{<span style="color:#2aa198">123</span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">func</span> <span style="color:#268bd2">add</span>(args <span style="color:#719e07">...</span><span style="color:#dc322f">int</span>) {
+</span></span><span style="display:flex;"><span>    total <span style="color:#719e07">:=</span> <span style="color:#2aa198">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">for</span> _, arg <span style="color:#719e07">:=</span> <span style="color:#719e07">range</span> args {
+</span></span><span style="display:flex;"><span>      total <span style="color:#719e07">+=</span> arg
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">return</span> total
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">add</span>(<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">add</span>([]<span style="color:#dc322f">int</span>{<span style="color:#2aa198">1</span>, <span style="color:#2aa198">2</span>, <span style="color:#2aa198">3</span>}<span style="color:#719e07">...</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Stopped at Closure
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>}
+</span></span></code></pre></div>
   </section>
   
 

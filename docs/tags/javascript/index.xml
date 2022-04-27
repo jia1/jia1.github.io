@@ -14,8 +14,8 @@
       
       <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
       <description>I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
-The exercises were very manageable and I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
- Babel is not part of React but it was helpful to know how Babel makes our lives easier by understanding and transforming JSX.</description>
+The exercises were very manageable. I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
+ Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@ The exercises were very manageable and I learnt the most from the instructor&amp
       <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
       <description>Polling wasn&amp;rsquo;t effective because:
  Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
-{ &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
+{  &amp;#34;scripts&amp;#34;: {  &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34;  } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@ The exercises were very manageable and I learnt the most from the instructor&amp
       <guid>https://jiayee.net/2020/10/constants/</guid>
       <description>I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, this practice is frowned upon. In JavaScript, it seemed alright.
 The answer which received the bounty recommended the following:
-// Warning: This answer was written in 2014. module.exports = Object.freeze({ MY_CONSTANT: &amp;#39;some value&amp;#39;, ANOTHER_CONSTANT: &amp;#39;another value&amp;#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.</description>
+// Warning: This answer was written in 2014. module.exports = Object.freeze({  MY_CONSTANT: &amp;#39;some value&amp;#39;,  ANOTHER_CONSTANT: &amp;#39;another value&amp;#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.</description>
     </item>
     
     <item>
@@ -68,7 +68,7 @@ Notice the line above the last which says, FATAL ERROR: Ineffective mark-compact
       <description>If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
 Install redux-persist:
 yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;; import rootReducer from &amp;#39;.</description>
+// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;;  import rootReducer from &amp;#39;.</description>
     </item>
     
     <item>
@@ -88,7 +88,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       <guid>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</guid>
       <description>While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&amp;rsquo;t need to). I didn&amp;rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
-// Warning: Untested code export const compileTemplate = (template: string, values: Map&amp;lt;string, string&amp;gt;) =&amp;gt; { const variables = Array.from(values.keys()).map(key =&amp;gt; &amp;#39;:&amp;#39; + key).</description>
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&amp;lt;string, string&amp;gt;) =&amp;gt; {  const variables = Array.from(values.keys()).map(key =&amp;gt; &amp;#39;:&amp;#39; + key).</description>
     </item>
     
     <item>
@@ -117,7 +117,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       <guid>https://jiayee.net/2020/10/calculator-v2/</guid>
       <description>I made some changes to my compound interest calculator after reading up on &amp;ldquo;future value&amp;rdquo;. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
-import nerdamer from &amp;#39;nerdamer/nerdamer.core&amp;#39;; import Algebra from &amp;#39;nerdamer/Algebra&amp;#39;; import Calculus from &amp;#39;nerdamer/Calculus&amp;#39;; import Solve from &amp;#39;nerdamer/Solve&amp;#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&amp;gt; { const totalAmount = solveForOneUnknownVariable( &amp;#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&amp;#39;, { p: principal.</description>
+import nerdamer from &amp;#39;nerdamer/nerdamer.core&amp;#39;; import Algebra from &amp;#39;nerdamer/Algebra&amp;#39;; import Calculus from &amp;#39;nerdamer/Calculus&amp;#39;; import Solve from &amp;#39;nerdamer/Solve&amp;#39;;  const totalMonthsPerYear = 12;  export const calcCompoundInterest = ({  principal,  depositAmountPerMonth = 0,  interestRatePerAnnum,  compoundRatePerMonth = 1,  totalMonths, }) =&amp;gt; {  const totalAmount = solveForOneUnknownVariable(  &amp;#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&amp;#39;,  {  p: principal.</description>
     </item>
     
     <item>
@@ -160,7 +160,7 @@ I thought there would be a lot of symbols in the Base64 alphabet at first (I was
       <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
       <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
 At first, the tooltip looked like:
-&amp;lt;i class=&amp;#34;...&amp;#34; uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34; tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
+&amp;lt;i  class=&amp;#34;...&amp;#34;  uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34;  tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
     </item>
     
     <item>

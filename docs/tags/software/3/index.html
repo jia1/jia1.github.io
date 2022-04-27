@@ -199,7 +199,7 @@ pip3 freeze &gt; reqs.txt sudo pip3 uninstall -r reqs.txt I didn&rsquo;t realise
   </div>
   <section class="nar-row article-summary">
     I did not realise my pull request was between branches of the same repository. Not sure if my friend realised. I moved the feature branch&rsquo;s latest updates to my fork&rsquo;s feature branch. I then made another pull request. I used the following commands to straighten things out:
-# Create a local branch with the same name as the origin remote feature branch git checkout -b feat/simple-compound-interest-calculators # Pull in the changes from the origin remote git pull # Set the upstream to the origin remote feature branch git branch --set-upstream-to=origin/feat/simple-compound-interest-calculators feat/simple-compound-interest-calculators # Check the remotes and their URLs git remote -v # Add the remote for my fork git remote add jiayee git@github.
+# Create a local branch with the same name as the origin remote feature branch git checkout -b feat/simple-compound-interest-calculators  # Pull in the changes from the origin remote git pull  # Set the upstream to the origin remote feature branch git branch --set-upstream-to=origin/feat/simple-compound-interest-calculators feat/simple-compound-interest-calculators  # Check the remotes and their URLs git remote -v  # Add the remote for my fork git remote add jiayee git@github.
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/some-git/">Continue reading "Some Git"</a>
@@ -293,7 +293,7 @@ pip3 freeze &gt; reqs.txt sudo pip3 uninstall -r reqs.txt I didn&rsquo;t realise
   <section class="nar-row article-summary">
     I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, this practice is frowned upon. In JavaScript, it seemed alright.
 The answer which received the bounty recommended the following:
-// Warning: This answer was written in 2014. module.exports = Object.freeze({ MY_CONSTANT: &#39;some value&#39;, ANOTHER_CONSTANT: &#39;another value&#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.
+// Warning: This answer was written in 2014. module.exports = Object.freeze({  MY_CONSTANT: &#39;some value&#39;,  ANOTHER_CONSTANT: &#39;another value&#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/constants/">Continue reading "Constants"</a>

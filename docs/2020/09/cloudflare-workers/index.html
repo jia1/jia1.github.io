@@ -147,26 +147,26 @@
     </div>
   
   <section class="row article-content">
-    <p>It&rsquo;s time to put my short custom domain to good use. <a href="https://developers.cloudflare.com/workers/">Cloudflare Workers</a> is a quick &lsquo;n&rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).</p>
+    <p>It&rsquo;s time to put my short custom domain to good use. <a href="https://developers.cloudflare.com/workers/">Cloudflare Workers</a> is a quick &rsquo;n&rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).</p>
 <p>My worker&rsquo;s name was <code>&quot;vanity&quot;</code> for obvious reasons and it sits at <code>https://www.jiay.ee/*</code> and <code>https://jiay.ee/*</code>. Without further ado, here&rsquo;s my worker:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">const</span> defaultPath <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blog&#39;</span>;
-<span style="color:#268bd2">const</span> regex <span style="color:#719e07">=</span> <span style="color:#dc322f">/^(?:https:\/\/)(?:www\.)?(?:jiay\.ee\/)([A-Za-z0-9]+[A-Za-z0-9-_]*[A-Za-z0-9]+)$/i</span>;
-<span style="color:#268bd2">const</span> links <span style="color:#719e07">=</span> {
-  [defaultPath]<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;https://jiayee.net&#39;</span>,
-  fb<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;https://facebook.com/profile.php?id=100001087143682&#39;</span>,
-  gh<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;https://github.com/jia1&#39;</span>,
-};
-
-addEventListener(<span style="color:#2aa198">&#39;fetch&#39;</span>, event =&gt; {
-  event.respondWith(handleRequest(event.request));
-});
-
-<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> handleRequest(request) {
-  <span style="color:#268bd2">const</span> exec <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> regex.exec(request.url);
-  <span style="color:#268bd2">const</span> path <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> exec <span style="color:#719e07">?</span> exec[<span style="color:#2aa198">1</span>].toLowerCase() <span style="color:#719e07">:</span> defaultPath;
-  <span style="color:#719e07">return</span> Response.redirect(links[path] <span style="color:#719e07">||</span> links[defaultPath], <span style="color:#2aa198">302</span>);
-}
-</code></pre></div><p>So <a href="http://jiay.ee/steam"><code>jiay.ee/steam</code></a> goes to my Steam profile. Give it a try. Last but not least, if you find your worker still stuck at an old version, clear your browser cache.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#268bd2">const</span> defaultPath <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;blog&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> regex <span style="color:#719e07">=</span> <span style="color:#dc322f">/^(?:https:\/\/)(?:www\.)?(?:jiay\.ee\/)([A-Za-z0-9]+[A-Za-z0-9-_]*[A-Za-z0-9]+)$/i</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> links <span style="color:#719e07">=</span> {
+</span></span><span style="display:flex;"><span>  [defaultPath]<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;https://jiayee.net&#39;</span>,
+</span></span><span style="display:flex;"><span>  fb<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;https://facebook.com/profile.php?id=100001087143682&#39;</span>,
+</span></span><span style="display:flex;"><span>  gh<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;https://github.com/jia1&#39;</span>,
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>addEventListener(<span style="color:#2aa198">&#39;fetch&#39;</span>, event =&gt; {
+</span></span><span style="display:flex;"><span>  event.respondWith(handleRequest(event.request));
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> handleRequest(request) {
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">const</span> exec <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> regex.exec(request.url);
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">const</span> path <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> exec <span style="color:#719e07">?</span> exec[<span style="color:#2aa198">1</span>].toLowerCase() <span style="color:#719e07">:</span> defaultPath;
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> Response.redirect(links[path] <span style="color:#719e07">||</span> links[defaultPath], <span style="color:#2aa198">302</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>So <a href="http://jiay.ee/steam"><code>jiay.ee/steam</code></a> goes to my Steam profile. Give it a try. Last but not least, if you find your worker still stuck at an old version, clear your browser cache.</p>
 
   </section>
   

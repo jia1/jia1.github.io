@@ -153,27 +153,27 @@
   
   <section class="row article-content">
     <p>Something could&rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Uncaught Error: <span style="color:#719e07">[</span><span style="color:#268bd2">$injector</span>:modulerr<span style="color:#719e07">]</span> Failed to instantiate module FormSG due to:
-Error: <span style="color:#719e07">[</span><span style="color:#268bd2">$injector</span>:modulerr<span style="color:#719e07">]</span> Failed to instantiate module forms due to:
-Error: <span style="color:#719e07">[</span>ng:areq<span style="color:#719e07">]</span> Argument <span style="color:#2aa198">&#39;directiveFactory&#39;</span> is required
-</code></pre></div><p>My Google-fu was lacking. My teammate helped me find this <a href="https://stackoverflow.com/questions/42217831/angularjs-error-ngareq-argument-directivefactory-is-required/42218107">relevant Stack Overflow thread</a>. Below was how I&rsquo;ve been implementing my directives:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#2aa198">&#39;use strict&#39;</span>;
-
-angular.module(<span style="color:#2aa198">&#39;forms&#39;</span>).directive(<span style="color:#2aa198">&#39;someDirective&#39;</span>, someDirectiveFunction);
-
-<span style="color:#268bd2">const</span> someDirectiveFunction <span style="color:#719e07">=</span> () =&gt; {
-  ...
-};
-</code></pre></div><p>There&rsquo;s no function hoisting. As such, the console was complaining about the non-existence of <code>someDirectiveFunction</code>. If I were to remove <code>'use strict'</code>, would the <code>directiveFactory</code> error be silent?</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Uncaught Error: <span style="color:#719e07">[</span><span style="color:#268bd2">$injector</span>:modulerr<span style="color:#719e07">]</span> Failed to instantiate module FormSG due to:
+</span></span><span style="display:flex;"><span>Error: <span style="color:#719e07">[</span><span style="color:#268bd2">$injector</span>:modulerr<span style="color:#719e07">]</span> Failed to instantiate module forms due to:
+</span></span><span style="display:flex;"><span>Error: <span style="color:#719e07">[</span>ng:areq<span style="color:#719e07">]</span> Argument <span style="color:#2aa198">&#39;directiveFactory&#39;</span> is required
+</span></span></code></pre></div><p>My Google-fu was lacking. My teammate helped me find this <a href="https://stackoverflow.com/questions/42217831/angularjs-error-ngareq-argument-directivefactory-is-required/42218107">relevant Stack Overflow thread</a>. Below was how I&rsquo;ve been implementing my directives:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#2aa198">&#39;use strict&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>angular.module(<span style="color:#2aa198">&#39;forms&#39;</span>).directive(<span style="color:#2aa198">&#39;someDirective&#39;</span>, someDirectiveFunction);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> someDirectiveFunction <span style="color:#719e07">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  ...
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>There&rsquo;s no function hoisting. As such, the console was complaining about the non-existence of <code>someDirectiveFunction</code>. If I were to remove <code>'use strict'</code>, would the <code>directiveFactory</code> error be silent?</p>
 <p>I could have fixed the code above by moving the function definition above the call to <code>.directive(...)</code>, but after seeing that the other existing directives were defined by <code>function someDirectiveFunction() { ... }</code>, I decided to follow suit. Now, my code looks like:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#2aa198">&#39;use strict&#39;</span>;
-
-angular.module(<span style="color:#2aa198">&#39;forms&#39;</span>).directive(<span style="color:#2aa198">&#39;someDirective&#39;</span>, someDirectiveFunction);
-
-<span style="color:#268bd2">function</span> someDirectiveFunction() {
-  ...
-}
-</code></pre></div><p>I&rsquo;m glad I asked and I&rsquo;m fortunate to have such patient teammates.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#2aa198">&#39;use strict&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>angular.module(<span style="color:#2aa198">&#39;forms&#39;</span>).directive(<span style="color:#2aa198">&#39;someDirective&#39;</span>, someDirectiveFunction);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">function</span> someDirectiveFunction() {
+</span></span><span style="display:flex;"><span>  ...
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I&rsquo;m glad I asked and I&rsquo;m fortunate to have such patient teammates.</p>
 
   </section>
   

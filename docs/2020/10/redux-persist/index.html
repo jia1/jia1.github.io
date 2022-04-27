@@ -159,56 +159,56 @@
   <section class="row article-content">
     <p>If you need your Redux store to last beyond a page load or refresh, look no further! <a href="https://github.com/rt2zz/redux-persist">redux-persist</a> is here to the rescue. Based on <a href="https://medium.com/@dharacharolap/get-rid-of-data-consistency-with-the-redux-persist-86559e96de32">this guide</a> and <a href="https://levelup.gitconnected.com/persisting-your-react-application-state-with-redux-and-typescript-51e4e66c4e53">this guide</a>, you need to update your reducers and store to enjoy persistence:</p>
 <p>Install <code>redux-persist</code>:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">yarn add redux-persist @types/redux-persist
-</code></pre></div><p>Update root reducer and store:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Copied from the official README and edited
-</span><span style="color:#586e75"></span><span style="color:#268bd2">import</span> { Provider } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react-redux&#39;</span>;
-<span style="color:#268bd2">import</span> { createStore, Store } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux&#39;</span>;
-<span style="color:#268bd2">import</span> { persistReducer, persistStore } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist&#39;</span>;
-<span style="color:#268bd2">import</span> storage <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist/lib/storage&#39;</span>;
-
-<span style="color:#268bd2">import</span> rootReducer <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;./reducers&#39;</span>;
-<span style="color:#586e75">// Import YourReduxStoreModel interface here
-</span><span style="color:#586e75"></span>
-<span style="color:#268bd2">import</span> { PersistGate } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist/integration/react&#39;</span>;
-<span style="color:#268bd2">import</span> thunk <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-thunk&#39;</span>;
-
-<span style="color:#586e75">// Import Blah component here
-</span><span style="color:#586e75"></span>
-<span style="color:#268bd2">const</span> persistConfig <span style="color:#719e07">=</span> {
-  key<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;anyKeyInTheStore&#39;</span>, <span style="color:#586e75">// Or &#39;root&#39; if you want the entire store to be persistent
-</span><span style="color:#586e75"></span>  storage,
-  <span style="color:#586e75">// Can blacklist or whitelist one or more keys with blacklist: [...] and whitelist: [...]
-</span><span style="color:#586e75"></span>};
-
-<span style="color:#268bd2">const</span> persistedReducer <span style="color:#719e07">=</span> persistReducer(persistConfig, rootReducer)
-
-<span style="color:#268bd2">const</span> configureStore<span style="color:#719e07">:</span> () <span style="color:#719e07">=&gt;</span> Store&lt;<span style="color:#268bd2">YourReduxStoreModel</span>&gt; <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
-  <span style="color:#268bd2">let</span> store <span style="color:#719e07">=</span> createStore(persistedReducer, initialStore, applyMiddleware(thunk));
-  <span style="color:#268bd2">let</span> persistor <span style="color:#719e07">=</span> persistStore(store);
-  <span style="color:#719e07">return</span> { store, persistor };
-};
-
-<span style="color:#586e75">// The stuff below can be in a separate file.
-</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { store, persistor } <span style="color:#719e07">=</span> configureStore();
-
-<span style="color:#268bd2">const</span> App <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
-  <span style="color:#719e07">return</span> (
-    &lt;<span style="color:#268bd2">Provider</span> store<span style="color:#719e07">=</span>{store}&gt;
-      &lt;<span style="color:#268bd2">PersistGate</span> loading<span style="color:#719e07">=</span>{<span style="color:#cb4b16">null</span>} persistor<span style="color:#719e07">=</span>{persistor}&gt;
-        &lt;<span style="color:#268bd2">Blah</span> /&gt;
-      &lt;/<span style="color:#268bd2">PersistGate</span>&gt;
-    &lt;/<span style="color:#268bd2">Provider</span>&gt;
-  );
-};
-</code></pre></div><p>The TypeScript type checker will then highlight <code>initialStore</code> because its type is <code>YourReduxStoreModel</code>. It does not contain <code>_persist</code> key and other keys related to <code>redux-persist</code>. This is a <a href="https://github.com/rt2zz/redux-persist/issues/1169">known issue</a>. For a quick fix, I added the missing keys to <code>YourReduxStoreModel</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>yarn add redux-persist @types/redux-persist
+</span></span></code></pre></div><p>Update root reducer and store:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#586e75">// Copied from the official README and edited
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">import</span> { Provider } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react-redux&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { createStore, Store } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { persistReducer, persistStore } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> storage <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist/lib/storage&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> rootReducer <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;./reducers&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// Import YourReduxStoreModel interface here
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { PersistGate } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist/integration/react&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> thunk <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-thunk&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// Import Blah component here
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> persistConfig <span style="color:#719e07">=</span> {
+</span></span><span style="display:flex;"><span>  key<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;anyKeyInTheStore&#39;</span>, <span style="color:#586e75">// Or &#39;root&#39; if you want the entire store to be persistent
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  storage,
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Can blacklist or whitelist one or more keys with blacklist: [...] and whitelist: [...]
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> persistedReducer <span style="color:#719e07">=</span> persistReducer(persistConfig, rootReducer)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> configureStore<span style="color:#719e07">:</span> () <span style="color:#719e07">=&gt;</span> Store&lt;<span style="color:#268bd2">YourReduxStoreModel</span>&gt; <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">let</span> store <span style="color:#719e07">=</span> createStore(persistedReducer, initialStore, applyMiddleware(thunk));
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">let</span> persistor <span style="color:#719e07">=</span> persistStore(store);
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> { store, persistor };
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// The stuff below can be in a separate file.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { store, persistor } <span style="color:#719e07">=</span> configureStore();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> App <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#268bd2">Provider</span> store<span style="color:#719e07">=</span>{store}&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#268bd2">PersistGate</span> loading<span style="color:#719e07">=</span>{<span style="color:#cb4b16">null</span>} persistor<span style="color:#719e07">=</span>{persistor}&gt;
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#268bd2">Blah</span> /&gt;
+</span></span><span style="display:flex;"><span>      &lt;/<span style="color:#268bd2">PersistGate</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#268bd2">Provider</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>The TypeScript type checker will then highlight <code>initialStore</code> because its type is <code>YourReduxStoreModel</code>. It does not contain <code>_persist</code> key and other keys related to <code>redux-persist</code>. This is a <a href="https://github.com/rt2zz/redux-persist/issues/1169">known issue</a>. For a quick fix, I added the missing keys to <code>YourReduxStoreModel</code>.</p>
 <p>To access <code>persistor</code> elsewhere, <a href="https://github.com/rt2zz/redux-persist/issues/349">the author recommends</a> accessing it through the config.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">// Copied from https://github.com/rt2zz/redux-persist/issues/349
-</span><span style="color:#586e75"></span><span style="color:#268bd2">import</span> { purgeStoredState } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist&#39;</span>;
-<span style="color:#268bd2">import</span> { persistConfig } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;relative path to your persistConfig&#39;</span>;
-
-purgeStoredState(persistConfig);
-</code></pre></div><p>Cheers!</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#586e75">// Copied from https://github.com/rt2zz/redux-persist/issues/349
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">import</span> { purgeStoredState } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;redux-persist&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { persistConfig } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;relative path to your persistConfig&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>purgeStoredState(persistConfig);
+</span></span></code></pre></div><p>Cheers!</p>
 
   </section>
   

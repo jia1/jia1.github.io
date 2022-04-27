@@ -215,7 +215,7 @@ I had a collection of documents with a name property. Originally, name was annot
   </div>
   <section class="nar-row article-summary">
     I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I could not make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
-// MyAbstractController public abstract class MyAbstractController&lt;T extends UniversalModel&gt; { private final .
+// MyAbstractController public abstract class MyAbstractController&lt;T extends UniversalModel&gt; {  private final .
   </section>
   <p>
     <a class="article-read-more" href="/2020/11/abstract-classes-and-aop/">Continue reading "Abstract classes and AOP"</a>
@@ -313,7 +313,7 @@ I had a collection of documents with a name property. Originally, name was annot
   </div>
   <section class="nar-row article-summary">
     I found myself entangled in CSS. I needed app-header to stick to the top at all times. I also needed template-header to be right beneath app-header at all times. Lastly, embedded-content should begin immediately after template-header and should not be sticky. Here&rsquo;s how the page organisation might look like:
-&lt;div class=&#34;app&#34;&gt; &lt;div class=&#34;app-header&#34;&gt; &lt;!-- Content --&gt; &lt;/div&gt; &lt;div class=&#34;app-content&#34;&gt; &lt;div class=&#34;template-container&#34;&gt; &lt;div class=&#34;template-header&#34;&gt; &lt;!-- Content --&gt; &lt;/div&gt; &lt;div class=&#34;embedded-content&#34;&gt; &lt;!-- Content --&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt; The simplest approach is to place app-header and template-header inside a single div.
+&lt;div class=&#34;app&#34;&gt;  &lt;div class=&#34;app-header&#34;&gt;  &lt;!-- Content --&gt;  &lt;/div&gt;  &lt;div class=&#34;app-content&#34;&gt;  &lt;div class=&#34;template-container&#34;&gt;  &lt;div class=&#34;template-header&#34;&gt;  &lt;!
   </section>
   <p>
     <a class="article-read-more" href="/2020/11/sticky/">Continue reading "Sticky"</a>
@@ -371,7 +371,7 @@ I had a collection of documents with a name property. Originally, name was annot
   <section class="nar-row article-summary">
     Polling wasn&rsquo;t effective because:
  Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
-{ &#34;scripts&#34;: { &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
+{  &#34;scripts&#34;: {  &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34;  } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
   </section>
   <p>
     <a class="article-read-more" href="/2020/11/recaptcha-on-error/">Continue reading "reCaptcha on-error"</a>

@@ -151,16 +151,16 @@
 <p>There were moments in my life when I wanted to give up writing in British English. There are so many other people using American English&hellip; except for me. Programming languages are expressed using American English as well. I felt like a rebel for naming my variables in British English, but that&rsquo;s what I&rsquo;ve learnt in school. It isn&rsquo;t wrong, or is it?</p>
 <p>Today, I found myself back in CSS. It isn&rsquo;t good, because I tend to spend a long time prettifying things. In order to adhere to the wireframes, I had to position some elements towards the centre.</p>
 <p>Firstly, texts should all be in the centre (horizontally). In the parent <code>div</code>, I added this rule:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#268bd2">parent-div-class</span> {
-  <span style="color:#719e07">text-align</span>: <span style="color:#cb4b16">center</span>;
-}
-</code></pre></div><p>Secondly, I need to centre a few elements in the vertical plane. In the parent <code>div</code>, I added these rules:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">.<span style="color:#268bd2">another-parent-div-class</span> {
-  <span style="color:#719e07">display</span>: <span style="color:#cb4b16">flex</span>;
-  <span style="color:#719e07">align-items</span>: <span style="color:#cb4b16">center</span>;
-  <span style="color:#719e07">min-height</span>: something that works for you;
-}
-</code></pre></div><p>Lastly, <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">this</a> is a lifesaver!</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#268bd2">parent-div-class</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">text-align</span>: <span style="color:#cb4b16">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Secondly, I need to centre a few elements in the vertical plane. In the parent <code>div</code>, I added these rules:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>.<span style="color:#268bd2">another-parent-div-class</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">display</span>: <span style="color:#cb4b16">flex</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">align-items</span>: <span style="color:#cb4b16">center</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">min-height</span>: something that works for you;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Lastly, <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">this</a> is a lifesaver!</p>
 
   </section>
   

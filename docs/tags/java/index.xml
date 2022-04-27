@@ -44,7 +44,7 @@ I had a collection of documents with a name property. Originally, name was annot
       
       <guid>https://jiayee.net/2020/11/abstract-classes-and-aop/</guid>
       <description>I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I could not make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
-// MyAbstractController public abstract class MyAbstractController&amp;lt;T extends UniversalModel&amp;gt; { private final .</description>
+// MyAbstractController public abstract class MyAbstractController&amp;lt;T extends UniversalModel&amp;gt; {  private final .</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ I had a collection of documents with a name property. Originally, name was annot
       
       <guid>https://jiayee.net/tweets/iterator-to-stream/</guid>
       <description>With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&amp;rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
-Stream&amp;lt;String&amp;gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.</description>
+Stream&amp;lt;String&amp;gt; stream = StreamSupport.stream(  Spliterators.spliteratorUnknownSize(  iterator,  Spliterator.ORDERED  ),  false ); Reference: mkyong.</description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@ Before that, I tried attaching only @Bean to the getter, but it didn&amp;rsquo;t
       
       <guid>https://jiayee.net/2020/09/almost-done-with-the-custom-starter/</guid>
       <description>I was right. I forgot to enable the Mongo repository. And it wasn&amp;rsquo;t only that. I had two Mongo configuration classes. One in the consumer and another in the custom starter. I needed only one. I removed the configuration class from the custom starter. Then, I enabled the custom starter&amp;rsquo;s repository in the consumer&amp;rsquo;s configuration class. Below is an idea of how my configuration class looks like:
-@EnableMongoRepositories(basePackages = { &amp;#34;yourTLD.</description>
+@EnableMongoRepositories(basePackages = {  &amp;#34;yourTLD.</description>
     </item>
     
     <item>
@@ -86,7 +86,7 @@ Before that, I tried attaching only @Bean to the getter, but it didn&amp;rsquo;t
       <guid>https://jiayee.net/2020/09/auto-configuring-controllers-and-repositories/</guid>
       <description>I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).
 I then ran the consumer&amp;rsquo;s codebase and used Postman to hit the newly-offered endpoints. Below is the response seen in Postman:
-{ &amp;#34;error&amp;#34;: { &amp;#34;IllegalArgumentException&amp;#34;: &amp;#34;Couldn&amp;#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&amp;#34; } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&amp;rsquo;s logs.</description>
+{  &amp;#34;error&amp;#34;: {  &amp;#34;IllegalArgumentException&amp;#34;: &amp;#34;Couldn&amp;#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&amp;#34;  } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&amp;rsquo;s logs.</description>
     </item>
     
     <item>

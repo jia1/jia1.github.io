@@ -14,7 +14,7 @@
       
       <guid>https://jiayee.net/2020/12/reach-router-match/</guid>
       <description>I use Reach Router. I have a component which isn&amp;rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&amp;rsquo;s how I did it after seeing Jacek&amp;rsquo;s hint:
-&amp;lt;div&amp;gt; &amp;lt;Match path=&amp;#34;/*&amp;#34;&amp;gt; {(props) =&amp;gt; ( &amp;lt;MyComponent path=&amp;#34;/*&amp;#34; match={props.match ?? &amp;#39;&amp;#39;} /&amp;gt; )} &amp;lt;/Match&amp;gt; &amp;lt;Router&amp;gt; ... &amp;lt;/Router&amp;gt; &amp;lt;/div&amp;gt; interface Props { match: any; } export const MyComponent: FC&amp;lt;Props&amp;gt; = (props: Props) =&amp;gt; { const pathname = props.</description>
+&amp;lt;div&amp;gt;  &amp;lt;Match path=&amp;#34;/*&amp;#34;&amp;gt;  {(props) =&amp;gt; (  &amp;lt;MyComponent  path=&amp;#34;/*&amp;#34;  match={props.match ?? &amp;#39;&amp;#39;}  /&amp;gt;  )}  &amp;lt;/Match&amp;gt;  &amp;lt;Router&amp;gt;  ...  &amp;lt;/Router&amp;gt; &amp;lt;/div&amp;gt; interface Props {  match: any; }  export const MyComponent: FC&amp;lt;Props&amp;gt; = (props: Props) =&amp;gt; {  const pathname = props.</description>
     </item>
     
   </channel>

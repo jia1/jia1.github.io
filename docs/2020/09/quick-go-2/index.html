@@ -148,72 +148,72 @@
   
   <section class="row article-content">
     <p>Chapter 3 and 4 were about variables (<code>var</code>, <code>const</code> and so on) and control structures (<code>for</code>, <code>if</code> and so on).</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#719e07">package</span> main
-
-<span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
-
-b <span style="color:#719e07">:=</span> <span style="color:#2aa198">&#34;Hello, world!&#34;</span> <span style="color:#586e75">// Block scope
-</span><span style="color:#586e75"></span>
-<span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
-  <span style="color:#586e75">// Chapter 3: Variables
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> x <span style="color:#dc322f">string</span> = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
-
-  <span style="color:#268bd2">var</span> y <span style="color:#dc322f">string</span>
-  y = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
-
-  <span style="color:#586e75">// x = x + y
-</span><span style="color:#586e75"></span>  <span style="color:#586e75">// x += y
-</span><span style="color:#586e75"></span>
-  z <span style="color:#719e07">:=</span> <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
-
-  <span style="color:#268bd2">var</span> a = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
-
-  fmt.<span style="color:#268bd2">Println</span>(b)
-
-  <span style="color:#268bd2">const</span> c = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
-
-  <span style="color:#268bd2">var</span> (
-    d = <span style="color:#2aa198">1</span>
-    e = <span style="color:#2aa198">2</span>
-    f = <span style="color:#2aa198">3</span>
-  )
-
-  <span style="color:#268bd2">var</span> input <span style="color:#dc322f">float64</span>
-  fmt.<span style="color:#268bd2">Scanf</span>(<span style="color:#2aa198">&#34;%f&#34;</span>, <span style="color:#719e07">&amp;</span>input)
-  output <span style="color:#719e07">:=</span> input <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span>
-
-  <span style="color:#586e75">// Chapter 4: Control structures
-</span><span style="color:#586e75"></span>  i <span style="color:#719e07">:=</span> <span style="color:#2aa198">1</span>
-  <span style="color:#719e07">for</span> i <span style="color:#719e07">&lt;=</span> <span style="color:#2aa198">10</span> {
-    <span style="color:#586e75">// Do something with i
-</span><span style="color:#586e75"></span>    i <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
-  }
-
-  <span style="color:#719e07">for</span> i <span style="color:#719e07">:=</span> <span style="color:#2aa198">10</span>; i <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">1</span>; i<span style="color:#719e07">--</span> {
-    <span style="color:#586e75">// Do something with i
-</span><span style="color:#586e75"></span>  }
-
-  w = <span style="color:#2aa198">50</span>
-  <span style="color:#719e07">if</span> w &gt; <span style="color:#2aa198">100</span> {
-    <span style="color:#586e75">// Do something
-</span><span style="color:#586e75"></span>  } <span style="color:#719e07">else</span> <span style="color:#719e07">if</span> w &gt; <span style="color:#2aa198">50</span> {
-    <span style="color:#586e75">// Do something
-</span><span style="color:#586e75"></span>  } <span style="color:#719e07">else</span> {
-    <span style="color:#586e75">// Do something
-</span><span style="color:#586e75"></span>  }
-
-  <span style="color:#586e75">// No need to break between cases
-</span><span style="color:#586e75"></span>  j <span style="color:#719e07">:=</span> <span style="color:#2aa198">100</span>
-  <span style="color:#719e07">switch</span> j {
-    <span style="color:#719e07">case</span> <span style="color:#2aa198">0</span>:
-      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Zero&#34;</span>)
-    <span style="color:#719e07">case</span> <span style="color:#2aa198">100</span>:
-      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Hundred&#34;</span>)
-    <span style="color:#719e07">default</span>:
-      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Don&#39;t know&#34;</span>)
-  }
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#719e07">package</span> main
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> <span style="color:#2aa198">&#34;fmt&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>b <span style="color:#719e07">:=</span> <span style="color:#2aa198">&#34;Hello, world!&#34;</span> <span style="color:#586e75">// Block scope
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">func</span> <span style="color:#268bd2">main</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Chapter 3: Variables
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#268bd2">var</span> x <span style="color:#dc322f">string</span> = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">var</span> y <span style="color:#dc322f">string</span>
+</span></span><span style="display:flex;"><span>  y = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// x = x + y
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  <span style="color:#586e75">// x += y
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span>  z <span style="color:#719e07">:=</span> <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">var</span> a = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#268bd2">Println</span>(b)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">const</span> c = <span style="color:#2aa198">&#34;Hello, world!&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">var</span> (
+</span></span><span style="display:flex;"><span>    d = <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>    e = <span style="color:#2aa198">2</span>
+</span></span><span style="display:flex;"><span>    f = <span style="color:#2aa198">3</span>
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">var</span> input <span style="color:#dc322f">float64</span>
+</span></span><span style="display:flex;"><span>  fmt.<span style="color:#268bd2">Scanf</span>(<span style="color:#2aa198">&#34;%f&#34;</span>, <span style="color:#719e07">&amp;</span>input)
+</span></span><span style="display:flex;"><span>  output <span style="color:#719e07">:=</span> input <span style="color:#719e07">*</span> <span style="color:#2aa198">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Chapter 4: Control structures
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  i <span style="color:#719e07">:=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">for</span> i <span style="color:#719e07">&lt;=</span> <span style="color:#2aa198">10</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Do something with i
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>    i <span style="color:#719e07">+=</span> <span style="color:#2aa198">1</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">for</span> i <span style="color:#719e07">:=</span> <span style="color:#2aa198">10</span>; i <span style="color:#719e07">&gt;=</span> <span style="color:#2aa198">1</span>; i<span style="color:#719e07">--</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Do something with i
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  w = <span style="color:#2aa198">50</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">if</span> w &gt; <span style="color:#2aa198">100</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Do something
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  } <span style="color:#719e07">else</span> <span style="color:#719e07">if</span> w &gt; <span style="color:#2aa198">50</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Do something
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  } <span style="color:#719e07">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Do something
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// No need to break between cases
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  j <span style="color:#719e07">:=</span> <span style="color:#2aa198">100</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">switch</span> j {
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">case</span> <span style="color:#2aa198">0</span>:
+</span></span><span style="display:flex;"><span>      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Zero&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">case</span> <span style="color:#2aa198">100</span>:
+</span></span><span style="display:flex;"><span>      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Hundred&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">default</span>:
+</span></span><span style="display:flex;"><span>      fmt.<span style="color:#268bd2">Println</span>(<span style="color:#2aa198">&#34;Don&#39;t know&#34;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
   </section>
   
 

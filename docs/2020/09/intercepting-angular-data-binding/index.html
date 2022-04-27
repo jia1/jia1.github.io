@@ -167,37 +167,37 @@
 </ol>
 <p>Below are some code snippets to illustrate what I did:</p>
 <p>Directive:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">angular
-  .module(<span style="color:#2aa198">&#39;forms&#39;</span>)
-  .directive(<span style="color:#2aa198">&#39;saveInterceptor&#39;</span>, [
-    <span style="color:#2aa198">&#39;ToastService&#39;</span>,
-    saveInterceptor,
-  ])
-
-<span style="color:#268bd2">function</span> saveInterceptor(ToastService) {
-  <span style="color:#719e07">return</span> {
-    require<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;ngModel&#39;</span>,
-    link<span style="color:#719e07">:</span> (scope, elem, attr, ngModel) =&gt; {
-      ngModel.$parsers.push((inputValue) =&gt; {
-        <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>inputValue) { <span style="color:#586e75">// If A is off
-</span><span style="color:#586e75"></span>          ToastService.show(
-            <span style="color:#2aa198">&#39;Some message.&#39;</span>,
-          )
-        }
-        scope.B <span style="color:#719e07">=</span> <span style="color:#cb4b16">false</span> <span style="color:#586e75">// Switch B off whenever A changes
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">return</span> inputValue <span style="color:#586e75">// Do not mutate A
-</span><span style="color:#586e75"></span>      })
-    },
-  }
-}
-</code></pre></div><p>I had to insert <code>require('relative path to directive file')</code> into <code>main.js</code>. And, as mentioned in an earlier post about hoisting, <code>saveInterceptor</code> must be defined as <code>function saveInterceptor(ToastService) { ... }</code> instead of an arrow function. This is because the <code>.directive(...)</code> is above the function definition. As such, we need the function hoisting from the <code>function</code> keyword.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>angular
+</span></span><span style="display:flex;"><span>  .module(<span style="color:#2aa198">&#39;forms&#39;</span>)
+</span></span><span style="display:flex;"><span>  .directive(<span style="color:#2aa198">&#39;saveInterceptor&#39;</span>, [
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;ToastService&#39;</span>,
+</span></span><span style="display:flex;"><span>    saveInterceptor,
+</span></span><span style="display:flex;"><span>  ])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">function</span> saveInterceptor(ToastService) {
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> {
+</span></span><span style="display:flex;"><span>    require<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;ngModel&#39;</span>,
+</span></span><span style="display:flex;"><span>    link<span style="color:#719e07">:</span> (scope, elem, attr, ngModel) =&gt; {
+</span></span><span style="display:flex;"><span>      ngModel.$parsers.push((inputValue) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>inputValue) { <span style="color:#586e75">// If A is off
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>          ToastService.show(
+</span></span><span style="display:flex;"><span>            <span style="color:#2aa198">&#39;Some message.&#39;</span>,
+</span></span><span style="display:flex;"><span>          )
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        scope.B <span style="color:#719e07">=</span> <span style="color:#cb4b16">false</span> <span style="color:#586e75">// Switch B off whenever A changes
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>        <span style="color:#719e07">return</span> inputValue <span style="color:#586e75">// Do not mutate A
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>      })
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I had to insert <code>require('relative path to directive file')</code> into <code>main.js</code>. And, as mentioned in an earlier post about hoisting, <code>saveInterceptor</code> must be defined as <code>function saveInterceptor(ToastService) { ... }</code> instead of an arrow function. This is because the <code>.directive(...)</code> is above the function definition. As such, we need the function hoisting from the <code>function</code> keyword.</p>
 <p>View:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">input</span>
-  type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;checkbox&#34;</span>
-  ng-model<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;A&#34;</span>
-  save-interceptor
-/&gt;
-</code></pre></div><p>Before I end my post, I want to highlight another thing I learnt from this task. It&rsquo;s the difference between <code>$parsers</code> and <code>$formatters</code>. I got to know about the directive&rsquo;s syntax from this <a href="https://stackoverflow.com/questions/19969740/how-to-intercept-value-binding-by-ng-model-directive">Stack Overflow thread</a>. Both <code>$formatters</code> and <code>$parsers</code> were present, and, being curious, I went ahead and <a href="https://stackoverflow.com/questions/22841225/ngmodel-formatters-and-parsers">looked them up</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#268bd2">input</span>
+</span></span><span style="display:flex;"><span>  type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;checkbox&#34;</span>
+</span></span><span style="display:flex;"><span>  ng-model<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;A&#34;</span>
+</span></span><span style="display:flex;"><span>  save-interceptor
+</span></span><span style="display:flex;"><span>/&gt;
+</span></span></code></pre></div><p>Before I end my post, I want to highlight another thing I learnt from this task. It&rsquo;s the difference between <code>$parsers</code> and <code>$formatters</code>. I got to know about the directive&rsquo;s syntax from this <a href="https://stackoverflow.com/questions/19969740/how-to-intercept-value-binding-by-ng-model-directive">Stack Overflow thread</a>. Both <code>$formatters</code> and <code>$parsers</code> were present, and, being curious, I went ahead and <a href="https://stackoverflow.com/questions/22841225/ngmodel-formatters-and-parsers">looked them up</a>.</p>
 <p>TL;DR: Formatters are for appearances (model -&gt; view); parsers are for saves (view -&gt; model). In our case, we want the parser. This is because user interactions toggle A and B at the view, and we want to watch what the view is passing to the model.</p>
 
   </section>

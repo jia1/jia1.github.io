@@ -150,67 +150,67 @@
 <li>An optional parameter to represent a periodic top-up amount.</li>
 </ul>
 <p>Here&rsquo;s v1 of my simple interest calculator:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#586e75">/**
-</span><span style="color:#586e75"> * Calculates simple interest.
-</span><span style="color:#586e75"> *
-</span><span style="color:#586e75"> * Uses the formula A = P(1 + rt).
-</span><span style="color:#586e75"> *
-</span><span style="color:#586e75"> * @param {Object} param Object containing parameters.
-</span><span style="color:#586e75"> * @param {Number} param.principal Principal amount.
-</span><span style="color:#586e75"> * @param {Number} param.interestRate Interest rate.
-</span><span style="color:#586e75"> * @param {Number} param.numInterestDeposits Number of time periods.
-</span><span style="color:#586e75"> *
-</span><span style="color:#586e75"> * @return {Object} Object containing totalAmount and totalInterest.
-</span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> calcSimpleInterest <span style="color:#719e07">=</span> ({
- principal,
- interestRate,
- numInterestDeposits,
-}) =&gt; {
- <span style="color:#268bd2">const</span> totalInterest <span style="color:#719e07">=</span> principal <span style="color:#719e07">*</span> interestRate <span style="color:#719e07">*</span> numInterestDeposits;
- <span style="color:#719e07">return</span> {
- totalAmount<span style="color:#719e07">:</span> principal <span style="color:#719e07">+</span> totalInterest,
- totalInterest,
- };
-};
-</code></pre></div><p>And here&rsquo;s v2 of it:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">import</span> nerdamer from <span style="color:#2aa198">&#39;nerdamer/nerdamer.core&#39;</span>;
-<span style="color:#268bd2">import</span> Algebra from <span style="color:#2aa198">&#39;nerdamer/Algebra&#39;</span>;
-<span style="color:#268bd2">import</span> Calculus from <span style="color:#2aa198">&#39;nerdamer/Calculus&#39;</span>;
-<span style="color:#268bd2">import</span> Solve from <span style="color:#2aa198">&#39;nerdamer/Solve&#39;</span>;
-
-<span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> calcSimpleInterest <span style="color:#719e07">=</span> ({
- principal,
- interestRate,
- numInterestDeposits,
-}) =&gt; {
- <span style="color:#268bd2">const</span> totalAmount <span style="color:#719e07">=</span> solveForOneUnknownVariable(
- <span style="color:#2aa198">&#39;a=p+p*r*t&#39;</span>,
- {
- p<span style="color:#719e07">:</span> principal.toString(),
- r<span style="color:#719e07">:</span> interestRate.toString(),
- t<span style="color:#719e07">:</span> numInterestDeposits.toString(),
- },
- <span style="color:#2aa198">&#39;a&#39;</span>,
- principal,
- );
- <span style="color:#719e07">return</span> {
- totalAmount,
- totalInterest<span style="color:#719e07">:</span> totalAmount <span style="color:#719e07">-</span> principal,
- };
-};
-
-<span style="color:#268bd2">const</span> solveForOneUnknownVariable <span style="color:#719e07">=</span> (
- equationString,
- knownValues,
- unknownVariable,
- defaultValue,
-) =&gt; {
- <span style="color:#268bd2">const</span> equation <span style="color:#719e07">=</span> nerdamer(equationString).evaluate(knownValues);
- <span style="color:#268bd2">const</span> solution <span style="color:#719e07">=</span> equation.solveFor(unknownVariable);
- <span style="color:#719e07">return</span> <span style="color:#b58900">Number</span>(solution.text());
-};
-</code></pre></div><p>Both versions treat <code>numInterestDeposits</code> in years and have not handled the periodic top-ups. Also, the compound interest calculator has <code>compoundRate</code>. The compound rate is the number of times the annual interest compounds in a year. It looks like I still have a long way to go&hellip;</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#586e75">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * Calculates simple interest.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * Uses the formula A = P(1 + rt).
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * @param {Object} param Object containing parameters.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * @param {Number} param.principal Principal amount.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * @param {Number} param.interestRate Interest rate.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * @param {Number} param.numInterestDeposits Number of time periods.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> *
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * @return {Object} Object containing totalAmount and totalInterest.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> calcSimpleInterest <span style="color:#719e07">=</span> ({
+</span></span><span style="display:flex;"><span> principal,
+</span></span><span style="display:flex;"><span> interestRate,
+</span></span><span style="display:flex;"><span> numInterestDeposits,
+</span></span><span style="display:flex;"><span>}) =&gt; {
+</span></span><span style="display:flex;"><span> <span style="color:#268bd2">const</span> totalInterest <span style="color:#719e07">=</span> principal <span style="color:#719e07">*</span> interestRate <span style="color:#719e07">*</span> numInterestDeposits;
+</span></span><span style="display:flex;"><span> <span style="color:#719e07">return</span> {
+</span></span><span style="display:flex;"><span> totalAmount<span style="color:#719e07">:</span> principal <span style="color:#719e07">+</span> totalInterest,
+</span></span><span style="display:flex;"><span> totalInterest,
+</span></span><span style="display:flex;"><span> };
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>And here&rsquo;s v2 of it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#268bd2">import</span> nerdamer from <span style="color:#2aa198">&#39;nerdamer/nerdamer.core&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> Algebra from <span style="color:#2aa198">&#39;nerdamer/Algebra&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> Calculus from <span style="color:#2aa198">&#39;nerdamer/Calculus&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> Solve from <span style="color:#2aa198">&#39;nerdamer/Solve&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> calcSimpleInterest <span style="color:#719e07">=</span> ({
+</span></span><span style="display:flex;"><span> principal,
+</span></span><span style="display:flex;"><span> interestRate,
+</span></span><span style="display:flex;"><span> numInterestDeposits,
+</span></span><span style="display:flex;"><span>}) =&gt; {
+</span></span><span style="display:flex;"><span> <span style="color:#268bd2">const</span> totalAmount <span style="color:#719e07">=</span> solveForOneUnknownVariable(
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">&#39;a=p+p*r*t&#39;</span>,
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span> p<span style="color:#719e07">:</span> principal.toString(),
+</span></span><span style="display:flex;"><span> r<span style="color:#719e07">:</span> interestRate.toString(),
+</span></span><span style="display:flex;"><span> t<span style="color:#719e07">:</span> numInterestDeposits.toString(),
+</span></span><span style="display:flex;"><span> },
+</span></span><span style="display:flex;"><span> <span style="color:#2aa198">&#39;a&#39;</span>,
+</span></span><span style="display:flex;"><span> principal,
+</span></span><span style="display:flex;"><span> );
+</span></span><span style="display:flex;"><span> <span style="color:#719e07">return</span> {
+</span></span><span style="display:flex;"><span> totalAmount,
+</span></span><span style="display:flex;"><span> totalInterest<span style="color:#719e07">:</span> totalAmount <span style="color:#719e07">-</span> principal,
+</span></span><span style="display:flex;"><span> };
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> solveForOneUnknownVariable <span style="color:#719e07">=</span> (
+</span></span><span style="display:flex;"><span> equationString,
+</span></span><span style="display:flex;"><span> knownValues,
+</span></span><span style="display:flex;"><span> unknownVariable,
+</span></span><span style="display:flex;"><span> defaultValue,
+</span></span><span style="display:flex;"><span>) =&gt; {
+</span></span><span style="display:flex;"><span> <span style="color:#268bd2">const</span> equation <span style="color:#719e07">=</span> nerdamer(equationString).evaluate(knownValues);
+</span></span><span style="display:flex;"><span> <span style="color:#268bd2">const</span> solution <span style="color:#719e07">=</span> equation.solveFor(unknownVariable);
+</span></span><span style="display:flex;"><span> <span style="color:#719e07">return</span> <span style="color:#b58900">Number</span>(solution.text());
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>Both versions treat <code>numInterestDeposits</code> in years and have not handled the periodic top-ups. Also, the compound interest calculator has <code>compoundRate</code>. The compound rate is the number of times the annual interest compounds in a year. It looks like I still have a long way to go&hellip;</p>
 
   </section>
   

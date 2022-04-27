@@ -148,14 +148,14 @@
   
   <section class="row article-content">
     <p>With Google Guava, you can transform an <code>Iterator</code> into a <code>Stream</code> with <code>Streams.stream(...)</code>. But that API is only available from Guava 21. If you don&rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your <code>Iterator</code> to a <code>Stream</code>:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Stream<span style="color:#719e07">&lt;</span>String<span style="color:#719e07">&gt;</span> stream <span style="color:#719e07">=</span> StreamSupport<span style="color:#719e07">.</span>stream<span style="color:#719e07">(</span>
-    Spliterators<span style="color:#719e07">.</span>spliteratorUnknownSize<span style="color:#719e07">(</span>
-        iterator<span style="color:#719e07">,</span>
-        Spliterator<span style="color:#719e07">.</span>ORDERED
-    <span style="color:#719e07">),</span>
-    <span style="color:#cb4b16">false</span>
-<span style="color:#719e07">);</span>
-</code></pre></div><p>Reference: <a href="https://mkyong.com/java8/java-8-how-to-convert-iterator-to-stream/">mkyong</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Stream<span style="color:#719e07">&lt;</span>String<span style="color:#719e07">&gt;</span> stream <span style="color:#719e07">=</span> StreamSupport<span style="color:#719e07">.</span>stream<span style="color:#719e07">(</span>
+</span></span><span style="display:flex;"><span>    Spliterators<span style="color:#719e07">.</span>spliteratorUnknownSize<span style="color:#719e07">(</span>
+</span></span><span style="display:flex;"><span>        iterator<span style="color:#719e07">,</span>
+</span></span><span style="display:flex;"><span>        Spliterator<span style="color:#719e07">.</span>ORDERED
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">),</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#cb4b16">false</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">);</span>
+</span></span></code></pre></div><p>Reference: <a href="https://mkyong.com/java8/java-8-how-to-convert-iterator-to-stream/">mkyong</a>.</p>
 
   </section>
   

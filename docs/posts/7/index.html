@@ -153,7 +153,7 @@
   </div>
   <section class="nar-row article-summary">
     Chapter 3 and 4 were about variables (var, const and so on) and control structures (for, if and so on).
-package main import &#34;fmt&#34; b := &#34;Hello, world!&#34; // Block scope  func main() { // Chapter 3: Variables  var x string = &#34;Hello, world!&#34; var y string y = &#34;Hello, world!&#34; // x = x + y  // x += y  z := &#34;Hello, world!&#34; var a = &#34;Hello, world!
+package main  import &#34;fmt&#34;  b := &#34;Hello, world!&#34; // Block scope  func main() {  // Chapter 3: Variables  var x string = &#34;Hello, world!&#34;   var y string  y = &#34;Hello, world!&#34;   // x = x + y  // x += y   z := &#34;Hello, world!
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/quick-go-2/">Continue reading "Quick Go 2"</a>
@@ -206,7 +206,7 @@ package main import &#34;fmt&#34; b := &#34;Hello, world!&#34; // Block scope  f
   <section class="nar-row article-summary">
     I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
 My GraphQL query:
-query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:
+query MyQuery(...) {  arrayA: someModel(...) {  someInnerModel {  id  }  },  arrayB: someModel(...) {  someInnerModel {  id  }  } } Expected JSON response from GraphQL service:
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/jslt/">Continue reading "JSLT"</a>
@@ -363,7 +363,7 @@ query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: s
   <section class="nar-row article-summary">
     I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
 At first, the tooltip looked like:
-&lt;i class=&#34;...&#34; uib-tooltip=&#34;Here&#39;s the one and only static tooltip!&#34; tooltip-trigger=&#34;&#39;click mouseenter&#39;&#34; &gt;&lt;/i&gt; uib-tooltip seems to come from UI Bootstrap.
+&lt;i  class=&#34;...&#34;  uib-tooltip=&#34;Here&#39;s the one and only static tooltip!&#34;  tooltip-trigger=&#34;&#39;click mouseenter&#39;&#34; &gt;&lt;/i&gt; uib-tooltip seems to come from UI Bootstrap.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/dynamic-tooltips/">Continue reading "Dynamic Tooltips"</a>

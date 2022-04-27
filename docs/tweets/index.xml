@@ -304,7 +304,7 @@ A little too early to think about this&amp;hellip; I don&amp;rsquo;t know&amp;he
       
       <guid>https://jiayee.net/tweets/iterator-to-stream/</guid>
       <description>With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&amp;rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
-Stream&amp;lt;String&amp;gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.</description>
+Stream&amp;lt;String&amp;gt; stream = StreamSupport.stream(  Spliterators.spliteratorUnknownSize(  iterator,  Spliterator.ORDERED  ),  false ); Reference: mkyong.</description>
     </item>
     
     <item>
@@ -594,7 +594,7 @@ I&amp;rsquo;d rather dilly-dally.</description>
       
       <guid>https://jiayee.net/tweets/need-an-extra-whitespace/</guid>
       <description>Need an extra whitespace in JSX? Instead of &amp;amp;nbsp;, try this:
-&amp;lt;span&amp;gt;Hello, &amp;lt;/span&amp;gt; {true ? &amp;#39;world!&amp;#39; : &amp;#39;world!&amp;#39;} Some food for thought here.</description>
+&amp;lt;span&amp;gt;Hello, &amp;lt;/span&amp;gt; {true  ? &amp;#39;world!&amp;#39;  : &amp;#39;world!&amp;#39;} Some food for thought here.</description>
     </item>
     
     <item>
@@ -811,7 +811,7 @@ Start small. Materialise the plan for your adjustments (e.g. make a planning she
       
       <guid>https://jiayee.net/tweets/28-sep-2020-qna/</guid>
       <description>How hungry are you right now?
- I&amp;rsquo;m like 55% full now. Had a cup of water and a red apple when I woke up. Then, I exercised, showered, drank a cup of water and had a green apple. And a moment ago, I ate my in-laws&#39; peanut pancakes from yesterday, and I drank another cup of water. Should get more water plus a cup of milk. I&amp;rsquo;m all set for the day!</description>
+ I&amp;rsquo;m like 55% full now. Had a cup of water and a red apple when I woke up. Then, I exercised, showered, drank a cup of water and had a green apple. And a moment ago, I ate my in-laws&amp;rsquo; peanut pancakes from yesterday, and I drank another cup of water. Should get more water plus a cup of milk. I&amp;rsquo;m all set for the day!</description>
     </item>
     
     <item>

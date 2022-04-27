@@ -158,12 +158,12 @@
 <li>I called the wrong function to check if the reCaptcha errored.</li>
 </ol>
 <p>To deal with the heap limit, my buddy suggested updating the <code>docker-dev</code> script in <code>package.json</code> to:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#268bd2">&#34;scripts&#34;</span>: {
-    <span style="color:#268bd2">&#34;docker-dev&#34;</span>: <span style="color:#2aa198">&#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34;</span>
-  }
-}
-</code></pre></div><p>As for checking if the reCaptcha errored, neither <code>on-expire</code> nor <code>captchaService.isValid</code> worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire. It just didn&rsquo;t work. On the other hand, <code>captchaService.isValid</code> checks <code>this.response || !this.enabled</code>. These do not determine if the reCaptcha errored.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">&#34;scripts&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">&#34;docker-dev&#34;</span>: <span style="color:#2aa198">&#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>As for checking if the reCaptcha errored, neither <code>on-expire</code> nor <code>captchaService.isValid</code> worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire. It just didn&rsquo;t work. On the other hand, <code>captchaService.isValid</code> checks <code>this.response || !this.enabled</code>. These do not determine if the reCaptcha errored.</p>
 <p>My buddy wondered if there was something like <code>on-error</code>. He dug through the reCaptcha package&rsquo;s source code and found it in the <a href="https://github.com/opengovsg/angular-recaptcha-fallback/commit/5896c1096753952aef8ec48f0a4c6c7e5ea8a3d2">directive</a>. This jewel wasn&rsquo;t documented. I proceeded to use <code>on-error</code> <a href="https://github.com/opengovsg/FormSG/pull/582/files">with much success</a>!</p>
 
   </section>

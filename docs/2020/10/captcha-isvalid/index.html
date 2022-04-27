@@ -148,18 +148,18 @@
   
   <section class="row article-content">
     <p>I needed the client to check for the captcha failure when a user loads a form. In the <code>captchaService</code> abstraction for <code>angular-recaptcha</code>, there was <code>isValid()</code> which does:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#586e75">/**
-</span><span style="color:#586e75"> * Check if the response has been set, assuming captcha is enabled.
-</span><span style="color:#586e75"> */</span>
-<span style="color:#719e07">this</span>.isValid <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> <span style="color:#719e07">this</span>.response <span style="color:#719e07">||</span> <span style="color:#719e07">!</span><span style="color:#719e07">this</span>.enabled;
-</code></pre></div><p>I had a way to trigger the captcha failure. In the same WiFi network, I accessed a form from <code>localhost</code> through my mobile phone. However, both desktop and mobile had the same <code>isValid()</code> boolean values. I had the following lines in the form&rsquo;s directive:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#268bd2">let</span> i <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>;
-$interval(() <span style="color:#719e07">=&gt;</span> {
-  Toastr.error(
-    <span style="color:#586e75">`</span><span style="color:#2aa198">${</span>i<span style="color:#719e07">++</span><span style="color:#2aa198">}</span><span style="color:#586e75">: </span><span style="color:#2aa198">${</span>scope.form.hasCaptcha<span style="color:#2aa198">}</span><span style="color:#586e75">, </span><span style="color:#2aa198">${</span>scope.form.isPreview<span style="color:#2aa198">}</span><span style="color:#586e75">, </span><span style="color:#2aa198">${</span>captchaService.isValid()<span style="color:#2aa198">}</span><span style="color:#586e75">`</span>,
-  )
-}, <span style="color:#2aa198">3000</span>);
-</code></pre></div><p>For both desktop and mobile, the toast shows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#586e75">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> * Check if the response has been set, assuming captcha is enabled.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">this</span>.isValid <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> <span style="color:#719e07">this</span>.response <span style="color:#719e07">||</span> <span style="color:#719e07">!</span><span style="color:#719e07">this</span>.enabled;
+</span></span></code></pre></div><p>I had a way to trigger the captcha failure. In the same WiFi network, I accessed a form from <code>localhost</code> through my mobile phone. However, both desktop and mobile had the same <code>isValid()</code> boolean values. I had the following lines in the form&rsquo;s directive:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#268bd2">let</span> i <span style="color:#719e07">=</span> <span style="color:#2aa198">0</span>;
+</span></span><span style="display:flex;"><span>$interval(() <span style="color:#719e07">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  Toastr.error(
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">`</span><span style="color:#2aa198">${</span>i<span style="color:#719e07">++</span><span style="color:#2aa198">}</span><span style="color:#586e75">: </span><span style="color:#2aa198">${</span>scope.form.hasCaptcha<span style="color:#2aa198">}</span><span style="color:#586e75">, </span><span style="color:#2aa198">${</span>scope.form.isPreview<span style="color:#2aa198">}</span><span style="color:#586e75">, </span><span style="color:#2aa198">${</span>captchaService.isValid()<span style="color:#2aa198">}</span><span style="color:#586e75">`</span>,
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}, <span style="color:#2aa198">3000</span>);
+</span></span></code></pre></div><p>For both desktop and mobile, the toast shows:</p>
 <ol>
 <li><code>0: true, false, true</code>.</li>
 <li><code>1: true, false, false</code>.</li>
@@ -167,16 +167,16 @@ $interval(() <span style="color:#719e07">=&gt;</span> {
 <li><code>3: true, false, false</code>.</li>
 </ol>
 <p>I also noticed that the captcha widget at the bottom of the form does not show the failure immediately on my mobile phone. As for desktop, the widget never showed any failure despite the toast printing <code>false</code> for <code>isValid()</code>. I observed the same results with the following if-conditions:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#719e07">if</span> (
-  scope.form.hasCaptcha <span style="color:#719e07">&amp;&amp;</span>
-  <span style="color:#719e07">!</span>scope.form.isPreview <span style="color:#719e07">&amp;&amp;</span>
-  <span style="color:#719e07">!</span>captchaService.isValid()
-) {
-  Toastr.error(
-    <span style="color:#2aa198">&#39;Error: Cannot connect to reCAPTCHA. Please check your internet connectivity or try submitting on another device.&#39;</span>,
-  )
-}
-</code></pre></div><p>I copied these if-conditions from the <code>checkCaptchaAndSubmit</code> function in the form directive. Perhaps I should look into other parts of the captcha service such as <code>expire()</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#719e07">if</span> (
+</span></span><span style="display:flex;"><span>  scope.form.hasCaptcha <span style="color:#719e07">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">!</span>scope.form.isPreview <span style="color:#719e07">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">!</span>captchaService.isValid()
+</span></span><span style="display:flex;"><span>) {
+</span></span><span style="display:flex;"><span>  Toastr.error(
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;Error: Cannot connect to reCAPTCHA. Please check your internet connectivity or try submitting on another device.&#39;</span>,
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>I copied these if-conditions from the <code>checkCaptchaAndSubmit</code> function in the form directive. Perhaps I should look into other parts of the captcha service such as <code>expire()</code>.</p>
 
   </section>
   

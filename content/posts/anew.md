@@ -4,7 +4,7 @@ date: 2023-03-23T23:30:00+08:00
 draft: false
 tags: []
 ---
-As you may have already [known](https://www.straitstimes.com/business/job-site-indeed-cuts-2200-positions-as-tech-sector-cools), my (soon-to-be-ex) company decided for me to pursue a new career elsewhere. I did not want to believe this - my body accepted it faster than my mind could. My body moved like clockwork - I proceeded to update my resume. My resume was in shambles. It looked lacklustre. As I documented my notable accomplishments line by line, my resume brightened a lot. It brightened like how replacing an incandescent bulb with an LED one felt.
+As you may have already [known](https://www.straitstimes.com/business/job-site-indeed-cuts-2200-positions-as-tech-sector-cools), my (soon-to-be ex-)company decided for me to pursue a new career elsewhere. I did not want to believe this - my body accepted it faster than my mind could. My body moved like clockwork - I proceeded to update my resume. My resume was in shambles. It looked lacklustre. As I documented my notable accomplishments line by line, my resume brightened a lot. It brightened like how replacing an incandescent bulb with an LED one felt.
 
 I felt touched. I grew. And that was not all - if the things off the top of my head were enough to impress myself, I can't imagine how much happier I'll be when I recall my other achievements. I did not achieve these on my own. I had my team to thank. Things were hectic during the day when I was scrambling to get my resume, payslips, tax documents, Workday profile and insurance policy settled or downloaded. Now, as the slanting rays of the setting sun gave a warm orange tinge to the sky, my body slowed down, and my mind had all the space it needed to reflect and think.
 

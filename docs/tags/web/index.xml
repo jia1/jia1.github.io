@@ -14,7 +14,7 @@
       
       <guid>https://jiayee.net/2020/11/sticky/</guid>
       <description>I found myself entangled in CSS. I needed app-header to stick to the top at all times. I also needed template-header to be right beneath app-header at all times. Lastly, embedded-content should begin immediately after template-header and should not be sticky. Here&amp;rsquo;s how the page organisation might look like:
-&amp;lt;div class=&amp;#34;app&amp;#34;&amp;gt;  &amp;lt;div class=&amp;#34;app-header&amp;#34;&amp;gt;  &amp;lt;!-- Content --&amp;gt;  &amp;lt;/div&amp;gt;  &amp;lt;div class=&amp;#34;app-content&amp;#34;&amp;gt;  &amp;lt;div class=&amp;#34;template-container&amp;#34;&amp;gt;  &amp;lt;div class=&amp;#34;template-header&amp;#34;&amp;gt;  &amp;lt;!</description>
+&amp;lt;div class=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;app-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;app-content&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-container&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;embedded-content&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; The simplest approach is to place app-header and template-header inside a single div.</description>
     </item>
     
     <item>
@@ -24,8 +24,8 @@
       
       <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
       <description>Polling wasn&amp;rsquo;t effective because:
- Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored.  To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
-{  &amp;#34;scripts&amp;#34;: {  &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34;  } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
+Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+{ &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
     </item>
     
     <item>
@@ -45,11 +45,10 @@
       
       <guid>https://jiayee.net/2020/10/some-similarities/</guid>
       <description>This
-.some-class {  display: flex;  flex-direction: column;  justify-content: center;  min-height: 20rem; } and this
-.some-class {  display: flex;  align-items: center;  min-height: 20rem; } appear the same to me.
+.some-class { display: flex; flex-direction: column; justify-content: center; min-height: 20rem; } and this
+.some-class { display: flex; align-items: center; min-height: 20rem; } appear the same to me.
 CSS-Tricks says,
- You can think of align-items as the justify-content version for the cross-axis (perpendicular to the main-axis).
- </description>
+You can think of align-items as the justify-content version for the cross-axis (perpendicular to the main-axis).</description>
     </item>
     
     <item>
@@ -90,7 +89,7 @@ There were moments in my life when I wanted to give up writing in British Englis
       <description>If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
 Install redux-persist:
 yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;;  import rootReducer from &amp;#39;.</description>
+// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;; import rootReducer from &amp;#39;.</description>
     </item>
     
     <item>
@@ -100,7 +99,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       <guid>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</guid>
       <description>I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&amp;rsquo;s post for the context. The edge cases are:
- Forms which need data from the preceding forms Dynamic form links  I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.</description>
+Forms which need data from the preceding forms Dynamic form links I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.</description>
     </item>
     
     <item>
@@ -110,7 +109,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
       <description>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
- If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.</description>
+If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.</description>
     </item>
     
     <item>
@@ -130,7 +129,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
       <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
 At first, the tooltip looked like:
-&amp;lt;i  class=&amp;#34;...&amp;#34;  uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34;  tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
+&amp;lt;i class=&amp;#34;...&amp;#34; uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34; tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
     </item>
     
     <item>
@@ -140,7 +139,7 @@ At first, the tooltip looked like:
       
       <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
       <description>I have two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
- When A is off, disable and switch B off. When A is on, disable and switch B off.  We can ignore backend logic because I programmed it such that if A is off, ignore B.
+When A is off, disable and switch B off. When A is on, disable and switch B off. We can ignore backend logic because I programmed it such that if A is off, ignore B.
 So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!</description>
     </item>
     
@@ -172,7 +171,7 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
       <guid>https://jiayee.net/2020/09/first-lighthouse-report-for-jiayee.net/</guid>
       <description>I ran my first Lighthouse report on this site. There&amp;rsquo;s a bunch of improvements to make. As of now, I managed to resolve some of them. I put up the links to the before and after Lighthouse reports at the end of this post. Please feel free to take a look at them.
 A summary of the improvements I made:
- Include lang attribute to the html element i.e. &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;.</description>
+Include lang attribute to the html element i.e. &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;. Added rel=&amp;quot;noopener&amp;quot; to external links.</description>
     </item>
     
     <item>

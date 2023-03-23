@@ -152,7 +152,7 @@
   <section class="nar-row article-summary">
     I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
 My GraphQL query:
-query MyQuery(...) {  arrayA: someModel(...) {  someInnerModel {  id  }  },  arrayB: someModel(...) {  someInnerModel {  id  }  } } Expected JSON response from GraphQL service:
+query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/jslt/">Continue reading "JSLT"</a>
@@ -177,7 +177,7 @@ query MyQuery(...) {  arrayA: someModel(...) {  someInnerModel {  id  }  },  arr
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2022
+  Copyright &copy; 2023
   Jiayee Lim.
 </footer>
 </section>

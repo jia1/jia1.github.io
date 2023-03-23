@@ -31,9 +31,17 @@ Join me on Google Pay and you'll earn $3 when you opt in to Google Pay offers an
 
 Get up to $1000 of free IBKR stock when opening an account at Interactive Brokers! Sign up with my link. https://ibkr.com/referral/jiayee664
 
-#### MyACUVUE
+#### Klook
 
-Ping me!
+Here's S$5 off your first unique travel experience with Klook!
+
+Hey! Here's S$5 off for things to do, hotels and more on Klook. Just sign up with my link.
+
+https://s.klook.com/c/NVXMeKN_w0
+
+#### MyRepublic
+
+https://secure.myrepublic.com.sg/order2/signup?promo_code=fwb&referrer_id=C
 
 #### Revolut
 
@@ -42,3 +50,15 @@ Ping me!
 #### Shopee
 
 Use my referral code REF-JIA942 to get S$10.00 off your first purchase!
+
+#### Trust
+
+Sign up for Trust with my referral code. We each get a S$10 FairPrice E-Voucher. Simply download the Trust Bank SG App on the App Store or Google Play Store. Tap on "Get started" immediately after you start the app and key in: K7916PY3
+
+Find out more on Trust Bank SG website. Terms and conditions apply.
+
+#### Wise
+
+Hey, I use Wise to send money abroad. Really easy and a lot cheaper than the bank! Give it a try with a fee-free transfer of up to 500 GBP.
+
+https://wise.com/invite/ath/jial120

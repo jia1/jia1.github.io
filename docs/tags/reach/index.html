@@ -151,7 +151,7 @@
   </div>
   <section class="nar-row article-summary">
     I use Reach Router. I have a component which isn&rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing Jacek&rsquo;s hint:
-&lt;div&gt;  &lt;Match path=&#34;/*&#34;&gt;  {(props) =&gt; (  &lt;MyComponent  path=&#34;/*&#34;  match={props.match ?? &#39;&#39;}  /&gt;  )}  &lt;/Match&gt;  &lt;Router&gt;  ...  &lt;/Router&gt; &lt;/div&gt; interface Props {  match: any; }  export const MyComponent: FC&lt;Props&gt; = (props: Props) =&gt; {  const pathname = props.
+&lt;div&gt; &lt;Match path=&#34;/*&#34;&gt; {(props) =&gt; ( &lt;MyComponent path=&#34;/*&#34; match={props.match ?? &#39;&#39;} /&gt; )} &lt;/Match&gt; &lt;Router&gt; ... &lt;/Router&gt; &lt;/div&gt; interface Props { match: any; } export const MyComponent: FC&lt;Props&gt; = (props: Props) =&gt; { const pathname = props.
   </section>
   <p>
     <a class="article-read-more" href="/2020/12/reach-router-match/">Continue reading "Reach Router Match"</a>
@@ -176,7 +176,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2022
+  Copyright &copy; 2023
   Jiayee Lim.
 </footer>
 </section>

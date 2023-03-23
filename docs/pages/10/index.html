@@ -153,7 +153,7 @@
   </div>
   <section class="nar-row article-summary">
     I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see features such as:
- Web traffic analytics Set up DNSSEC Configure network transport options and/or optimisations Run speed tests on my site Configure caching Run JavaScript workers Restrict image hotlinking  This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.
+Web traffic analytics Set up DNSSEC Configure network transport options and/or optimisations Run speed tests on my site Configure caching Run JavaScript workers Restrict image hotlinking This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/adding-my-sites-to-cloudflare/">Continue reading "Adding my sites to Cloudflare"</a>
@@ -309,7 +309,7 @@ One difference (compared to my usual activities) was I couldn&rsquo;t do import 
   </div>
   <section class="nar-row article-summary">
     I was right. I forgot to enable the Mongo repository. And it wasn&rsquo;t only that. I had two Mongo configuration classes. One in the consumer and another in the custom starter. I needed only one. I removed the configuration class from the custom starter. Then, I enabled the custom starter&rsquo;s repository in the consumer&rsquo;s configuration class. Below is an idea of how my configuration class looks like:
-@EnableMongoRepositories(basePackages = {  &#34;yourTLD.
+@EnableMongoRepositories(basePackages = { &#34;yourTLD.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/almost-done-with-the-custom-starter/">Continue reading "Almost done with the custom starter"</a>
@@ -367,7 +367,7 @@ One difference (compared to my usual activities) was I couldn&rsquo;t do import 
   <section class="nar-row article-summary">
     I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).
 I then ran the consumer&rsquo;s codebase and used Postman to hit the newly-offered endpoints. Below is the response seen in Postman:
-{  &#34;error&#34;: {  &#34;IllegalArgumentException&#34;: &#34;Couldn&#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&#34;  } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&rsquo;s logs.
+{ &#34;error&#34;: { &#34;IllegalArgumentException&#34;: &#34;Couldn&#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&#34; } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&rsquo;s logs.
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/auto-configuring-controllers-and-repositories/">Continue reading "Auto-configuring controllers and repositories"</a>
@@ -400,7 +400,7 @@ I then ran the consumer&rsquo;s codebase and used Postman to hit the newly-offer
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2022
+  Copyright &copy; 2023
   Jiayee Lim.
 </footer>
 </section>

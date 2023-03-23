@@ -163,7 +163,7 @@
     If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
 Install redux-persist:
 yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &#39;react-redux&#39;; import { createStore, Store } from &#39;redux&#39;; import { persistReducer, persistStore } from &#39;redux-persist&#39;; import storage from &#39;redux-persist/lib/storage&#39;;  import rootReducer from &#39;.
+// Copied from the official README and edited import { Provider } from &#39;react-redux&#39;; import { createStore, Store } from &#39;redux&#39;; import { persistReducer, persistStore } from &#39;redux-persist&#39;; import storage from &#39;redux-persist/lib/storage&#39;; import rootReducer from &#39;.
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/redux-persist/">Continue reading "redux-persist"</a>
@@ -220,7 +220,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
   </div>
   <section class="nar-row article-summary">
     I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&rsquo;s post for the context. The edge cases are:
- Forms which need data from the preceding forms Dynamic form links  I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.
+Forms which need data from the preceding forms Dynamic form links I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">Continue reading "Challenges of a multi-step flow with permalinks"</a>
@@ -272,7 +272,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
   </div>
   <section class="nar-row article-summary">
     While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&rsquo;t need to). I didn&rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
-// Warning: Untested code export const compileTemplate = (template: string, values: Map&lt;string, string&gt;) =&gt; {  const variables = Array.from(values.keys()).map(key =&gt; &#39;:&#39; + key).
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&lt;string, string&gt;) =&gt; { const variables = Array.from(values.keys()).map(key =&gt; &#39;:&#39; + key).
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/string.format-equivalent-in-typescript/">Continue reading "String.format equivalent in TypeScript"</a>
@@ -329,7 +329,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
   </div>
   <section class="nar-row article-summary">
     I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
- If we do not do anything, we will need to insert &lt;ProgressBar .../&gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.
+If we do not do anything, we will need to insert &lt;ProgressBar .../&gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/multi-step-forms/">Continue reading "Multi-step forms"</a>
@@ -418,7 +418,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2022
+  Copyright &copy; 2023
   Jiayee Lim.
 </footer>
 </section>

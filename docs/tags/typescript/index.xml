@@ -16,7 +16,7 @@
       <description>If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
 Install redux-persist:
 yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;;  import rootReducer from &amp;#39;.</description>
+// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;; import rootReducer from &amp;#39;.</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       <guid>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</guid>
       <description>While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&amp;rsquo;t need to). I didn&amp;rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
-// Warning: Untested code export const compileTemplate = (template: string, values: Map&amp;lt;string, string&amp;gt;) =&amp;gt; {  const variables = Array.from(values.keys()).map(key =&amp;gt; &amp;#39;:&amp;#39; + key).</description>
+// Warning: Untested code export const compileTemplate = (template: string, values: Map&amp;lt;string, string&amp;gt;) =&amp;gt; { const variables = Array.from(values.keys()).map(key =&amp;gt; &amp;#39;:&amp;#39; + key).</description>
     </item>
     
     <item>

@@ -151,7 +151,7 @@
   </div>
   <section class="nar-row article-summary">
     With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
-Stream&lt;String&gt; stream = StreamSupport.stream(  Spliterators.spliteratorUnknownSize(  iterator,  Spliterator.ORDERED  ),  false ); Reference: mkyong.
+Stream&lt;String&gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.
   </section>
   <p>
     <a class="article-read-more" href="/tweets/iterator-to-stream/">Continue reading "Iterator to Stream"</a>
@@ -176,7 +176,7 @@ Stream&lt;String&gt; stream = StreamSupport.stream(  Spliterators.spliteratorUnk
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2022
+  Copyright &copy; 2023
   Jiayee Lim.
 </footer>
 </section>

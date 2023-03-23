@@ -15,7 +15,7 @@
       <guid>https://jiayee.net/2020/09/first-lighthouse-report-for-jiayee.net/</guid>
       <description>I ran my first Lighthouse report on this site. There&amp;rsquo;s a bunch of improvements to make. As of now, I managed to resolve some of them. I put up the links to the before and after Lighthouse reports at the end of this post. Please feel free to take a look at them.
 A summary of the improvements I made:
- Include lang attribute to the html element i.e. &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;.</description>
+Include lang attribute to the html element i.e. &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;. Added rel=&amp;quot;noopener&amp;quot; to external links.</description>
     </item>
     
   </channel>

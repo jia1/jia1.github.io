@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jiayee.net/tags/javascript/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/library/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/react/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/2023/03/react-hook-form/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/software/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+  </url><url>
     <loc>https://jiayee.net/2023/03/anew/</loc>
     <lastmod>2023-03-23T23:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2023-03-23T23:30:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/posts/</loc>
-    <lastmod>2023-03-23T23:30:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/2022/04/core-react-training-day-1/</loc>
-    <lastmod>2022-04-26T21:10:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/javascript/</loc>
-    <lastmod>2022-04-26T21:10:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/react/</loc>
-    <lastmod>2022-04-26T21:10:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/software/</loc>
-    <lastmod>2022-04-26T21:10:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2022-04-26T21:10:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2021/12/file-upload-to-spring-boot/</loc>
@@ -850,9 +856,6 @@
   </url><url>
     <loc>https://jiayee.net/tweets/11-sep-2020-qna/</loc>
     <lastmod>2020-09-11T00:33:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/library/</loc>
-    <lastmod>2020-09-10T23:59:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2020/09/my-first-yarn-package/</loc>
     <lastmod>2020-09-10T23:59:00+08:00</lastmod>

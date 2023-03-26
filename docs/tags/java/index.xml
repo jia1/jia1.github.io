@@ -13,7 +13,7 @@
       <pubDate>Sun, 26 Mar 2023 21:55:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/03/read-sheets-in-java/</guid>
-      <description>If you need to programmatically read a Google spreadsheet in Java, the quickstart guide describes a basic class that does configuration, scoping and reading of dat, all in one. However, if you use Spring Boot, you would want to split it into configuration and service layers:
+      <description>If you need to programmatically read a Google spreadsheet in Java, the quickstart guide describes a class that does configuration, scoping and reading all in one. However, if you use Spring Boot, you would want to split it into configuration and service layers:
 // build.gradle ... dependencies { ... compile (&amp;#39;com.google.api-client:google-api-client&amp;#39;) compile (&amp;#39;com.google.apis:google-api-services-sheets&amp;#39;) ... } ... // Spring Boot // Your config layer should contain the Sheets bean: // Copied from: https://stackoverflow.</description>
     </item>
     

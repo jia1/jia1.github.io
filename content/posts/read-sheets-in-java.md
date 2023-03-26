@@ -4,7 +4,7 @@ date: 2023-03-26T21:55:00+08:00
 draft: false
 tags: ["software","java"]
 ---
-If you need to programmatically read a Google spreadsheet in Java, the [quickstart guide](https://developers.google.com/sheets/api/quickstart/java) describes a basic class that does configuration, scoping and reading of dat, all in one. However, if you use Spring Boot, you would want to split it into configuration and service layers:
+If you need to programmatically read a Google spreadsheet in Java, the [quickstart guide](https://developers.google.com/sheets/api/quickstart/java) describes a class that does configuration, scoping and reading all in one. However, if you use Spring Boot, you would want to split it into configuration and service layers:
 
 ```groovy
 // build.gradle

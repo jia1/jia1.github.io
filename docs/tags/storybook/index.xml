@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>storybook on Jiayee.net</title>
+    <link>https://jiayee.net/tags/storybook/</link>
+    <description>Recent content in storybook on Jiayee.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 26 Mar 2023 21:06:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/storybook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reuse Stories When Testing</title>
+      <link>https://jiayee.net/2023/03/reuse-stories-when-testing/</link>
+      <pubDate>Sun, 26 Mar 2023 21:06:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/03/reuse-stories-when-testing/</guid>
+      <description>My volunteering experience at an open source project led me to appreciate Storybook. Developing frontend components in isolation makes me happy. Unexpected behaviour is localised, and you are appropriately enticed to write your components better. By better, I meant modular. Modularity encourages simplicity (think SRP) and this in turn makes code more reusable and self-documenting. There&amp;rsquo;s no greater joy than not having to explain your code.
+But wait, there&amp;rsquo;s more: If you think writing stories is exclusively only for your Storybook instance and thus a pain to write, think again.</description>
+    </item>
+    
+  </channel>
+</rss>

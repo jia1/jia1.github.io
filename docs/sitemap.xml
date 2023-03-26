@@ -3,27 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jiayee.net/tags/javascript/</loc>
-    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/</loc>
-    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/react/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/2023/03/reuse-stories-when-testing/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/software/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/storybook/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/testing/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/typescript/</loc>
+    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/library/</loc>
     <lastmod>2023-03-25T12:35:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/posts/</loc>
-    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/react/</loc>
-    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/2023/03/react-hook-form/</loc>
-    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/software/</loc>
-    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2023-03-25T12:35:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/03/anew/</loc>
@@ -554,9 +566,6 @@
     <loc>https://jiayee.net/2020/10/redux-persist/</loc>
     <lastmod>2020-10-08T22:36:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/typescript/</loc>
-    <lastmod>2020-10-08T22:36:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tags/08-oct/</loc>
     <lastmod>2020-10-08T09:35:00+08:00</lastmod>
   </url><url>
@@ -828,9 +837,6 @@
     <lastmod>2020-09-13T21:56:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2020/09/jest-for-the-first-time/</loc>
-    <lastmod>2020-09-13T21:56:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/testing/</loc>
     <lastmod>2020-09-13T21:56:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2020/09/adding-my-sites-to-cloudflare/</loc>

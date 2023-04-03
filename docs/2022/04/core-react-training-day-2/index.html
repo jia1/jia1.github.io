@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Core React Training Day 2</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia10" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-3 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/tweets">
+            &#34;Tweets&#34;
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/referral-codes">
+            Referral codes
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Core React Training Day 2
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2022-04-27">27 Apr 2022 @ 10.00 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/software">
+          #software
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/react">
+          #react
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>Day 2 was a continuation of our understanding of the <code>useEffect</code> hook. Some of concepts mentioned were concepts I &ldquo;felt&rdquo; while getting my hands dirty. The workshop was a conducive environment to make these concepts known to me more.</p>
+<ul>
+<li>Some keywords, libraries or links of interest:
+<ul>
+<li><code>usehooks-ts</code></li>
+<li><code>eslint-plugin-react-hooks</code></li>
+<li><a href="https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/">React lifecycle diagrams</a></li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>The dependency array in <code>useEffect</code> does diffs by identity.
+<ul>
+<li>For primitives, we diff by value.</li>
+<li>For objects, we diff by memory location.
+<ul>
+<li>We need to be careful when placing non-primitives into the dependency array. We risk getting into infinite loops.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Ways to get into an infinite loop:
+<ul>
+<li>Placing <code>setMyState</code> into the return (render) value unconditionally. This means we run <code>setMyState</code>, change <code>myState</code> and trigger re-renders.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><code>useEffect</code> can offer the functionalities of both <code>componentDidMount</code> and <code>componentDidUpdate</code> by configuring the dependency array.
+<ul>
+<li><code>useEffect</code> with a non-vacant dependency array is similar to a <code>componentDidUpdate</code> with an if statement checking the state of the dependency.</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>We cannot run <code>setMyState</code> on an unmounted component. There can be race conditions where the component can either be mounted or unmounted when we run <code>useEffect</code>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><code>useEffect</code> can return a cleanup function in the form: return () =&gt; {}; (<a href="https://react.dev/reference/react/useEffect#useeffect">docs</a>)</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>There is no built-in API to check if a component is mounted.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// Do API call with courseSlug with .then(course =&gt; setCourse(course))
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>}, [courseSlug]);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// This can lead to race conditions and memory leak.
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75">// If we click rapidly, only the last API call survives.
+</span></span></span></code></pre></div><!-- raw HTML omitted -->
+<ul>
+<li>So, do it yourself. These are equivalent:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#586e75">// Inside a functional component
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>useEffect(() =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">let</span> mounted <span style="color:#719e07">=</span> <span style="color:#cb4b16">true</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">if</span> (mounted) {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Set state in API callback
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#719e07">return</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    mounted <span style="color:#719e07">=</span> <span style="color:#cb4b16">false</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}, [courseSlug]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// Class component
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">class</span> YourComp {
+</span></span><span style="display:flex;"><span>  <span style="color:#268bd2">let</span> mounted <span style="color:#719e07">=</span> <span style="color:#cb4b16">true</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#586e75">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>  componentWillUnmount() {
+</span></span><span style="display:flex;"><span>    mounted <span style="color:#719e07">=</span> <span style="color:#cb4b16">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// Read: https://reacttraining.com/blog/isMounted-tricks-are-code-smell
+</span></span></span></code></pre></div><!-- raw HTML omitted -->
+<ul>
+<li><code>const mountedRef = useRef(true); // synonomous with a mutable state that does not cause re-render</code></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Can you have more than one effect per component? Yes. There is no need to merge effects into one big <code>useEffect</code>.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Do you need cleanups? Not always.</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>Side effects should run after render phases Which render phases? Not all. We don&rsquo;t want to run side effects on the server (SSR). Running side effects on render phase = any amount of bugs can come (<a href="https://legacy.reactjs.org/docs/hooks-rules.html">legacy docs</a>).</li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li><a href="https://gist.github.com/bradwestfall/4fa683c8f4fcd781a38a8d623bec20e7">HoC (pattern) vs Render Props (pattern) vs Hooks (not pattern, a new API)</a></li>
+</ul>
+<!-- raw HTML omitted -->
+<p>TBC!</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2022/04/core-react-training-day-1/">
+      Core React Training Day 1 (#react)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">
+      Challenges of a multi-step flow with permalinks (#react)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/multi-step-forms/">
+      Multi-step forms (#react)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2023
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

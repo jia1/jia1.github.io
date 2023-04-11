@@ -113,6 +113,49 @@
     <div class="row">
       <article>
   
+  <a href="/2020/11/recaptcha-on-error/">
+    <h3 class="article-title">
+  reCaptcha on-error
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-11-09">9 Nov 2020 @ 6.20 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    Polling wasn&rsquo;t effective because:
+Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+{ &#34;scripts&#34;: { &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/11/recaptcha-on-error/">Continue reading "reCaptcha on-error"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/11/reaping-the-benefits/">
     <h3 class="article-title">
   Reaping the Benefits
@@ -295,48 +338,6 @@ pip3 freeze &gt; reqs.txt sudo pip3 uninstall -r reqs.txt I didn&rsquo;t realise
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/pip-uninstall-all/">Continue reading "pip uninstall All"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/some-git/">
-    <h3 class="article-title">
-  Some Git
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-27">27 Oct 2020 @ 8.51 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/git">
-          #git
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I did not realise my pull request was between branches of the same repository. Not sure if my friend realised. I moved the feature branch&rsquo;s latest updates to my fork&rsquo;s feature branch. I then made another pull request. I used the following commands to straighten things out:
-# Create a local branch with the same name as the origin remote feature branch git checkout -b feat/simple-compound-interest-calculators # Pull in the changes from the origin remote git pull # Set the upstream to the origin remote feature branch git branch --set-upstream-to=origin/feat/simple-compound-interest-calculators feat/simple-compound-interest-calculators # Check the remotes and their URLs git remote -v # Add the remote for my fork git remote add jiayee git@github.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/some-git/">Continue reading "Some Git"</a>
   </p>
 </article>
 

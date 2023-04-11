@@ -41,15 +41,11 @@ https://s.klook.com/c/NVXMeKN_w0
 
 #### MyRepublic
 
-https://secure.myrepublic.com.sg/order2/signup?promo_code=fwb&referrer_id=C
+Ping me!
 
 #### Revolut
 
 Ping me!
-
-#### Shopee
-
-Use my referral code REF-JIA942 to get S$10.00 off your first purchase!
 
 #### Trust
 

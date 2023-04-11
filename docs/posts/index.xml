@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 26 Mar 2023 21:55:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Apr 2023 00:12:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>react-hook-form validations</title>
+      <link>https://jiayee.net/2023/04/react-hook-form-validations/</link>
+      <pubDate>Wed, 12 Apr 2023 00:12:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/04/react-hook-form-validations/</guid>
+      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want take a break while keeping the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please do not hesitate to reach out!
+Back to the main learning point I am trying to share: In the pull request above, look at the first screenshot.</description>
+    </item>
+    
     <item>
       <title>Read Sheets in Java</title>
       <link>https://jiayee.net/2023/03/read-sheets-in-java/</link>

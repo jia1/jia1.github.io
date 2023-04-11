@@ -2,7 +2,7 @@
 title: "Captcha isValid()"
 date: 2020-10-18T19:30:00+08:00
 draft: false
-tags: ["software","web","angular"]
+tags: ["angular"]
 ---
 I needed the client to check for the captcha failure when a user loads a form. In the `captchaService` abstraction for `angular-recaptcha`, there was `isValid()` which does:
 

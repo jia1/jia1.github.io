@@ -111,9 +111,9 @@
     <div class="row">
       <article>
   
-  <a href="/tweets/ready-for-review/">
+  <a href="/2020/10/typescript-shortcuts/">
     <h3 class="article-title">
-  Ready for review
+  TypeScript Shortcuts
 </h3>
 
   </a>
@@ -124,15 +124,10 @@
       
       
       
-      <time datetime="2020-10-20">20 Oct 2020 @ 3.25 pm</time>
+      <time datetime="2020-10-01">1 Oct 2020 @ 7.01 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
       
         
         <a href="https://jiayee.net/tags/javascript">
@@ -145,10 +140,12 @@
 
   </div>
   <section class="nar-row article-summary">
-    I&rsquo;m ready for review.
+    TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F TYPESCRIPT_SHORTCUT_1 and TYPESCRIPT_SHORTCUT_2 to get to the code.
+Context: Yesterday, I did not invest time into inverting a TypeScript Map&lt;string, string&gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
+Here&rsquo;s the new original code:
   </section>
   <p>
-    <a class="article-read-more" href="/tweets/ready-for-review/">Continue reading "Ready for review"</a>
+    <a class="article-read-more" href="/2020/10/typescript-shortcuts/">Continue reading "TypeScript Shortcuts"</a>
   </p>
 </article>
 
@@ -157,9 +154,9 @@
     <div class="row">
       <article>
   
-  <a href="/2020/10/constants/">
+  <a href="/2020/09/cryptojs-and-url/">
     <h3 class="article-title">
-  Constants
+  CryptoJS and URL
 </h3>
 
   </a>
@@ -170,15 +167,10 @@
       
       
       
-      <time datetime="2020-10-19">19 Oct 2020 @ 10.30 pm</time>
+      <time datetime="2020-09-30">30 Sep 2020 @ 7.17 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
       
         
         <a href="https://jiayee.net/tags/javascript">
@@ -191,12 +183,11 @@
 
   </div>
   <section class="nar-row article-summary">
-    I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, this practice is frowned upon. In JavaScript, it seemed alright.
-The answer which received the bounty recommended the following:
-// Warning: This answer was written in 2014. module.exports = Object.freeze({ MY_CONSTANT: &#39;some value&#39;, ANOTHER_CONSTANT: &#39;another value&#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.
+    Like this Stack Overflow thread, I needed to encrypt some string which will become part of a URL. However, there was a slash in one of the encrypted strings, like c3ViamVjdHM/X2Q9MQ==. Feel free to decode this. It&rsquo;s something I copied from the internet.
+I thought there would be a lot of symbols in the Base64 alphabet at first (I was wrong). I didn&rsquo;t want to deal with them and set up a giant substitution map, like a Map&lt;string, string&gt;.
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/constants/">Continue reading "Constants"</a>
+    <a class="article-read-more" href="/2020/09/cryptojs-and-url/">Continue reading "CryptoJS and URL"</a>
   </p>
 </article>
 
@@ -205,9 +196,9 @@ The answer which received the bounty recommended the following:
     <div class="row">
       <article>
   
-  <a href="/2020/10/javascript-heap-limit/">
+  <a href="/2020/09/writing-calculators/">
     <h3 class="article-title">
-  Javascript heap limit
+  Writing Calculators
 </h3>
 
   </a>
@@ -218,15 +209,10 @@ The answer which received the bounty recommended the following:
       
       
       
-      <time datetime="2020-10-13">13 Oct 2020 @ 7.11 pm</time>
+      <time datetime="2020-09-25">25 Sep 2020 @ 9.23 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
       
         
         <a href="https://jiayee.net/tags/javascript">
@@ -239,11 +225,12 @@ The answer which received the bounty recommended the following:
 
   </div>
   <section class="nar-row article-summary">
-    For the past week, I could not fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase did not rebuild and remained stale. This issue does not happen to everyone. I am using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
-Notice the line above the last which says, FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory.
+    My friends needed an interest calculator. For the simple interest calculator, the parameters are:
+The principal (P), Annual interest rate (r), Number of months (t), and An optional parameter to represent a periodic top-up amount. Here&rsquo;s v1 of my simple interest calculator:
+/** * Calculates simple interest. * * Uses the formula A = P(1 + rt). * * @param {Object} param Object containing parameters. * @param {Number} param.principal Principal amount.
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/javascript-heap-limit/">Continue reading "Javascript heap limit"</a>
+    <a class="article-read-more" href="/2020/09/writing-calculators/">Continue reading "Writing Calculators"</a>
   </p>
 </article>
 
@@ -252,9 +239,9 @@ Notice the line above the last which says, FATAL ERROR: Ineffective mark-compact
     <div class="row">
       <article>
   
-  <a href="/2020/10/redux-persist/">
+  <a href="/tweets/no-var-requires/">
     <h3 class="article-title">
-  redux-persist
+  Rule: no-var-requires
 </h3>
 
   </a>
@@ -265,34 +252,14 @@ Notice the line above the last which says, FATAL ERROR: Ineffective mark-compact
       
       
       
-      <time datetime="2020-10-08">8 Oct 2020 @ 10.36 pm</time>
+      <time datetime="2020-09-13">13 Sep 2020 @ 10.12 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
       
         
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/web">
-          #web
-        </a>
-      
-        
         <a href="https://jiayee.net/tags/javascript">
           #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/typescript">
-          #typescript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/redux">
-          #redux
         </a>
       
     </div>
@@ -301,13 +268,10 @@ Notice the line above the last which says, FATAL ERROR: Ineffective mark-compact
 
   </div>
   <section class="nar-row article-summary">
-    If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
-Install redux-persist:
-yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &#39;react-redux&#39;; import { createStore, Store } from &#39;redux&#39;; import { persistReducer, persistStore } from &#39;redux-persist&#39;; import storage from &#39;redux-persist/lib/storage&#39;; import rootReducer from &#39;.
+    My pre-commit hook complained because the original code had an import that looked like var module = require(&quot;module&quot;). The permitted ways to import are: import foo = require('foo') and &ldquo;ES2015-style imports&rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&hellip;
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/redux-persist/">Continue reading "redux-persist"</a>
+    <a class="article-read-more" href="/tweets/no-var-requires/">Continue reading "Rule: no-var-requires"</a>
   </p>
 </article>
 
@@ -316,9 +280,9 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
     <div class="row">
       <article>
   
-  <a href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">
+  <a href="/2020/09/my-first-yarn-package/">
     <h3 class="article-title">
-  Challenges of a multi-step flow with permalinks
+  My first yarn package
 </h3>
 
   </a>
@@ -329,29 +293,14 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
       
       
       
-      <time datetime="2020-10-07">7 Oct 2020 @ 10.50 pm</time>
+      <time datetime="2020-09-10">10 Sep 2020 @ 11.59 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
       
         
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/web">
-          #web
-        </a>
-      
-        
         <a href="https://jiayee.net/tags/javascript">
           #javascript
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/react">
-          #react
         </a>
       
     </div>
@@ -360,11 +309,11 @@ yarn add redux-persist @types/redux-persist Update root reducer and store:
 
   </div>
   <section class="nar-row article-summary">
-    I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&rsquo;s post for the context. The edge cases are:
-Forms which need data from the preceding forms Dynamic form links I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.
+    I wrote my first yarn package (kind of for fun) yesterday. It&rsquo;s strange how I&rsquo;ve been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven&rsquo;t published my package, but I&rsquo;m omw. So, how did I create a package? It just felt like the usual&hellip; I followed the yarn docs.
+One difference (compared to my usual activities) was I couldn&rsquo;t do import { .
   </section>
   <p>
-    <a class="article-read-more" href="/2020/10/challenges-of-a-multi-step-flow-with-permalinks/">Continue reading "Challenges of a multi-step flow with permalinks"</a>
+    <a class="article-read-more" href="/2020/09/my-first-yarn-package/">Continue reading "My first yarn package"</a>
   </p>
 </article>
 
@@ -380,10 +329,6 @@ Forms which need data from the preceding forms Dynamic form links I can deal wit
     
   </div>
   <div class="cell small-6 text-right">
-    
-      <a class="nav-page" href="/tags/javascript/3/">
-        Next page
-      </a>
     
   </div>
 </section>

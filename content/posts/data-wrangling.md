@@ -2,7 +2,7 @@
 title: "Data Wrangling"
 date: 2020-09-22T21:14:00+08:00
 draft: false
-tags: ["software","nus","nushackers","cli"]
+tags: ["nushackers","cli"]
 ---
 I managed to catch one of the NUS Hackers' workshops, "Hacker Tools: Data Wrangling" by Julius. I got to learn many new things since I don't use CLI for text processing. Julius' slides are in [his GitHub repo](https://github.com/indocomsoft/hackertools-slides/blob/master/3-data-wrangling/data-wrangling.pdf).
 

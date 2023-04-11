@@ -2,7 +2,7 @@
 title: "Writing Calculators"
 date: 2020-09-25T21:23:00+08:00
 draft: false
-tags: ["software","javascript"]
+tags: ["javascript"]
 ---
 My friends needed an interest calculator. For the simple interest calculator, the parameters are:
 

@@ -2,7 +2,7 @@
 title: "Core React Training Day 2"
 date: 2022-04-27T22:00:00+08:00
 draft: false
-tags: ["software","javascript","react"]
+tags: ["braindump","react"]
 ---
 Day 2 was a continuation of our understanding of the `useEffect` hook. Some of concepts mentioned were concepts I "felt" while getting my hands dirty. The workshop was a conducive environment to make these concepts known to me more.
 

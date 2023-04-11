@@ -2,7 +2,7 @@
 title: "Center"
 date: 2020-10-14T18:04:00+08:00
 draft: false
-tags: ["software","web","css"]
+tags: ["css"]
 ---
 Why "Center" instead of "Centre"? Well, that's because "center" is the version used in CSS.
 

@@ -130,16 +130,6 @@
       
       
         
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-        
         <a href="https://jiayee.net/tags/spring">
           #spring
         </a>
@@ -180,16 +170,6 @@ So here&rsquo;s the design: The user clicks &ldquo;Submit&rdquo;. The files get 
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
       
         
         <a href="https://jiayee.net/tags/spring">
@@ -234,16 +214,6 @@ To create this interceptor, simply extend the HandlerInterceptor interface. By o
       
       
         
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-        
         <a href="https://jiayee.net/tags/spring">
           #spring
         </a>
@@ -272,63 +242,6 @@ I had a collection of documents with a name property. Originally, name was annot
     <div class="row">
       <article>
   
-  <a href="/2020/11/abstract-classes-and-aop/">
-    <h3 class="article-title">
-  Abstract classes and AOP
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-11-17">17 Nov 2020 @ 9.30 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/spring">
-          #spring
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/aop">
-          #aop
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I could not make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
-// MyAbstractController public abstract class MyAbstractController&lt;T extends UniversalModel&gt; { private final .
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/11/abstract-classes-and-aop/">Continue reading "Abstract classes and AOP"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
   <a href="/2020/09/no-qualifying-bean/">
     <h3 class="article-title">
   No qualifying bean
@@ -348,16 +261,6 @@ I had a collection of documents with a name property. Originally, name was annot
       
       
         
-        <a href="https://jiayee.net/tags/software">
-          #software
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-        
         <a href="https://jiayee.net/tags/spring">
           #spring
         </a>
@@ -374,6 +277,48 @@ Before that, I tried attaching only @Bean to the getter, but it didn&rsquo;t wor
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/no-qualifying-bean/">Continue reading "No qualifying bean"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
+  <a href="/2020/09/almost-done-with-the-custom-starter/">
+    <h3 class="article-title">
+  Almost done with the custom starter
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-09">9 Sep 2020 @ 12.18 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/spring">
+          #spring
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I was right. I forgot to enable the Mongo repository. And it wasn&rsquo;t only that. I had two Mongo configuration classes. One in the consumer and another in the custom starter. I needed only one. I removed the configuration class from the custom starter. Then, I enabled the custom starter&rsquo;s repository in the consumer&rsquo;s configuration class. Below is an idea of how my configuration class looks like:
+@EnableMongoRepositories(basePackages = { &#34;yourTLD.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/almost-done-with-the-custom-starter/">Continue reading "Almost done with the custom starter"</a>
   </p>
 </article>
 

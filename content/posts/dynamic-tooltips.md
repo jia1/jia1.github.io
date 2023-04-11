@@ -2,7 +2,7 @@
 title: "Dynamic Tooltips"
 date: 2020-09-25T14:55:00+08:00
 draft: false
-tags: ["software","web","javascript","angular"]
+tags: ["angular"]
 ---
 I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
 

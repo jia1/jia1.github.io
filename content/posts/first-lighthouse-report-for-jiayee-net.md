@@ -2,7 +2,7 @@
 title: "First Lighthouse Report for Jiayee.net"
 date: 2020-09-19T18:34:00+08:00
 draft: false
-tags: ["software","web","lighthouse"]
+tags: ["lighthouse"]
 ---
 I ran my first Lighthouse report on this site. There's a bunch of improvements to make. As of now, I managed to resolve some of them. I put up the links to the before and after Lighthouse reports at the end of this post. Please feel free to take a look at them.
 

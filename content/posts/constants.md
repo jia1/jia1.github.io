@@ -2,7 +2,7 @@
 title: "Constants"
 date: 2020-10-19T22:30:00+08:00
 draft: false
-tags: ["software","javascript"]
+tags: ["javascript"]
 ---
 I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, [this practice is frowned upon](https://stackoverflow.com/questions/66066/what-is-the-best-way-to-implement-constants-in-java). In JavaScript, [it seemed alright](https://stackoverflow.com/questions/8595509/how-do-you-share-constants-in-nodejs-modules).
 

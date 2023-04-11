@@ -2,7 +2,7 @@
 title: "Custom domains"
 date: 2020-09-11T01:10:00+08:00
 draft: false
-tags: ["software","domains"]
+tags: ["dns"]
 ---
 A few days ago, I purchased the [`jiayee.net`](https://jiayee.net) domain. Yesterday, I purchased the [`jiay.ee`](https://jiay.ee/blog) domain. It was a novel experience for me. I last "purchased" a domain from Freenom about 3 years ago. Back then, I had the free domain point to my AWS EC2 public IP address (this was for CS3216). This week, my custom domains are pointing towards GitHub pages and Blogger respectively.
 

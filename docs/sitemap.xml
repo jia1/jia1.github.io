@@ -14,14 +14,8 @@
     <loc>https://jiayee.net/2023/03/read-sheets-in-java/</loc>
     <lastmod>2023-03-26T21:55:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/software/</loc>
-    <lastmod>2023-03-26T21:55:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tags/</loc>
     <lastmod>2023-03-26T21:55:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/javascript/</loc>
-    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/react/</loc>
     <lastmod>2023-03-26T21:06:00+08:00</lastmod>
@@ -32,20 +26,14 @@
     <loc>https://jiayee.net/tags/storybook/</loc>
     <lastmod>2023-03-26T21:06:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/testing/</loc>
-    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/typescript/</loc>
-    <lastmod>2023-03-26T21:06:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/library/</loc>
-    <lastmod>2023-03-25T12:35:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/2023/03/react-hook-form/</loc>
     <lastmod>2023-03-25T12:35:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/03/anew/</loc>
     <lastmod>2023-03-23T23:30:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/braindump/</loc>
+    <lastmod>2022-04-27T22:00:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2022/04/core-react-training-day-2/</loc>
     <lastmod>2022-04-27T22:00:00+08:00</lastmod>
@@ -227,9 +215,6 @@
     <loc>https://jiayee.net/2020/11/abstract-classes-and-aop/</loc>
     <lastmod>2020-11-17T21:30:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/aop/</loc>
-    <lastmod>2020-11-17T21:30:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tags/17-nov/</loc>
     <lastmod>2020-11-17T20:38:00+08:00</lastmod>
   </url><url>
@@ -244,9 +229,6 @@
   </url><url>
     <loc>https://jiayee.net/tweets/16-nov-2020-qna/</loc>
     <lastmod>2020-11-16T21:43:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/books/</loc>
-    <lastmod>2020-11-15T22:40:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/eq/</loc>
     <lastmod>2020-11-15T22:40:00+08:00</lastmod>
@@ -280,12 +262,6 @@
   </url><url>
     <loc>https://jiayee.net/2020/11/sticky/</loc>
     <lastmod>2020-11-11T20:43:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/web/</loc>
-    <lastmod>2020-11-11T20:43:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/guava/</loc>
-    <lastmod>2020-11-11T19:38:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tweets/iterator-to-stream/</loc>
     <lastmod>2020-11-11T19:38:00+08:00</lastmod>
@@ -451,6 +427,9 @@
   </url><url>
     <loc>https://jiayee.net/tweets/21-oct-2020-qna/</loc>
     <lastmod>2020-10-21T23:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/javascript/</loc>
+    <lastmod>2020-10-20T15:25:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tweets/ready-for-review/</loc>
     <lastmod>2020-10-20T15:25:00+08:00</lastmod>
@@ -629,9 +608,6 @@
     <loc>https://jiayee.net/tweets/02-oct-2020-qna/</loc>
     <lastmod>2020-10-02T14:12:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/braindump/</loc>
-    <lastmod>2020-10-01T21:02:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tags/go/</loc>
     <lastmod>2020-10-01T21:02:00+08:00</lastmod>
   </url><url>
@@ -731,9 +707,6 @@
     <loc>https://jiayee.net/2020/09/data-wrangling/</loc>
     <lastmod>2020-09-22T21:14:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/nus/</loc>
-    <lastmod>2020-09-22T21:14:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tags/nushackers/</loc>
     <lastmod>2020-09-22T21:14:00+08:00</lastmod>
   </url><url>
@@ -812,13 +785,10 @@
     <loc>https://jiayee.net/tweets/16-sep-2020-qna/</loc>
     <lastmod>2020-09-16T10:14:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/cloudflare/</loc>
-    <lastmod>2020-09-15T21:31:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/2020/09/cloudflare-workers/</loc>
     <lastmod>2020-09-15T21:31:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/tags/domains/</loc>
+    <loc>https://jiayee.net/tags/dns/</loc>
     <lastmod>2020-09-15T21:31:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/15-sep/</loc>

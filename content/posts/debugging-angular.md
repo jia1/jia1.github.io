@@ -2,7 +2,7 @@
 title: "Debugging Angular"
 date: 2020-09-14T21:29:00+08:00
 draft: false
-tags: ["software","web","javascript","angular"]
+tags: ["angular"]
 ---
 Something could've happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
 

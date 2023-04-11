@@ -2,7 +2,7 @@
 title: "Quick Go 2"
 date: 2020-09-30T12:14:00+08:00
 draft: false
-tags: ["software","go","braindump"]
+tags: ["braindump","go"]
 ---
 Chapter 3 and 4 were about variables (`var`, `const` and so on) and control structures (`for`, `if` and so on).
 

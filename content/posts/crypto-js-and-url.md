@@ -2,7 +2,7 @@
 title: "CryptoJS and URL"
 date: 2020-09-30T19:17:00+08:00
 draft: false
-tags: ["software","javascript","typescript"]
+tags: ["javascript"]
 ---
 Like this [Stack Overflow thread](https://stackoverflow.com/questions/43399093/encrypt-cryptojs-without-special-characters), I needed to encrypt some string which will become part of a URL. However, there was a slash in one of the encrypted strings, like `c3ViamVjdHM/X2Q9MQ==`. Feel free to decode this. It's something I copied from the internet.
 

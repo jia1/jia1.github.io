@@ -2,7 +2,7 @@
 title: "Intercepting Angular Data Binding"
 date: 2020-09-23T21:40:00+08:00
 draft: false
-tags: ["software","web","javascript","angular"]
+tags: ["angular"]
 ---
 I have two form switches. Let's call them A and B. I had to program them such that:
 

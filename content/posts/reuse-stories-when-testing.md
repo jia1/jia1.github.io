@@ -2,7 +2,7 @@
 title: "Reuse Stories When Testing"
 date: 2023-03-26T21:06:00+08:00
 draft: false
-tags: ["software","testing","javascript","typescript","react","storybook"]
+tags: ["react","storybook"]
 ---
 My volunteering experience at an open source project led me to appreciate Storybook. Developing frontend components in isolation makes me happy. Unexpected behaviour is localised, and you are appropriately enticed to write your components better. By better, I meant modular. Modularity encourages simplicity (think [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle)), and this makes code more reusable and self-documenting. There's no greater joy than not having to explain your code.
 

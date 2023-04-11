@@ -2,7 +2,7 @@
 title: "Truncating Strings With CSS"
 date: 2020-12-04T21:19:00+08:00
 draft: false
-tags: ["software","css"]
+tags: ["css"]
 ---
 A few days ago, I would not have realised truncating strings by number of lines with CSS was possible. I was beginning to sweat when I received a request to truncate strings by number of lines instead of number of characters. To be fair, only SWEs would think of truncating by number of characters instead of line numbers...
 

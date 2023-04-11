@@ -2,7 +2,7 @@
 title: "Cloudflare Workers"
 date: 2020-09-15T21:31:00+08:00
 draft: false
-tags: ["software","domains","cloudflare"]
+tags: ["dns"]
 ---
 It's time to put my short custom domain to good use. [Cloudflare Workers](https://developers.cloudflare.com/workers/) is a quick 'n' dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
 

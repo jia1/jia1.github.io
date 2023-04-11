@@ -17,24 +17,6 @@
     </item>
     
     <item>
-      <title>software</title>
-      <link>https://jiayee.net/tags/software/</link>
-      <pubDate>Sun, 26 Mar 2023 21:55:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/software/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://jiayee.net/tags/javascript/</link>
-      <pubDate>Sun, 26 Mar 2023 21:06:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>react</title>
       <link>https://jiayee.net/tags/react/</link>
       <pubDate>Sun, 26 Mar 2023 21:06:00 +0800</pubDate>
@@ -53,29 +35,11 @@
     </item>
     
     <item>
-      <title>testing</title>
-      <link>https://jiayee.net/tags/testing/</link>
-      <pubDate>Sun, 26 Mar 2023 21:06:00 +0800</pubDate>
+      <title>braindump</title>
+      <link>https://jiayee.net/tags/braindump/</link>
+      <pubDate>Wed, 27 Apr 2022 22:00:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tags/testing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>typescript</title>
-      <link>https://jiayee.net/tags/typescript/</link>
-      <pubDate>Sun, 26 Mar 2023 21:06:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/typescript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>library</title>
-      <link>https://jiayee.net/tags/library/</link>
-      <pubDate>Sat, 25 Mar 2023 12:35:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/library/</guid>
+      <guid>https://jiayee.net/tags/braindump/</guid>
       <description></description>
     </item>
     
@@ -323,15 +287,6 @@
     </item>
     
     <item>
-      <title>aop</title>
-      <link>https://jiayee.net/tags/aop/</link>
-      <pubDate>Tue, 17 Nov 2020 21:30:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/aop/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>17-nov</title>
       <link>https://jiayee.net/tags/17-nov/</link>
       <pubDate>Tue, 17 Nov 2020 20:38:00 +0800</pubDate>
@@ -346,15 +301,6 @@
       <pubDate>Mon, 16 Nov 2020 21:45:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/16-nov/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>books</title>
-      <link>https://jiayee.net/tags/books/</link>
-      <pubDate>Sun, 15 Nov 2020 22:40:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/books/</guid>
       <description></description>
     </item>
     
@@ -400,24 +346,6 @@
       <pubDate>Thu, 12 Nov 2020 23:59:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/12-nov/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web</title>
-      <link>https://jiayee.net/tags/web/</link>
-      <pubDate>Wed, 11 Nov 2020 20:43:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>guava</title>
-      <link>https://jiayee.net/tags/guava/</link>
-      <pubDate>Wed, 11 Nov 2020 19:38:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/guava/</guid>
       <description></description>
     </item>
     
@@ -656,6 +584,15 @@
     </item>
     
     <item>
+      <title>javascript</title>
+      <link>https://jiayee.net/tags/javascript/</link>
+      <pubDate>Tue, 20 Oct 2020 15:25:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>20-oct</title>
       <link>https://jiayee.net/tags/20-oct/</link>
       <pubDate>Tue, 20 Oct 2020 14:06:00 +0800</pubDate>
@@ -863,15 +800,6 @@
     </item>
     
     <item>
-      <title>braindump</title>
-      <link>https://jiayee.net/tags/braindump/</link>
-      <pubDate>Thu, 01 Oct 2020 21:02:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/braindump/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>go</title>
       <link>https://jiayee.net/tags/go/</link>
       <pubDate>Thu, 01 Oct 2020 21:02:00 +0800</pubDate>
@@ -989,15 +917,6 @@
     </item>
     
     <item>
-      <title>nus</title>
-      <link>https://jiayee.net/tags/nus/</link>
-      <pubDate>Tue, 22 Sep 2020 21:14:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/nus/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>nushackers</title>
       <link>https://jiayee.net/tags/nushackers/</link>
       <pubDate>Tue, 22 Sep 2020 21:14:00 +0800</pubDate>
@@ -1106,20 +1025,11 @@
     </item>
     
     <item>
-      <title>cloudflare</title>
-      <link>https://jiayee.net/tags/cloudflare/</link>
+      <title>dns</title>
+      <link>https://jiayee.net/tags/dns/</link>
       <pubDate>Tue, 15 Sep 2020 21:31:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tags/cloudflare/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>domains</title>
-      <link>https://jiayee.net/tags/domains/</link>
-      <pubDate>Tue, 15 Sep 2020 21:31:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/domains/</guid>
+      <guid>https://jiayee.net/tags/dns/</guid>
       <description></description>
     </item>
     

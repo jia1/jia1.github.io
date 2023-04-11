@@ -2,7 +2,7 @@
 title: "Super Thinking Chapter 01"
 date: 2020-11-15T22:40:00+08:00
 draft: false
-tags: ["books","eq"]
+tags: ["braindump","eq"]
 ---
 ## Being Wrong Less
 

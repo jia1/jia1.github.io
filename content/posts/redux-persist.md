@@ -2,7 +2,7 @@
 title: "redux-persist"
 date: 2020-10-08T22:36:00+08:00
 draft: false
-tags: ["software","web","javascript","typescript","redux"]
+tags: ["redux"]
 ---
 If you need your Redux store to last beyond a page load or refresh, look no further! [redux-persist](https://github.com/rt2zz/redux-persist) is here to the rescue. Based on [this guide](https://medium.com/@dharacharolap/get-rid-of-data-consistency-with-the-redux-persist-86559e96de32) and [this guide](https://levelup.gitconnected.com/persisting-your-react-application-state-with-redux-and-typescript-51e4e66c4e53), you need to update your reducers and store to enjoy persistence:
 

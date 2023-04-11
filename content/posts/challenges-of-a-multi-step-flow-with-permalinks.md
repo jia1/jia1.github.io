@@ -2,7 +2,7 @@
 title: "Challenges of a multi-step flow with permalinks"
 date: 2020-10-07T22:50:00+08:00
 draft: false
-tags: ["software","web","javascript","react"]
+tags: ["react"]
 ---
 I decided to invest my time into covering the edge cases that were not handled by Design \#1. Refer to [yesterday's post](/2020/10/multi-step-forms) for the context. The edge cases are:
 

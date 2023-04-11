@@ -2,7 +2,7 @@
 title: "Some Git"
 date: 2020-10-27T20:51:00+08:00
 draft: false
-tags: ["software","git"]
+tags: ["git"]
 ---
 I did not realise [my pull request](https://github.com/calcsg/core/pull/5) was between branches of the same repository. Not sure if my friend realised. I moved the feature branch's latest updates to my fork's feature branch. I then made [another pull request](https://github.com/calcsg/core/pull/6). I used the following commands to straighten things out:
 

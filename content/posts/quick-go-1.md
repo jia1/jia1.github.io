@@ -2,7 +2,7 @@
 title: "Quick Go 1"
 date: 2020-09-28T22:43:00+08:00
 draft: false
-tags: ["software","go","braindump"]
+tags: ["braindump","go"]
 ---
 It was a busy weekend for me. Last Saturday, I went out to catch up with my friends, and I went shopping for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport, so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. Besides my HumbleBundle books, I borrowed some books from NLB via OverDrive.
 

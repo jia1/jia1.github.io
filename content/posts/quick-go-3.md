@@ -2,7 +2,7 @@
 title: "Quick Go 3"
 date: 2020-10-01T21:02:00+08:00
 draft: false
-tags: ["software","go","braindump"]
+tags: ["braindump","go"]
 ---
 Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
 

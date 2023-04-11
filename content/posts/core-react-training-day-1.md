@@ -2,13 +2,13 @@
 title: "Core React Training Day 1"
 date: 2022-04-26T21:10:00+08:00
 draft: false
-tags: ["software","javascript","react"]
+tags: ["braindump","react"]
 ---
 I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
 
 The exercises were very manageable. I learnt the most from the instructor's detailed explanation of how React works:
 
-- Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX. I found [a StackOverflow thread](https://stackoverflow.com/questions/41713966/how-babel-and-jsx-related-or-differ) which describes the relationship between these technologies.
+- Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX. I found [a Stack Overflow thread](https://stackoverflow.com/questions/41713966/how-babel-and-jsx-related-or-differ) which describes the relationship between these technologies.
   - I learnt that Babel evaluates `<div>` to a string due to the first letter being a lower-case letter. On the other hand, when we call `React.createElement` with `<App/>` as an argument, Babel will pass the reference to `<App/>` into `React.createElement` since `App` begins with an upper-case letter.
 
 <!-- -->

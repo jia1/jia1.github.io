@@ -2,7 +2,7 @@
 title: "File Upload to Spring Boot"
 date: 2021-12-10T13:30:00+08:00
 draft: false
-tags: ["software","java","spring"]
+tags: ["spring"]
 ---
 Implementing file uploads through GraphQL was something I never managed to succeed in. Got embroiled in type incompatibilities. And eventually, I gave up and implemented a separate but simple API endpoint just for file uploads.
 
@@ -45,4 +45,4 @@ const upload = async (files: File[]) => {
 };
 ```
 
-`File` is defined by TypeScript and it is equivalent to [File](https://developer.mozilla.org/en-US/docs/Web/API/File) in JavaScript ([StackOverflow](https://stackoverflow.com/questions/51722363/create-file-object-type-in-typescript)).
+`File` is defined by TypeScript and it is equivalent to [File](https://developer.mozilla.org/en-US/docs/Web/API/File) in JavaScript ([Stack Overflow](https://stackoverflow.com/questions/51722363/create-file-object-type-in-typescript)).

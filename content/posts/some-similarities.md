@@ -2,7 +2,7 @@
 title: "Some Similarities"
 date: 2020-10-15T19:11:00+08:00
 draft: false
-tags: ["software","web","css"]
+tags: ["css"]
 ---
 This
 

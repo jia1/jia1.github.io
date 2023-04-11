@@ -2,7 +2,7 @@
 title: "reCaptcha on-error"
 date: 2020-11-09T18:20:00+08:00
 draft: false
-tags: ["software","web","javascript","angular"]
+tags: ["angular"]
 ---
 [Polling](/2020/10/polling) wasn't effective because:
 

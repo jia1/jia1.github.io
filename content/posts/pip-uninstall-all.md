@@ -2,7 +2,7 @@
 title: "pip uninstall All"
 date: 2020-10-28T22:06:00+08:00
 draft: false
-tags: ["software","python","cli"]
+tags: ["python","cli"]
 ---
 I found a one-liner which can uninstall all `pip` packages:
 

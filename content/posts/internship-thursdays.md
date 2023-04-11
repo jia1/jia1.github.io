@@ -2,7 +2,7 @@
 title: "Internship Thursdays"
 date: 2020-09-16T21:52:00+08:00
 draft: false
-tags: ["nus","braindump"]
+tags: ["braindump"]
 ---
 Last week, I had the honour to be one of the panellists for NUS CFG Internship Thursdays featuring Indeed. This is the profile I shared with NUS:
 

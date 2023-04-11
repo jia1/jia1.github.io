@@ -2,7 +2,7 @@
 title: "Numerical IDs in MongoDB"
 date: 2020-12-04T20:27:00+08:00
 draft: false
-tags: ["software","java","spring","mongo"]
+tags: ["spring","mongo"]
 ---
 Auto-generated IDs in MongoDB are "strange" strings. I quote "strange" because they are actually [derived not out of nowhere](https://stackoverflow.com/questions/5817795/how-are-mongodbs-objectids-generated) despite looking like they had nothing to do with anything. But to users, these IDs are strange.
 

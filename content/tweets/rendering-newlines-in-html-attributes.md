@@ -2,7 +2,7 @@
 title: "Rendering newlines in HTML attributes"
 date: 2020-09-21T22:41:00+08:00
 draft: false
-tags: ["software","web","angular"]
+tags: ["angular"]
 ---
 Doing
 

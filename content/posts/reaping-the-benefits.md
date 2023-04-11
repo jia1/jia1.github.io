@@ -2,7 +2,7 @@
 title: "Reaping the Benefits"
 date: 2020-11-05T18:23:00+08:00
 draft: false
-tags: ["books","eq"]
+tags: ["braindump","eq"]
 ---
 ## Section 3: "Reaping the Benefits"
 

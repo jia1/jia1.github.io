@@ -2,7 +2,7 @@
 title: "Polling"
 date: 2020-10-05T23:00:00+08:00
 draft: false
-tags: ["software","web","javascript","angular"]
+tags: ["angular"]
 ---
 There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That's some harsh user experience. My team uses [a forked version of angular-recaptcha](https://github.com/opengovsg/angular-recaptcha-fallback). I located the controller, directive and template for the form. I attached a recursive `$timeout` at the controller and the directive, but as of now, I have not gotten them to work. Some possible questions, which, if answered, may help:
 

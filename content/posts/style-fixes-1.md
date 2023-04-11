@@ -2,7 +2,7 @@
 title: "Style Fixes 1"
 date: 2020-09-20T16:26:00+08:00
 draft: false
-tags: ["software","web","hugo","foundation"]
+tags: ["hugo","foundation"]
 ---
 I discovered there were some unexpected styles for `<code>` and `<pre>` in this site. This is due to Foundation's default styles. The inline code style was fine, but the same style applied to code blocks (i.e. `<pre><code>...</code></pre>`), and that was not fine. There was also insufficient margin and padding for the code blocks. I inspected the `<code>` elements. I found out that Foundation was the culprit. It has been styling the `<code>` elements on top of what Hugo has in store. Refer to [official docs for Syntax Highlighting](https://gohugo.io/content-management/syntax-highlighting/) for more information.
 

@@ -2,7 +2,7 @@
 title: "My first yarn package"
 date: 2020-09-10T23:59:00+08:00
 draft: false
-tags: ["software","library","javascript"]
+tags: ["javascript"]
 ---
 I wrote my first yarn package (kind of for fun) yesterday. It's strange how I've been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven't published my package, but I'm omw. So, how did I create a package? It just felt like the usual... I followed the [yarn docs](https://classic.yarnpkg.com/en/docs/creating-a-package/).
 

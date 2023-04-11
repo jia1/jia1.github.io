@@ -2,7 +2,7 @@
 title: "Need an extra whitespace?"
 date: 2020-10-15T19:16:00+08:00
 draft: false
-tags: ["software","react"]
+tags: ["react"]
 ---
 Need an extra whitespace in JSX? Instead of `&nbsp;`, try this:
 

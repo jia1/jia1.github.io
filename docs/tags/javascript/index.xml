@@ -6,59 +6,7 @@
     <description>Recent content in javascript on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 26 Mar 2023 21:06:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Reuse Stories When Testing</title>
-      <link>https://jiayee.net/2023/03/reuse-stories-when-testing/</link>
-      <pubDate>Sun, 26 Mar 2023 21:06:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2023/03/reuse-stories-when-testing/</guid>
-      <description>My volunteering experience at an open source project led me to appreciate Storybook. Developing frontend components in isolation makes me happy. Unexpected behaviour is localised, and you are appropriately enticed to write your components better. By better, I meant modular. Modularity encourages simplicity (think SRP), and this makes code more reusable and self-documenting. There&amp;rsquo;s no greater joy than not having to explain your code.
-But wait, there&amp;rsquo;s more: If you think writing stories is exclusive to your Storybook instance and thus a pain to write, think again.</description>
-    </item>
-    
-    <item>
-      <title>react-hook-form</title>
-      <link>https://jiayee.net/2023/03/react-hook-form/</link>
-      <pubDate>Sat, 25 Mar 2023 12:35:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2023/03/react-hook-form/</guid>
-      <description>It&amp;rsquo;s been a while since I last had the chance to assess several libraries to solve parts of a problem. My most recent project required me to evaluate JavaScript libraries which make form management a breeze. The &amp;ldquo;me&amp;rdquo; in the past would have jumped at any first possibility, like how a chick imprints on the first living thing they see. Not anymore.
-My ex-company taught me to set up decision tables and make recommendations according to concrete criteria and their priorities.</description>
-    </item>
-    
-    <item>
-      <title>Core React Training Day 2</title>
-      <link>https://jiayee.net/2022/04/core-react-training-day-2/</link>
-      <pubDate>Wed, 27 Apr 2022 22:00:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2022/04/core-react-training-day-2/</guid>
-      <description>Day 2 was a continuation of our understanding of the useEffect hook. Some of concepts mentioned were concepts I &amp;ldquo;felt&amp;rdquo; while getting my hands dirty. The workshop was a conducive environment to make these concepts known to me more.
-Some keywords, libraries or links of interest: usehooks-ts eslint-plugin-react-hooks React lifecycle diagrams The dependency array in useEffect does diffs by identity. For primitives, we diff by value. For objects, we diff by memory location.</description>
-    </item>
-    
-    <item>
-      <title>Core React Training Day 1</title>
-      <link>https://jiayee.net/2022/04/core-react-training-day-1/</link>
-      <pubDate>Tue, 26 Apr 2022 21:10:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
-      <description>I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
-The exercises were very manageable. I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
-Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX.</description>
-    </item>
-    
-    <item>
-      <title>reCaptcha on-error</title>
-      <link>https://jiayee.net/2020/11/recaptcha-on-error/</link>
-      <pubDate>Mon, 09 Nov 2020 18:20:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
-      <description>Polling wasn&amp;rsquo;t effective because:
-Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
-{ &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 20 Oct 2020 15:25:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ready for review</title>
       <link>https://jiayee.net/tweets/ready-for-review/</link>
@@ -90,28 +38,6 @@ Notice the line above the last which says, FATAL ERROR: Ineffective mark-compact
     </item>
     
     <item>
-      <title>redux-persist</title>
-      <link>https://jiayee.net/2020/10/redux-persist/</link>
-      <pubDate>Thu, 08 Oct 2020 22:36:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/10/redux-persist/</guid>
-      <description>If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
-Install redux-persist:
-yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &amp;#39;react-redux&amp;#39;; import { createStore, Store } from &amp;#39;redux&amp;#39;; import { persistReducer, persistStore } from &amp;#39;redux-persist&amp;#39;; import storage from &amp;#39;redux-persist/lib/storage&amp;#39;; import rootReducer from &amp;#39;.</description>
-    </item>
-    
-    <item>
-      <title>Challenges of a multi-step flow with permalinks</title>
-      <link>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</link>
-      <pubDate>Wed, 07 Oct 2020 22:50:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</guid>
-      <description>I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&amp;rsquo;s post for the context. The edge cases are:
-Forms which need data from the preceding forms Dynamic form links I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.</description>
-    </item>
-    
-    <item>
       <title>String.format equivalent in TypeScript</title>
       <link>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</link>
       <pubDate>Wed, 07 Oct 2020 22:50:00 +0800</pubDate>
@@ -119,25 +45,6 @@ Forms which need data from the preceding forms Dynamic form links I can deal wit
       <guid>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</guid>
       <description>While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&amp;rsquo;t need to). I didn&amp;rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
 // Warning: Untested code export const compileTemplate = (template: string, values: Map&amp;lt;string, string&amp;gt;) =&amp;gt; { const variables = Array.from(values.keys()).map(key =&amp;gt; &amp;#39;:&amp;#39; + key).</description>
-    </item>
-    
-    <item>
-      <title>Multi-step forms</title>
-      <link>https://jiayee.net/2020/10/multi-step-forms/</link>
-      <pubDate>Tue, 06 Oct 2020 21:48:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
-      <description>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
-If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.</description>
-    </item>
-    
-    <item>
-      <title>Polling</title>
-      <link>https://jiayee.net/2020/10/polling/</link>
-      <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/10/polling/</guid>
-      <description>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
     </item>
     
     <item>
@@ -183,54 +90,12 @@ The principal (P), Annual interest rate (r), Number of months (t), and An option
     </item>
     
     <item>
-      <title>Dynamic Tooltips</title>
-      <link>https://jiayee.net/2020/09/dynamic-tooltips/</link>
-      <pubDate>Fri, 25 Sep 2020 14:55:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
-      <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
-At first, the tooltip looked like:
-&amp;lt;i class=&amp;#34;...&amp;#34; uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34; tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
-    </item>
-    
-    <item>
-      <title>Intercepting Angular Data Binding</title>
-      <link>https://jiayee.net/2020/09/intercepting-angular-data-binding/</link>
-      <pubDate>Wed, 23 Sep 2020 21:40:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
-      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
-When A is off, disable and switch B off. When A is on, disable and switch B off. We can ignore backend logic because I programmed it such that if A is off, ignore B.
-So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!</description>
-    </item>
-    
-    <item>
-      <title>Debugging Angular</title>
-      <link>https://jiayee.net/2020/09/debugging-angular/</link>
-      <pubDate>Mon, 14 Sep 2020 21:29:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
-      <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
-Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required My Google-fu was lacking.</description>
-    </item>
-    
-    <item>
       <title>Rule: no-var-requires</title>
       <link>https://jiayee.net/tweets/no-var-requires/</link>
       <pubDate>Sun, 13 Sep 2020 22:12:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tweets/no-var-requires/</guid>
       <description>My pre-commit hook complained because the original code had an import that looked like var module = require(&amp;quot;module&amp;quot;). The permitted ways to import are: import foo = require(&#39;foo&#39;) and &amp;ldquo;ES2015-style imports&amp;rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Jest for the First Time</title>
-      <link>https://jiayee.net/2020/09/jest-for-the-first-time/</link>
-      <pubDate>Sun, 13 Sep 2020 21:56:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/2020/09/jest-for-the-first-time/</guid>
-      <description>I needed to test a feature which I have been building for GovTech&amp;rsquo;s FormSG. To test it, I had to mock a function in the superclass of an instance generated by a factory method call. I once considered stripping away the barriers between the mock and the test. But, I didn&amp;rsquo;t want to refactor a codebase which I am not too familiar with.
-Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock and the test:</description>
     </item>
     
     <item>

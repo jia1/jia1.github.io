@@ -2,7 +2,7 @@
 title: "react-hook-form"
 date: 2023-03-25T12:35:00+08:00
 draft: false
-tags: ["software","library","javascript","react"]
+tags: ["react"]
 ---
 It's been a while since I last had the chance to assess several libraries to solve parts of a problem. My most recent project required me to evaluate JavaScript libraries which make form management a breeze. The "me" in the past would have jumped at any first possibility, like how a chick imprints on the first living thing they see. Not anymore.
 

@@ -2,7 +2,7 @@
 title: "Spring Boot Interceptors"
 date: 2021-02-11T20:57:00+08:00
 draft: false
-tags: ["software","java","spring"]
+tags: ["spring"]
 ---
 A neat trick to log HTTP requests and responses in a Spring Boot project is through interceptors. To log requests and responses between the client and the server, I use the `HandlerInterceptor` ([Introduction to Spring MVC HandlerInterceptor](https://www.baeldung.com/spring-mvc-handlerinterceptor)).
 

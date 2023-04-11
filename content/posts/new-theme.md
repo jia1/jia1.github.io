@@ -2,7 +2,7 @@
 title: "New Theme"
 date: 2020-09-19T12:20:00+08:00
 draft: false
-tags: ["software","hugo","foundation"]
+tags: ["hugo","foundation"]
 ---
 Hello to my new theme! Indeed's "You Day" was yesterday, and I spent the day redesigning this site. I am very pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to consider these things:
 

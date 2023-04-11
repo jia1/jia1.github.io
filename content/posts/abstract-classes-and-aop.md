@@ -2,7 +2,7 @@
 title: "Abstract classes and AOP"
 date: 2020-11-17T21:30:00+08:00
 draft: false
-tags: ["software","java","spring","aop"]
+tags: ["java"]
 ---
 I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I could not make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
 

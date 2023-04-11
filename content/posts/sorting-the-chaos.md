@@ -2,7 +2,7 @@
 title: "Sorting the Chaos"
 date: 2020-11-03T20:04:00+08:00
 draft: false
-tags: ["books","eq"]
+tags: ["braindump","eq"]
 ---
 ## Section 2: "Sorting the Chaos"
 

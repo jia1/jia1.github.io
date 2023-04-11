@@ -2,7 +2,7 @@
 title: "Calculator V2"
 date: 2020-10-04T22:32:00+08:00
 draft: false
-tags: ["software","javascript"]
+tags: ["javascript"]
 ---
 I made some changes to my compound interest calculator after reading up on ["future value"](https://www.thecalculatorsite.com/articles/finance/future-value-formula.php). My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
 

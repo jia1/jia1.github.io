@@ -2,7 +2,7 @@
 title: "Redux Poof!"
 date: 2020-10-15T19:00:00+08:00
 draft: false
-tags: ["software","web","redux"]
+tags: ["redux"]
 ---
 I was at Page A. Page A calls an API and stores the response in the Redux store. After some clicking, I was routed to Page B. I expected to retrieve the API response stored by Page A. But it wasn't there! The culprit was `<a href ...>`. I should be using `Link` or `navigate(...)` instead.
 

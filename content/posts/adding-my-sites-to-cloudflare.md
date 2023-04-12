@@ -2,7 +2,7 @@
 title: "Adding my sites to Cloudflare"
 date: 2020-09-13T11:34:00+08:00
 draft: false
-tags: ["dns"]
+tags: ["devops"]
 ---
 I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see features such as:
 

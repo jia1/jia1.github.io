@@ -6,15 +6,25 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 12 Apr 2023 00:12:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Apr 2023 12:46:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Push vs Pull CDN</title>
+      <link>https://jiayee.net/2023/04/push-vs-pull-cdn/</link>
+      <pubDate>Wed, 12 Apr 2023 12:46:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/04/push-vs-pull-cdn/</guid>
+      <description>It was only recently that I realised that there was more than one way to update the content that your CDN hosts. Since, to the best of my knowledge, Cloudflare was the closest thing to a CDN, I thought all CDN would work like that. Couldn&amp;rsquo;t be more wrong.
+I like that Cloudflare is so hassle-free to set up. It caches my site upon request + nothing in cache. There is no need to push any content to Cloudflare by myself.</description>
+    </item>
+    
     <item>
       <title>react-hook-form validations</title>
       <link>https://jiayee.net/2023/04/react-hook-form-validations/</link>
       <pubDate>Wed, 12 Apr 2023 00:12:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/04/react-hook-form-validations/</guid>
-      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want take a break while keeping the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please do not hesitate to reach out!
-Back to the main learning point I am trying to share: In the pull request above, look at the first screenshot.</description>
+      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please do not hesitate to reach out!
+Back to the main learning point I am trying to share: In the pull request above, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched.</description>
     </item>
     
     <item>

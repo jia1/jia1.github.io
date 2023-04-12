@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 16 Sep 2020 22:03:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown nested lists</title>
-      <link>https://jiayee.net/tweets/markdown-nested-lists/</link>
+      <link>https://jiayee.net/tidbits/markdown-nested-lists/</link>
       <pubDate>Wed, 16 Sep 2020 22:03:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/markdown-nested-lists/</guid>
+      <guid>https://jiayee.net/tidbits/markdown-nested-lists/</guid>
       <description>Got too used to using 2-space indents (for JavaScript). Markdown nested lists need 4-space indents.</description>
     </item>
     

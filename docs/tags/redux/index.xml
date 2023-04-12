@@ -19,10 +19,10 @@ When I refreshed Page B after getting there via Link, the store went poof again.
     
     <item>
       <title>Purge</title>
-      <link>https://jiayee.net/tweets/purge/</link>
+      <link>https://jiayee.net/tidbits/purge/</link>
       <pubDate>Wed, 14 Oct 2020 18:00:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/purge/</guid>
+      <guid>https://jiayee.net/tidbits/purge/</guid>
       <description>I also purged my redux-persist storage and wondered how the heck did the frontend state remain intact.</description>
     </item>
     

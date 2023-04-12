@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 29 Sep 2020 21:15:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docker system prune -a --volumes</title>
-      <link>https://jiayee.net/tweets/docker-system-prune/</link>
+      <link>https://jiayee.net/tidbits/docker-system-prune/</link>
       <pubDate>Tue, 29 Sep 2020 21:15:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/docker-system-prune/</guid>
+      <guid>https://jiayee.net/tidbits/docker-system-prune/</guid>
       <description>I&amp;rsquo;ve finally encountered this on my MacBook Air: no space left on device. And&amp;hellip; docker system prune -a --volumes to the rescue! (Relevant Stack Overflow thread)</description>
     </item>
     

@@ -26,9 +26,9 @@
       {{ $numMenuItems := len .Site.Menus.item }}
       {{ range .Site.Menus.item }}
         {{ $active := (eq .Name $current.Title) }}
-        <!-- TODO: Make this configutable. -->
+        <!-- TODO: Make this configurable. -->
         {{ $active = or $active (and (eq .Name "Blog") (in (slice "" "posts" "tags") $current.Section)) }}
-        {{ $active = or $active (and (eq .Name "\"Tweets\"") (in (slice "tweets" "tags") $current.Section)) }}
+        {{ $active = or $active (and (eq .Name "Tidbits") (in (slice "tidbits" "tags") $current.Section)) }}
         <li class="cell small-{{ div 12 $numMenuItems }} {{ if $active }}is-active{{ end }}">
           <a href="{{ .URL }}">
             {{ .Name }}

@@ -70,10 +70,10 @@ Babel is not part of React but it was helpful to know how Babel makes our lives 
     
     <item>
       <title>Need an extra whitespace?</title>
-      <link>https://jiayee.net/tweets/need-an-extra-whitespace/</link>
+      <link>https://jiayee.net/tidbits/need-an-extra-whitespace/</link>
       <pubDate>Thu, 15 Oct 2020 19:16:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/need-an-extra-whitespace/</guid>
+      <guid>https://jiayee.net/tidbits/need-an-extra-whitespace/</guid>
       <description>Need an extra whitespace in JSX? Instead of &amp;amp;nbsp;, try this:
 &amp;lt;span&amp;gt;Hello, &amp;lt;/span&amp;gt; {true ? &amp;#39;world!&amp;#39; : &amp;#39;world!&amp;#39;} Some food for thought here.</description>
     </item>

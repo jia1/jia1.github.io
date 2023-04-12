@@ -9,10 +9,10 @@
     <lastBuildDate>Tue, 20 Oct 2020 15:25:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ready for review</title>
-      <link>https://jiayee.net/tweets/ready-for-review/</link>
+      <link>https://jiayee.net/tidbits/ready-for-review/</link>
       <pubDate>Tue, 20 Oct 2020 15:25:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/ready-for-review/</guid>
+      <guid>https://jiayee.net/tidbits/ready-for-review/</guid>
       <description>I&amp;rsquo;m ready for review.</description>
     </item>
     
@@ -91,10 +91,10 @@ The principal (P), Annual interest rate (r), Number of months (t), and An option
     
     <item>
       <title>Rule: no-var-requires</title>
-      <link>https://jiayee.net/tweets/no-var-requires/</link>
+      <link>https://jiayee.net/tidbits/no-var-requires/</link>
       <pubDate>Sun, 13 Sep 2020 22:12:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/no-var-requires/</guid>
+      <guid>https://jiayee.net/tidbits/no-var-requires/</guid>
       <description>My pre-commit hook complained because the original code had an import that looked like var module = require(&amp;quot;module&amp;quot;). The permitted ways to import are: import foo = require(&#39;foo&#39;) and &amp;ldquo;ES2015-style imports&amp;rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&amp;hellip;</description>
     </item>
     

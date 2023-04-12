@@ -61,10 +61,10 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
     
     <item>
       <title>Rendering newlines in HTML attributes</title>
-      <link>https://jiayee.net/tweets/rendering-newlines-in-html-attributes/</link>
+      <link>https://jiayee.net/tidbits/rendering-newlines-in-html-attributes/</link>
       <pubDate>Mon, 21 Sep 2020 22:41:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/rendering-newlines-in-html-attributes/</guid>
+      <guid>https://jiayee.net/tidbits/rendering-newlines-in-html-attributes/</guid>
       <description>Doing
 &amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; will not work, but doing
 &amp;lt;textarea placeholder=&amp;#34;{{ somethingFromScope }}&amp;#34;&amp;gt; where somethingFromScope is line1\nline2 will work as expected!</description>

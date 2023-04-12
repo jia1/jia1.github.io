@@ -29,10 +29,10 @@
     
     <item>
       <title>Iterator to Stream</title>
-      <link>https://jiayee.net/tweets/iterator-to-stream/</link>
+      <link>https://jiayee.net/tidbits/iterator-to-stream/</link>
       <pubDate>Wed, 11 Nov 2020 19:38:00 +0800</pubDate>
       
-      <guid>https://jiayee.net/tweets/iterator-to-stream/</guid>
+      <guid>https://jiayee.net/tidbits/iterator-to-stream/</guid>
       <description>With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&amp;rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
 Stream&amp;lt;String&amp;gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.</description>
     </item>

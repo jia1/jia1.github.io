@@ -4,20 +4,20 @@
     url = "/"
     weight = 1
   [[menu.item]]
-    name = "\"Tweets\""
-    url = "/tweets"
+    name = "Tidbits"
+    url = "/tidbits"
     weight = 2
   [[menu.item]]
     name = "About"
     url = "/about"
     weight = 3
   [[menu.item]]
-    name = "Referral codes"
-    url = "/referral-codes"
+    name = "Promo codes"
+    url = "/promo"
     weight = 4
 
 [params]
-  contentTypesWithDate = ["posts", "tweets"]
+  contentTypesWithDate = ["posts", "tidbits"]
   copyrightOwner = "Jiayee Lim"
   copyrightYears = ""
   dateTimeDisplayFormat = "2 Jan 2006 @ 3.04 pm"

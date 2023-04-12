@@ -6,7 +6,17 @@
     <description>Recent content on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 12 Apr 2023 12:46:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Apr 2023 13:21:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Today&#39;s Q&amp;A for Jiayee (12 Apr 2023)</title>
+      <link>https://jiayee.net/tidbits/12-apr-2023-qna/</link>
+      <pubDate>Wed, 12 Apr 2023 13:21:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tidbits/12-apr-2023-qna/</guid>
+      <description>Write down a new fact you recently learned.
+What a coincidence. Please refer to today&amp;rsquo;s blog post.</description>
+    </item>
+    
     <item>
       <title>Push vs Pull CDN</title>
       <link>https://jiayee.net/2023/04/push-vs-pull-cdn/</link>

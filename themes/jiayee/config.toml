@@ -13,7 +13,7 @@
     weight = 3
   [[menu.item]]
     name = "Promo codes"
-    url = "/promo"
+    url = "/promo-codes"
     weight = 4
 
 [params]

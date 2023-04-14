@@ -8,9 +8,9 @@
       </h1>
     </div>
     <div class="grid-x grid-margin-x">
-      <h5 class="cell large-6 medium-6 small-12">
+      <sub class="cell large-6 medium-6 small-12">
         {{ .Site.Params.subtitle }}
-      </h5>
+      </sub>
       <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
         {{ range .Site.Params.Social }}
           <a href="{{ .url }}" rel="noopener" target='{{ if not (eq .name "Email") }}_blank{{ end }}'>

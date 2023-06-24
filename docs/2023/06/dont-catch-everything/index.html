@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
   
   <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
-  <title>javascript</title>
+  <title>Don&#39;t catch everything</title>
 </head>
 <body>
     <div class="grid-container">
@@ -75,7 +75,7 @@
         
         
         
-        <li class="cell small-3 is-active">
+        <li class="cell small-3 ">
           <a href="/tidbits">
             Tidbits
           </a>
@@ -106,25 +106,21 @@
 </header>
 </section>
           <section class="row">
-<div class="article-list">
+<article>
   
-    <div class="row">
-      <article>
   
-  <a href="/2020/09/my-first-yarn-package/">
-    <h3 class="article-title">
-  My first yarn package
+    <div class="nar-row">
+      <h3 class="article-title">
+  Don&#39;t catch everything
 </h3>
 
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
+      <section class="article-metadata">
   <div class="grid-x grid-margin-x">
     <div class="cell large-6 medium-6 small-12">
       
       
       
-      <time datetime="2020-09-10">10 Sep 2020 @ 11.59 pm</time>
+      <time datetime="2023-06-24">24 Jun 2023 @ 11.23 pm</time>
     </div>
     <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
       
@@ -138,33 +134,49 @@
   </div>
 </section>
 
-  </div>
-  <section class="nar-row article-summary">
-    I wrote my first yarn package (kind of for fun) yesterday. It&rsquo;s strange how I&rsquo;ve been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven&rsquo;t published my package, but I&rsquo;m omw. So, how did I create a package? It just felt like the usual&hellip; I followed the yarn docs.
-One difference (compared to my usual activities) was I couldn&rsquo;t do import { .
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/my-first-yarn-package/">Continue reading "My first yarn package"</a>
-  </p>
-</article>
-
     </div>
   
-  <section class="grid-x grid-margin-x">
-  <div class="cell small-6">
-    
-      <a class="nav-page" href="/tags/javascript/2/">
-        Previous page
-      </a>
-    
-  </div>
-  <div class="cell small-6 text-right">
-    
-  </div>
+  <section class="row article-content">
+    <p>I did a catch when I didn&rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.</p>
+<p>In <a href="https://github.com/opengovsg/FormSG/pull/6087/commits/157c5e8d2e6ad716828aa03865844064f55edc5e">this commit</a>, I removed the catch clause.</p>
+<p>And in <a href="https://github.com/opengovsg/FormSG/pull/6087/commits/c40a2d9a64a0bfee75395005a401d9e6a4073e66">another commit</a>, I defined what failure is.</p>
+<p>While writing about this, I wondered if there could be a better way to express identical requirements. A quick search led me to this <a href="https://stackoverflow.com/questions/43306623/reject-a-promise-from-then">Stack Overflow thread</a> - <code>throw</code> (but not in AngularJS).</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/tidbits/ready-for-review/">
+      Ready for review (#javascript)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/constants/">
+      Constants (#javascript)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/javascript-heap-limit/">
+      Javascript heap limit (#javascript)
+      
+    </a>
+  </li>
+	
+</ul>
 </section>
 
-</div>
 
+</article>
 
           </section>
           <section class="row"><footer class="text-center">

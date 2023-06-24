@@ -6,7 +6,19 @@
     <description>Recent content on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 12 Apr 2023 13:21:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 23:23:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don&#39;t catch everything</title>
+      <link>https://jiayee.net/2023/06/dont-catch-everything/</link>
+      <pubDate>Sat, 24 Jun 2023 23:23:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/06/dont-catch-everything/</guid>
+      <description>I did a catch when I didn&amp;rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.
+In this commit, I removed the catch clause.
+And in another commit, I defined what failure is.
+While writing about this, I wondered if there could be a better way to express identical requirements.</description>
+    </item>
+    
     <item>
       <title>Today&#39;s Q&amp;A for Jiayee (12 Apr 2023)</title>
       <link>https://jiayee.net/tidbits/12-apr-2023-qna/</link>
@@ -1678,7 +1690,7 @@ At first, I extracted only the method body which configures HttpSecurity. So I g
       <pubDate>Mon, 07 Sep 2020 19:20:00 +0800</pubDate>
       
       <guid>https://jiayee.net/about/</guid>
-      <description>Hello, I&amp;rsquo;m Jiayee. I was a senior software engineer at Indeed and I am #OpenToWork. I graduated from NUS Computer Science in 2019. Through blogging, I hope to be better at retaining what I learnt. Please keep in mind that not everything in this blog is correct. I am and will always be learning.
+      <description>Hello, I&amp;rsquo;m Jiayee. I am a Software Engineer in Open Government Products. Through writing, I hope to be better at retaining what I learnt.
 My resume</description>
     </item>
     

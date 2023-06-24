@@ -33,11 +33,7 @@ Get up to $1000 of free IBKR stock when opening an account at Interactive Broker
 
 ##### Klook
 
-Here's S$5 off your first unique travel experience with Klook!
-
-Hey! Here's S$5 off for things to do, hotels and more on Klook. Just sign up with my link.
-
-https://s.klook.com/c/NVXMeKN_w0
+Ping me!
 
 ##### MyRepublic
 
@@ -46,6 +42,10 @@ Ping me!
 ##### Revolut
 
 Ping me!
+
+#### shopFarEast
+
+Get the shopFarEast app and use my referral code `6dcTuF` to sign up now!
 
 ##### Trust
 

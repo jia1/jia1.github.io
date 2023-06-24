@@ -6,7 +6,19 @@
     <description>Recent content in javascript on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 20 Oct 2020 15:25:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Jun 2023 23:23:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Don&#39;t catch everything</title>
+      <link>https://jiayee.net/2023/06/dont-catch-everything/</link>
+      <pubDate>Sat, 24 Jun 2023 23:23:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/06/dont-catch-everything/</guid>
+      <description>I did a catch when I didn&amp;rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.
+In this commit, I removed the catch clause.
+And in another commit, I defined what failure is.
+While writing about this, I wondered if there could be a better way to express identical requirements.</description>
+    </item>
+    
     <item>
       <title>Ready for review</title>
       <link>https://jiayee.net/tidbits/ready-for-review/</link>

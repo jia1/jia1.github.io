@@ -137,7 +137,7 @@
     </div>
   
   <section class="row article-content">
-    <p>I did a catch when I didn&rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.</p>
+    <p><a href="https://stackoverflow.com/questions/75078415/error-responses-from-api-are-considered-success-in-react-query">I did a catch when I didn&rsquo;t need to.</a> I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.</p>
 <p>In <a href="https://github.com/opengovsg/FormSG/pull/6087/commits/157c5e8d2e6ad716828aa03865844064f55edc5e">this commit</a>, I removed the catch clause.</p>
 <p>And in <a href="https://github.com/opengovsg/FormSG/pull/6087/commits/c40a2d9a64a0bfee75395005a401d9e6a4073e66">another commit</a>, I defined what failure is.</p>
 <p>While writing about this, I wondered if there could be a better way to express identical requirements. A quick search led me to this <a href="https://stackoverflow.com/questions/43306623/reject-a-promise-from-then">Stack Overflow thread</a> - <code>throw</code> (but not in AngularJS).</p>

@@ -14,6 +14,6 @@ To be frank, that was actually the first thing I saw, especially since [FormSG](
 
 Less than a month into this, I'm glad to say I made the right choice. The library saved me from having to worry about form state and validation. I could nest my form components without worries. The documentation was clear and concise, too.
 
-It was unfortunate I didn't have enough time to unravel some unexpected behaviour when getting the internal design system to work with this library. I think this is really something to do with the design system. On some form components, [`register`](https://react-hook-form.com/api/useform/register/) did not work. Values did not get set. Digging deep into the design system is out-of-scope. As such, I proceeded to call [`setValue`](https://react-hook-form.com/api/useform/setvalue/) with `{ shouldValidate: true }` on the relevant events.
+It was unfortunate I didn't have enough time to unravel some unexpected behaviour when getting the internal design system to work with this library. I think this is really something to do with the design system. On some form components, [`register`](https://react-hook-form.com/api/useform/register/) didn't work. Values didn't get set. Digging deep into the design system is out-of-scope. As such, I proceeded to call [`setValue`](https://react-hook-form.com/api/useform/setvalue/) with `{ shouldValidate: true }` on the relevant events.
 
 If you get stuck in a similar situation, try the above workaround. As the saying goes, "Make it work. Make it better. Make it faster."

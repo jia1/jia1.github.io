@@ -19,7 +19,7 @@ Suggested information compartments:
 #### Chapter 7: "What Is the Mandate?"
 
 1. "Why are we here?" (Vision, mission, agenda, etc.)
- - So that we do not lose track and get mesmerised by less important things
+ - So that we don't lose track and get mesmerised by less important things
 1. "Are there any misalignments?"
  - Stay relevant or risk losing importance/usefulness.
 1. "Can we work with this mandate?"

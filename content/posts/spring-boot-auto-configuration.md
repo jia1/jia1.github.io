@@ -24,6 +24,6 @@ org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 
 I was more or less done, but there were some things I have not / will not solve:
 
-1. `No qualifying bean of type String`. I did not venture into where I should be placing `@Bean`, `@Qualifier` or `@Value`. It's because I did not want to overwrite my Lombok getters or setters.
+1. `No qualifying bean of type String`. I didn't venture into where I should be placing `@Bean`, `@Qualifier` or `@Value`. It's because I didn't want to overwrite my Lombok getters or setters.
 1. Including a controller (i.e. annotated with `@RestController`) in the custom starter.
 1. Upon the consumer's trigger / API call, interact with the client's database through the controller.

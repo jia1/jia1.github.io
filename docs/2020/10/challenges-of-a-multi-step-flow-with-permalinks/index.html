@@ -170,7 +170,7 @@
 <li>Store the referer in a persistent Redux store. I may need to investigate Redux middlewares to do this.</li>
 <li>Move <code>:param1</code> and <code>:param2</code> to query parameters. Then, access the query string with Reach router&rsquo;s <code>useLocation().search</code>. However, there are existing links which have <code>:param1</code> and <code>:param2</code>. I don&rsquo;t want to break existing implementations.</li>
 </ol>
-<p>It seems I do not have much a choice other than investigating Redux middlewares to make Redux storage persistent so that I can store the referers. If I can persist the Redux storage, I would want to cache the user&rsquo;s input from the previous forms as well so that he/she can navigate to a form containing his/her recent response.</p>
+<p>It seems I don&rsquo;t have much a choice other than investigating Redux middlewares to make Redux storage persistent so that I can store the referers. If I can persist the Redux storage, I would want to cache the user&rsquo;s input from the previous forms as well so that he/she can navigate to a form containing his/her recent response.</p>
 <p>These concerns look like things that a multi-step form library should have covered. Unfortunately, frontend components are not obliged to provide out-of-the-box state management.</p>
 <p>The multi-step component libraries I know of in the wild are not suitable. They compel me to conduct an overhaul and/or major copypasta of the current codebase. For instance, the libraries can come with their own frontend components. Users will need to reorganise the form into a JSON object. I used one a few years ago, for a closed source codebase. It was crazy - bulky and many LoC.</p>
 <p>I don&rsquo;t want to give up.</p>

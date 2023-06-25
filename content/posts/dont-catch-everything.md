@@ -4,7 +4,7 @@ date: 2023-06-24T23:23:00+08:00
 draft: false
 tags: ["javascript"]
 ---
-[I did a catch when I didn't need to.](https://stackoverflow.com/questions/75078415/error-responses-from-api-are-considered-success-in-react-query) I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.
+[I did a catch when I didn't need to.](https://stackoverflow.com/questions/75078415/error-responses-from-api-are-considered-success-in-react-query) I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure didn't appear.
 
 In [this commit](https://github.com/opengovsg/FormSG/pull/6087/commits/157c5e8d2e6ad716828aa03865844064f55edc5e), I removed the catch clause.
 

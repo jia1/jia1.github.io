@@ -13,10 +13,10 @@
       <pubDate>Sat, 24 Jun 2023 23:23:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/06/dont-catch-everything/</guid>
-      <description>I did a catch when I didn&amp;rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.
+      <description>I did a catch when I didn&amp;rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure didn&amp;rsquo;t appear.
 In this commit, I removed the catch clause.
 And in another commit, I defined what failure is.
-While writing about this, I wondered if there could be a better way to express identical requirements.</description>
+While writing about this, I wondered if there could be a better way to express identical requirements. A quick search led me to this Stack Overflow thread - throw (but not in AngularJS).</description>
     </item>
     
     <item>
@@ -35,8 +35,8 @@ I like that Cloudflare is so hassle-free to set up. It caches my site upon reque
       <pubDate>Wed, 12 Apr 2023 00:12:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/04/react-hook-form-validations/</guid>
-      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please do not hesitate to reach out!
-Back to the main learning point I am trying to share: In the pull request above, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched.</description>
+      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please don&amp;rsquo;t hesitate to reach out!
+Back to the main learning point I&amp;rsquo;m trying to share: In the pull request above, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched.</description>
     </item>
     
     <item>
@@ -75,7 +75,7 @@ My ex-company taught me to set up decision tables and make recommendations accor
       <pubDate>Thu, 23 Mar 2023 23:30:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/03/anew/</guid>
-      <description>As you may have already known, my (soon-to-be ex-)company decided for me to pursue a new career elsewhere. I did not want to believe this - my body accepted it faster than my mind could. My body moved like clockwork - I proceeded to update my resume. My resume was in shambles. It looked lacklustre. As I documented my notable accomplishments line by line, my resume brightened a lot. It brightened like how replacing an incandescent bulb with an LED one felt.</description>
+      <description>As you may have already known, my (soon-to-be ex-)company decided for me to pursue a new career elsewhere. I didn&amp;rsquo;t want to believe this - my body accepted it faster than my mind could. My body moved like clockwork - I proceeded to update my resume. My resume was in shambles. It looked lacklustre. As I documented my notable accomplishments line by line, my resume brightened a lot. It brightened like how replacing an incandescent bulb with an LED one felt.</description>
     </item>
     
     <item>
@@ -94,7 +94,7 @@ Some keywords, libraries or links of interest: usehooks-ts eslint-plugin-react-h
       <pubDate>Tue, 26 Apr 2022 21:10:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
-      <description>I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
+      <description>I&amp;rsquo;m thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
 The exercises were very manageable. I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
 Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX.</description>
     </item>
@@ -146,7 +146,7 @@ My teammate shared an answer he found at CSS-Tricks. If I recall, it didn&amp;rs
       
       <guid>https://jiayee.net/2020/12/numerical-ids-in-mongodb/</guid>
       <description>Auto-generated IDs in MongoDB are &amp;ldquo;strange&amp;rdquo; strings. I quote &amp;ldquo;strange&amp;rdquo; because they are actually derived not out of nowhere despite looking like they had nothing to do with anything. But to users, these IDs are strange.
-I had a collection of documents with a name property. Originally, name was annotated with @Id. But it meant that I could not change the value of name. name was also annotated with regex validation (@Pattern(.</description>
+I had a collection of documents with a name property. Originally, name was annotated with @Id. But it meant that I couldn&amp;rsquo;t change the value of name. name was also annotated with regex validation (@Pattern(.</description>
     </item>
     
     <item>
@@ -155,7 +155,7 @@ I had a collection of documents with a name property. Originally, name was annot
       <pubDate>Tue, 17 Nov 2020 21:30:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/11/abstract-classes-and-aop/</guid>
-      <description>I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I could not make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
+      <description>I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I couldn&amp;rsquo;t make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
 // MyAbstractController public abstract class MyAbstractController&amp;lt;T extends UniversalModel&amp;gt; { private final .</description>
     </item>
     
@@ -185,7 +185,7 @@ I had a collection of documents with a name property. Originally, name was annot
       
       <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
       <description>Polling wasn&amp;rsquo;t effective because:
-Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+Hot reloading didn&amp;rsquo;t happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
 { &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
     </item>
     
@@ -208,7 +208,7 @@ Chapter 13: &amp;ldquo;Changing Your Organisation through Listening&amp;rdquo; &
       <guid>https://jiayee.net/2020/11/sorting-the-chaos/</guid>
       <description>Section 2: &amp;ldquo;Sorting the Chaos&amp;rdquo; This section breaks down information from general business problems into suggested components. It also lists the questions to ask ourselves so that we remain focused and productive.
 Suggested information compartments:
-Mandate Plan Team Execution Personal Chapter 7: &amp;ldquo;What Is the Mandate?&amp;rdquo; &amp;ldquo;Why are we here?&amp;rdquo; (Vision, mission, agenda, etc.) So that we do not lose track and get mesmerised by less important things &amp;ldquo;Are there any misalignments?</description>
+Mandate Plan Team Execution Personal Chapter 7: &amp;ldquo;What Is the Mandate?&amp;rdquo; &amp;ldquo;Why are we here?&amp;rdquo; (Vision, mission, agenda, etc.) So that we don&amp;rsquo;t lose track and get mesmerised by less important things &amp;ldquo;Are there any misalignments?</description>
     </item>
     
     <item>
@@ -237,7 +237,7 @@ pip3 freeze &amp;gt; reqs.txt sudo pip3 uninstall -r reqs.txt I didn&amp;rsquo;t
       <pubDate>Tue, 27 Oct 2020 20:51:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/some-git/</guid>
-      <description>I did not realise my pull request was between branches of the same repository. Not sure if my friend realised. I moved the feature branch&amp;rsquo;s latest updates to my fork&amp;rsquo;s feature branch. I then made another pull request. I used the following commands to straighten things out:
+      <description>I didn&amp;rsquo;t realise my pull request was between branches of the same repository. Not sure if my friend realised. I moved the feature branch&amp;rsquo;s latest updates to my fork&amp;rsquo;s feature branch. I then made another pull request. I used the following commands to straighten things out:
 # Create a local branch with the same name as the origin remote feature branch git checkout -b feat/simple-compound-interest-calculators # Pull in the changes from the origin remote git pull # Set the upstream to the origin remote feature branch git branch --set-upstream-to=origin/feat/simple-compound-interest-calculators feat/simple-compound-interest-calculators # Check the remotes and their URLs git remote -v # Add the remote for my fork git remote add jiayee git@github.</description>
     </item>
     
@@ -301,7 +301,7 @@ There were moments in my life when I wanted to give up writing in British Englis
       <pubDate>Tue, 13 Oct 2020 19:11:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/javascript-heap-limit/</guid>
-      <description>For the past week, I could not fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase did not rebuild and remained stale. This issue does not happen to everyone. I am using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
+      <description>For the past week, I couldn&amp;rsquo;t fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase didn&amp;rsquo;t rebuild and remained stale. This issue does not happen to everyone. I&amp;rsquo;m using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
 Notice the line above the last which says, FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory.</description>
     </item>
     
@@ -344,7 +344,7 @@ Forms which need data from the preceding forms Dynamic form links I can deal wit
       
       <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
       <description>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
-If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.</description>
+If we don&amp;rsquo;t do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which don&amp;rsquo;t need the progress bar is difficult. The form flow will become more obscure.</description>
     </item>
     
     <item>
@@ -353,7 +353,7 @@ If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt
       <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/polling/</guid>
-      <description>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
+      <description>There were instances where users filled up a time-consuming form but couldn&amp;rsquo;t submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
     </item>
     
     <item>
@@ -383,7 +383,7 @@ package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, sl
       
       <guid>https://jiayee.net/2020/10/typescript-shortcuts/</guid>
       <description>TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F TYPESCRIPT_SHORTCUT_1 and TYPESCRIPT_SHORTCUT_2 to get to the code.
-Context: Yesterday, I did not invest time into inverting a TypeScript Map&amp;lt;string, string&amp;gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
+Context: Yesterday, I didn&amp;rsquo;t invest time into inverting a TypeScript Map&amp;lt;string, string&amp;gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
 Here&amp;rsquo;s the new original code:</description>
     </item>
     
@@ -496,7 +496,7 @@ Include lang attribute to the html element i.e. &amp;lt;html lang=&amp;quot;en&a
       <pubDate>Sat, 19 Sep 2020 12:20:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/new-theme/</guid>
-      <description>Hello to my new theme! Indeed&amp;rsquo;s &amp;ldquo;You Day&amp;rdquo; was yesterday, and I spent the day redesigning this site. I am very pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to consider these things:
+      <description>Hello to my new theme! Indeed&amp;rsquo;s &amp;ldquo;You Day&amp;rdquo; was yesterday, and I spent the day redesigning this site. I&amp;rsquo;m very pleased with the result. I was able to follow my hand-drawn wireframe to produce this theme. While this is a simple theme, I made sure to consider these things:
 Little clutter Consistent margin between sections. The margin was 2rem between sections and 1rem between post metadata and content. Only 3 font sizes (Foundation&amp;rsquo;s h1, h3 and h5) Only 3 colours (background colour: #F5F5F5, font colour: #333333 and dark turquoise: #26867C) Reduction of eye strain with lower contrast of colours Colour-blind friendly Through this experience, I gained more exposure to Hugo and Foundation.</description>
     </item>
     
@@ -527,7 +527,7 @@ Jiayee is a software engineer at Indeed. She graduated from NUS Computer Science
       <pubDate>Tue, 15 Sep 2020 21:31:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/cloudflare-workers/</guid>
-      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;rsquo;n&amp;rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
+      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;rsquo;n&amp;rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites don&amp;rsquo;t support custom domains (why will they). The latter costs money (the first 3 page rules are free).
 My worker&amp;rsquo;s name was &amp;quot;vanity&amp;quot; for obvious reasons and it sits at https://www.</description>
     </item>
     
@@ -547,7 +547,7 @@ Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to:
       <pubDate>Sun, 13 Sep 2020 21:56:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/jest-for-the-first-time/</guid>
-      <description>I needed to test a feature which I have been building for GovTech&amp;rsquo;s FormSG. To test it, I had to mock a function in the superclass of an instance generated by a factory method call. I once considered stripping away the barriers between the mock and the test. But, I didn&amp;rsquo;t want to refactor a codebase which I am not too familiar with.
+      <description>I needed to test a feature which I have been building for GovTech&amp;rsquo;s FormSG. To test it, I had to mock a function in the superclass of an instance generated by a factory method call. I once considered stripping away the barriers between the mock and the test. But, I didn&amp;rsquo;t want to refactor a codebase which I&amp;rsquo;m not too familiar with.
 Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock and the test:</description>
     </item>
     
@@ -557,7 +557,7 @@ Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock 
       <pubDate>Sun, 13 Sep 2020 11:34:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/adding-my-sites-to-cloudflare/</guid>
-      <description>I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see features such as:
+      <description>I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers don&amp;rsquo;t offer. Well, they didn&amp;rsquo;t need to offer those features. In Cloudflare, I get to see features such as:
 Web traffic analytics Set up DNSSEC Configure network transport options and/or optimisations Run speed tests on my site Configure caching Run JavaScript workers Restrict image hotlinking This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.</description>
     </item>
     
@@ -597,7 +597,7 @@ One difference (compared to my usual activities) was I couldn&amp;rsquo;t do imp
       <pubDate>Tue, 08 Sep 2020 21:01:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/auto-configuring-controllers-and-repositories/</guid>
-      <description>I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).
+      <description>I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I didn&amp;rsquo;t have much luck with auto-configuring Mongo collections (yet).
 I then ran the consumer&amp;rsquo;s codebase and used Postman to hit the newly-offered endpoints. Below is the response seen in Postman:
 { &amp;#34;error&amp;#34;: { &amp;#34;IllegalArgumentException&amp;#34;: &amp;#34;Couldn&amp;#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&amp;#34; } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&amp;rsquo;s logs.</description>
     </item>

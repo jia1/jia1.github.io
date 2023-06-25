@@ -23,7 +23,7 @@ I like that Cloudflare is so hassle-free to set up. It caches my site upon reque
       <pubDate>Tue, 15 Sep 2020 21:31:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/cloudflare-workers/</guid>
-      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;rsquo;n&amp;rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites do not support custom domains (why will they). The latter costs money (the first 3 page rules are free).
+      <description>It&amp;rsquo;s time to put my short custom domain to good use. Cloudflare Workers is a quick &amp;rsquo;n&amp;rsquo; dirty way for me to do URL forwarding. With URL forwarding, I will no longer need to set up DNS records or page rules. The former requires domain verification. Plus, social media websites don&amp;rsquo;t support custom domains (why will they). The latter costs money (the first 3 page rules are free).
 My worker&amp;rsquo;s name was &amp;quot;vanity&amp;quot; for obvious reasons and it sits at https://www.</description>
     </item>
     
@@ -33,7 +33,7 @@ My worker&amp;rsquo;s name was &amp;quot;vanity&amp;quot; for obvious reasons an
       <pubDate>Sun, 13 Sep 2020 11:34:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/adding-my-sites-to-cloudflare/</guid>
-      <description>I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see features such as:
+      <description>I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers don&amp;rsquo;t offer. Well, they didn&amp;rsquo;t need to offer those features. In Cloudflare, I get to see features such as:
 Web traffic analytics Set up DNSSEC Configure network transport options and/or optimisations Run speed tests on my site Configure caching Run JavaScript workers Restrict image hotlinking This list is non-exhaustive. There are more features in the Pro and Enterprise subscriptions.</description>
     </item>
     

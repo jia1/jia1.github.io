@@ -145,7 +145,7 @@
     <p>I managed to catch one of the NUS Hackers&rsquo; workshops, &ldquo;Hacker Tools: Data Wrangling&rdquo; by Julius. I got to learn many new things since I don&rsquo;t use CLI for text processing. Julius&rsquo; slides are in <a href="https://github.com/indocomsoft/hackertools-slides/blob/master/3-data-wrangling/data-wrangling.pdf">his GitHub repo</a>.</p>
 <p>Below is a very brief and dry summary of what is more important to me. If I &ldquo;miss&rdquo; something out, it&rsquo;s likely because I remembered it before. This summary does no justice to the workshop, but I want to write them down here before I forget.</p>
 <h5 id="cat-text--grep--ve-regex"><code>cat TEXT | grep -vE REGEX</code></h5>
-<p>Get all lines from <code>TEXT</code> which do not match <code>REGEX</code>. <code>-v</code> means invert match and <code>-E</code> means extended regex.</p>
+<p>Get all lines from <code>TEXT</code> which don&rsquo;t match <code>REGEX</code>. <code>-v</code> means invert match and <code>-E</code> means extended regex.</p>
 <h5 id="cat-text--grep--e---sed-sregexsubstitutionflags"><code>cat TEXT | grep -E '.*' | sed s/REGEX/SUBSTITUTION/FLAGS</code></h5>
 <p>Substitute <code>REGEX</code> match(es) in <code>TEXT</code> with <code>SUBSTITUTION</code>. <code>SUBSTITUTION</code> can be a capture group i.e. <code>\1</code>, <code>\2</code>, <code>\3</code> and so on.</p>
 <h5 id="-sort--nk12"><code>| sort -nk1,2</code></h5>
@@ -154,7 +154,7 @@
 <p>Collapse <strong>adjacent</strong> lines which are duplicates of each other. Prefix each unique line with the total number of lines which collapsed into one (the count).</p>
 <h5 id="-awk-1--1--2--r-t--print-3-"><code>| awk '$1 == 1 &amp;&amp; $2 ~ /^r[^ ]*t$/ { print $3 }'</code></h5>
 <p><code>awk</code> is a programming language with the basic syntax: <code>awk PATTERN { DO THIS IF PATTERN MATCHES }</code>. In the (partial) command above, the pattern is <code>$1 == 1 &amp;&amp; $2 ~ /^r[^ ]*t$/</code>.</p>
-<p><code>$1</code> and <code>$2</code> are the first and second elements, with whitespace as the default delimiter. For the lines which match the pattern, print the 3rd element (<code>$3</code>). For the lines which do not match the pattern, do nothing. These lines do not get printed and we can count the number of matches with <code>| wc -l</code>.</p>
+<p><code>$1</code> and <code>$2</code> are the first and second elements, with whitespace as the default delimiter. For the lines which match the pattern, print the 3rd element (<code>$3</code>). For the lines which don&rsquo;t match the pattern, do nothing. These lines don&rsquo;t get printed and we can count the number of matches with <code>| wc -l</code>.</p>
 <h5 id="-paste--sd--"><code>| paste -sd, -</code></h5>
 <p>Combine lines from the standard output with the specified delimiter (<code>,</code> in this case). <code>-s</code> means serial input e.g. a single file or a bunch of text lines. <code>-d</code> means delimiter and <code>,</code> is the delimiter.</p>
 <h5 id="-bc"><code>| bc</code></h5>

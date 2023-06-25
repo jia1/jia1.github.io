@@ -137,7 +137,7 @@
     </div>
   
   <section class="row article-content">
-    <p>For the past week, I could not fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase did not rebuild and remained stale. This issue does not happen to everyone. I am using a MacBook Air (13-inch, 2017) with 8 GB of RAM.</p>
+    <p>For the past week, I couldn&rsquo;t fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase didn&rsquo;t rebuild and remained stale. This issue does not happen to everyone. I&rsquo;m using a MacBook Air (13-inch, 2017) with 8 GB of RAM.</p>
 <p><img src="/javascript-heap-limit.png" alt="JavaScript heap limit"></p>
 <p>Notice the line above the last which says, <code>FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory</code>. The fix was to update <code>package.json</code> with the following script:</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{

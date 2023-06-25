@@ -4,7 +4,7 @@ date: 2022-04-26T21:10:00+08:00
 draft: false
 tags: ["braindump","react"]
 ---
-I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
+I'm thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
 
 The exercises were very manageable. I learnt the most from the instructor's detailed explanation of how React works:
 
@@ -14,7 +14,7 @@ The exercises were very manageable. I learnt the most from the instructor's deta
 <!-- -->
 - I took JSX for granted and thought it was part of React. Other UI libraries use JSX too.
   - I learnt that JSX is syntax sugar for nested function calls. For example: `React.createElement('someDiv', null, React.createElement(...))`. If not for JSX, we would need to have several of such nested function calls to build composable UI.
-  - Some JSX attributes are metadata for React and do not go into the HTML code. For example, `onClick`.
+  - Some JSX attributes are metadata for React and don't go into the HTML code. For example, `onClick`.
 
 <!-- -->
 - In OOP, classes are blueprints and objects are instantiated from classes. In React, components are blueprints and elements are "instances" of components. In [this article](https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html), there are distinctions between React Components, Elements, and Instances.
@@ -22,12 +22,12 @@ The exercises were very manageable. I learnt the most from the instructor's deta
     - `<Button icon={<FaTrash/>}>` (i.e. passing in an element) and
     - `<Button icon={FaTrash}>` (i.e. passing in a component)
   - Depending on the implementation of `Button`, we can refer to the icon as `{icon}` or `<Icon/>`. To make `icon` become `Icon`, use named destructuring of `props`.
-  - Passing in components may not be ideal since we do not want to pass its config in as props.
+  - Passing in components may not be ideal since we don't want to pass its config in as props.
     - `<Button icon={...} iconColor={...}>` contains props applied to components of varying levels of abstraction. It is untidy and we would not have known if `Button` expects us to configure `icon` outside or inside of `Button`.
 
 <!-- -->
 - Each child in a list should have a unique `key` prop.
-  - I always see this in my console but I did not bother to figure out why. And I did the one thing which the instructor advised against - setting `key` to be the index of the element in the list.
+  - I always see this in my console but I didn't bother to figure out why. And I did the one thing which the instructor advised against - setting `key` to be the index of the element in the list.
   - The `key` prop allows React to run a diff on virtual DOMs.
   - When we remove an element in the middle of the list, the indices of the elements are no longer constant. This reduces the performance of the diff function.
   - Random numbers as `key` are not ideal either. Each re-render regenerates the random numbers and these numbers have a small chance of collision.
@@ -41,7 +41,7 @@ The exercises were very manageable. I learnt the most from the instructor's deta
     - We do this because the component gets regenerated along with the brand new state constants when we call `setMyState`.
 
 <!-- -->
-- We should memoise slow functions with `useMemo` so that we do not rerun it upon re-render.
+- We should memoise slow functions with `useMemo` so that we don't rerun it upon re-render.
   - From [the docs](https://reactjs.org/docs/hooks-reference.html#usememo), the hook accepts a dependency array as its second parameter. The function is re-computed if anything in the dependency array changes.
     - A dependency array is an array which contains variables whose values may change.
 

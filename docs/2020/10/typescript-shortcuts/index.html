@@ -138,7 +138,7 @@
   
   <section class="row article-content">
     <p>TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F <code>TYPESCRIPT_SHORTCUT_1</code> and <code>TYPESCRIPT_SHORTCUT_2</code> to get to the code.</p>
-<p>Context: Yesterday, I did not invest time into inverting a TypeScript <code>Map&lt;string, string&gt;</code>. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.</p>
+<p>Context: Yesterday, I didn&rsquo;t invest time into inverting a TypeScript <code>Map&lt;string, string&gt;</code>. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.</p>
 <p>Here&rsquo;s the new original code:</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#268bd2">import</span> { AES } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js&#39;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> Utf8 <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;crypto-js/enc-utf8&#39;</span>;
@@ -206,7 +206,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> decrypt <span style="color:#719e07">=</span> (cipher: <span style="color:#dc322f">string</span>) <span style="color:#719e07">=&gt;</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#719e07">return</span> AES.decrypt(replaceSymbols(cipher, decodeMap), passphrase).toString(Utf8);
 </span></span><span style="display:flex;"><span>};
-</span></span></code></pre></div><p>While I failed to shorten the code, I reduced the number of literals. I&rsquo;m left with <code>encodeMap</code> and the regex now. From this experience, I figured out why I could not invert a map like <a href="https://stackoverflow.com/questions/56550463/invert-a-map-object">how it&rsquo;s done in JavaScript</a>. It&rsquo;s a <a href="https://github.com/microsoft/TypeScript/issues/8936">typing ambiguity</a> (refer to the comments above).</p>
+</span></span></code></pre></div><p>While I failed to shorten the code, I reduced the number of literals. I&rsquo;m left with <code>encodeMap</code> and the regex now. From this experience, I figured out why I couldn&rsquo;t invert a map like <a href="https://stackoverflow.com/questions/56550463/invert-a-map-object">how it&rsquo;s done in JavaScript</a>. It&rsquo;s a <a href="https://github.com/microsoft/TypeScript/issues/8936">typing ambiguity</a> (refer to the comments above).</p>
 <p>So, to invert a map in TypeScript, do:</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#586e75">// TYPESCRIPT_SHORTCUT_1: Inverting a map
 </span></span></span><span style="display:flex;"><span><span style="color:#586e75">// Remember to replace THE_MAP_YOU_WANT_TO_INVERT, KEY_TYPE and VALUE_TYPE.

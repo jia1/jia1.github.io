@@ -40,7 +40,7 @@ The simplest approach is to place `app-header` and `template-header` inside a si
 
 .template-header {
   padding: 2px;
-  position: fixed; /* Changing to position: sticky; did not work for me. */
+  position: fixed; /* Changing to position: sticky; didn't work for me. */
   top: 56px;
   z-index: 1;
 }

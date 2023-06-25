@@ -10,7 +10,7 @@ Below is a very brief and dry summary of what is more important to me. If I "mis
 
 ##### `cat TEXT | grep -vE REGEX`
 
-Get all lines from `TEXT` which do not match `REGEX`. `-v` means invert match and `-E` means extended regex.
+Get all lines from `TEXT` which don't match `REGEX`. `-v` means invert match and `-E` means extended regex.
 
 ##### `cat TEXT | grep -E '.*' | sed s/REGEX/SUBSTITUTION/FLAGS`
 
@@ -28,7 +28,7 @@ Collapse **adjacent** lines which are duplicates of each other. Prefix each uniq
 
 `awk` is a programming language with the basic syntax: `awk PATTERN { DO THIS IF PATTERN MATCHES }`. In the (partial) command above, the pattern is `$1 == 1 && $2 ~ /^r[^ ]*t$/`.
 
-`$1` and `$2` are the first and second elements, with whitespace as the default delimiter. For the lines which match the pattern, print the 3rd element (`$3`). For the lines which do not match the pattern, do nothing. These lines do not get printed and we can count the number of matches with `| wc -l`.
+`$1` and `$2` are the first and second elements, with whitespace as the default delimiter. For the lines which match the pattern, print the 3rd element (`$3`). For the lines which don't match the pattern, do nothing. These lines don't get printed and we can count the number of matches with `| wc -l`.
 
 ##### `| paste -sd, -`
 

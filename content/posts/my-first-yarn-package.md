@@ -6,7 +6,7 @@ tags: ["javascript"]
 ---
 I wrote my first yarn package (kind of for fun) yesterday. It's strange how I've been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven't published my package, but I'm omw. So, how did I create a package? It just felt like the usual... I followed the [yarn docs](https://classic.yarnpkg.com/en/docs/creating-a-package/).
 
-One difference (compared to my usual activities) was I couldn't do `import { ... } from './blah'` and `export const blah = ...`. It's because Babel isn't around to transpile these. At work, webpack was already configured by DevOps, and I can do anything that's ES6. Here, I only have myself, and it does not make sense to bloat my package with things that do not add functionality. And so I stuck with `const blah = require('./blah')` and `module.exports = { blah }`.
+One difference (compared to my usual activities) was I couldn't do `import { ... } from './blah'` and `export const blah = ...`. It's because Babel isn't around to transpile these. At work, webpack was already configured by DevOps, and I can do anything that's ES6. Here, I only have myself, and it does not make sense to bloat my package with things that don't add functionality. And so I stuck with `const blah = require('./blah')` and `module.exports = { blah }`.
 
 Thinking back, I recalled I added `prettier` into the package since I'm a sucker for tidiness. Although `prettier` does not contribute to the functionality, it contributes to my sanity. I'm not sure if I should remove it before release...? At the very least, I should change these Git hook dependencies to `devDependencies`.
 

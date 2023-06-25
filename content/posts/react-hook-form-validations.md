@@ -4,9 +4,9 @@ date: 2023-04-12T00:12:00+08:00
 draft: false
 tags: ["react"]
 ---
-Feeling a little abashed about [leaving a bug unresolved for the day](https://github.com/opengovsg/FormSG/pull/6087), but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what's the problem with my commit, please do not hesitate to reach out!
+Feeling a little abashed about [leaving a bug unresolved for the day](https://github.com/opengovsg/FormSG/pull/6087), but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what's the problem with my commit, please don't hesitate to reach out!
 
-Back to the main learning point I am trying to share: In [the pull request above](https://github.com/opengovsg/FormSG/pull/6087), look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched. Based on my understanding of the mockups I was given, this was the intended behaviour.
+Back to the main learning point I'm trying to share: In [the pull request above](https://github.com/opengovsg/FormSG/pull/6087), look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched. Based on my understanding of the mockups I was given, this was the intended behaviour.
 
 Though, this was not a default behaviour in `react-hook-form`. So I had to do the following:
 

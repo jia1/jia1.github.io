@@ -14,7 +14,7 @@
       
       <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
       <description>Polling wasn&amp;rsquo;t effective because:
-Hot reloading did not happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
+Hot reloading didn&amp;rsquo;t happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
 { &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
     </item>
     
@@ -34,7 +34,7 @@ Hot reloading did not happen because of some heap limit error. I called the wron
       <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/polling/</guid>
-      <description>There were instances where users filled up a time-consuming form but could not submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
+      <description>There were instances where users filled up a time-consuming form but couldn&amp;rsquo;t submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
     </item>
     
     <item>

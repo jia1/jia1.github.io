@@ -4,7 +4,7 @@ date: 2020-10-27T20:51:00+08:00
 draft: false
 tags: ["git"]
 ---
-I did not realise [my pull request](https://github.com/calcsg/core/pull/5) was between branches of the same repository. Not sure if my friend realised. I moved the feature branch's latest updates to my fork's feature branch. I then made [another pull request](https://github.com/calcsg/core/pull/6). I used the following commands to straighten things out:
+I didn't realise [my pull request](https://github.com/calcsg/core/pull/5) was between branches of the same repository. Not sure if my friend realised. I moved the feature branch's latest updates to my fork's feature branch. I then made [another pull request](https://github.com/calcsg/core/pull/6). I used the following commands to straighten things out:
 
 ```bash
 # Create a local branch with the same name as the origin remote feature branch
@@ -52,7 +52,7 @@ git remote remove jiayee
 git push --set-upstream origin feat/simple-compound-interest-calculators
 ```
 
-My feature branch stopped tracking its remote branch because I removed the remote. That was why I called another `git push`. The `git push` did not push anything because the remote branch was up-to-date. And, as expected, `git remote -v` looks like:
+My feature branch stopped tracking its remote branch because I removed the remote. That was why I called another `git push`. The `git push` didn't push anything because the remote branch was up-to-date. And, as expected, `git remote -v` looks like:
 
 ```bash
 origin	git@github.com:calcsg/core.git (fetch)

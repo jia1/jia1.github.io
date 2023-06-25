@@ -6,8 +6,8 @@ tags: ["react"]
 ---
 I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
 
-1. If we do not do anything, we will need to insert `<ProgressBar .../>` and the like into every form component.
-1. Sharing the forms/pages across other flows which do not need to progress bar is difficult.
+1. If we don't do anything, we will need to insert `<ProgressBar .../>` and the like into every form component.
+1. Sharing the forms/pages across other flows which don't need the progress bar is difficult.
 1. The form flow will become more obscure. This is because the flow is not grouped or labelled with anything related to a multi-step form.
 
 I came up with the following two designs:

@@ -226,7 +226,7 @@ One difference (compared to my usual activities) was I couldn&rsquo;t do import 
 
   </div>
   <section class="nar-row article-summary">
-    I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I did not have much luck with auto-configuring Mongo collections (yet).
+    I auto-configured Spring Boot REST controllers by adding their names to the spring.factories file. On the other hand, I didn&rsquo;t have much luck with auto-configuring Mongo collections (yet).
 I then ran the consumer&rsquo;s codebase and used Postman to hit the newly-offered endpoints. Below is the response seen in Postman:
 { &#34;error&#34;: { &#34;IllegalArgumentException&#34;: &#34;Couldn&#39;t find PersistentEntity for type class yourTLD.yourOrg.yourProject.somePackage.SomeModel!&#34; } } I thought the Mongo repository was not auto-configured, so I went to check the consumer&rsquo;s logs.
   </section>

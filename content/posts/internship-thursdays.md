@@ -17,15 +17,15 @@ And here's my answer script for the questions asked during the panel discussion:
  - Soft skills (be a better person!)
 1. Mentorship
  - Learn from the professionals
- - Make sure I am on the right track
+ - Make sure I'm on the right track
  - Not for hand-holding but to help unblock when shit hits the fan (don't say this for real)
 1. Learn more about the company
- - Whether I am a good fit
+ - Whether I'm a good fit
 1. Confirm my choice of career
 
 > How else would I have prepared for an internship?
 
-I wouldn't. I am convinced that I should focus on improving my technical and soft skills. This is so I can be better at what I'm interested in and stay motivated.
+I wouldn't. I'm convinced that I should focus on improving my technical and soft skills. This is so I can be better at what I'm interested in and stay motivated.
 
 And how would you know if an internship is something you are going to like? Ask about the company and internship.
 
@@ -34,7 +34,7 @@ And how would you know if an internship is something you are going to like? Ask 
 Not receiving a return offer doesn't mean that you are bad or incompetent.
 
 1. Attitude
- - It is good to have basic soft skills so that you do not step on people's toes. Feel free to check with your peers and/or CFG on whether you are on the right track.
+ - It is good to have basic soft skills so that you don't step on people's toes. Feel free to check with your peers and/or CFG on whether you are on the right track.
 1. Ability to learn
  - Companies are not supposed to expect 10 years of experience from you. But, they can expect you to pick up the necessary skills to deliver your project.
  - Furthermore, technology is very fast-paced. We have to be able to catch up with these changes.
@@ -60,6 +60,6 @@ Last but not least, there was one question which I prepared for but wasn't asked
 1. Apply
  - Study about the company first.
  - Talk to them at career fairs or other outreach events.
- - Do not be afraid of failure.
+ - Don't be afraid of failure.
 
 Hope these answers will help someone somehow sometime somewhere!

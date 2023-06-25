@@ -142,7 +142,7 @@
     </div>
   
   <section class="row article-content">
-    <p>I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.</p>
+    <p>I&rsquo;m thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.</p>
 <p>The exercises were very manageable. I learnt the most from the instructor&rsquo;s detailed explanation of how React works:</p>
 <ul>
 <li>Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX. I found <a href="https://stackoverflow.com/questions/41713966/how-babel-and-jsx-related-or-differ">a Stack Overflow thread</a> which describes the relationship between these technologies.
@@ -156,7 +156,7 @@
 <li>I took JSX for granted and thought it was part of React. Other UI libraries use JSX too.
 <ul>
 <li>I learnt that JSX is syntax sugar for nested function calls. For example: <code>React.createElement('someDiv', null, React.createElement(...))</code>. If not for JSX, we would need to have several of such nested function calls to build composable UI.</li>
-<li>Some JSX attributes are metadata for React and do not go into the HTML code. For example, <code>onClick</code>.</li>
+<li>Some JSX attributes are metadata for React and don&rsquo;t go into the HTML code. For example, <code>onClick</code>.</li>
 </ul>
 </li>
 </ul>
@@ -171,7 +171,7 @@
 </ul>
 </li>
 <li>Depending on the implementation of <code>Button</code>, we can refer to the icon as <code>{icon}</code> or <code>&lt;Icon/&gt;</code>. To make <code>icon</code> become <code>Icon</code>, use named destructuring of <code>props</code>.</li>
-<li>Passing in components may not be ideal since we do not want to pass its config in as props.
+<li>Passing in components may not be ideal since we don&rsquo;t want to pass its config in as props.
 <ul>
 <li><code>&lt;Button icon={...} iconColor={...}&gt;</code> contains props applied to components of varying levels of abstraction. It is untidy and we would not have known if <code>Button</code> expects us to configure <code>icon</code> outside or inside of <code>Button</code>.</li>
 </ul>
@@ -183,7 +183,7 @@
 <ul>
 <li>Each child in a list should have a unique <code>key</code> prop.
 <ul>
-<li>I always see this in my console but I did not bother to figure out why. And I did the one thing which the instructor advised against - setting <code>key</code> to be the index of the element in the list.</li>
+<li>I always see this in my console but I didn&rsquo;t bother to figure out why. And I did the one thing which the instructor advised against - setting <code>key</code> to be the index of the element in the list.</li>
 <li>The <code>key</code> prop allows React to run a diff on virtual DOMs.</li>
 <li>When we remove an element in the middle of the list, the indices of the elements are no longer constant. This reduces the performance of the diff function.</li>
 <li>Random numbers as <code>key</code> are not ideal either. Each re-render regenerates the random numbers and these numbers have a small chance of collision.</li>
@@ -207,7 +207,7 @@
 </ul>
 <!-- raw HTML omitted -->
 <ul>
-<li>We should memoise slow functions with <code>useMemo</code> so that we do not rerun it upon re-render.
+<li>We should memoise slow functions with <code>useMemo</code> so that we don&rsquo;t rerun it upon re-render.
 <ul>
 <li>From <a href="https://reactjs.org/docs/hooks-reference.html#usememo">the docs</a>, the hook accepts a dependency array as its second parameter. The function is re-computed if anything in the dependency array changes.
 <ul>

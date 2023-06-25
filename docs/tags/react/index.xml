@@ -13,8 +13,8 @@
       <pubDate>Wed, 12 Apr 2023 00:12:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/04/react-hook-form-validations/</guid>
-      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please do not hesitate to reach out!
-Back to the main learning point I am trying to share: In the pull request above, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched.</description>
+      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please don&amp;rsquo;t hesitate to reach out!
+Back to the main learning point I&amp;rsquo;m trying to share: In the pull request above, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched.</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@ Some keywords, libraries or links of interest: usehooks-ts eslint-plugin-react-h
       <pubDate>Tue, 26 Apr 2022 21:10:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
-      <description>I am thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
+      <description>I&amp;rsquo;m thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
 The exercises were very manageable. I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
 Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX.</description>
     </item>
@@ -95,7 +95,7 @@ Forms which need data from the preceding forms Dynamic form links I can deal wit
       
       <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
       <description>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
-If we do not do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which do not need to progress bar is difficult.</description>
+If we don&amp;rsquo;t do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which don&amp;rsquo;t need the progress bar is difficult. The form flow will become more obscure.</description>
     </item>
     
   </channel>

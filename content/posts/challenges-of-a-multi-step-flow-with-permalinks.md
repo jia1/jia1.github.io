@@ -43,7 +43,7 @@ You should have noticed stuff like `:param1` and `:param2`. These are dynamic at
 1. Store the referer in a persistent Redux store. I may need to investigate Redux middlewares to do this.
 1. Move `:param1` and `:param2` to query parameters. Then, access the query string with Reach router's `useLocation().search`. However, there are existing links which have `:param1` and `:param2`. I don't want to break existing implementations.
 
-It seems I do not have much a choice other than investigating Redux middlewares to make Redux storage persistent so that I can store the referers. If I can persist the Redux storage, I would want to cache the user's input from the previous forms as well so that he/she can navigate to a form containing his/her recent response.
+It seems I don't have much a choice other than investigating Redux middlewares to make Redux storage persistent so that I can store the referers. If I can persist the Redux storage, I would want to cache the user's input from the previous forms as well so that he/she can navigate to a form containing his/her recent response.
 
 These concerns look like things that a multi-step form library should have covered. Unfortunately, frontend components are not obliged to provide out-of-the-box state management.
 

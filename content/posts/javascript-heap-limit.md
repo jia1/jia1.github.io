@@ -4,7 +4,7 @@ date: 2020-10-13T19:11:00+08:00
 draft: false
 tags: ["javascript"]
 ---
-For the past week, I could not fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase did not rebuild and remained stale. This issue does not happen to everyone. I am using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
+For the past week, I couldn't fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase didn't rebuild and remained stale. This issue does not happen to everyone. I'm using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
 
 ![JavaScript heap limit](/javascript-heap-limit.png)
 

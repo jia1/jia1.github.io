@@ -14,7 +14,7 @@
       
       <guid>https://jiayee.net/2020/12/numerical-ids-in-mongodb/</guid>
       <description>Auto-generated IDs in MongoDB are &amp;ldquo;strange&amp;rdquo; strings. I quote &amp;ldquo;strange&amp;rdquo; because they are actually derived not out of nowhere despite looking like they had nothing to do with anything. But to users, these IDs are strange.
-I had a collection of documents with a name property. Originally, name was annotated with @Id. But it meant that I could not change the value of name. name was also annotated with regex validation (@Pattern(.</description>
+I had a collection of documents with a name property. Originally, name was annotated with @Id. But it meant that I couldn&amp;rsquo;t change the value of name. name was also annotated with regex validation (@Pattern(.</description>
     </item>
     
   </channel>

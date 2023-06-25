@@ -44,4 +44,4 @@ func main() {
 // Backtick strings are useable
 ```
 
-I am also reading about design patterns in the context of JavaScript and jQuery. There's so much to read, and I'm so glad I purchased this ebook reader. I can finally avoid the glare I've been getting from my usual screens!
+I'm also reading about design patterns in the context of JavaScript and jQuery. There's so much to read, and I'm so glad I purchased this ebook reader. I can finally avoid the glare I've been getting from my usual screens!

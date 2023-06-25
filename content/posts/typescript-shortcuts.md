@@ -6,7 +6,7 @@ tags: ["javascript"]
 ---
 TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F `TYPESCRIPT_SHORTCUT_1` and `TYPESCRIPT_SHORTCUT_2` to get to the code.
 
-Context: Yesterday, I did not invest time into inverting a TypeScript `Map<string, string>`. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
+Context: Yesterday, I didn't invest time into inverting a TypeScript `Map<string, string>`. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
 
 Here's the new original code:
 
@@ -83,7 +83,7 @@ export const decrypt = (cipher: string) => {
 };
 ```
 
-While I failed to shorten the code, I reduced the number of literals. I'm left with `encodeMap` and the regex now. From this experience, I figured out why I could not invert a map like [how it's done in JavaScript](https://stackoverflow.com/questions/56550463/invert-a-map-object). It's a [typing ambiguity](https://github.com/microsoft/TypeScript/issues/8936) (refer to the comments above).
+While I failed to shorten the code, I reduced the number of literals. I'm left with `encodeMap` and the regex now. From this experience, I figured out why I couldn't invert a map like [how it's done in JavaScript](https://stackoverflow.com/questions/56550463/invert-a-map-object). It's a [typing ambiguity](https://github.com/microsoft/TypeScript/issues/8936) (refer to the comments above).
 
 So, to invert a map in TypeScript, do:
 

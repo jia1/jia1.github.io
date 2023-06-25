@@ -13,10 +13,10 @@
       <pubDate>Sat, 24 Jun 2023 23:23:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/06/dont-catch-everything/</guid>
-      <description>I did a catch when I didn&amp;rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure did not appear.
+      <description>I did a catch when I didn&amp;rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure didn&amp;rsquo;t appear.
 In this commit, I removed the catch clause.
 And in another commit, I defined what failure is.
-While writing about this, I wondered if there could be a better way to express identical requirements.</description>
+While writing about this, I wondered if there could be a better way to express identical requirements. A quick search led me to this Stack Overflow thread - throw (but not in AngularJS).</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ The answer which received the bounty recommended the following:
       <pubDate>Tue, 13 Oct 2020 19:11:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/javascript-heap-limit/</guid>
-      <description>For the past week, I could not fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase did not rebuild and remained stale. This issue does not happen to everyone. I am using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
+      <description>For the past week, I couldn&amp;rsquo;t fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase didn&amp;rsquo;t rebuild and remained stale. This issue does not happen to everyone. I&amp;rsquo;m using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
 Notice the line above the last which says, FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory.</description>
     </item>
     
@@ -76,7 +76,7 @@ import nerdamer from &amp;#39;nerdamer/nerdamer.core&amp;#39;; import Algebra fr
       
       <guid>https://jiayee.net/2020/10/typescript-shortcuts/</guid>
       <description>TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F TYPESCRIPT_SHORTCUT_1 and TYPESCRIPT_SHORTCUT_2 to get to the code.
-Context: Yesterday, I did not invest time into inverting a TypeScript Map&amp;lt;string, string&amp;gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
+Context: Yesterday, I didn&amp;rsquo;t invest time into inverting a TypeScript Map&amp;lt;string, string&amp;gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
 Here&amp;rsquo;s the new original code:</description>
     </item>
     

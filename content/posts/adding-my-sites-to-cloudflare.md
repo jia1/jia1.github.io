@@ -4,7 +4,7 @@ date: 2020-09-13T11:34:00+08:00
 draft: false
 tags: ["devops"]
 ---
-I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers do not offer. Well, they did not need to offer those features. In Cloudflare, I get to see features such as:
+I added my domains to Cloudflare. Cloudflare offers many cool features that my domain providers don't offer. Well, they didn't need to offer those features. In Cloudflare, I get to see features such as:
 
 - Web traffic analytics
 - Set up DNSSEC
@@ -34,4 +34,4 @@ Steps for Netim:
 - Select "Custom nameservers".
 - Do your thing!
 
-Setting the DNS records (i.e. updating the NS records) did not help. I had to go into the specific configuration or tab for nameservers in each of the domain providers to set them up.
+Setting the DNS records (i.e. updating the NS records) didn't help. I had to go into the specific configuration or tab for nameservers in each of the domain providers to set them up.

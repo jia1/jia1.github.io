@@ -39,7 +39,7 @@ func main() {
 // float32 and float64 (use float64)
 // complex64 and complex128
 
-// Double-quoted strings cannot contain newlines but allow special escape sequences
+// Double-quoted strings can't contain newlines but allow special escape sequences
 // i.e. \n gets replaced with a real newline
 // Backtick strings are useable
 ```

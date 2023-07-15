@@ -137,7 +137,7 @@
     </div>
   
   <section class="row article-content">
-    <p>Feeling a little abashed about <a href="https://github.com/opengovsg/FormSG/pull/6087">leaving a bug unresolved for the day</a>, but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what&rsquo;s the problem with my commit, please don&rsquo;t hesitate to reach out!</p>
+    <p>Feeling a little abashed about <a href="https://github.com/opengovsg/FormSG/pull/6087">leaving a bug unresolved for the day</a>, but I want a break and keep the team posted. And I also want to share what I&rsquo;ve learnt. However, if you know what&rsquo;s the problem with my commit, please don&rsquo;t hesitate to reach out!</p>
 <p>Back to the main learning point I&rsquo;m trying to share: In <a href="https://github.com/opengovsg/FormSG/pull/6087">the pull request above</a>, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched. Based on my understanding of the mockups I was given, this was the intended behaviour.</p>
 <p>Though, this was not a default behaviour in <code>react-hook-form</code>. So I had to do the following:</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#268bd2">import</span> { SubmitHandler, useForm } from <span style="color:#2aa198">&#39;react-hook-form&#39;</span>
@@ -156,13 +156,13 @@
 </span></span><span style="display:flex;"><span>    trigger()
 </span></span><span style="display:flex;"><span>  }, [])
 </span></span><span style="display:flex;"><span>...
-</span></span></code></pre></div><p>I have not looked into whether the current approach is the ideal approach. If I come across anything better, I&rsquo;ll write about it!</p>
+</span></span></code></pre></div><p>I&rsquo;ve not looked into whether the current approach is the ideal approach. If I come across anything better, I&rsquo;ll write about it!</p>
 <p>As for the actual validation functions, I got to know of a shorthand through <a href="https://stackoverflow.com/questions/66927236/how-do-i-pass-in-a-custom-validate-message-in-react-hook-form">Stack Overflow</a>. As a result, registration looked like:</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>{...register(<span style="color:#2aa198">&#39;email&#39;</span>, {
 </span></span><span style="display:flex;"><span>  required<span style="color:#719e07">:</span> REQUIRED_ERROR,
 </span></span><span style="display:flex;"><span>  validate<span style="color:#719e07">:</span> (value) =&gt; isEmail(value) <span style="color:#719e07">||</span> INVALID_EMAIL_ERROR,
 </span></span><span style="display:flex;"><span>})}
-</span></span></code></pre></div><p>I suppose I could merge the check for <code>required</code> into <code>validate</code>, but it would not be as readable.</p>
+</span></span></code></pre></div><p>I suppose I could merge the check for <code>required</code> into <code>validate</code>, but it wouldn&rsquo;t be as readable.</p>
 
   </section>
   

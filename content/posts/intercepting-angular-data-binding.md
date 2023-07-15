@@ -4,7 +4,7 @@ date: 2020-09-23T21:40:00+08:00
 draft: false
 tags: ["angular"]
 ---
-I have two form switches. Let's call them A and B. I had to program them such that:
+I've two form switches. Let's call them A and B. I had to program them such that:
 
 1. When A is off, disable and switch B off.
 1. When A is on, disable and switch B off.
@@ -14,7 +14,7 @@ We can ignore backend logic because I programmed it such that if A is off, ignor
 So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me! The directive was a sweet spot:
 
 1. Whenever A changes, I need to check A. If A is off, force B to be off.
-1. The checks cannot happen at the controller or model because it'd be too "late".
+1. The checks can't happen at the controller or model because it'd be too "late".
 1. I can't do much at the view because I imported the switches from a library which handled `onClick`.
 1. I also needed to call the toast service when A is off. I can put this call in the directive (along with the many other things I may need in the future).
 

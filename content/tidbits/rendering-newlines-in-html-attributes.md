@@ -10,7 +10,7 @@ Doing
 <textarea placeholder="line1\nline2">
 ```
 
-will not work, but doing
+won't work, but doing
 
 ```html
 <textarea placeholder="{{ somethingFromScope }}">

@@ -31,7 +31,7 @@ public class BlahController extends MyAbstractController<MyModel> {
 }
 ```
 
-And so, all seemed well..., until I had to integrate AOP. My ideal aspect was one that could inherit basic functionality from its abstract parent. But [JVM would not allow it](https://stackoverflow.com/questions/42607015/emulate-annotation-inheritance-for-interfaces-and-methods-with-aspectj).
+And so, all seemed well..., until I had to integrate AOP. My ideal aspect was one that could inherit basic functionality from its abstract parent. But [JVM wouldn't allow it](https://stackoverflow.com/questions/42607015/emulate-annotation-inheritance-for-interfaces-and-methods-with-aspectj).
 
 ```java
 // MyAbstractAspect

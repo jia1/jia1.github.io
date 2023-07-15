@@ -4,7 +4,7 @@ date: 2020-10-06T21:48:00+08:00
 draft: false
 tags: ["react"]
 ---
-I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
+I've a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
 
 1. If we don't do anything, we will need to insert `<ProgressBar .../>` and the like into every form component.
 1. Sharing the forms/pages across other flows which don't need the progress bar is difficult.
@@ -119,7 +119,7 @@ export const MultiStepForm: FC<Props> = (props: Props) => {
 };
 ```
 
-This design is a more conventional way of building multi-step forms. Each step appears/disappears, depending on the user's progress. As such, each step will not have its permalink. Redux can help pass data from one form to another without modifying the child components.
+This design is a more conventional way of building multi-step forms. Each step appears/disappears, depending on the user's progress. As such, each step won't have its permalink. Redux can help pass data from one form to another without modifying the child components.
 
 As with the first design, I will need to extend the `onSubmit` handlers for the same reasons.
 

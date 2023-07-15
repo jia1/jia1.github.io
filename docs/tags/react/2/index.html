@@ -145,7 +145,7 @@
 
   </div>
   <section class="nar-row article-summary">
-    I use Reach Router. I have a component which isn&rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing Jacek&rsquo;s hint:
+    I use Reach Router. I&rsquo;ve a component which isn&rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing Jacek&rsquo;s hint:
 &lt;div&gt; &lt;Match path=&#34;/*&#34;&gt; {(props) =&gt; ( &lt;MyComponent path=&#34;/*&#34; match={props.match ?? &#39;&#39;} /&gt; )} &lt;/Match&gt; &lt;Router&gt; ... &lt;/Router&gt; &lt;/div&gt; interface Props { match: any; } export const MyComponent: FC&lt;Props&gt; = (props: Props) =&gt; { const pathname = props.
   </section>
   <p>
@@ -271,7 +271,7 @@ Forms which need data from the preceding forms Dynamic form links I can deal wit
 
   </div>
   <section class="nar-row article-summary">
-    I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
+    I&rsquo;ve a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
 If we don&rsquo;t do anything, we will need to insert &lt;ProgressBar .../&gt; and the like into every form component. Sharing the forms/pages across other flows which don&rsquo;t need the progress bar is difficult. The form flow will become more obscure.
   </section>
   <p>

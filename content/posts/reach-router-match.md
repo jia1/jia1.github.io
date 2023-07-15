@@ -4,7 +4,7 @@ date: 2020-12-04T21:10:00+08:00
 draft: false
 tags: ["react","reach"]
 ---
-I use Reach Router. I have a component which isn't a child of `Router`, so it does not have the `useLocation` hook. But I need to access the current URL in that component. Here's how I did it after seeing [Jacek's hint](https://github.com/reach/router/issues/318):
+I use Reach Router. I've a component which isn't a child of `Router`, so it does not have the `useLocation` hook. But I need to access the current URL in that component. Here's how I did it after seeing [Jacek's hint](https://github.com/reach/router/issues/318):
 
 ```html
 <div>

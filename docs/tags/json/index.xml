@@ -13,7 +13,7 @@
       <pubDate>Tue, 29 Sep 2020 18:22:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/jslt/</guid>
-      <description>I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
+      <description>I&amp;rsquo;ve a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
 My GraphQL query:
 query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:</description>
     </item>

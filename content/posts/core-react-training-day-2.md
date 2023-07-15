@@ -26,7 +26,7 @@ Day 2 was a continuation of our understanding of the `useEffect` hook. Some of c
   - `useEffect` with a non-vacant dependency array is similar to a `componentDidUpdate` with an if statement checking the state of the dependency.
 
 <!-- -->
-- We cannot run `setMyState` on an unmounted component. There can be race conditions where the component can either be mounted or unmounted when we run `useEffect`.
+- We can't run `setMyState` on an unmounted component. There can be race conditions where the component can either be mounted or unmounted when we run `useEffect`.
 
 <!-- -->
 - `useEffect` can return a cleanup function in the form: return () => {}; ([docs](https://react.dev/reference/react/useEffect#useeffect))

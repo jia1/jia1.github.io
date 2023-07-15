@@ -4,7 +4,7 @@ date: 2022-04-26T21:10:00+08:00
 draft: false
 tags: ["braindump","react"]
 ---
-I'm thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
+I'm thankful to be able to attend a React training workshop organised by my company. I've been using React in my job but this workshop made me realise I still have lots to learn.
 
 The exercises were very manageable. I learnt the most from the instructor's detailed explanation of how React works:
 
@@ -23,7 +23,7 @@ The exercises were very manageable. I learnt the most from the instructor's deta
     - `<Button icon={FaTrash}>` (i.e. passing in a component)
   - Depending on the implementation of `Button`, we can refer to the icon as `{icon}` or `<Icon/>`. To make `icon` become `Icon`, use named destructuring of `props`.
   - Passing in components may not be ideal since we don't want to pass its config in as props.
-    - `<Button icon={...} iconColor={...}>` contains props applied to components of varying levels of abstraction. It is untidy and we would not have known if `Button` expects us to configure `icon` outside or inside of `Button`.
+    - `<Button icon={...} iconColor={...}>` contains props applied to components of varying levels of abstraction. It is untidy and we wouldn't have known if `Button` expects us to configure `icon` outside or inside of `Button`.
 
 <!-- -->
 - Each child in a list should have a unique `key` prop.
@@ -51,14 +51,14 @@ The exercises were very manageable. I learnt the most from the instructor's deta
 <!-- -->
 - There is only one re-render per event loop.
   - If we run multiple `setMyState` in a function, there will only be 1 re-render.
-    - This means that subsequent statements in the same function should not expect to retrieve the latest state.
+    - This means that subsequent statements in the same function shouldn't expect to retrieve the latest state.
 
 <!-- -->
 - [Derived states](https://stackoverflow.com/questions/58288286/what-is-derived-state-in-react-and-why-is-it-important).
 
 <!-- -->
 - React hooks must be called in the same order in every component re-render.
-  - As such, we cannot put hooks inside conditionals.
+  - As such, we can't put hooks inside conditionals.
 
 <!-- -->
 - [useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer)

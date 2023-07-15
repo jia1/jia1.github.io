@@ -4,7 +4,7 @@ date: 2020-11-11T20:43:00+08:00
 draft: false
 tags: ["css"]
 ---
-I found myself entangled in CSS. I needed `app-header` to stick to the top at all times. I also needed `template-header` to be right beneath `app-header` at all times. Lastly, `embedded-content` should begin immediately after `template-header` and should not be sticky. Here's how the page organisation might look like:
+I found myself entangled in CSS. I needed `app-header` to stick to the top at all times. I also needed `template-header` to be right beneath `app-header` at all times. Lastly, `embedded-content` should begin immediately after `template-header` and shouldn't be sticky. Here's how the page organisation might look like:
 
 ```html
 <div class="app">

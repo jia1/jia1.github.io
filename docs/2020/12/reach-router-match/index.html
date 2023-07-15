@@ -142,7 +142,7 @@
     </div>
   
   <section class="row article-content">
-    <p>I use Reach Router. I have a component which isn&rsquo;t a child of <code>Router</code>, so it does not have the <code>useLocation</code> hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing <a href="https://github.com/reach/router/issues/318">Jacek&rsquo;s hint</a>:</p>
+    <p>I use Reach Router. I&rsquo;ve a component which isn&rsquo;t a child of <code>Router</code>, so it does not have the <code>useLocation</code> hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing <a href="https://github.com/reach/router/issues/318">Jacek&rsquo;s hint</a>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#268bd2">div</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#268bd2">Match</span> path<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;/*&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>    {(props) =&gt; (

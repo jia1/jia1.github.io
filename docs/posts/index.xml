@@ -35,7 +35,7 @@ I like that Cloudflare is so hassle-free to set up. It caches my site upon reque
       <pubDate>Wed, 12 Apr 2023 00:12:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2023/04/react-hook-form-validations/</guid>
-      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I have learnt. However, if you know what&amp;rsquo;s the problem with my commit, please don&amp;rsquo;t hesitate to reach out!
+      <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I&amp;rsquo;ve learnt. However, if you know what&amp;rsquo;s the problem with my commit, please don&amp;rsquo;t hesitate to reach out!
 Back to the main learning point I&amp;rsquo;m trying to share: In the pull request above, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched.</description>
     </item>
     
@@ -94,7 +94,7 @@ Some keywords, libraries or links of interest: usehooks-ts eslint-plugin-react-h
       <pubDate>Tue, 26 Apr 2022 21:10:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
-      <description>I&amp;rsquo;m thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.
+      <description>I&amp;rsquo;m thankful to be able to attend a React training workshop organised by my company. I&amp;rsquo;ve been using React in my job but this workshop made me realise I still have lots to learn.
 The exercises were very manageable. I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
 Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX.</description>
     </item>
@@ -125,7 +125,7 @@ To create this interceptor, simply extend the HandlerInterceptor interface. By o
       <pubDate>Fri, 04 Dec 2020 21:19:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/12/truncating-strings-with-css/</guid>
-      <description>A few days ago, I would not have realised truncating strings by number of lines with CSS was possible. I was beginning to sweat when I received a request to truncate strings by number of lines instead of number of characters. To be fair, only SWEs would think of truncating by number of characters instead of line numbers&amp;hellip;
+      <description>A few days ago, I wouldn&amp;rsquo;t have realised truncating strings by number of lines with CSS was possible. I was beginning to sweat when I received a request to truncate strings by number of lines instead of number of characters. To be fair, only SWEs would think of truncating by number of characters instead of line numbers&amp;hellip;
 My teammate shared an answer he found at CSS-Tricks. If I recall, it didn&amp;rsquo;t work out for me because of the way the containers were styled.</description>
     </item>
     
@@ -135,7 +135,7 @@ My teammate shared an answer he found at CSS-Tricks. If I recall, it didn&amp;rs
       <pubDate>Fri, 04 Dec 2020 21:10:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/12/reach-router-match/</guid>
-      <description>I use Reach Router. I have a component which isn&amp;rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&amp;rsquo;s how I did it after seeing Jacek&amp;rsquo;s hint:
+      <description>I use Reach Router. I&amp;rsquo;ve a component which isn&amp;rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&amp;rsquo;s how I did it after seeing Jacek&amp;rsquo;s hint:
 &amp;lt;div&amp;gt; &amp;lt;Match path=&amp;#34;/*&amp;#34;&amp;gt; {(props) =&amp;gt; ( &amp;lt;MyComponent path=&amp;#34;/*&amp;#34; match={props.match ?? &amp;#39;&amp;#39;} /&amp;gt; )} &amp;lt;/Match&amp;gt; &amp;lt;Router&amp;gt; ... &amp;lt;/Router&amp;gt; &amp;lt;/div&amp;gt; interface Props { match: any; } export const MyComponent: FC&amp;lt;Props&amp;gt; = (props: Props) =&amp;gt; { const pathname = props.</description>
     </item>
     
@@ -174,7 +174,7 @@ I had a collection of documents with a name property. Originally, name was annot
       <pubDate>Wed, 11 Nov 2020 20:43:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/11/sticky/</guid>
-      <description>I found myself entangled in CSS. I needed app-header to stick to the top at all times. I also needed template-header to be right beneath app-header at all times. Lastly, embedded-content should begin immediately after template-header and should not be sticky. Here&amp;rsquo;s how the page organisation might look like:
+      <description>I found myself entangled in CSS. I needed app-header to stick to the top at all times. I also needed template-header to be right beneath app-header at all times. Lastly, embedded-content should begin immediately after template-header and shouldn&amp;rsquo;t be sticky. Here&amp;rsquo;s how the page organisation might look like:
 &amp;lt;div class=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;app-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;app-content&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-container&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;embedded-content&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; The simplest approach is to place app-header and template-header inside a single div.</description>
     </item>
     
@@ -343,7 +343,7 @@ Forms which need data from the preceding forms Dynamic form links I can deal wit
       <pubDate>Tue, 06 Oct 2020 21:48:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
-      <description>I have a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
+      <description>I&amp;rsquo;ve a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
 If we don&amp;rsquo;t do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which don&amp;rsquo;t need the progress bar is difficult. The form flow will become more obscure.</description>
     </item>
     
@@ -353,7 +353,7 @@ If we don&amp;rsquo;t do anything, we will need to insert &amp;lt;ProgressBar ..
       <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/polling/</guid>
-      <description>There were instances where users filled up a time-consuming form but couldn&amp;rsquo;t submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
+      <description>There were instances where users filled up a time-consuming form but couldn&amp;rsquo;t submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I&amp;rsquo;ve not gotten them to work.</description>
     </item>
     
     <item>
@@ -413,7 +413,7 @@ package main import &amp;#34;fmt&amp;#34; b := &amp;#34;Hello, world!&amp;#34; /
       <pubDate>Tue, 29 Sep 2020 18:22:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/jslt/</guid>
-      <description>I have a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
+      <description>I&amp;rsquo;ve a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
 My GraphQL query:
 query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:</description>
     </item>
@@ -455,7 +455,7 @@ At first, the tooltip looked like:
       <pubDate>Wed, 23 Sep 2020 21:40:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
-      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
+      <description>I&amp;rsquo;ve two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
 When A is off, disable and switch B off. When A is on, disable and switch B off. We can ignore backend logic because I programmed it such that if A is off, ignore B.
 So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!</description>
     </item>
@@ -547,7 +547,7 @@ Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to:
       <pubDate>Sun, 13 Sep 2020 21:56:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/jest-for-the-first-time/</guid>
-      <description>I needed to test a feature which I have been building for GovTech&amp;rsquo;s FormSG. To test it, I had to mock a function in the superclass of an instance generated by a factory method call. I once considered stripping away the barriers between the mock and the test. But, I didn&amp;rsquo;t want to refactor a codebase which I&amp;rsquo;m not too familiar with.
+      <description>I needed to test a feature which I&amp;rsquo;ve been building for GovTech&amp;rsquo;s FormSG. To test it, I had to mock a function in the superclass of an instance generated by a factory method call. I once considered stripping away the barriers between the mock and the test. But, I didn&amp;rsquo;t want to refactor a codebase which I&amp;rsquo;m not too familiar with.
 Below is a visualisation of the &amp;ldquo;barriers&amp;rdquo; between the mock and the test:</description>
     </item>
     

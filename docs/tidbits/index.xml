@@ -893,7 +893,7 @@ Picture from zerochan and &amp;ldquo;Yashahime: Princess Half-Demon&amp;rdquo; W
       
       <guid>https://jiayee.net/tidbits/rendering-newlines-in-html-attributes/</guid>
       <description>Doing
-&amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; will not work, but doing
+&amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; won&amp;rsquo;t work, but doing
 &amp;lt;textarea placeholder=&amp;#34;{{ somethingFromScope }}&amp;#34;&amp;gt; where somethingFromScope is line1\nline2 will work as expected!</description>
     </item>
     

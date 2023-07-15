@@ -16,9 +16,9 @@ Thank you, A, for always being patient when explaining the various parts of the 
 
 Thank you, YH, for leading several of our team meetings and introducing so many areas for improvement in our products and the team itself. Our monitoring capabilities would be close to zero if not for you. While we may not always agree on everything during some of our technical discussions, it was important to understand both sides of the argument. I believe we did, and our interactions have helped me iterate towards informed and well-considered decisions.
 
-Thank you, HY, for being such a joy to work with. You are my first female teammate (let's not count school projects) and I liked that we confided in each other a lot - about life, career, work and so on. I hope I have been a great source of support as you were to me. And not to forget, your massive contributions to the SB and TE projects have improved the lives of many.
+Thank you, HY, for being such a joy to work with. You are my first female teammate (let's not count school projects) and I liked that we confided in each other a lot - about life, career, work and so on. I hope I've been a great source of support as you were to me. And not to forget, your massive contributions to the SB and TE projects have improved the lives of many.
 
-Thank you, E and I, for working round the clock to disambiguate stakeholder needs, managing their expectations and ensuring we work on what's important. The XT project would not have come to fruition so quickly without your help.
+Thank you, E and I, for working round the clock to disambiguate stakeholder needs, managing their expectations and ensuring we work on what's important. The XT project wouldn't have come to fruition so quickly without your help.
 
 It was short, but thank you, K, N, T and L for being such a significant boost to our reliability and productivity. Between Q2 2022 and today, we have resolved a ton of improvement work items for our existing systems (I don't have the exact numbers as I'm locked out of Jira). Bugs were squashed and response times became much faster. You were so inspiring - you motivated me to stop in my tracks to prioritise improvements and better address user needs.
 

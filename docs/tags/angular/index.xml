@@ -34,7 +34,7 @@ Hot reloading didn&amp;rsquo;t happen because of some heap limit error. I called
       <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/10/polling/</guid>
-      <description>There were instances where users filled up a time-consuming form but couldn&amp;rsquo;t submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I have not gotten them to work.</description>
+      <description>There were instances where users filled up a time-consuming form but couldn&amp;rsquo;t submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I&amp;rsquo;ve not gotten them to work.</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ At first, the tooltip looked like:
       <pubDate>Wed, 23 Sep 2020 21:40:00 +0800</pubDate>
       
       <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
-      <description>I have two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
+      <description>I&amp;rsquo;ve two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
 When A is off, disable and switch B off. When A is on, disable and switch B off. We can ignore backend logic because I programmed it such that if A is off, ignore B.
 So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!</description>
     </item>
@@ -66,7 +66,7 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
       
       <guid>https://jiayee.net/tidbits/rendering-newlines-in-html-attributes/</guid>
       <description>Doing
-&amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; will not work, but doing
+&amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; won&amp;rsquo;t work, but doing
 &amp;lt;textarea placeholder=&amp;#34;{{ somethingFromScope }}&amp;#34;&amp;gt; where somethingFromScope is line1\nline2 will work as expected!</description>
     </item>
     

@@ -137,7 +137,7 @@
     </div>
   
   <section class="row article-content">
-    <p>I have two form switches. Let&rsquo;s call them A and B. I had to program them such that:</p>
+    <p>I&rsquo;ve two form switches. Let&rsquo;s call them A and B. I had to program them such that:</p>
 <ol>
 <li>When A is off, disable and switch B off.</li>
 <li>When A is on, disable and switch B off.</li>
@@ -146,7 +146,7 @@
 <p>So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me! The directive was a sweet spot:</p>
 <ol>
 <li>Whenever A changes, I need to check A. If A is off, force B to be off.</li>
-<li>The checks cannot happen at the controller or model because it&rsquo;d be too &ldquo;late&rdquo;.</li>
+<li>The checks can&rsquo;t happen at the controller or model because it&rsquo;d be too &ldquo;late&rdquo;.</li>
 <li>I can&rsquo;t do much at the view because I imported the switches from a library which handled <code>onClick</code>.</li>
 <li>I also needed to call the toast service when A is off. I can put this call in the directive (along with the many other things I may need in the future).</li>
 </ol>

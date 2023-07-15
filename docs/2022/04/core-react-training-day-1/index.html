@@ -142,7 +142,7 @@
     </div>
   
   <section class="row article-content">
-    <p>I&rsquo;m thankful to be able to attend a React training workshop organised by my company. I have been using React in my job but this workshop made me realise I still have lots to learn.</p>
+    <p>I&rsquo;m thankful to be able to attend a React training workshop organised by my company. I&rsquo;ve been using React in my job but this workshop made me realise I still have lots to learn.</p>
 <p>The exercises were very manageable. I learnt the most from the instructor&rsquo;s detailed explanation of how React works:</p>
 <ul>
 <li>Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX. I found <a href="https://stackoverflow.com/questions/41713966/how-babel-and-jsx-related-or-differ">a Stack Overflow thread</a> which describes the relationship between these technologies.
@@ -173,7 +173,7 @@
 <li>Depending on the implementation of <code>Button</code>, we can refer to the icon as <code>{icon}</code> or <code>&lt;Icon/&gt;</code>. To make <code>icon</code> become <code>Icon</code>, use named destructuring of <code>props</code>.</li>
 <li>Passing in components may not be ideal since we don&rsquo;t want to pass its config in as props.
 <ul>
-<li><code>&lt;Button icon={...} iconColor={...}&gt;</code> contains props applied to components of varying levels of abstraction. It is untidy and we would not have known if <code>Button</code> expects us to configure <code>icon</code> outside or inside of <code>Button</code>.</li>
+<li><code>&lt;Button icon={...} iconColor={...}&gt;</code> contains props applied to components of varying levels of abstraction. It is untidy and we wouldn&rsquo;t have known if <code>Button</code> expects us to configure <code>icon</code> outside or inside of <code>Button</code>.</li>
 </ul>
 </li>
 </ul>
@@ -227,7 +227,7 @@
 <ul>
 <li>If we run multiple <code>setMyState</code> in a function, there will only be 1 re-render.
 <ul>
-<li>This means that subsequent statements in the same function should not expect to retrieve the latest state.</li>
+<li>This means that subsequent statements in the same function shouldn&rsquo;t expect to retrieve the latest state.</li>
 </ul>
 </li>
 </ul>
@@ -241,7 +241,7 @@
 <ul>
 <li>React hooks must be called in the same order in every component re-render.
 <ul>
-<li>As such, we cannot put hooks inside conditionals.</li>
+<li>As such, we can&rsquo;t put hooks inside conditionals.</li>
 </ul>
 </li>
 </ul>

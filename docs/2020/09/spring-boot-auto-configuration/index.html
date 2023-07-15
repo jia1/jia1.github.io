@@ -146,7 +146,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>org.springframework.boot.autoconfigure.EnableAutoConfiguration<span style="color:#719e07">=</span><span style="color:#cb4b16">\
 </span></span></span><span style="display:flex;"><span><span style="color:#cb4b16"></span>  yourTLD.yourOrg.yourProject.somePackage.SomeConfigClass,<span style="color:#cb4b16">\
 </span></span></span><span style="display:flex;"><span><span style="color:#cb4b16"></span>  yourTLD.yourOrg.yourProject.somePackage.SomeConfigClass2
-</span></span></code></pre></div><p>I was more or less done, but there were some things I have not / will not solve:</p>
+</span></span></code></pre></div><p>I was more or less done, but there were some things I haven&rsquo;t / won&rsquo;t solve:</p>
 <ol>
 <li><code>No qualifying bean of type String</code>. I didn&rsquo;t venture into where I should be placing <code>@Bean</code>, <code>@Qualifier</code> or <code>@Value</code>. It&rsquo;s because I didn&rsquo;t want to overwrite my Lombok getters or setters.</li>
 <li>Including a controller (i.e. annotated with <code>@RestController</code>) in the custom starter.</li>

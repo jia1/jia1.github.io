@@ -4,7 +4,7 @@ date: 2020-12-04T21:19:00+08:00
 draft: false
 tags: ["css"]
 ---
-A few days ago, I would not have realised truncating strings by number of lines with CSS was possible. I was beginning to sweat when I received a request to truncate strings by number of lines instead of number of characters. To be fair, only SWEs would think of truncating by number of characters instead of line numbers...
+A few days ago, I wouldn't have realised truncating strings by number of lines with CSS was possible. I was beginning to sweat when I received a request to truncate strings by number of lines instead of number of characters. To be fair, only SWEs would think of truncating by number of characters instead of line numbers...
 
 My teammate shared an answer he found at [CSS-Tricks](https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/). If I recall, it didn't work out for me because of the way the containers were styled. I had no control over that and I didn't want to control that, so I scoured the internet for more answers.
 

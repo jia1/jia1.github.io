@@ -114,6 +114,49 @@
     <div class="row">
       <article>
   
+  <a href="/2020/09/intercepting-angular-data-binding/">
+    <h3 class="article-title">
+  Intercepting Angular Data Binding
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-09-23">23 Sep 2020 @ 9.40 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I&rsquo;ve two form switches. Let&rsquo;s call them A and B. I had to program them such that:
+When A is off, disable and switch B off. When A is on, disable and switch B off. We can ignore backend logic because I programmed it such that if A is off, ignore B.
+So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/09/intercepting-angular-data-binding/">Continue reading "Intercepting Angular Data Binding"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/09/data-wrangling/">
     <h3 class="article-title">
   Data Wrangling
@@ -289,49 +332,6 @@ Little clutter Consistent margin between sections. The margin was 2rem between s
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/new-theme/">Continue reading "New Theme"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/no-qualifying-bean/">
-    <h3 class="article-title">
-  No qualifying bean
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-17">17 Sep 2020 @ 3.23 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/spring">
-          #spring
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    In one of my previous posts, I avoided auto-configuring primitives. Otherwise, the No qualifying bean error will occur. Today, I couldn&rsquo;t avoid that anymore. I had to auto-configure a boolean so that the consumer can enable or disable a feature in application.yml.
-So, how did I resolve this issue? I used @Value(&quot;{someKey:someDefault}&quot;) final boolean someFlag in the caller constructor.
-Before that, I tried attaching only @Bean to the getter, but it didn&rsquo;t work out.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/no-qualifying-bean/">Continue reading "No qualifying bean"</a>
   </p>
 </article>
 

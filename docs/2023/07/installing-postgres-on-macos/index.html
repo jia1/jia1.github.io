@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Installing Postgres on macOS</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <h5 class="cell large-6 medium-6 small-12">
+        My learning diary
+      </h5>
+      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </h5>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-3 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/tidbits">
+            Tidbits
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/promo-codes">
+            Promo codes
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h3 class="article-title">
+  Installing Postgres on macOS
+</h3>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2023-07-20">20 Jul 2023 @ 11.09 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/postgres">
+          #postgres
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>Before this, the last time I installed a Postgres database on my local machine was years ago. I wished I found <a href="https://samikorpela.dev/posts/pg-on-macos-2023/">Sami Korpela&rsquo;s blog post</a> sooner. It had everything I needed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#586e75"># macOS Ventura Terminal</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>brew install postgresql@15
+</span></span><span style="display:flex;"><span><span style="color:#b58900">echo</span> <span style="color:#2aa198">&#39;export PATH=&#34;/opt/homebrew/opt/postgresql@15/bin:$PATH&#34;&#39;</span> &gt;&gt; ~/.zshrc
+</span></span><span style="display:flex;"><span><span style="color:#b58900">source</span> ~/.zshrc
+</span></span><span style="display:flex;"><span>brew services start postgresql
+</span></span><span style="display:flex;"><span>createuser -s postgres
+</span></span><span style="display:flex;"><span>psql postgres <span style="color:#586e75"># or psql -U your_username -d your_database</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">### postgres=# ###</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#cb4b16">\l</span> <span style="color:#586e75"># List databases</span>
+</span></span><span style="display:flex;"><span><span style="color:#cb4b16">\d</span>u <span style="color:#586e75"># List roles</span>
+</span></span><span style="display:flex;"><span><span style="color:#cb4b16">\c</span> your_database <span style="color:#586e75"># Connect to database</span>
+</span></span><span style="display:flex;"><span><span style="color:#cb4b16">\c</span> your_database other_username <span style="color:#586e75"># Connect to database as other_username</span>
+</span></span><span style="display:flex;"><span><span style="color:#cb4b16">\d</span> <span style="color:#586e75"># List relations (tables)</span>
+</span></span></code></pre></div>
+  </section>
+  
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2023
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div></body>
+</html>

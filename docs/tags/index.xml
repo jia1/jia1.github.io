@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 15 Jul 2023 14:44:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 23:09:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>postgres</title>
+      <link>https://jiayee.net/tags/postgres/</link>
+      <pubDate>Thu, 20 Jul 2023 23:09:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/postgres/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>react</title>
       <link>https://jiayee.net/tags/react/</link>

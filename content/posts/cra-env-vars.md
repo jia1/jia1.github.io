@@ -6,9 +6,9 @@ tags: ["react"]
 ---
 I worked on React codebases for years. For various reasons, I never had to deal with client-side environment variables.
 
-I was first exposed to the concept of environment variable prefixes in [Next](https://start.open.gov.sg/docs/concepts/env-variables#client-schema).
+I first saw environment variable prefixes in [Next](https://start.open.gov.sg/docs/concepts/env-variables#client-schema).
 
-Unfortunately, it took me a while to realise that this concept was also applicable to [create-react-app](https://create-react-app.dev/docs/adding-custom-environment-variables/).
+Unfortunately, it took me a while to realise that this concept also applied to [create-react-app](https://create-react-app.dev/docs/adding-custom-environment-variables/).
 
 As a result, I spent some time wondering why my environment variables were not replaced at build time. [I started to think it was because they were replaced during runtime](https://www.digitalocean.com/community/questions/environment-variables-not-working-for-static-site-on-digitalocean-app-platform). I felt silly for believing in everything I read.
 

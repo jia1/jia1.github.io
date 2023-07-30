@@ -109,129 +109,30 @@
 <div class="article-list">
   
     <div class="row">
-      <article>
-  
-  <a href="/2023/03/read-sheets-in-java/">
-    <h3 class="article-title">
+      <a href="/2023/03/read-sheets-in-java/">
+        <h3 class="article-title">
   Read Sheets in Java
 </h3>
 
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2023-03-26">26 Mar 2023 @ 9.55 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    If you need to programmatically read a Google spreadsheet in Java, the quickstart guide describes a class that does configuration, scoping and reading all in one. However, if you use Spring Boot, you would want to split it into configuration and service layers:
-// build.gradle ... dependencies { ... compile (&#39;com.google.api-client:google-api-client&#39;) compile (&#39;com.google.apis:google-api-services-sheets&#39;) ... } ... // Spring Boot // Your config layer should contain the Sheets bean: // Copied from: https://stackoverflow.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2023/03/read-sheets-in-java/">Continue reading "Read Sheets in Java"</a>
-  </p>
-</article>
-
+      </a>
     </div>
   
     <div class="row">
-      <article>
-  
-  <a href="/2020/11/abstract-classes-and-aop/">
-    <h3 class="article-title">
+      <a href="/2020/11/abstract-classes-and-aop/">
+        <h3 class="article-title">
   Abstract classes and AOP
 </h3>
 
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-11-17">17 Nov 2020 @ 9.30 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I couldn&rsquo;t make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
-// MyAbstractController public abstract class MyAbstractController&lt;T extends UniversalModel&gt; { private final .
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/11/abstract-classes-and-aop/">Continue reading "Abstract classes and AOP"</a>
-  </p>
-</article>
-
+      </a>
     </div>
   
     <div class="row">
-      <article>
-  
-  <a href="/tidbits/iterator-to-stream/">
-    <h3 class="article-title">
+      <a href="/tidbits/iterator-to-stream/">
+        <h3 class="article-title">
   Iterator to Stream
 </h3>
 
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-11-11">11 Nov 2020 @ 7.38 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
-Stream&lt;String&gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.
-  </section>
-  <p>
-    <a class="article-read-more" href="/tidbits/iterator-to-stream/">Continue reading "Iterator to Stream"</a>
-  </p>
-</article>
-
+      </a>
     </div>
   
   <section class="grid-x grid-margin-x">

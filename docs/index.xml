@@ -6,7 +6,21 @@
     <description>Recent content on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 30 Jul 2023 16:20:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jul 2023 16:34:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Multi-line editing in VS Code</title>
+      <link>https://jiayee.net/tidbits/multi-line-editing-in-vs-code/</link>
+      <pubDate>Sun, 30 Jul 2023 16:34:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tidbits/multi-line-editing-in-vs-code/</guid>
+      <description>How to edit multiple lines in VS Code in Mac:
+Cmd + Opt + Up/Down
+If you want to do something like a PgUp or PgDn, do fn + Up/Down, like:
+Cmd + Opt + Shift + fn + Up/Down
+References:
+Stack Overflow Mac keyboard shortcuts </description>
+    </item>
+    
     <item>
       <title>The SSH command</title>
       <link>https://jiayee.net/2023/07/the-ssh-command/</link>

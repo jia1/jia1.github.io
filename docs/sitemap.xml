@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2023-07-30T16:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tidbits/multi-line-editing-in-vs-code/</loc>
+    <lastmod>2023-07-30T16:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/shortcuts/</loc>
+    <lastmod>2023-07-30T16:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2023-07-30T16:34:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tidbits/</loc>
+    <lastmod>2023-07-30T16:34:00+08:00</lastmod>
+  </url><url>
     <loc>https://jiayee.net/tags/cli/</loc>
     <lastmod>2023-07-30T16:20:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2023-07-30T16:20:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/posts/</loc>
-    <lastmod>2023-07-30T16:20:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2023-07-30T16:20:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/07/the-ssh-command/</loc>
@@ -36,9 +45,6 @@
     <lastmod>2023-06-24T23:23:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/qna/</loc>
-    <lastmod>2023-04-12T13:21:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tidbits/</loc>
     <lastmod>2023-04-12T13:21:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tidbits/12-apr-2023-qna/</loc>

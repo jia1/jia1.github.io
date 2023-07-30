@@ -16,7 +16,7 @@ PygmentsStyle = "solarized-dark"
   [markup.highlight]
     lineNos = false
   [markup.goldmark.renderer]
-    unsafe= true
+    unsafe = true
 
 [permalinks]
   pages = "/:slug"

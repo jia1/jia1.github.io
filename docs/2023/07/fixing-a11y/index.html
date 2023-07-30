@@ -126,8 +126,13 @@
       
       
         
-        <a href="https://jiayee.net/tags/css">
-          #css
+        <a href="https://jiayee.net/tags/foundation">
+          #foundation
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/hugo">
+          #hugo
         </a>
       
         
@@ -155,6 +160,13 @@
 </span></span></code></pre></div><p>For more information, check out <a href="https://get.foundation/sites/docs/typography-helpers.html">Foundation&rsquo;s docs</a>.</p>
 <p><a href="/lighthouse04.pdf">Lighthouse report for desktop</a></p>
 <p>Making everything 100 and doing the manual checks are next!</p>
+<p>P.S. If you need to include raw HTML in a Markdown file in Hugo, remember to enable it in <code>config.toml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[markup.goldmark.renderer]
+</span></span><span style="display:flex;"><span>    unsafe = <span style="color:#cb4b16">true</span>
+</span></span></code></pre></div><p>Otherwise, your element won&rsquo;t appear and you&rsquo;ll see:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#586e75">&lt;!-- raw HTML omitted --&gt;</span>
+</span></span></code></pre></div><p>when you inspect your HTML elements (Cmd + Opt + I).</p>
+<p><a href="https://discourse.gohugo.io/t/raw-html-getting-omitted-in-0-60-0/22032">Raw HTML getting omitted in 0.60.0</a></p>
 
   </section>
   
@@ -166,22 +178,22 @@
 <ul>
 	
 	<li>
-    <a href="/2020/12/truncating-strings-with-css/">
-      Truncating Strings With CSS (#css)
+    <a href="/2020/09/style-fixes-1/">
+      Style Fixes 1 (#foundation)
       
     </a>
   </li>
 	
 	<li>
-    <a href="/2020/11/sticky/">
-      Sticky (#css)
+    <a href="/2020/09/new-theme/">
+      New Theme (#foundation)
       
     </a>
   </li>
 	
 	<li>
-    <a href="/2020/10/some-similarities/">
-      Some Similarities (#css)
+    <a href="/2020/09/first-lighthouse-report-for-jiayee.net/">
+      First Lighthouse Report for Jiayee.net (#lighthouse)
       
     </a>
   </li>

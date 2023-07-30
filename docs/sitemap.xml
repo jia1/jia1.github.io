@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jiayee.net/tags/css/</loc>
+    <loc>https://jiayee.net/2023/07/fixing-a11y/</loc>
     <lastmod>2023-07-30T21:44:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/2023/07/fixing-a11y/</loc>
+    <loc>https://jiayee.net/tags/foundation/</loc>
+    <lastmod>2023-07-30T21:44:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/hugo/</loc>
     <lastmod>2023-07-30T21:44:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/</loc>
@@ -124,6 +127,9 @@
   </url><url>
     <loc>https://jiayee.net/tidbits/05-dec-2020-qna/</loc>
     <lastmod>2020-12-05T23:59:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/css/</loc>
+    <lastmod>2020-12-04T21:19:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2020/12/truncating-strings-with-css/</loc>
     <lastmod>2020-12-04T21:19:00+08:00</lastmod>
@@ -526,12 +532,6 @@
   </url><url>
     <loc>https://jiayee.net/tidbits/20-sep-2020-qna/</loc>
     <lastmod>2020-09-20T17:55:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/foundation/</loc>
-    <lastmod>2020-09-20T16:26:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/hugo/</loc>
-    <lastmod>2020-09-20T16:26:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2020/09/style-fixes-1/</loc>
     <lastmod>2020-09-20T16:26:00+08:00</lastmod>

@@ -1,6 +1,6 @@
 ---
 title: "The SSH command"
-date: 2023-07-30T15:26:28+08:00
+date: 2023-07-30T16:20:00+08:00
 draft: false
 tags: ["cli"]
 ---

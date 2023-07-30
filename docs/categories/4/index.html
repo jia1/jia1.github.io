@@ -113,6 +113,53 @@
     <div class="row">
       <article>
   
+  <a href="/2020/12/reach-router-match/">
+    <h3 class="article-title">
+  Reach Router Match
+</h3>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-12-04">4 Dec 2020 @ 9.10 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/react">
+          #react
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/reach">
+          #reach
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I use Reach Router. I&rsquo;ve a component which isn&rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing Jacek&rsquo;s hint:
+&lt;div&gt; &lt;Match path=&#34;/*&#34;&gt; {(props) =&gt; ( &lt;MyComponent path=&#34;/*&#34; match={props.match ?? &#39;&#39;} /&gt; )} &lt;/Match&gt; &lt;Router&gt; ... &lt;/Router&gt; &lt;/div&gt; interface Props { match: any; } export const MyComponent: FC&lt;Props&gt; = (props: Props) =&gt; { const pathname = props.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/12/reach-router-match/">Continue reading "Reach Router Match"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/12/numerical-ids-in-mongodb/">
     <h3 class="article-title">
   Numerical IDs in MongoDB
@@ -282,49 +329,6 @@ I had a collection of documents with a name property. Originally, name was annot
   </section>
   <p>
     <a class="article-read-more" href="/2020/11/sticky/">Continue reading "Sticky"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/11/recaptcha-on-error/">
-    <h3 class="article-title">
-  reCaptcha on-error
-</h3>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-11-09">9 Nov 2020 @ 6.20 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/angular">
-          #angular
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    Polling wasn&rsquo;t effective because:
-Hot reloading didn&rsquo;t happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
-{ &#34;scripts&#34;: { &#34;docker-dev&#34;: &#34;export NODE_OPTIONS=\&#34;--max-old-space-size=4096\&#34; &amp;&amp; ...&#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&rsquo;t expire.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/11/recaptcha-on-error/">Continue reading "reCaptcha on-error"</a>
   </p>
 </article>
 

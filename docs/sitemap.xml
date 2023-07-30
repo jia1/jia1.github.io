@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jiayee.net/tags/cli/</loc>
+    <lastmod>2023-07-30T15:26:28+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2023-07-30T15:26:28+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2023-07-30T15:26:28+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2023-07-30T15:26:28+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/2023/07/the-ssh-command/</loc>
+    <lastmod>2023-07-30T15:26:28+08:00</lastmod>
+  </url><url>
     <loc>https://jiayee.net/2023/07/installing-postgres-on-macos/</loc>
     <lastmod>2023-07-20T23:09:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2023-07-20T23:09:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tags/postgres/</loc>
-    <lastmod>2023-07-20T23:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/posts/</loc>
-    <lastmod>2023-07-20T23:09:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2023-07-20T23:09:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/07/create-react-app-environment-variables/</loc>
@@ -265,9 +271,6 @@
   </url><url>
     <loc>https://jiayee.net/tidbits/29-oct-2020-qna/</loc>
     <lastmod>2020-10-29T11:36:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/cli/</loc>
-    <lastmod>2020-10-28T22:06:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2020/10/pip-uninstall-all/</loc>
     <lastmod>2020-10-28T22:06:00+08:00</lastmod>

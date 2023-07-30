@@ -6,7 +6,19 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 20 Jul 2023 23:09:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jul 2023 15:26:28 +0800</lastBuildDate><atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The SSH command</title>
+      <link>https://jiayee.net/2023/07/the-ssh-command/</link>
+      <pubDate>Sun, 30 Jul 2023 15:26:28 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/07/the-ssh-command/</guid>
+      <description>This is what man ssh gives:
+ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine. It is intended to provide secure encrypted communications between two untrusted hosts over an insecure network. X11 connections, arbitrary TCP ports and UNIX-domain sockets can also be forwarded over the secure channel.
+A simple usage would be:
+ssh $USERNAME@$TARGET_HOST And you will be prompted for your password.</description>
+    </item>
+    
     <item>
       <title>Installing Postgres on macOS</title>
       <link>https://jiayee.net/2023/07/installing-postgres-on-macos/</link>

@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 20 Jul 2023 23:09:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jul 2023 15:26:28 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cli</title>
+      <link>https://jiayee.net/tags/cli/</link>
+      <pubDate>Sun, 30 Jul 2023 15:26:28 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/cli/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>postgres</title>
       <link>https://jiayee.net/tags/postgres/</link>
@@ -130,15 +139,6 @@
       <pubDate>Mon, 09 Nov 2020 18:20:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/angular/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cli</title>
-      <link>https://jiayee.net/tags/cli/</link>
-      <pubDate>Wed, 28 Oct 2020 22:06:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/cli/</guid>
       <description></description>
     </item>
     

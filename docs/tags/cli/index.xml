@@ -6,7 +6,19 @@
     <description>Recent content in cli on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 28 Oct 2020 22:06:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jul 2023 15:26:28 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The SSH command</title>
+      <link>https://jiayee.net/2023/07/the-ssh-command/</link>
+      <pubDate>Sun, 30 Jul 2023 15:26:28 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/07/the-ssh-command/</guid>
+      <description>This is what man ssh gives:
+ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine. It is intended to provide secure encrypted communications between two untrusted hosts over an insecure network. X11 connections, arbitrary TCP ports and UNIX-domain sockets can also be forwarded over the secure channel.
+A simple usage would be:
+ssh $USERNAME@$TARGET_HOST And you will be prompted for your password.</description>
+    </item>
+    
     <item>
       <title>pip uninstall All</title>
       <link>https://jiayee.net/2020/10/pip-uninstall-all/</link>

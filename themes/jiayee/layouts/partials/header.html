@@ -8,16 +8,16 @@
       </h1>
     </div>
     <div class="grid-x grid-margin-x">
-      <h5 class="cell large-6 medium-6 small-12">
+      <p class="cell large-6 medium-6 small-12 lead">
         {{ .Site.Params.subtitle }}
-      </h5>
-      <h5 class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      </p>
+      <p class="cell large-6 large-text-right medium-6 medium-text-right small-12 lead">
         {{ range .Site.Params.Social }}
           <a href="{{ .url }}" rel="noopener" target='{{ if not (eq .name "Email") }}_blank{{ end }}'>
             <i class="social {{ .icon }}" title="{{ .name }}"></i>
           </a>
         {{ end }}
-      </h5>
+      </p>
     </div>
   </section>
   <nav class="row">

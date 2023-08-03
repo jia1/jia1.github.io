@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My tech learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>for...in and for...of</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <p class="cell large-6 medium-6 small-12 lead">
+        My learning diary
+      </p>
+      <p class="cell large-6 large-text-right medium-6 medium-text-right small-12 lead">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </p>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-3 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/tidbits">
+            Tidbits
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/promo-codes">
+            Promo codes
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h2 class="article-title h3">
+  for...in and for...of
+</h2>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2023-08-03">3 Aug 2023 @ 10.49 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>I needed to <a href="https://github.com/opengovsg/postmangovsg/pull/2136/commits/301c2aeb425c790a20e29be6e038fabd7719872f">change my async code into synchronous</a>. I didn&rsquo;t need to track the index of the array, so I wanted a for&hellip;?? loop.</p>
+<p>Was it <code>for...in</code> or was it <code>for...of</code>!?</p>
+<h3 class="h5">for...in</h3>
+<p><code>for (let key in someObject)</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#268bd2">const</span> a <span style="color:#719e07">=</span> [<span style="color:#2aa198">4</span>,<span style="color:#2aa198">5</span>,<span style="color:#2aa198">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> b <span style="color:#719e07">=</span> [{<span style="color:#2aa198">&#39;k1&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v1&#39;</span>},{<span style="color:#2aa198">&#39;k2&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v2&#39;</span>},{<span style="color:#2aa198">&#39;k3&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v3&#39;</span>}]
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> c <span style="color:#719e07">=</span> {<span style="color:#2aa198">&#39;k1&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v1&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">for</span> (<span style="color:#268bd2">let</span> d <span style="color:#719e07">in</span> a) { console.log(d) } <span style="color:#586e75">// 0 1 2
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (<span style="color:#268bd2">let</span> d <span style="color:#719e07">in</span> b) { console.log(d) } <span style="color:#586e75">// 0 1 2
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (<span style="color:#268bd2">let</span> d <span style="color:#719e07">in</span> c) { console.log(d) } <span style="color:#586e75">// k1
+</span></span></span></code></pre></div><h3 class="h5">for...of</h3>
+<p><code>for (let value in someIterable)</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#268bd2">const</span> a <span style="color:#719e07">=</span> [<span style="color:#2aa198">4</span>,<span style="color:#2aa198">5</span>,<span style="color:#2aa198">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> b <span style="color:#719e07">=</span> [{<span style="color:#2aa198">&#39;k1&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v1&#39;</span>},{<span style="color:#2aa198">&#39;k2&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v2&#39;</span>},{<span style="color:#2aa198">&#39;k3&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v3&#39;</span>}]
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">const</span> c <span style="color:#719e07">=</span> {<span style="color:#2aa198">&#39;k1&#39;</span><span style="color:#719e07">:</span><span style="color:#2aa198">&#39;v1&#39;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">for</span> (<span style="color:#268bd2">let</span> d <span style="color:#719e07">of</span> a) { console.log(d) } <span style="color:#586e75">// 4 5 6
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (<span style="color:#268bd2">let</span> d <span style="color:#719e07">of</span> b) { console.log(d) } <span style="color:#586e75">// {&#39;k1&#39;:&#39;v1&#39;} {&#39;k2&#39;:&#39;v2&#39;} {&#39;k3&#39;:&#39;v3&#39;}
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (<span style="color:#268bd2">let</span> d <span style="color:#719e07">of</span> c) { console.log(d) } <span style="color:#586e75">// Uncaught TypeError: c is not iterable
+</span></span></span></code></pre></div>
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2023/06/dont-catch-everything/">
+      Don&#39;t catch everything (#javascript)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/tidbits/ready-for-review/">
+      Ready for review (#javascript)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/constants/">
+      Constants (#javascript)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2023
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jiayee" data-description="Support me on Buy me a coffee!" data-message="" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+</html>

@@ -6,7 +6,19 @@
     <description>Recent content on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 30 Jul 2023 21:44:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Aug 2023 23:37:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>for-in and for-of</title>
+      <link>https://jiayee.net/2023/08/for-in-and-for-of/</link>
+      <pubDate>Thu, 03 Aug 2023 23:37:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/08/for-in-and-for-of/</guid>
+      <description>I needed to change my async code into synchronous. I didn&amp;rsquo;t need to track the index of the array, so I wanted a for...?? loop.
+Was it for...in or was it for...of!?
+for...in Example: for (let key in someObject)
+const a = [4,5,6] const b = [{&amp;#39;k1&amp;#39;:&amp;#39;v1&amp;#39;},{&amp;#39;k2&amp;#39;:&amp;#39;v2&amp;#39;},{&amp;#39;k3&amp;#39;:&amp;#39;v3&amp;#39;}] const c = {&amp;#39;k1&amp;#39;:&amp;#39;v1&amp;#39;} for (let d in a) { console.log(d) } // 0 1 2 for (let d in b) { console.log(d) } // 0 1 2 for (let d in c) { console.</description>
+    </item>
+    
     <item>
       <title>Fixing a11y</title>
       <link>https://jiayee.net/2023/07/fixing-a11y/</link>

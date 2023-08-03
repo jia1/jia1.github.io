@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jiayee.net/2023/08/for-in-and-for-of/</loc>
+    <lastmod>2023-08-03T23:37:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/javascript/</loc>
+    <lastmod>2023-08-03T23:37:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2023-08-03T23:37:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2023-08-03T23:37:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2023-08-03T23:37:00+08:00</lastmod>
+  </url><url>
     <loc>https://jiayee.net/2023/07/fixing-a11y/</loc>
     <lastmod>2023-07-30T21:44:00+08:00</lastmod>
   </url><url>
@@ -11,16 +26,7 @@
     <loc>https://jiayee.net/tags/hugo/</loc>
     <lastmod>2023-07-30T21:44:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2023-07-30T21:44:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tags/lighthouse/</loc>
-    <lastmod>2023-07-30T21:44:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/posts/</loc>
-    <lastmod>2023-07-30T21:44:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2023-07-30T21:44:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tidbits/multi-line-editing-in-vs-code/</loc>
@@ -51,9 +57,6 @@
     <lastmod>2023-07-15T14:44:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/06/dont-catch-everything/</loc>
-    <lastmod>2023-06-24T23:23:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/javascript/</loc>
     <lastmod>2023-06-24T23:23:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/qna/</loc>

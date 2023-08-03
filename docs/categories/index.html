@@ -113,6 +113,50 @@
     <div class="row">
       <article>
   
+  <a href="/2023/08/for-in-and-for-of/">
+    <h2 class="article-title h3">
+  for-in and for-of
+</h2>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2023-08-03">3 Aug 2023 @ 11.37 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I needed to change my async code into synchronous. I didn&rsquo;t need to track the index of the array, so I wanted a for...?? loop.
+Was it for...in or was it for...of!?
+for...in Example: for (let key in someObject)
+const a = [4,5,6] const b = [{&#39;k1&#39;:&#39;v1&#39;},{&#39;k2&#39;:&#39;v2&#39;},{&#39;k3&#39;:&#39;v3&#39;}] const c = {&#39;k1&#39;:&#39;v1&#39;} for (let d in a) { console.log(d) } // 0 1 2 for (let d in b) { console.log(d) } // 0 1 2 for (let d in c) { console.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2023/08/for-in-and-for-of/">Continue reading "for-in and for-of"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2023/07/fixing-a11y/">
     <h2 class="article-title h3">
   Fixing a11y
@@ -289,50 +333,6 @@ As a result, I spent some time wondering why my environment variables were not r
   </section>
   <p>
     <a class="article-read-more" href="/2023/07/create-react-app-environment-variables/">Continue reading "Create React App environment variables"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2023/06/dont-catch-everything/">
-    <h2 class="article-title h3">
-  Don&#39;t catch everything
-</h2>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2023-06-24">24 Jun 2023 @ 11.23 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/javascript">
-          #javascript
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I did a catch when I didn&rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure didn&rsquo;t appear.
-In this commit, I removed the catch clause.
-And in another commit, I defined what failure is.
-While writing about this, I wondered if there could be a better way to express identical requirements. A quick search led me to this Stack Overflow thread - throw (but not in AngularJS).
-  </section>
-  <p>
-    <a class="article-read-more" href="/2023/06/dont-catch-everything/">Continue reading "Don&#39;t catch everything"</a>
   </p>
 </article>
 

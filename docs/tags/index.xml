@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 30 Jul 2023 21:44:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Aug 2023 23:37:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>javascript</title>
+      <link>https://jiayee.net/tags/javascript/</link>
+      <pubDate>Thu, 03 Aug 2023 23:37:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>foundation</title>
       <link>https://jiayee.net/tags/foundation/</link>
@@ -67,15 +76,6 @@
       <pubDate>Sat, 15 Jul 2023 14:44:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/react/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://jiayee.net/tags/javascript/</link>
-      <pubDate>Sat, 24 Jun 2023 23:23:00 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/javascript/</guid>
       <description></description>
     </item>
     

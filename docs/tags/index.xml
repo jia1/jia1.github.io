@@ -6,16 +6,7 @@
     <description>Recent content in Tags on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 04 Aug 2023 22:06:33 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>angular</title>
-      <link>https://jiayee.net/tags/angular/</link>
-      <pubDate>Fri, 04 Aug 2023 22:06:33 +0800</pubDate>
-      
-      <guid>https://jiayee.net/tags/angular/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 03 Aug 2023 23:37:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>javascript</title>
       <link>https://jiayee.net/tags/javascript/</link>
@@ -175,6 +166,15 @@
       <pubDate>Sun, 15 Nov 2020 22:40:00 +0800</pubDate>
       
       <guid>https://jiayee.net/tags/eq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>angular</title>
+      <link>https://jiayee.net/tags/angular/</link>
+      <pubDate>Mon, 09 Nov 2020 18:20:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tags/angular/</guid>
       <description></description>
     </item>
     

@@ -1,6 +1,6 @@
 ---
 title: "ng new with pnpm"
-date: 2023-08-04T22:06:33+08:00
+date: 2023-08-04T22:14:00:+08:00
 draft: false
 tags: ["angular"]
 ---

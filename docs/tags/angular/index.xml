@@ -88,7 +88,8 @@ Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to:
       <guid>https://jiayee.net/tidbits/ng-new-with-pnpm/</guid>
       <description>Many years ago, my friend recommended yarn for package management. Things have changed since then. I was searching for a performance comparison report until I stumbled upon pnpm.
 Then, when I ran ng new [name], npm was used. I wanted pnpm. I should have done:
-ng new [name] --package-manager pnpm Angular CLI docs</description>
+ng new [name] --package-manager pnpm References:
+Stack Overflow thread Angular CLI docs </description>
     </item>
     
   </channel>

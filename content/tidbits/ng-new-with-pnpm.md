@@ -12,4 +12,6 @@ Then, when I ran `ng new [name]`, `npm` was used. I wanted `pnpm`. I should have
 ng new [name] --package-manager pnpm
 ```
 
-[Angular CLI docs](https://angular.io/cli/new)
+References:
+- [Stack Overflow thread](https://stackoverflow.com/questions/52948906/how-do-i-use-pnpm-in-my-angular-project-to-manage-packages)
+- [Angular CLI docs](https://angular.io/cli/new)

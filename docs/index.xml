@@ -6,7 +6,18 @@
     <description>Recent content on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 03 Aug 2023 23:37:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2023 22:24:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deleting conflicting keyboard shortcuts</title>
+      <link>https://jiayee.net/2023/08/deleting-conflicting-keyboard-shortcuts/</link>
+      <pubDate>Fri, 04 Aug 2023 22:24:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/2023/08/deleting-conflicting-keyboard-shortcuts/</guid>
+      <description>I started using JetBrains&amp;rsquo; IDE recently again but Cmd + Shift + A kept triggering something else instead of Find Action.
+I got that unwanted shortcut disabled. Here&amp;rsquo;s how:
+Spotlight search (Cmd + Space) &amp;ldquo;keyboard&amp;rdquo; Go to Keyboard Settings... Go to Keyboard Shortcuts... Disable the shortcut that&amp;rsquo;s selected in the screenshot below </description>
+    </item>
+    
     <item>
       <title>for-in and for-of</title>
       <link>https://jiayee.net/2023/08/for-in-and-for-of/</link>

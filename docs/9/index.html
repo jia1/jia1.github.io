@@ -114,6 +114,48 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/calculator-v2/">
+    <h2 class="article-title h3">
+  Calculator V2
+</h2>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-04">4 Oct 2020 @ 10.32 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/javascript">
+          #javascript
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I made some changes to my compound interest calculator after reading up on &ldquo;future value&rdquo;. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
+import nerdamer from &#39;nerdamer/nerdamer.core&#39;; import Algebra from &#39;nerdamer/Algebra&#39;; import Calculus from &#39;nerdamer/Calculus&#39;; import Solve from &#39;nerdamer/Solve&#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&gt; { const totalAmount = solveForOneUnknownVariable( &#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&#39;, { p: principal.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/calculator-v2/">Continue reading "Calculator V2"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/quick-go-3/">
     <h2 class="article-title h3">
   Quick Go 3
@@ -285,54 +327,6 @@ package main import &#34;fmt&#34; b := &#34;Hello, world!&#34; // Block scope fu
   </section>
   <p>
     <a class="article-read-more" href="/2020/09/quick-go-2/">Continue reading "Quick Go 2"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/09/jslt/">
-    <h2 class="article-title h3">
-  JSLT
-</h2>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-09-29">29 Sep 2020 @ 6.22 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/json">
-          #json
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/jslt">
-          #jslt
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I&rsquo;ve a GraphQL service and a Spring Boot application. The latter consumes the former. In the application, I transform the retrieved JSON with the help of JSLT. Today, I wrote a JSLT program to do de-duplication and array intersection. Below is the context:
-My GraphQL query:
-query MyQuery(...) { arrayA: someModel(...) { someInnerModel { id } }, arrayB: someModel(...) { someInnerModel { id } } } Expected JSON response from GraphQL service:
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/09/jslt/">Continue reading "JSLT"</a>
   </p>
 </article>
 

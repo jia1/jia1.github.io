@@ -113,6 +113,48 @@
     <div class="row">
       <article>
   
+  <a href="/2020/10/captcha-isvalid/">
+    <h2 class="article-title h3">
+  Captcha isValid()
+</h2>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2020-10-18">18 Oct 2020 @ 7.30 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/angular">
+          #angular
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    I needed the client to check for the captcha failure when a user loads a form. In the captchaService abstraction for angular-recaptcha, there was isValid() which does:
+/** * Check if the response has been set, assuming captcha is enabled. */ this.isValid = () =&gt; this.response || !this.enabled; I had a way to trigger the captcha failure. In the same WiFi network, I accessed a form from localhost through my mobile phone.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2020/10/captcha-isvalid/">Continue reading "Captcha isValid()"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2020/10/some-similarities/">
     <h2 class="article-title h3">
   Some Similarities
@@ -276,50 +318,6 @@ Notice the line above the last which says, FATAL ERROR: Ineffective mark-compact
   </section>
   <p>
     <a class="article-read-more" href="/2020/10/javascript-heap-limit/">Continue reading "Javascript heap limit"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2020/10/redux-persist/">
-    <h2 class="article-title h3">
-  redux-persist
-</h2>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-10-08">8 Oct 2020 @ 10.36 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/redux">
-          #redux
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    If you need your Redux store to last beyond a page load or refresh, look no further! redux-persist is here to the rescue. Based on this guide and this guide, you need to update your reducers and store to enjoy persistence:
-Install redux-persist:
-yarn add redux-persist @types/redux-persist Update root reducer and store:
-// Copied from the official README and edited import { Provider } from &#39;react-redux&#39;; import { createStore, Store } from &#39;redux&#39;; import { persistReducer, persistStore } from &#39;redux-persist&#39;; import storage from &#39;redux-persist/lib/storage&#39;; import rootReducer from &#39;.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/10/redux-persist/">Continue reading "redux-persist"</a>
   </p>
 </article>
 

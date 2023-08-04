@@ -17,6 +17,15 @@
     <loc>https://jiayee.net/tags/</loc>
     <lastmod>2023-08-04T22:24:00+08:00</lastmod>
   </url><url>
+    <loc>https://jiayee.net/tags/angular/</loc>
+    <lastmod>2023-08-04T22:14:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tidbits/ng-new-with-pnpm/</loc>
+    <lastmod>2023-08-04T22:14:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tidbits/</loc>
+    <lastmod>2023-08-04T22:14:00+08:00</lastmod>
+  </url><url>
     <loc>https://jiayee.net/2023/08/for-in-and-for-of/</loc>
     <lastmod>2023-08-03T23:37:00+08:00</lastmod>
   </url><url>
@@ -36,9 +45,6 @@
     <lastmod>2023-07-30T21:44:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tidbits/multi-line-editing-in-vs-code/</loc>
-    <lastmod>2023-07-30T16:34:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tidbits/</loc>
     <lastmod>2023-07-30T16:34:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/cli/</loc>
@@ -244,9 +250,6 @@
   </url><url>
     <loc>https://jiayee.net/tidbits/10-nov-2020-qna/</loc>
     <lastmod>2020-11-10T23:59:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/angular/</loc>
-    <lastmod>2020-11-09T18:20:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2020/11/recaptcha-on-error/</loc>
     <lastmod>2020-11-09T18:20:00+08:00</lastmod>
@@ -639,7 +642,5 @@
     <lastmod>2020-09-07T19:20:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/categories/</loc>
-  </url><url>
-    <loc>https://jiayee.net/tidbits/ng-new-with-pnpm/</loc>
   </url>
 </urlset>

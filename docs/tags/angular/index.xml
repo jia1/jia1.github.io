@@ -6,7 +6,19 @@
     <description>Recent content in angular on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 09 Nov 2020 18:20:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2023 22:14:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ng new with pnpm</title>
+      <link>https://jiayee.net/tidbits/ng-new-with-pnpm/</link>
+      <pubDate>Fri, 04 Aug 2023 22:14:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tidbits/ng-new-with-pnpm/</guid>
+      <description>Many years ago, my friend recommended yarn for package management. Things have changed since then. I was searching for a performance comparison report until I stumbled upon pnpm.
+Then, when I ran ng new [name], npm was used. I wanted pnpm. I should have done:
+ng new [name] --package-manager pnpm References:
+Stack Overflow thread Angular CLI docs </description>
+    </item>
+    
     <item>
       <title>reCaptcha on-error</title>
       <link>https://jiayee.net/2020/11/recaptcha-on-error/</link>
@@ -78,18 +90,6 @@ So, how did I solve this? I intercepted the data binding with a directive. This 
       <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
       <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
 Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required My Google-fu was lacking.</description>
-    </item>
-    
-    <item>
-      <title>ng new with pnpm</title>
-      <link>https://jiayee.net/tidbits/ng-new-with-pnpm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jiayee.net/tidbits/ng-new-with-pnpm/</guid>
-      <description>Many years ago, my friend recommended yarn for package management. Things have changed since then. I was searching for a performance comparison report until I stumbled upon pnpm.
-Then, when I ran ng new [name], npm was used. I wanted pnpm. I should have done:
-ng new [name] --package-manager pnpm References:
-Stack Overflow thread Angular CLI docs </description>
     </item>
     
   </channel>

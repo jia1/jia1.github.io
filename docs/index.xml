@@ -19,6 +19,18 @@ Spotlight search (Cmd + Space) &amp;ldquo;keyboard&amp;rdquo; Go to Keyboard Set
     </item>
     
     <item>
+      <title>ng new with pnpm</title>
+      <link>https://jiayee.net/tidbits/ng-new-with-pnpm/</link>
+      <pubDate>Fri, 04 Aug 2023 22:14:00 +0800</pubDate>
+      
+      <guid>https://jiayee.net/tidbits/ng-new-with-pnpm/</guid>
+      <description>Many years ago, my friend recommended yarn for package management. Things have changed since then. I was searching for a performance comparison report until I stumbled upon pnpm.
+Then, when I ran ng new [name], npm was used. I wanted pnpm. I should have done:
+ng new [name] --package-manager pnpm References:
+Stack Overflow thread Angular CLI docs </description>
+    </item>
+    
+    <item>
       <title>for-in and for-of</title>
       <link>https://jiayee.net/2023/08/for-in-and-for-of/</link>
       <pubDate>Thu, 03 Aug 2023 23:37:00 +0800</pubDate>
@@ -1784,18 +1796,6 @@ My resume</description>
       
       <guid>https://jiayee.net/tidbits/hello-world/</guid>
       <description>ハロー・ワルド</description>
-    </item>
-    
-    <item>
-      <title>ng new with pnpm</title>
-      <link>https://jiayee.net/tidbits/ng-new-with-pnpm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jiayee.net/tidbits/ng-new-with-pnpm/</guid>
-      <description>Many years ago, my friend recommended yarn for package management. Things have changed since then. I was searching for a performance comparison report until I stumbled upon pnpm.
-Then, when I ran ng new [name], npm was used. I wanted pnpm. I should have done:
-ng new [name] --package-manager pnpm References:
-Stack Overflow thread Angular CLI docs </description>
     </item>
     
   </channel>

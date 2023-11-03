@@ -24,7 +24,7 @@ for (let d in c) { console.log(d) } // k1
 
 <h3 class="h4">for...of</h3>
 
-Example: `for (let value in someIterable)`
+Example: `for (let value of someIterable)`
 
 ```javascript
 const a = [4,5,6]

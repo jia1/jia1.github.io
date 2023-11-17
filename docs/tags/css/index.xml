@@ -6,32 +6,28 @@
     <description>Recent content in css on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 04 Dec 2020 21:19:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Dec 2020 21:19:00 +0800</lastBuildDate>
+    <atom:link href="https://jiayee.net/tags/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Truncating Strings With CSS</title>
       <link>https://jiayee.net/2020/12/truncating-strings-with-css/</link>
       <pubDate>Fri, 04 Dec 2020 21:19:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/12/truncating-strings-with-css/</guid>
       <description>A few days ago, I wouldn&amp;rsquo;t have realised truncating strings by number of lines with CSS was possible. I was beginning to sweat when I received a request to truncate strings by number of lines instead of number of characters. To be fair, only SWEs would think of truncating by number of characters instead of line numbers&amp;hellip;
 My teammate shared an answer he found at CSS-Tricks. If I recall, it didn&amp;rsquo;t work out for me because of the way the containers were styled.</description>
     </item>
-    
     <item>
       <title>Sticky</title>
       <link>https://jiayee.net/2020/11/sticky/</link>
       <pubDate>Wed, 11 Nov 2020 20:43:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/11/sticky/</guid>
       <description>I found myself entangled in CSS. I needed app-header to stick to the top at all times. I also needed template-header to be right beneath app-header at all times. Lastly, embedded-content should begin immediately after template-header and shouldn&amp;rsquo;t be sticky. Here&amp;rsquo;s how the page organisation might look like:
 &amp;lt;div class=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;app-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;app-content&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-container&amp;#34;&amp;gt; &amp;lt;div class=&amp;#34;template-header&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div class=&amp;#34;embedded-content&amp;#34;&amp;gt; &amp;lt;!-- Content --&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; The simplest approach is to place app-header and template-header inside a single div.</description>
     </item>
-    
     <item>
       <title>Some Similarities</title>
       <link>https://jiayee.net/2020/10/some-similarities/</link>
       <pubDate>Thu, 15 Oct 2020 19:11:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/some-similarities/</guid>
       <description>This
 .some-class { display: flex; flex-direction: column; justify-content: center; min-height: 20rem; } and this
@@ -39,16 +35,13 @@ My teammate shared an answer he found at CSS-Tricks. If I recall, it didn&amp;rs
 CSS-Tricks says,
 You can think of align-items as the justify-content version for the cross-axis (perpendicular to the main-axis).</description>
     </item>
-    
     <item>
       <title>Center</title>
       <link>https://jiayee.net/2020/10/center/</link>
       <pubDate>Wed, 14 Oct 2020 18:04:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/center/</guid>
       <description>Why &amp;ldquo;Center&amp;rdquo; instead of &amp;ldquo;Centre&amp;rdquo;? Well, that&amp;rsquo;s because &amp;ldquo;center&amp;rdquo; is the version used in CSS.
 There were moments in my life when I wanted to give up writing in British English. There are so many other people using American English&amp;hellip; except for me. Programming languages are expressed using American English as well. I felt like a rebel for naming my variables in British English, but that&amp;rsquo;s what I&amp;rsquo;ve learnt in school.</description>
     </item>
-    
   </channel>
 </rss>

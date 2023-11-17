@@ -6,36 +6,31 @@
     <description>Recent content in java on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 26 Mar 2023 21:55:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Mar 2023 21:55:00 +0800</lastBuildDate>
+    <atom:link href="https://jiayee.net/tags/java/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Read Sheets in Java</title>
       <link>https://jiayee.net/2023/03/read-sheets-in-java/</link>
       <pubDate>Sun, 26 Mar 2023 21:55:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2023/03/read-sheets-in-java/</guid>
       <description>If you need to programmatically read a Google spreadsheet in Java, the quickstart guide describes a class that does configuration, scoping and reading all in one. However, if you use Spring Boot, you would want to split it into configuration and service layers:
 // build.gradle ... dependencies { ... compile (&amp;#39;com.google.api-client:google-api-client&amp;#39;) compile (&amp;#39;com.google.apis:google-api-services-sheets&amp;#39;) ... } ... // Spring Boot // Your config layer should contain the Sheets bean: // Copied from: https://stackoverflow.</description>
     </item>
-    
     <item>
       <title>Abstract classes and AOP</title>
       <link>https://jiayee.net/2020/11/abstract-classes-and-aop/</link>
       <pubDate>Tue, 17 Nov 2020 21:30:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/11/abstract-classes-and-aop/</guid>
       <description>I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I couldn&amp;rsquo;t make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.
 // MyAbstractController public abstract class MyAbstractController&amp;lt;T extends UniversalModel&amp;gt; { private final .</description>
     </item>
-    
     <item>
       <title>Iterator to Stream</title>
       <link>https://jiayee.net/tidbits/iterator-to-stream/</link>
       <pubDate>Wed, 11 Nov 2020 19:38:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/tidbits/iterator-to-stream/</guid>
       <description>With Google Guava, you can transform an Iterator into a Stream with Streams.stream(...). But that API is only available from Guava 21. If you don&amp;rsquo;t want to use Guava or if your Guava version is below 21, you need an additional step to convert your Iterator to a Stream:
 Stream&amp;lt;String&amp;gt; stream = StreamSupport.stream( Spliterators.spliteratorUnknownSize( iterator, Spliterator.ORDERED ), false ); Reference: mkyong.</description>
     </item>
-    
   </channel>
 </rss>

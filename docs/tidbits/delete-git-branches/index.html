@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
   
   <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
-  <title>qna</title>
+  <title>Deleting all git branches except master</title>
 </head>
 <body>
     <div class="grid-container">
@@ -65,7 +65,7 @@
         
         
         
-        <li class="cell small-3 is-active">
+        <li class="cell small-3 ">
           <a href="/">
             Blog
           </a>
@@ -106,72 +106,75 @@
 </header>
 </section>
           <section class="row">
-<div class="article-list">
+<article>
   
-    <div class="row">
-      <a href="/tidbits/21-sep-2020-qna/">
-        <h2 class="article-title h3">
-  Today&#39;s Q&amp;A for Jiayee (21 Sep 2020)
+  
+    <div class="nar-row">
+      <h2 class="article-title h3">
+  Deleting all git branches except master
 </h2>
 
-      </a>
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2023-11-17">17 Nov 2023 @ 3.20 pm</time>
     </div>
-  
-    <div class="row">
-      <a href="/tidbits/20-sep-2020-qna/">
-        <h2 class="article-title h3">
-  Today&#39;s Q&amp;A for Jiayee (20 Sep 2020)
-</h2>
-
-      </a>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/git">
+          #git
+        </a>
+      
     </div>
-  
-    <div class="row">
-      <a href="/tidbits/19-sep-2020-qna/">
-        <h2 class="article-title h3">
-  Today&#39;s Q&amp;A for Jiayee (19 Sep 2020)
-</h2>
-
-      </a>
-    </div>
-  
-    <div class="row">
-      <a href="/tidbits/18-sep-2020-qna/">
-        <h2 class="article-title h3">
-  Today&#39;s Q&amp;A for Jiayee (18 Sep 2020)
-</h2>
-
-      </a>
-    </div>
-  
-    <div class="row">
-      <a href="/tidbits/17-sep-2020-qna/">
-        <h2 class="article-title h3">
-  Today&#39;s Q&amp;A for Jiayee (17 Sep 2020)
-</h2>
-
-      </a>
-    </div>
-  
-  <section class="grid-x grid-margin-x">
-  <div class="cell small-6">
-    
-      <a class="nav-page" href="/tags/qna/16/">
-        Previous page
-      </a>
-    
-  </div>
-  <div class="cell small-6 text-right">
-    
-      <a class="nav-page" href="/tags/qna/18/">
-        Next page
-      </a>
-    
   </div>
 </section>
 
-</div>
+    </div>
+  
+  <section class="row article-content">
+    <p>I like to use different branches to compartmentalise my work items. I don&rsquo;t remember my feature branches, so I list them with <code>git branch</code>.</p>
+<p>When cleaning them up in my local machine, I often google &ldquo;delete all branches except master&rdquo;. Today, I want to stop copying commands off the internet. It&rsquo;s not like I don&rsquo;t know these commands - I tuned off and did not bother to break it down.</p>
+<p>Today, I want to understand what&rsquo;s happening. Here&rsquo;s the command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git branch | grep -v <span style="color:#2aa198">&#39;master&#39;</span> | xargs git branch -D
+</span></span></code></pre></div><ul>
+<li>The pipe (<code>|</code>) passes the output from the previous command to the next as input.</li>
+<li><code>grep -v</code> does an inverse (negative) search.</li>
+<li><code>| xargs</code> converts the output from the previous command into the argument for the next</li>
+</ul>
 
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/tidbits/cherry-pick/">
+      cherry-pick (#git)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/some-git/">
+      Some Git (#git)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
 
           </section>
           <section class="row"><footer class="text-center">

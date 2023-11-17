@@ -6,106 +6,87 @@
     <description>Recent content in braindump on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 27 Apr 2022 22:00:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/braindump/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Apr 2022 22:00:00 +0800</lastBuildDate>
+    <atom:link href="https://jiayee.net/tags/braindump/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Core React Training Day 2</title>
       <link>https://jiayee.net/2022/04/core-react-training-day-2/</link>
       <pubDate>Wed, 27 Apr 2022 22:00:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2022/04/core-react-training-day-2/</guid>
       <description>Day 2 was a continuation of our understanding of the useEffect hook. Some of concepts mentioned were concepts I &amp;ldquo;felt&amp;rdquo; while getting my hands dirty. The workshop was a conducive environment to make these concepts known to me more.
 Some keywords, libraries or links of interest: usehooks-ts eslint-plugin-react-hooks React lifecycle diagrams The dependency array in useEffect does diffs by identity. For primitives, we diff by value. For objects, we diff by memory location.</description>
     </item>
-    
     <item>
       <title>Core React Training Day 1</title>
       <link>https://jiayee.net/2022/04/core-react-training-day-1/</link>
       <pubDate>Tue, 26 Apr 2022 21:10:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
       <description>I&amp;rsquo;m thankful to be able to attend a React training workshop organised by my company. I&amp;rsquo;ve been using React in my job but this workshop made me realise I still have lots to learn.
 The exercises were very manageable. I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
 Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX.</description>
     </item>
-    
     <item>
       <title>Super Thinking Chapter 01</title>
       <link>https://jiayee.net/2020/11/super-thinking-chapter-01/</link>
       <pubDate>Sun, 15 Nov 2020 22:40:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/11/super-thinking-chapter-01/</guid>
       <description>Being Wrong Less Inverse thinking. Instead of thinking how you can save money, think about how you can reduce your expenses. Unforced error. A personal shortcoming which can be controlled. Anti-fragile. Treating setbacks as challenges and thriving on them. Keep it simple, stupid! Arguing from first principles. De-risking. Challenging assumptions and verifying or debunking them. Premature optimisation. Minimum viable product. Ockham&amp;rsquo;s razor. &amp;ldquo;The simplest explanation is usually the right one.&amp;rdquo; Conjunction fallacy.</description>
     </item>
-    
     <item>
       <title>Reaping the Benefits</title>
       <link>https://jiayee.net/2020/11/reaping-the-benefits/</link>
       <pubDate>Thu, 05 Nov 2020 18:23:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/11/reaping-the-benefits/</guid>
       <description>Section 3: &amp;ldquo;Reaping the Benefits&amp;rdquo; This section connects better listening and information management to better decision-making and benefits that can span entire organisations.
 Chapter 12: &amp;ldquo;Connecting Better Listening to Better Judgment&amp;rdquo; Learning from others and constantly reconstructing ideas leads to discoveries and insights.
 Chapter 13: &amp;ldquo;Changing Your Organisation through Listening&amp;rdquo; &amp;ldquo;Foster a more disciplined and productive organisation.&amp;rdquo; The example raised was the organisation of organisation-wide meetings. In these meetings, speakers need to be well-prepared and adhere to strict requirements.</description>
     </item>
-    
     <item>
       <title>Sorting the Chaos</title>
       <link>https://jiayee.net/2020/11/sorting-the-chaos/</link>
       <pubDate>Tue, 03 Nov 2020 20:04:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/11/sorting-the-chaos/</guid>
       <description>Section 2: &amp;ldquo;Sorting the Chaos&amp;rdquo; This section breaks down information from general business problems into suggested components. It also lists the questions to ask ourselves so that we remain focused and productive.
 Suggested information compartments:
 Mandate Plan Team Execution Personal Chapter 7: &amp;ldquo;What Is the Mandate?&amp;rdquo; &amp;ldquo;Why are we here?&amp;rdquo; (Vision, mission, agenda, etc.) So that we don&amp;rsquo;t lose track and get mesmerised by less important things &amp;ldquo;Are there any misalignments?</description>
     </item>
-    
     <item>
       <title>Power Listening by Bernard T Ferrari</title>
       <link>https://jiayee.net/2020/10/power-listening-by-bernard-t-ferrari/</link>
       <pubDate>Fri, 30 Oct 2020 15:54:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/power-listening-by-bernard-t-ferrari/</guid>
       <description>I&amp;rsquo;ve been borrowing ebooks from NLB ever since I bought my Kobo. I find it difficult to listen in Zoom meetings, so I hope to learn something from this book named &amp;ldquo;Power Listening&amp;rdquo; by Bernard T. Ferrari. I also have difficulty remembering things, so I summarised my takeaways below. I recommend reading the book and penning down notes so that you can appreciate the art of listening based on real-world examples and remember what you need to do to be a good listener.</description>
     </item>
-    
     <item>
       <title>Quick Go 3</title>
       <link>https://jiayee.net/2020/10/quick-go-3/</link>
       <pubDate>Thu, 01 Oct 2020 21:02:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/quick-go-3/</guid>
       <description>Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
 package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, slices and maps var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int // i.e. (mismatched types float64 and int) // Should do a / float64(b) var total float64 = 0 for i, value := range x { total += value } // Different from Python&amp;#39;s range // Compiler will complain &amp;#34;i declared and not used&amp;#34;, so we must rename unused variables to &amp;#39;_&amp;#39;.</description>
     </item>
-    
     <item>
       <title>Quick Go 2</title>
       <link>https://jiayee.net/2020/09/quick-go-2/</link>
       <pubDate>Wed, 30 Sep 2020 12:14:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/09/quick-go-2/</guid>
       <description>Chapter 3 and 4 were about variables (var, const and so on) and control structures (for, if and so on).
 package main import &amp;#34;fmt&amp;#34; b := &amp;#34;Hello, world!&amp;#34; // Block scope func main() { // Chapter 3: Variables var x string = &amp;#34;Hello, world!&amp;#34; var y string y = &amp;#34;Hello, world!&amp;#34; // x = x + y // x += y z := &amp;#34;Hello, world!&amp;#34; var a = &amp;#34;Hello, world!&amp;#34; fmt.</description>
     </item>
-    
     <item>
       <title>Quick Go 1</title>
       <link>https://jiayee.net/2020/09/quick-go-1/</link>
       <pubDate>Mon, 28 Sep 2020 22:43:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/09/quick-go-1/</guid>
       <description>It was a busy weekend for me. Last Saturday, I went out to catch up with my friends, and I went shopping for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport, so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. Besides my HumbleBundle books, I borrowed some books from NLB via OverDrive.</description>
     </item>
-    
     <item>
       <title>Internship Thursdays</title>
       <link>https://jiayee.net/2020/09/internship-thursdays/</link>
       <pubDate>Wed, 16 Sep 2020 21:52:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/09/internship-thursdays/</guid>
       <description>Last week, I had the honour to be one of the panellists for NUS CFG Internship Thursdays featuring Indeed. This is the profile I shared with NUS:
 Jiayee is a software engineer at Indeed. She graduated from NUS Computer Science in 2019 and joined Indeed as a fresh graduate. Before she joined Indeed, she had the opportunity to intern at various reputable companies such as SGInnovate, Visa and ViSenze. At Indeed, she gets the chance to learn from brilliant engineers in the company while indulging her passion for creating impact through technology.</description>
     </item>
-    
   </channel>
 </rss>

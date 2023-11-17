@@ -4,7 +4,7 @@ date: 2023-11-17T16:55:00+08:00
 draft: false
 tags: ["react","react-hook-form"]
 ---
-I am fortunate to have the opportunity to work with `react-hook-form` again. And work with it better. The following worked well for me:
+I'm fortunate to have the opportunity to work with `react-hook-form` again. And work with it better. The following worked well for me:
 
 ```typescript
 // MultiStepForm.tsx
@@ -90,11 +90,11 @@ export const SubsetOfFormFields = () => {
 }
 ```
 
-Although `SubsetOfFormFields` is a direct child of `MultiStepForm`, I pass information via context. Any other child component will not have to define extensive prop interfaces. They can call `useContext`.
+Although `SubsetOfFormFields` is a direct child of `MultiStepForm`, I pass information via context. Any other child component won't have to define extensive prop interfaces. They can call `useContext`.
 
-This decision does not suggest we should always opt for context. I use context when sharing information between stateful components. As for presentational ones, I pass information to them via props. I see `SubsetOfFormFields` as a stateful component. I see presentational components as pure functions that do not mutate any state outside of itself.
+This decision doesn't suggest we should always opt for context. I use context when sharing information between stateful components. As for presentational ones, I pass information to them via props. I see `SubsetOfFormFields` as a stateful component. I see presentational components as pure functions that don't mutate any state outside of itself.
 
-For the sharp-eyed, you may have seen `useFormContext` and `FormProvider` in `react-hook-form`'s docs. Well, I forgot about it. If time and mood permit, I'll investigate if I can add values from `OtherContext` into `FormProvider`. With type safety.
+For the sharp-eyed, you might've seen `useFormContext` and `FormProvider` in `react-hook-form`'s docs. Well, I forgot about it. If time and mood permit, I'll investigate if I can add values from `OtherContext` into `FormProvider`. With type safety.
 
 References:
 - [useFieldArray](https://react-hook-form.com/docs/usefieldarray)

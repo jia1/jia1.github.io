@@ -94,7 +94,7 @@ Although `SubsetOfFormFields` is a direct child of `MultiStepForm`, I pass infor
 
 This decision does not suggest we should always opt for context. I use context when sharing information between stateful components. As for presentational ones, I pass information to them via props. I see `SubsetOfFormFields` as a stateful component. I see presentational components as pure functions that do not mutate any state outside of itself.
 
-For the sharp-eyed, you may have seen `useFormContext` and `FormProvider` in react-hook-form's docs. Well, I forgot about it. If time and mood permit, I'll investigate if I can add values from `OtherContext` into `FormProvider`. With type safety.
+For the sharp-eyed, you may have seen `useFormContext` and `FormProvider` in `react-hook-form`'s docs. Well, I forgot about it. If time and mood permit, I'll investigate if I can add values from `OtherContext` into `FormProvider`. With type safety.
 
 References:
 - [useFieldArray](https://react-hook-form.com/docs/usefieldarray)

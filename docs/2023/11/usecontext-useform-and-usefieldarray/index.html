@@ -223,7 +223,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Although <code>SubsetOfFormFields</code> is a direct child of <code>MultiStepForm</code>, I pass information via context. Any other child component will not have to define extensive prop interfaces. They can call <code>useContext</code>.</p>
 <p>This decision does not suggest we should always opt for context. I use context when sharing information between stateful components. As for presentational ones, I pass information to them via props. I see <code>SubsetOfFormFields</code> as a stateful component. I see presentational components as pure functions that do not mutate any state outside of itself.</p>
-<p>For the sharp-eyed, you may have seen <code>useFormContext</code> and <code>FormProvider</code> in react-hook-form&rsquo;s docs. Well, I forgot about it. If time and mood permit, I&rsquo;ll investigate if I can add values from <code>OtherContext</code> into <code>FormProvider</code>. With type safety.</p>
+<p>For the sharp-eyed, you may have seen <code>useFormContext</code> and <code>FormProvider</code> in <code>react-hook-form</code>&rsquo;s docs. Well, I forgot about it. If time and mood permit, I&rsquo;ll investigate if I can add values from <code>OtherContext</code> into <code>FormProvider</code>. With type safety.</p>
 <p>References:</p>
 <ul>
 <li><a href="https://react-hook-form.com/docs/usefieldarray">useFieldArray</a></li>

@@ -148,7 +148,7 @@
 
   </div>
   <section class="nar-row article-summary">
-    I am fortunate to have the opportunity to work with react-hook-form again. And work with it better. The following worked well for me:
+    I&rsquo;m fortunate to have the opportunity to work with react-hook-form again. And work with it better. The following worked well for me:
 // MultiStepForm.tsx import { createContext, Dispatch, SetStateAction } from &#39;react&#39; import { SubmitHandler, useFieldArray, UseFieldArrayReturn, useForm, UseFormReturn, } from &#39;react-hook-form&#39; interface SomeComplexInput { someKey: string someValue: string } interface MultiStepFormInput { formFieldA: string formFieldB: SomeComplexInput[] } interface OtherContext { // Other frontend-specific values e.g. active form step index } export const MultiStepFormContext = createContext( {} as UseFormReturn&lt;MultiStepFormInput&gt; &amp; UseFieldArrayReturn&lt;MultiStepFormInput, &#39;formFieldB&#39;, &#39;id&#39;&gt; &amp; OtherContext, ) export const MultiStepForm = () =&gt; { const form = useForm&lt;MultiStepFormInput&gt;({ mode: &#39;all&#39;, }) // Use fieldArray.
   </section>
   <p>

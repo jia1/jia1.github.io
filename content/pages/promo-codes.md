@@ -5,9 +5,9 @@ draft: false
 ---
 <h2 class="h3">Promo codes</h2>
 
-<h3 class="h5">BlueSG</h3>
+<h3 class="h5">Anywheel</h3>
 
-Ping me!
+Hey! Collect your free ride coupon and join me to ride with Anywheel! https://hello.anywheel.sg/pub/referral/LK8CBR3H
 
 <h3 class="h5">CapitaStar</h3>
 
@@ -39,7 +39,7 @@ Ping me!
 
 <h3 class="h5">MyRepublic</h3>
 
-Ping me!
+Broadband Referral Link: https://secure.myrepublic.com.sg/order2/signup?promo_code=fwb&referrer_id=C1221838
 
 <h3 class="h5">Revolut</h3>
 
@@ -48,6 +48,16 @@ Ping me!
 <h3 class="h5">shopFarEast</h3>
 
 Get the shopFarEast app and use my referral code `6dcTuF` to sign up now!
+
+<h3 class="h5">Senoko Energy</h3>
+
+Use my referral code `BKZGXRQN` and get a $20 referral rebate on your electricity bill when you sign up with Senoko Energy! Browse their price plans and start saving now: https://www.senokoenergy.com/households/price-plans#referral
+
+<h3 class="h5">SP</h3>
+
+Sustainability is more than just saving electricity. Join me in the SP app and let's make a difference together! 
+
+My signup code is `2F4YWV`
 
 <h3 class="h5">Trust</h3>
 

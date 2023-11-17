@@ -13,7 +13,7 @@
       <link>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</link>
       <pubDate>Fri, 17 Nov 2023 16:55:00 +0800</pubDate>
       <guid>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</guid>
-      <description>I am fortunate to have the opportunity to work with react-hook-form again. And work with it better. The following worked well for me:
+      <description>I&amp;rsquo;m fortunate to have the opportunity to work with react-hook-form again. And work with it better. The following worked well for me:
 // MultiStepForm.tsx import { createContext, Dispatch, SetStateAction } from &amp;#39;react&amp;#39; import { SubmitHandler, useFieldArray, UseFieldArrayReturn, useForm, UseFormReturn, } from &amp;#39;react-hook-form&amp;#39; interface SomeComplexInput { someKey: string someValue: string } interface MultiStepFormInput { formFieldA: string formFieldB: SomeComplexInput[] } interface OtherContext { // Other frontend-specific values e.g. active form step index } export const MultiStepFormContext = createContext( {} as UseFormReturn&amp;lt;MultiStepFormInput&amp;gt; &amp;amp; UseFieldArrayReturn&amp;lt;MultiStepFormInput, &amp;#39;formFieldB&amp;#39;, &amp;#39;id&amp;#39;&amp;gt; &amp;amp; OtherContext, ) export const MultiStepForm = () =&amp;gt; { const form = useForm&amp;lt;MultiStepFormInput&amp;gt;({ mode: &amp;#39;all&amp;#39;, }) // Use fieldArray.</description>
     </item>
     <item>
@@ -198,10 +198,9 @@ So here&amp;rsquo;s the design: The user clicks &amp;ldquo;Submit&amp;rdquo;. Th
       <link>https://jiayee.net/promo-codes/</link>
       <pubDate>Thu, 09 Dec 2021 20:00:00 +0800</pubDate>
       <guid>https://jiayee.net/promo-codes/</guid>
-      <description>Promo codes BlueSG Ping me!
+      <description>Promo codes Anywheel Hey! Collect your free ride coupon and join me to ride with Anywheel! https://hello.anywheel.sg/pub/referral/LK8CBR3H
 CapitaStar Hello there! I&amp;rsquo;m referring you to download the CapitaStar app! Sign up for CapitaStar with my referral link below and you can get up to $8 eCapitaVoucher! Valid for SG mobile numbers only. https://cstar.sg/ul/rc/U8UNBZ?cc=SG
-DBS PayLah! Have you tried using PayLah!? Get $3 when you sign up with my referral code JIAUPE043. T&amp;amp;Cs apply.
-Endowus Hey! I&amp;rsquo;m using Endowus, which helps us invest cash, CPF, and SRS in globally diversified portfolios at low cost.</description>
+DBS PayLah! Have you tried using PayLah!? Get $3 when you sign up with my referral code JIAUPE043. T&amp;amp;Cs apply.</description>
     </item>
     <item>
       <title>Spring Boot Interceptors</title>

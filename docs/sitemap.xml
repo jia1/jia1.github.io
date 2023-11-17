@@ -2,25 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jiayee.net/</loc>
+    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/posts/</loc>
+    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/react/</loc>
+    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/react-hook-form/</loc>
+    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</loc>
+    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+  </url><url>
     <loc>https://jiayee.net/tidbits/delete-git-branches/</loc>
     <lastmod>2023-11-17T15:20:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/git/</loc>
     <lastmod>2023-11-17T15:20:00+08:00</lastmod>
   </url><url>
-    <loc>https://jiayee.net/</loc>
-    <lastmod>2023-11-17T15:20:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/</loc>
-    <lastmod>2023-11-17T15:20:00+08:00</lastmod>
-  </url><url>
     <loc>https://jiayee.net/tidbits/</loc>
     <lastmod>2023-11-17T15:20:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/08/deleting-conflicting-keyboard-shortcuts/</loc>
-    <lastmod>2023-08-04T22:24:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/posts/</loc>
     <lastmod>2023-08-04T22:24:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/shortcuts/</loc>
@@ -66,9 +75,6 @@
     <lastmod>2023-07-20T23:09:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/07/create-react-app-environment-variables/</loc>
-    <lastmod>2023-07-15T14:44:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/react/</loc>
     <lastmod>2023-07-15T14:44:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/06/dont-catch-everything/</loc>

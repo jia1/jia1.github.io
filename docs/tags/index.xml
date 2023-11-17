@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 17 Nov 2023 15:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Nov 2023 16:55:00 +0800</lastBuildDate>
     <atom:link href="https://jiayee.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>react</title>
+      <link>https://jiayee.net/tags/react/</link>
+      <pubDate>Fri, 17 Nov 2023 16:55:00 +0800</pubDate>
+      <guid>https://jiayee.net/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>react-hook-form</title>
+      <link>https://jiayee.net/tags/react-hook-form/</link>
+      <pubDate>Fri, 17 Nov 2023 16:55:00 +0800</pubDate>
+      <guid>https://jiayee.net/tags/react-hook-form/</guid>
+      <description></description>
+    </item>
     <item>
       <title>git</title>
       <link>https://jiayee.net/tags/git/</link>
@@ -69,13 +83,6 @@
       <link>https://jiayee.net/tags/postgres/</link>
       <pubDate>Thu, 20 Jul 2023 23:09:00 +0800</pubDate>
       <guid>https://jiayee.net/tags/postgres/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>react</title>
-      <link>https://jiayee.net/tags/react/</link>
-      <pubDate>Sat, 15 Jul 2023 14:44:00 +0800</pubDate>
-      <guid>https://jiayee.net/tags/react/</guid>
       <description></description>
     </item>
     <item>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>useContext, useForm, and useFieldArray</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <p class="cell large-6 medium-6 small-12 lead">
+        My learning diary
+      </p>
+      <p class="cell large-6 large-text-right medium-6 medium-text-right small-12 lead">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </p>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-3 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/tidbits">
+            Tidbits
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/promo-codes">
+            Promo codes
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h2 class="article-title h3">
+  useContext, useForm, and useFieldArray
+</h2>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2023-11-17">17 Nov 2023 @ 4.55 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/react">
+          #react
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/react-hook-form">
+          #react-hook-form
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>I am fortunate to have the opportunity to work with <code>react-hook-form</code> again. And work with it better. The following worked well for me:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#586e75">// MultiStepForm.tsx
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { createContext, Dispatch, SetStateAction } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> {
+</span></span><span style="display:flex;"><span>  SubmitHandler,
+</span></span><span style="display:flex;"><span>  useFieldArray,
+</span></span><span style="display:flex;"><span>  UseFieldArrayReturn,
+</span></span><span style="display:flex;"><span>  useForm,
+</span></span><span style="display:flex;"><span>  UseFormReturn,
+</span></span><span style="display:flex;"><span>} <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react-hook-form&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">interface</span> SomeComplexInput {
+</span></span><span style="display:flex;"><span>    someKey: <span style="color:#dc322f">string</span>
+</span></span><span style="display:flex;"><span>    someValue: <span style="color:#dc322f">string</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">interface</span> MultiStepFormInput {
+</span></span><span style="display:flex;"><span>    formFieldA: <span style="color:#dc322f">string</span>
+</span></span><span style="display:flex;"><span>    formFieldB: <span style="color:#dc322f">SomeComplexInput</span>[]
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">interface</span> OtherContext {
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Other frontend-specific values e.g. active form step index
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepFormContext <span style="color:#719e07">=</span> createContext(
+</span></span><span style="display:flex;"><span>  {} <span style="color:#268bd2">as</span> UseFormReturn&lt;<span style="color:#268bd2">MultiStepFormInput</span>&gt; <span style="color:#719e07">&amp;</span>
+</span></span><span style="display:flex;"><span>    UseFieldArrayReturn&lt;<span style="color:#268bd2">MultiStepFormInput</span>, &#39;formFieldB&#39;, &#39;id&#39;&gt; <span style="color:#719e07">&amp;</span>
+</span></span><span style="display:flex;"><span>    OtherContext,
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> MultiStepForm <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">const</span> form <span style="color:#719e07">=</span> useForm&lt;<span style="color:#268bd2">MultiStepFormInput</span>&gt;({
+</span></span><span style="display:flex;"><span>        mode<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;all&#39;</span>,
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Use fieldArray.replace and the like to change form fields on the fly
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>    <span style="color:#268bd2">const</span> fieldArray <span style="color:#719e07">=</span> useFieldArray&lt;<span style="color:#268bd2">MultiStepFormInput</span>&gt;({
+</span></span><span style="display:flex;"><span>        control: <span style="color:#dc322f">form.control</span>,
+</span></span><span style="display:flex;"><span>        name<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;formFieldB&#39;</span>,
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">const</span> onSubmit: <span style="color:#dc322f">SubmitHandler</span>&lt;<span style="color:#268bd2">MultiStepFormInput</span>&gt; <span style="color:#719e07">=</span> (data: <span style="color:#dc322f">MultiStepFormInput</span>) <span style="color:#719e07">=&gt;</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">// Send data to your server
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">return</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#268bd2">form</span> onSubmit<span style="color:#719e07">=</span>{form.handleSubmit(onSubmit)}&gt;
+</span></span><span style="display:flex;"><span>            &lt;<span style="color:#268bd2">MultiStepFormContext.Provider</span>
+</span></span><span style="display:flex;"><span>                value<span style="color:#719e07">=</span>{{
+</span></span><span style="display:flex;"><span>                    ...form,
+</span></span><span style="display:flex;"><span>                    ...fieldArray,
+</span></span><span style="display:flex;"><span>                    <span style="color:#586e75">// values from OtherContext
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>                }}
+</span></span><span style="display:flex;"><span>            &gt;
+</span></span><span style="display:flex;"><span>                &lt;<span style="color:#268bd2">SubsetOfFormFields</span> /&gt;
+</span></span><span style="display:flex;"><span>            &lt;/<span style="color:#268bd2">MultiStepFormContext.Provider</span>&gt;
+</span></span><span style="display:flex;"><span>        &lt;/<span style="color:#268bd2">form</span>&gt;
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#586e75">// SubsetOfFormFields.tsx
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { Input } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;@chakra-ui/react&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { useContext } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;react&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">import</span> { MultiStepFormContext } <span style="color:#268bd2">from</span> <span style="color:#2aa198">&#39;./MultiStepForm&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">export</span> <span style="color:#268bd2">const</span> SubsetOfFormFields <span style="color:#719e07">=</span> () <span style="color:#719e07">=&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">const</span> { fields, register } <span style="color:#719e07">=</span> useContext(MultiStepFormContext)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">// Inside map, field has access to both someKey and someValue
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> fields.map((field, index) <span style="color:#719e07">=&gt;</span> (
+</span></span><span style="display:flex;"><span>        &lt;<span style="color:#268bd2">Input</span>
+</span></span><span style="display:flex;"><span>          key<span style="color:#719e07">=</span>{field.id}
+</span></span><span style="display:flex;"><span>          {...register(`formFieldB.${index}.someValue`)}
+</span></span><span style="display:flex;"><span>        /&gt;
+</span></span><span style="display:flex;"><span>    ))
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Although <code>SubsetOfFormFields</code> is a direct child of <code>MultiStepForm</code>, I pass information via context. Any other child component will not have to define extensive prop interfaces. They can call <code>useContext</code>.</p>
+<p>This decision does not suggest we should always opt for context. I use context when sharing information between stateful components. As for presentational ones, I pass information to them via props. I see <code>SubsetOfFormFields</code> as a stateful component. I see presentational components as pure functions that do not mutate any state outside of itself.</p>
+<p>For the sharp-eyed, you may have seen <code>useFormContext</code> and <code>FormProvider</code> in react-hook-form&rsquo;s docs. Well, I forgot about it. If time and mood permit, I&rsquo;ll investigate if I can add values from <code>OtherContext</code> into <code>FormProvider</code>. With type safety.</p>
+<p>References:</p>
+<ul>
+<li><a href="https://react-hook-form.com/docs/usefieldarray">useFieldArray</a></li>
+<li><a href="https://react-hook-form.com/docs/useformcontext">useFormContext</a></li>
+<li><a href="https://react-hook-form.com/docs/formprovider">FormProvider</a></li>
+</ul>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2023/03/react-hook-form/">
+      react-hook-form (#react-hook-form)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2023/07/create-react-app-environment-variables/">
+      Create React App environment variables (#react)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2023/04/react-hook-form-validations/">
+      react-hook-form validations (#react)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2023
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jiayee" data-description="Support me on Buy me a coffee!" data-message="" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+</html>

@@ -113,6 +113,48 @@
     <div class="row">
       <article>
   
+  <a href="/2023/07/installing-postgres-on-macos/">
+    <h2 class="article-title h3">
+  Installing Postgres on macOS
+</h2>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2023-07-20">20 Jul 2023 @ 11.09 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/postgres">
+          #postgres
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    Before this, the last time I installed a Postgres database on my local machine was years ago. I wished I found Sami Korpela&rsquo;s blog post sooner. It had everything I needed:
+# macOS Ventura Terminal brew install postgresql@15 echo &#39;export PATH=&#34;/opt/homebrew/opt/postgresql@15/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc source ~/.zshrc brew services start postgresql createuser -s postgres psql postgres # or psql -U your_username -d your_database ### postgres=# ### \l # List databases \du # List roles \c your_database # Connect to database \c your_database other_username # Connect to database as other_username \d # List relations (tables) 
+  </section>
+  <p>
+    <a class="article-read-more" href="/2023/07/installing-postgres-on-macos/">Continue reading "Installing Postgres on macOS"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2023/07/create-react-app-environment-variables/">
     <h2 class="article-title h3">
   Create React App environment variables
@@ -277,48 +319,6 @@ Back to the main learning point I&rsquo;m trying to share: In the pull request a
   </section>
   <p>
     <a class="article-read-more" href="/2023/04/react-hook-form-validations/">Continue reading "react-hook-form validations"</a>
-  </p>
-</article>
-
-    </div>
-  
-    <div class="row">
-      <article>
-  
-  <a href="/2023/03/read-sheets-in-java/">
-    <h2 class="article-title h3">
-  Read Sheets in Java
-</h2>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2023-03-26">26 Mar 2023 @ 9.55 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/java">
-          #java
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    If you need to programmatically read a Google spreadsheet in Java, the quickstart guide describes a class that does configuration, scoping and reading all in one. However, if you use Spring Boot, you would want to split it into configuration and service layers:
-// build.gradle ... dependencies { ... compile (&#39;com.google.api-client:google-api-client&#39;) compile (&#39;com.google.apis:google-api-services-sheets&#39;) ... } ... // Spring Boot // Your config layer should contain the Sheets bean: // Copied from: https://stackoverflow.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2023/03/read-sheets-in-java/">Continue reading "Read Sheets in Java"</a>
   </p>
 </article>
 

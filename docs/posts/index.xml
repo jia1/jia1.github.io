@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 04 Aug 2023 22:24:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Nov 2023 16:55:00 +0800</lastBuildDate>
     <atom:link href="https://jiayee.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>useContext, useForm, and useFieldArray</title>
+      <link>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</link>
+      <pubDate>Fri, 17 Nov 2023 16:55:00 +0800</pubDate>
+      <guid>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</guid>
+      <description>I am fortunate to have the opportunity to work with react-hook-form again. And work with it better. The following worked well for me:
+// MultiStepForm.tsx import { createContext, Dispatch, SetStateAction } from &amp;#39;react&amp;#39; import { SubmitHandler, useFieldArray, UseFieldArrayReturn, useForm, UseFormReturn, } from &amp;#39;react-hook-form&amp;#39; interface SomeComplexInput { someKey: string someValue: string } interface MultiStepFormInput { formFieldA: string formFieldB: SomeComplexInput[] } interface OtherContext { // Other frontend-specific values e.g. active form step index } export const MultiStepFormContext = createContext( {} as UseFormReturn&amp;lt;MultiStepFormInput&amp;gt; &amp;amp; UseFieldArrayReturn&amp;lt;MultiStepFormInput, &amp;#39;formFieldB&amp;#39;, &amp;#39;id&amp;#39;&amp;gt; &amp;amp; OtherContext, ) export const MultiStepForm = () =&amp;gt; { const form = useForm&amp;lt;MultiStepFormInput&amp;gt;({ mode: &amp;#39;all&amp;#39;, }) // Use fieldArray.</description>
+    </item>
     <item>
       <title>Deleting conflicting keyboard shortcuts</title>
       <link>https://jiayee.net/2023/08/deleting-conflicting-keyboard-shortcuts/</link>

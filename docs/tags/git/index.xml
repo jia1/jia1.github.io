@@ -6,30 +6,35 @@
     <description>Recent content in git on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 17 Nov 2023 15:20:00 +0800</lastBuildDate>
-    <atom:link href="https://jiayee.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2023 15:20:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Deleting all git branches except master</title>
       <link>https://jiayee.net/tidbits/delete-git-branches/</link>
       <pubDate>Fri, 17 Nov 2023 15:20:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/tidbits/delete-git-branches/</guid>
       <description>I like to use different branches to compartmentalise my work items. I don&amp;rsquo;t remember my feature branches, so I list them with git branch.
 When cleaning them up in my local machine, I often google &amp;ldquo;delete all branches except master&amp;rdquo;. Today, I want to stop copying commands off the internet. It&amp;rsquo;s not like I don&amp;rsquo;t know these commands - I tuned off and did not bother to break it down.</description>
     </item>
+    
     <item>
       <title>cherry-pick</title>
       <link>https://jiayee.net/tidbits/cherry-pick/</link>
       <pubDate>Mon, 16 Nov 2020 21:45:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/tidbits/cherry-pick/</guid>
       <description>I committed one commit to the wrong branch. Running git cherry-pick wrongBranch at the right branch did the trick.</description>
     </item>
+    
     <item>
       <title>Some Git</title>
       <link>https://jiayee.net/2020/10/some-git/</link>
       <pubDate>Tue, 27 Oct 2020 20:51:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/10/some-git/</guid>
       <description>I didn&amp;rsquo;t realise my pull request was between branches of the same repository. Not sure if my friend realised. I moved the feature branch&amp;rsquo;s latest updates to my fork&amp;rsquo;s feature branch. I then made another pull request. I used the following commands to straighten things out:
 # Create a local branch with the same name as the origin remote feature branch git checkout -b feat/simple-compound-interest-calculators # Pull in the changes from the origin remote git pull # Set the upstream to the origin remote feature branch git branch --set-upstream-to=origin/feat/simple-compound-interest-calculators feat/simple-compound-interest-calculators # Check the remotes and their URLs git remote -v # Add the remote for my fork git remote add jiayee git@github.</description>
     </item>
+    
   </channel>
 </rss>

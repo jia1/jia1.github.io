@@ -113,6 +113,53 @@
     <div class="row">
       <article>
   
+  <a href="/2022/04/core-react-training-day-2/">
+    <h2 class="article-title h3">
+  Core React Training Day 2
+</h2>
+
+  </a>
+  <div class="nar-row">
+    <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2022-04-27">27 Apr 2022 @ 10.00 pm</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/braindump">
+          #braindump
+        </a>
+      
+        
+        <a href="https://jiayee.net/tags/react">
+          #react
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+  </div>
+  <section class="nar-row article-summary">
+    Day 2 was a continuation of our understanding of the useEffect hook. Some of concepts mentioned were concepts I &ldquo;felt&rdquo; while getting my hands dirty. The workshop was a conducive environment to make these concepts known to me more.
+Some keywords, libraries or links of interest: usehooks-ts eslint-plugin-react-hooks React lifecycle diagrams The dependency array in useEffect does diffs by identity. For primitives, we diff by value. For objects, we diff by memory location.
+  </section>
+  <p>
+    <a class="article-read-more" href="/2022/04/core-react-training-day-2/">Continue reading "Core React Training Day 2"</a>
+  </p>
+</article>
+
+    </div>
+  
+    <div class="row">
+      <article>
+  
   <a href="/2022/04/core-react-training-day-1/">
     <h2 class="article-title h3">
   Core React Training Day 1
@@ -284,53 +331,6 @@ My teammate shared an answer he found at CSS-Tricks. If I recall, it didn&rsquo;
 
     </div>
   
-    <div class="row">
-      <article>
-  
-  <a href="/2020/12/reach-router-match/">
-    <h2 class="article-title h3">
-  Reach Router Match
-</h2>
-
-  </a>
-  <div class="nar-row">
-    <section class="article-metadata">
-  <div class="grid-x grid-margin-x">
-    <div class="cell large-6 medium-6 small-12">
-      
-      
-      
-      <time datetime="2020-12-04">4 Dec 2020 @ 9.10 pm</time>
-    </div>
-    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
-      
-      
-        
-        <a href="https://jiayee.net/tags/react">
-          #react
-        </a>
-      
-        
-        <a href="https://jiayee.net/tags/reach">
-          #reach
-        </a>
-      
-    </div>
-  </div>
-</section>
-
-  </div>
-  <section class="nar-row article-summary">
-    I use Reach Router. I&rsquo;ve a component which isn&rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&rsquo;s how I did it after seeing Jacek&rsquo;s hint:
-&lt;div&gt; &lt;Match path=&#34;/*&#34;&gt; {(props) =&gt; ( &lt;MyComponent path=&#34;/*&#34; match={props.match ?? &#39;&#39;} /&gt; )} &lt;/Match&gt; &lt;Router&gt; ... &lt;/Router&gt; &lt;/div&gt; interface Props { match: any; } export const MyComponent: FC&lt;Props&gt; = (props: Props) =&gt; { const pathname = props.
-  </section>
-  <p>
-    <a class="article-read-more" href="/2020/12/reach-router-match/">Continue reading "Reach Router Match"</a>
-  </p>
-</article>
-
-    </div>
-  
   <section class="grid-x grid-margin-x">
   <div class="cell small-6">
     
@@ -354,7 +354,7 @@ My teammate shared an answer he found at CSS-Tricks. If I recall, it didn&rsquo;
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2023
+  Copyright &copy; 2024
   Jiayee Lim.
 </footer>
 </section>

@@ -6,30 +6,35 @@
     <description>Recent content in go on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 01 Oct 2020 21:02:00 +0800</lastBuildDate>
-    <atom:link href="https://jiayee.net/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 21:02:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Go 3</title>
       <link>https://jiayee.net/2020/10/quick-go-3/</link>
       <pubDate>Thu, 01 Oct 2020 21:02:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/10/quick-go-3/</guid>
       <description>Chapter 5 and 6 were about basic data structures (like arrays, slices and maps) and functions.
 package main import &amp;#34;fmt&amp;#34; func main() { // Chapter 5: Arrays, slices and maps var x [5]int x[4] = 100 fmt.Println(x) // No coercing when there is a division operation involving a float64 and int // i.e. (mismatched types float64 and int) // Should do a / float64(b) var total float64 = 0 for i, value := range x { total += value } // Different from Python&amp;#39;s range // Compiler will complain &amp;#34;i declared and not used&amp;#34;, so we must rename unused variables to &amp;#39;_&amp;#39;.</description>
     </item>
+    
     <item>
       <title>Quick Go 2</title>
       <link>https://jiayee.net/2020/09/quick-go-2/</link>
       <pubDate>Wed, 30 Sep 2020 12:14:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/09/quick-go-2/</guid>
       <description>Chapter 3 and 4 were about variables (var, const and so on) and control structures (for, if and so on).
 package main import &amp;#34;fmt&amp;#34; b := &amp;#34;Hello, world!&amp;#34; // Block scope func main() { // Chapter 3: Variables var x string = &amp;#34;Hello, world!&amp;#34; var y string y = &amp;#34;Hello, world!&amp;#34; // x = x + y // x += y z := &amp;#34;Hello, world!&amp;#34; var a = &amp;#34;Hello, world!&amp;#34; fmt.</description>
     </item>
+    
     <item>
       <title>Quick Go 1</title>
       <link>https://jiayee.net/2020/09/quick-go-1/</link>
       <pubDate>Mon, 28 Sep 2020 22:43:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/09/quick-go-1/</guid>
       <description>It was a busy weekend for me. Last Saturday, I went out to catch up with my friends, and I went shopping for an ebook reader. Last Sunday, I cycled with my in-laws and played computer games. On both days, I travelled by public transport, so a couple of hours went into travelling too. Over the weekend, I also had to set up my ebook reader. Besides my HumbleBundle books, I borrowed some books from NLB via OverDrive.</description>
     </item>
+    
   </channel>
 </rss>

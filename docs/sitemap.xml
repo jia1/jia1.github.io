@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jiayee.net/tags/cli/</loc>
+    <lastmod>2024-06-15T10:16:48+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/2024/06/dataset-massage-head-tail-split/</loc>
+    <lastmod>2024-06-15T10:16:48+08:00</lastmod>
+  </url><url>
     <loc>https://jiayee.net/</loc>
-    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+    <lastmod>2024-06-15T10:16:48+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/posts/</loc>
-    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
+    <lastmod>2024-06-15T10:16:48+08:00</lastmod>
+  </url><url>
+    <loc>https://jiayee.net/tags/</loc>
+    <lastmod>2024-06-15T10:16:48+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/react/</loc>
     <lastmod>2023-11-17T16:55:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/tags/react-hook-form/</loc>
-    <lastmod>2023-11-17T16:55:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/</loc>
     <lastmod>2023-11-17T16:55:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</loc>
@@ -61,9 +67,6 @@
   </url><url>
     <loc>https://jiayee.net/tidbits/multi-line-editing-in-vs-code/</loc>
     <lastmod>2023-07-30T16:34:00+08:00</lastmod>
-  </url><url>
-    <loc>https://jiayee.net/tags/cli/</loc>
-    <lastmod>2023-07-30T16:20:00+08:00</lastmod>
   </url><url>
     <loc>https://jiayee.net/2023/07/the-ssh-command/</loc>
     <lastmod>2023-07-30T16:20:00+08:00</lastmod>

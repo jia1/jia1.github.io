@@ -6,98 +6,119 @@
     <description>Recent content in react on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 17 Nov 2023 16:55:00 +0800</lastBuildDate>
-    <atom:link href="https://jiayee.net/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2023 16:55:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>useContext, useForm, and useFieldArray</title>
       <link>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</link>
       <pubDate>Fri, 17 Nov 2023 16:55:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2023/11/usecontext-useform-and-usefieldarray/</guid>
       <description>I&amp;rsquo;m fortunate to have the opportunity to work with react-hook-form again. And work with it better. The following worked well for me:
 // MultiStepForm.tsx import { createContext, Dispatch, SetStateAction } from &amp;#39;react&amp;#39; import { SubmitHandler, useFieldArray, UseFieldArrayReturn, useForm, UseFormReturn, } from &amp;#39;react-hook-form&amp;#39; interface SomeComplexInput { someKey: string someValue: string } interface MultiStepFormInput { formFieldA: string formFieldB: SomeComplexInput[] } interface OtherContext { // Other frontend-specific values e.g. active form step index } export const MultiStepFormContext = createContext( {} as UseFormReturn&amp;lt;MultiStepFormInput&amp;gt; &amp;amp; UseFieldArrayReturn&amp;lt;MultiStepFormInput, &amp;#39;formFieldB&amp;#39;, &amp;#39;id&amp;#39;&amp;gt; &amp;amp; OtherContext, ) export const MultiStepForm = () =&amp;gt; { const form = useForm&amp;lt;MultiStepFormInput&amp;gt;({ mode: &amp;#39;all&amp;#39;, }) // Use fieldArray.</description>
     </item>
+    
     <item>
       <title>Create React App environment variables</title>
       <link>https://jiayee.net/2023/07/create-react-app-environment-variables/</link>
       <pubDate>Sat, 15 Jul 2023 14:44:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2023/07/create-react-app-environment-variables/</guid>
       <description>I worked on React codebases for years. For various reasons, I never had to deal with client-side environment variables.
 I first saw environment variable prefixes in Next.
 Unfortunately, it took me a while to realise that this concept also applied to create-react-app.
 As a result, I spent some time wondering why my environment variables were not replaced at build time. I started to think it was because they were replaced during runtime.</description>
     </item>
+    
     <item>
       <title>react-hook-form validations</title>
       <link>https://jiayee.net/2023/04/react-hook-form-validations/</link>
       <pubDate>Wed, 12 Apr 2023 00:12:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2023/04/react-hook-form-validations/</guid>
       <description>Feeling a little abashed about leaving a bug unresolved for the day, but I want a break and keep the team posted. And I also want to share what I&amp;rsquo;ve learnt. However, if you know what&amp;rsquo;s the problem with my commit, please don&amp;rsquo;t hesitate to reach out!
 Back to the main learning point I&amp;rsquo;m trying to share: In the pull request above, look at the first screenshot. The first screenshot was supposed to depict a form field that has gone through the validation function despite being untouched.</description>
     </item>
+    
     <item>
       <title>Reuse Stories When Testing</title>
       <link>https://jiayee.net/2023/03/reuse-stories-when-testing/</link>
       <pubDate>Sun, 26 Mar 2023 21:06:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2023/03/reuse-stories-when-testing/</guid>
       <description>My volunteering experience at an open source project led me to appreciate Storybook. Developing frontend components in isolation makes me happy. Unexpected behaviour is localised, and you are appropriately enticed to write your components better. By better, I meant modular. Modularity encourages simplicity (think SRP), and this makes code more reusable and self-documenting. There&amp;rsquo;s no greater joy than not having to explain your code.
 But wait, there&amp;rsquo;s more: If you think writing stories is exclusive to your Storybook instance and thus a pain to write, think again.</description>
     </item>
+    
     <item>
       <title>react-hook-form</title>
       <link>https://jiayee.net/2023/03/react-hook-form/</link>
       <pubDate>Sat, 25 Mar 2023 12:35:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2023/03/react-hook-form/</guid>
       <description>It&amp;rsquo;s been a while since I last had the chance to assess several libraries to solve parts of a problem. My most recent project required me to evaluate JavaScript libraries which make form management a breeze. The &amp;ldquo;me&amp;rdquo; in the past would have jumped at any first possibility, like how a chick imprints on the first living thing they see. Not anymore.
 My ex-company taught me to set up decision tables and make recommendations according to concrete criteria and their priorities.</description>
     </item>
+    
     <item>
       <title>Core React Training Day 2</title>
       <link>https://jiayee.net/2022/04/core-react-training-day-2/</link>
       <pubDate>Wed, 27 Apr 2022 22:00:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2022/04/core-react-training-day-2/</guid>
       <description>Day 2 was a continuation of our understanding of the useEffect hook. Some of concepts mentioned were concepts I &amp;ldquo;felt&amp;rdquo; while getting my hands dirty. The workshop was a conducive environment to make these concepts known to me more.
 Some keywords, libraries or links of interest: usehooks-ts eslint-plugin-react-hooks React lifecycle diagrams The dependency array in useEffect does diffs by identity. For primitives, we diff by value. For objects, we diff by memory location.</description>
     </item>
+    
     <item>
       <title>Core React Training Day 1</title>
       <link>https://jiayee.net/2022/04/core-react-training-day-1/</link>
       <pubDate>Tue, 26 Apr 2022 21:10:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2022/04/core-react-training-day-1/</guid>
       <description>I&amp;rsquo;m thankful to be able to attend a React training workshop organised by my company. I&amp;rsquo;ve been using React in my job but this workshop made me realise I still have lots to learn.
 The exercises were very manageable. I learnt the most from the instructor&amp;rsquo;s detailed explanation of how React works:
 Babel is not part of React but it was helpful to know how Babel makes our lives easier by parsing JSX.</description>
     </item>
+    
     <item>
       <title>Reach Router Match</title>
       <link>https://jiayee.net/2020/12/reach-router-match/</link>
       <pubDate>Fri, 04 Dec 2020 21:10:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/12/reach-router-match/</guid>
       <description>I use Reach Router. I&amp;rsquo;ve a component which isn&amp;rsquo;t a child of Router, so it does not have the useLocation hook. But I need to access the current URL in that component. Here&amp;rsquo;s how I did it after seeing Jacek&amp;rsquo;s hint:
 &amp;lt;div&amp;gt; &amp;lt;Match path=&amp;#34;/*&amp;#34;&amp;gt; {(props) =&amp;gt; ( &amp;lt;MyComponent path=&amp;#34;/*&amp;#34; match={props.match ?? &amp;#39;&amp;#39;} /&amp;gt; )} &amp;lt;/Match&amp;gt; &amp;lt;Router&amp;gt; ... &amp;lt;/Router&amp;gt; &amp;lt;/div&amp;gt; interface Props { match: any; } export const MyComponent: FC&amp;lt;Props&amp;gt; = (props: Props) =&amp;gt; { const pathname = props.</description>
     </item>
+    
     <item>
       <title>Need an extra whitespace?</title>
       <link>https://jiayee.net/tidbits/need-an-extra-whitespace/</link>
       <pubDate>Thu, 15 Oct 2020 19:16:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/tidbits/need-an-extra-whitespace/</guid>
       <description>Need an extra whitespace in JSX? Instead of &amp;amp;nbsp;, try this:
 &amp;lt;span&amp;gt;Hello, &amp;lt;/span&amp;gt; {true ? &amp;#39;world!&amp;#39; : &amp;#39;world!&amp;#39;} Some food for thought here.</description>
     </item>
+    
     <item>
       <title>Challenges of a multi-step flow with permalinks</title>
       <link>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</link>
       <pubDate>Wed, 07 Oct 2020 22:50:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/10/challenges-of-a-multi-step-flow-with-permalinks/</guid>
       <description>I decided to invest my time into covering the edge cases that were not handled by Design #1. Refer to yesterday&amp;rsquo;s post for the context. The edge cases are:
 Forms which need data from the preceding forms Dynamic form links I can deal with the first pain point by leveraging query parameters. A persistent Redux store is not needed (yet). A persistent Redux store is one which persists between page loads and refreshes.</description>
     </item>
+    
     <item>
       <title>Multi-step forms</title>
       <link>https://jiayee.net/2020/10/multi-step-forms/</link>
       <pubDate>Tue, 06 Oct 2020 21:48:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/10/multi-step-forms/</guid>
       <description>I&amp;rsquo;ve a few pages which I need to chain into a single form flow. I also need to display a progress bar at the top of each form. I need to do some rearchitecting. Reasons:
 If we don&amp;rsquo;t do anything, we will need to insert &amp;lt;ProgressBar .../&amp;gt; and the like into every form component. Sharing the forms/pages across other flows which don&amp;rsquo;t need the progress bar is difficult. The form flow will become more obscure.</description>
     </item>
+    
   </channel>
 </rss>

@@ -152,7 +152,7 @@
 <p>(You may be wondering why there are reactive Mongo repositories. It&rsquo;s because we are transitioning from a reactive codebase to a non-reactive one.)</p>
 <p>However, there was no other useful information as the consumer didn&rsquo;t log any errors. The MongoDB provisioner was a massive platform with a ton of logs. I didn&rsquo;t know which one to check and whether I should even check those logs. I proceeded to scrutinise both the consumer and the custom starter&rsquo;s codebases.</p>
 <p>This line piqued my curiosity:</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#268bd2">@EnableMongoRepositories</span>(value <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;yourTLD.yourOrg.yourProject.somePackageContainingRepositories&#34;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#268bd2">@EnableMongoRepositories</span><span style="color:#719e07">(</span>value <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;yourTLD.yourOrg.yourProject.somePackageContainingRepositories&#34;</span><span style="color:#719e07">)</span>
 </span></span></code></pre></div><p>It didn&rsquo;t point to the custom starter&rsquo;s package containing the auto-configured repository. This could be why I received the <code>IllegalArgumentException</code> error.</p>
 
   </section>
@@ -180,7 +180,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2023
+  Copyright &copy; 2024
   Jiayee Lim.
 </footer>
 </section>

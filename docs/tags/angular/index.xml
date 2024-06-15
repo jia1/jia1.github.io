@@ -6,76 +6,91 @@
     <description>Recent content in angular on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 04 Aug 2023 22:14:00 +0800</lastBuildDate>
-    <atom:link href="https://jiayee.net/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Aug 2023 22:14:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/angular/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ng new with pnpm</title>
       <link>https://jiayee.net/tidbits/ng-new-with-pnpm/</link>
       <pubDate>Fri, 04 Aug 2023 22:14:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/tidbits/ng-new-with-pnpm/</guid>
       <description>Many years ago, my friend recommended yarn for package management. Things have changed since then. I was searching for a performance comparison report until I stumbled upon pnpm.
 Then, when I ran ng new [name], npm was used. I wanted pnpm. I should have done:
 ng new [name] --package-manager pnpm References:
 Stack Overflow thread Angular CLI docs </description>
     </item>
+    
     <item>
       <title>reCaptcha on-error</title>
       <link>https://jiayee.net/2020/11/recaptcha-on-error/</link>
       <pubDate>Mon, 09 Nov 2020 18:20:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/11/recaptcha-on-error/</guid>
       <description>Polling wasn&amp;rsquo;t effective because:
 Hot reloading didn&amp;rsquo;t happen because of some heap limit error. I called the wrong function to check if the reCaptcha errored. To deal with the heap limit, my buddy suggested updating the docker-dev script in package.json to:
 { &amp;#34;scripts&amp;#34;: { &amp;#34;docker-dev&amp;#34;: &amp;#34;export NODE_OPTIONS=\&amp;#34;--max-old-space-size=4096\&amp;#34; &amp;amp;&amp;amp; ...&amp;#34; } } As for checking if the reCaptcha errored, neither on-expire nor captchaService.isValid worked. A possible explanation for the former would be that the reCaptcha didn&amp;rsquo;t expire.</description>
     </item>
+    
     <item>
       <title>Captcha isValid()</title>
       <link>https://jiayee.net/2020/10/captcha-isvalid/</link>
       <pubDate>Sun, 18 Oct 2020 19:30:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/10/captcha-isvalid/</guid>
       <description>I needed the client to check for the captcha failure when a user loads a form. In the captchaService abstraction for angular-recaptcha, there was isValid() which does:
 /** * Check if the response has been set, assuming captcha is enabled. */ this.isValid = () =&amp;gt; this.response || !this.enabled; I had a way to trigger the captcha failure. In the same WiFi network, I accessed a form from localhost through my mobile phone.</description>
     </item>
+    
     <item>
       <title>Polling</title>
       <link>https://jiayee.net/2020/10/polling/</link>
       <pubDate>Mon, 05 Oct 2020 23:00:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/10/polling/</guid>
       <description>There were instances where users filled up a time-consuming form but couldn&amp;rsquo;t submit it because of reCaptcha failure. Users ended up having to refresh and re-populate the form. That&amp;rsquo;s some harsh user experience. My team uses a forked version of angular-recaptcha. I located the controller, directive and template for the form. I attached a recursive $timeout at the controller and the directive, but as of now, I&amp;rsquo;ve not gotten them to work.</description>
     </item>
+    
     <item>
       <title>Dynamic Tooltips</title>
       <link>https://jiayee.net/2020/09/dynamic-tooltips/</link>
       <pubDate>Fri, 25 Sep 2020 14:55:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/09/dynamic-tooltips/</guid>
       <description>I had a tooltip for a switch which contained 2 lines of text. The first line of the tooltip shows how users can fill the textarea field nearby. The second line reminds users to meet certain prerequisites before filling the field. My GovTech OSS buddy suggested shortening the tooltip depending on user interaction.
 At first, the tooltip looked like:
 &amp;lt;i class=&amp;#34;...&amp;#34; uib-tooltip=&amp;#34;Here&amp;#39;s the one and only static tooltip!&amp;#34; tooltip-trigger=&amp;#34;&amp;#39;click mouseenter&amp;#39;&amp;#34; &amp;gt;&amp;lt;/i&amp;gt; uib-tooltip seems to come from UI Bootstrap.</description>
     </item>
+    
     <item>
       <title>Intercepting Angular Data Binding</title>
       <link>https://jiayee.net/2020/09/intercepting-angular-data-binding/</link>
       <pubDate>Wed, 23 Sep 2020 21:40:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/09/intercepting-angular-data-binding/</guid>
       <description>I&amp;rsquo;ve two form switches. Let&amp;rsquo;s call them A and B. I had to program them such that:
 When A is off, disable and switch B off. When A is on, disable and switch B off. We can ignore backend logic because I programmed it such that if A is off, ignore B.
 So, how did I solve this? I intercepted the data binding with a directive. This may not be the best solution, but it was so convenient and intuitive to me!</description>
     </item>
+    
     <item>
       <title>Rendering newlines in HTML attributes</title>
       <link>https://jiayee.net/tidbits/rendering-newlines-in-html-attributes/</link>
       <pubDate>Mon, 21 Sep 2020 22:41:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/tidbits/rendering-newlines-in-html-attributes/</guid>
       <description>Doing
 &amp;lt;textarea placeholder=&amp;#34;line1\nline2&amp;#34;&amp;gt; won&amp;rsquo;t work, but doing
 &amp;lt;textarea placeholder=&amp;#34;{{ somethingFromScope }}&amp;#34;&amp;gt; where somethingFromScope is line1\nline2 will work as expected!</description>
     </item>
+    
     <item>
       <title>Debugging Angular</title>
       <link>https://jiayee.net/2020/09/debugging-angular/</link>
       <pubDate>Mon, 14 Sep 2020 21:29:00 +0800</pubDate>
+      
       <guid>https://jiayee.net/2020/09/debugging-angular/</guid>
       <description>Something could&amp;rsquo;ve happened in the past 2 weeks while I focused on fixing my unit tests. It had been some time since I last did a local deployment. To my surprise, my local deployments in the recent days rendered a blank page with the following error in the JavaScript console:
 Uncaught Error: [$injector:modulerr] Failed to instantiate module FormSG due to: Error: [$injector:modulerr] Failed to instantiate module forms due to: Error: [ng:areq] Argument &amp;#39;directiveFactory&amp;#39; is required My Google-fu was lacking.</description>
     </item>
+    
   </channel>
 </rss>

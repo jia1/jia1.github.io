@@ -138,54 +138,54 @@
   
   <section class="row article-content">
     <p>I wanted to avoid writing boilerplate code for CRUD in Spring Boot. But I failed - I couldn&rsquo;t make my child aspect get along with my child controller. Before adopting AOP, I had an abstract controller which the child controller inherited. CRUD worked well and I no longer needed to repeat the code for simple CRUD anymore. I was happy.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#586e75">// MyAbstractController</span>
-</span></span><span style="display:flex;"><span><span style="color:#268bd2">public</span> <span style="color:#268bd2">abstract</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAbstractController</span><span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> UniversalModel<span style="color:#719e07">&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> ... repository;
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#586e75">// MyAbstractController
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">public</span> <span style="color:#268bd2">abstract</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAbstractController</span><span style="color:#719e07">&lt;</span>T <span style="color:#268bd2">extends</span> UniversalModel<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> <span style="color:#719e07">...</span> repository<span style="color:#719e07">;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyAbstractController</span>(<span style="color:#268bd2">final</span> ... repository) {
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">this</span>.repository <span style="color:#719e07">=</span> repository;
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyAbstractController</span><span style="color:#719e07">(</span><span style="color:#268bd2">final</span> <span style="color:#719e07">...</span> repository<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">this</span><span style="color:#719e07">.</span>repository <span style="color:#719e07">=</span> repository<span style="color:#719e07">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">@GetMapping</span>(<span style="color:#2aa198">&#34;/{id}&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> ResponseEntity<span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">info</span>(<span style="color:#268bd2">@PathVariable</span> <span style="color:#268bd2">final</span> String id) {
-</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> ...;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">@GetMapping</span><span style="color:#719e07">(</span><span style="color:#2aa198">&#34;/{id}&#34;</span><span style="color:#719e07">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> ResponseEntity<span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">info</span><span style="color:#719e07">(</span><span style="color:#268bd2">@PathVariable</span> <span style="color:#268bd2">final</span> String id<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">return</span> <span style="color:#719e07">...;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#586e75">// BlahController</span>
-</span></span><span style="display:flex;"><span><span style="color:#268bd2">@RequestMapping</span>(<span style="color:#2aa198">&#34;/blah&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// BlahController
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">@RequestMapping</span><span style="color:#719e07">(</span><span style="color:#2aa198">&#34;/blah&#34;</span><span style="color:#719e07">)</span>
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">@RestController</span>
-</span></span><span style="display:flex;"><span><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">BlahController</span> <span style="color:#268bd2">extends</span> MyAbstractController<span style="color:#719e07">&lt;</span>MyModel<span style="color:#719e07">&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">BlahController</span>(<span style="color:#268bd2">final</span> MyRepository repository) {
-</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">super</span>(repository);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">BlahController</span> <span style="color:#268bd2">extends</span> MyAbstractController<span style="color:#719e07">&lt;</span>MyModel<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">BlahController</span><span style="color:#719e07">(</span><span style="color:#268bd2">final</span> MyRepository repository<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">super</span><span style="color:#719e07">(</span>repository<span style="color:#719e07">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">}</span>
 </span></span></code></pre></div><p>And so, all seemed well&hellip;, until I had to integrate AOP. My ideal aspect was one that could inherit basic functionality from its abstract parent. But <a href="https://stackoverflow.com/questions/42607015/emulate-annotation-inheritance-for-interfaces-and-methods-with-aspectj">JVM wouldn&rsquo;t allow it</a>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#586e75">// MyAbstractAspect</span>
-</span></span><span style="display:flex;"><span><span style="color:#268bd2">@Aspect</span>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#586e75">// MyAbstractAspect
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">@Aspect</span>
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">@Component</span>
-</span></span><span style="display:flex;"><span><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAbstractAspect</span><span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyAbstractAspect</span>() {
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAbstractAspect</span><span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyAbstractAspect</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">@Pointcut</span>(<span style="color:#2aa198">&#34;...&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">shouldIntercept</span>() {
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">@Pointcut</span><span style="color:#719e07">(</span><span style="color:#2aa198">&#34;...&#34;</span><span style="color:#719e07">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">shouldIntercept</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">@AfterReturning</span>(value <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;shouldIntercept()&#34;</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">onExecute</span>(<span style="color:#268bd2">final</span> JoinPoint joinPoint, <span style="color:#268bd2">final</span> ResponseEntity<span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> response) {
-</span></span><span style="display:flex;"><span>        ...
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">@AfterReturning</span><span style="color:#719e07">(</span>value <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;shouldIntercept()&#34;</span><span style="color:#719e07">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">onExecute</span><span style="color:#719e07">(</span><span style="color:#268bd2">final</span> JoinPoint joinPoint<span style="color:#719e07">,</span> <span style="color:#268bd2">final</span> ResponseEntity<span style="color:#719e07">&lt;</span>T<span style="color:#719e07">&gt;</span> response<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">...</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">}</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#586e75">// MyAspect</span>
-</span></span><span style="display:flex;"><span><span style="color:#268bd2">@Aspect</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">// MyAspect
+</span></span></span><span style="display:flex;"><span><span style="color:#586e75"></span><span style="color:#268bd2">@Aspect</span>
 </span></span><span style="display:flex;"><span><span style="color:#268bd2">@Component</span>
-</span></span><span style="display:flex;"><span><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAspect</span> <span style="color:#268bd2">extends</span> MyAbstractAspect<span style="color:#719e07">&lt;</span>MyModel<span style="color:#719e07">&gt;</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyAspect</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">super</span>();
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">MyAspect</span> <span style="color:#268bd2">extends</span> MyAbstractAspect<span style="color:#719e07">&lt;</span>MyModel<span style="color:#719e07">&gt;</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#268bd2">public</span> <span style="color:#268bd2">MyAspect</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">super</span><span style="color:#719e07">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">}</span>
 </span></span></code></pre></div><p>In the end, I scrapped the hierarchy. There was no more <code>MyAbstractAspect</code>, and <code>MyAspect</code> contained all the functionality that was needed. Still, I couldn&rsquo;t get <code>MyAspect</code> and my child controller to work together. Tried various pointcut expressions but to no avail. <a href="https://coderanch.com/t/524963/frameworks/pointcut-method-parent-abstract-class">Someone else seemed to have tried the same thing</a> and it didn&rsquo;t seem to work out well either.</p>
 <p>Time was getting short, so I conceded and settled with a generic class which extended <code>ApplicationEvent</code>. I wanted to publish events via AOP. And now&hellip; another road bump. The listener couldn&rsquo;t listen due to <a href="https://spring.io/blog/2015/02/11/better-application-events-in-spring-framework-4-2">type erasure</a>. As suggested by <a href="https://stackoverflow.com/questions/35883022/spring-generic-application-event-failing-to-reach-destination">a kind soul</a>, I had my application event class implement <code>ResolvableTypeProvider</code>, and everything finally fell into place.</p>
 
@@ -214,7 +214,7 @@
           </section>
           <section class="row"><footer class="text-center">
   
-  Copyright &copy; 2023
+  Copyright &copy; 2024
   Jiayee Lim.
 </footer>
 </section>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="description" content="My learning diary">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon_io/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/fontello/css/jiayee.css">
+  <link rel="stylesheet" type="text/css" href="/foundation/css/foundation.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="https://jiayee.net/main.css">
+  <title>Dataset Massage (head, tail, split)</title>
+</head>
+<body>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell large-8 large-offset-2 medium-10 medium-offset-1 small-12">
+          <section class="row"><header>
+  <section class="row">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell large-6 medium-6 small-12">
+        <a href="https://jiayee.net">
+          Jiayee.net
+        </a>
+      </h1>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <p class="cell large-6 medium-6 small-12 lead">
+        My learning diary
+      </p>
+      <p class="cell large-6 large-text-right medium-6 medium-text-right small-12 lead">
+        
+          <a href="mailto:me@jiayee.net" rel="noopener" target=''>
+            <i class="social icon-mail-alt" title="Email"></i>
+          </a>
+        
+          <a href="/resume.pdf" rel="noopener" target='_blank'>
+            <i class="social icon-doc-text-inv" title="Resume"></i>
+          </a>
+        
+          <a href="https://facebook.com/profile.php?id=100001087143682" rel="noopener" target='_blank'>
+            <i class="social icon-facebook-official" title="Facebook"></i>
+          </a>
+        
+          <a href="https://github.com/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-github-circled" title="GitHub"></i>
+          </a>
+        
+          <a href="https://linkedin.com/in/jia1" rel="noopener" target='_blank'>
+            <i class="social icon-linkedin-squared" title="LinkedIn"></i>
+          </a>
+        
+          <a href="https://steamcommunity.com/id/jiayee" rel="noopener" target='_blank'>
+            <i class="social icon-steam-squared" title="Steam"></i>
+          </a>
+        
+      </p>
+    </div>
+  </section>
+  <nav class="row">
+    <ul class="grid-x grid-margin-x menu align-center">
+      
+      
+      
+        
+        
+        
+        
+        <li class="cell small-3 is-active">
+          <a href="/">
+            Blog
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/tidbits">
+            Tidbits
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/about">
+            About
+          </a>
+        </li>
+      
+        
+        
+        
+        
+        <li class="cell small-3 ">
+          <a href="/promo-codes">
+            Promo codes
+          </a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+</section>
+          <section class="row">
+<article>
+  
+  
+    <div class="nar-row">
+      <h2 class="article-title h3">
+  Dataset Massage (head, tail, split)
+</h2>
+
+      <section class="article-metadata">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-6 medium-6 small-12">
+      
+      
+      
+      <time datetime="2024-06-15">15 Jun 2024 @ 10.16 am</time>
+    </div>
+    <div class="cell large-6 large-text-right medium-6 medium-text-right small-12">
+      
+      
+        
+        <a href="https://jiayee.net/tags/cli">
+          #cli
+        </a>
+      
+    </div>
+  </div>
+</section>
+
+    </div>
+  
+  <section class="row article-content">
+    <p>Recently at work, I found an opportunity to revise / level-up my bash-fu. It probably sounds mundane and trivial to some, but I had fun solving my little problem with the command line instead of retreating into Python or JavaScript.</p>
+<p>I received a CSV file containing millions of rows. My job is to split this file into a couple of smaller files, with each file containing an increasing number of rows.</p>
+<p>Assuming there are no CSV headers (minor details like this can be postponed, but not forgotten!), and suppose I want to split my files in this manner:</p>
+<ol>
+<li>1,000 lines</li>
+<li>2,000 lines</li>
+<li>5,000 lines</li>
+<li>10,000 lines</li>
+<li>20,000 lines</li>
+<li>50,000 lines</li>
+<li>100,000 lines</li>
+<li>And so on</li>
+</ol>
+<p>The first command I stumbled upon was <a href="https://stackoverflow.com/questions/2016894/how-can-i-split-a-large-text-file-into-smaller-files-with-an-equal-number-of-lin"><code>split</code></a>.</p>
+<p>I tried solving my problem with just <code>split</code>, like:</p>
+<ol>
+<li>Split into files containing 1,000 lines each</li>
+<li>Keep the first file from (1)</li>
+<li>Shave off 1,000 lines from the original file</li>
+<li>Split the file from (3) into 2,000 lines each</li>
+<li>Keep the first file from (4)</li>
+<li>Repeat steps 3-5 but remember to increase the number of lines to split/shave</li>
+</ol>
+<p>I used <code>tail</code> to shave the file. Usage:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#586e75"># Write to output.csv, starting from the 1001st line of file.csv</span>
+</span></span><span style="display:flex;"><span>tail -n +1001 file.csv &gt; output.csv
+</span></span></code></pre></div><p>Why <code>-n</code> and why <code>+</code>?</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>man tail
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># tail – display the last part of a file</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># -n number, --lines=number</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">#         The location is number lines.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Numbers having a leading plus (&#39;+&#39;) sign are relative to the beginning of the input</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Numbers having a leading minus (&#39;-&#39;) sign or no explicit sign are relative to the end of the input</span>
+</span></span></code></pre></div><p>Well, <code>split</code> and <code>tail</code> worked. But that was a lot of unnecessary I/O. If I were to use a programming language, I would iterate through the lines of the file instead of copying parts of the file multiple times.</p>
+<p>I consulted <a href="https://pair.gov.sg/">Pair</a> and it suggested the use of <code>head</code>. Putting <code>tail</code> and <code>head</code> together, I get:</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>head -n <span style="color:#2aa198">1000</span> file.csv &gt; output_1.csv
+</span></span><span style="display:flex;"><span>tail -n +1001 file.csv | head -n <span style="color:#2aa198">2000</span> &gt; output_2.csv
+</span></span></code></pre></div><p>It&rsquo;s also possible to use <code>head</code> first, before piping the output into <code>tail</code>. To me, starting with <code>tail</code> helped me better visualise the front part of the file getting isolated and then taking the first X lines from this isolated part.</p>
+<p>Using <code>head</code> first would mean you&rsquo;re taking a larger chunk of the file from the front and then reading from the back of this chunk to shave off the very first part. According to the manual (<code>man head</code>), <code>head</code> traverses in only one direction - from the start.</p>
+<p>Finally, I had a couple of <code>tail ... | head ...</code> commands. While this meant the file was opened and read from the start again and again, at least I didn&rsquo;t have to produce so many intermediate output files. For my use case, it was still a quick operation, and I didn&rsquo;t optimise the script any further.</p>
+
+  </section>
+  
+
+<section class="article-related-articles">
+<h3>
+  Relevant posts
+</h3>
+<ul>
+	
+	<li>
+    <a href="/2023/07/the-ssh-command/">
+      The SSH command (#cli)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/10/pip-uninstall-all/">
+      pip uninstall All (#cli)
+      
+    </a>
+  </li>
+	
+	<li>
+    <a href="/2020/09/data-wrangling/">
+      Data Wrangling (#cli)
+      
+    </a>
+  </li>
+	
+</ul>
+</section>
+
+
+</article>
+
+          </section>
+          <section class="row"><footer class="text-center">
+  
+  Copyright &copy; 2024
+  Jiayee Lim.
+</footer>
+</section>
+        </div>
+      </div>
+    </div><script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="jiayee" data-description="Support me on Buy me a coffee!" data-message="" data-color="#40DCA5" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+</html>

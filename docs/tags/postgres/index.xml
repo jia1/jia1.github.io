@@ -6,16 +6,15 @@
     <description>Recent content in postgres on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 20 Jul 2023 23:09:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Jul 2023 23:09:00 +0800</lastBuildDate>
+    <atom:link href="https://jiayee.net/tags/postgres/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Postgres on macOS</title>
       <link>https://jiayee.net/2023/07/installing-postgres-on-macos/</link>
       <pubDate>Thu, 20 Jul 2023 23:09:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2023/07/installing-postgres-on-macos/</guid>
       <description>Before this, the last time I installed a Postgres database on my local machine was years ago. I wished I found Sami Korpela&amp;rsquo;s blog post sooner. It had everything I needed:
 # macOS Ventura Terminal brew install postgresql@15 echo &amp;#39;export PATH=&amp;#34;/opt/homebrew/opt/postgresql@15/bin:$PATH&amp;#34;&amp;#39; &amp;gt;&amp;gt; ~/.zshrc source ~/.zshrc brew services start postgresql createuser -s postgres psql postgres # or psql -U your_username -d your_database ### postgres=# ### \l # List databases \du # List roles \c your_database # Connect to database \c your_database other_username # Connect to database as other_username \d # List relations (tables) </description>
     </item>
-    
   </channel>
 </rss>

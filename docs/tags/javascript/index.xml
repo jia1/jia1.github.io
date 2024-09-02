@@ -6,131 +6,108 @@
     <description>Recent content in javascript on Jiayee.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 03 Aug 2023 23:37:00 +0800</lastBuildDate><atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Aug 2023 23:37:00 +0800</lastBuildDate>
+    <atom:link href="https://jiayee.net/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>for-in and for-of</title>
       <link>https://jiayee.net/2023/08/for-in-and-for-of/</link>
       <pubDate>Thu, 03 Aug 2023 23:37:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2023/08/for-in-and-for-of/</guid>
       <description>I needed to change my async code into synchronous. I didn&amp;rsquo;t need to track the index of the array, so I wanted a for...?? loop.
 Was it for...in or was it for...of!?
 for...in Example: for (let key in someObject)
 const a = [4,5,6] const b = [{&amp;#39;k1&amp;#39;:&amp;#39;v1&amp;#39;},{&amp;#39;k2&amp;#39;:&amp;#39;v2&amp;#39;},{&amp;#39;k3&amp;#39;:&amp;#39;v3&amp;#39;}] const c = {&amp;#39;k1&amp;#39;:&amp;#39;v1&amp;#39;} for (let d in a) { console.log(d) } // 0 1 2 for (let d in b) { console.log(d) } // 0 1 2 for (let d in c) { console.</description>
     </item>
-    
     <item>
       <title>Don&#39;t catch everything</title>
       <link>https://jiayee.net/2023/06/dont-catch-everything/</link>
       <pubDate>Sat, 24 Jun 2023 23:23:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2023/06/dont-catch-everything/</guid>
       <description>I did a catch when I didn&amp;rsquo;t need to. I defined the catch clause for an API request which should return a rejected Promise upon failure. As a result, the toast which indicated failure didn&amp;rsquo;t appear.
 In this commit, I removed the catch clause.
 And in another commit, I defined what failure is.
 While writing about this, I wondered if there could be a better way to express identical requirements. A quick search led me to this Stack Overflow thread - throw (but not in AngularJS).</description>
     </item>
-    
     <item>
       <title>Ready for review</title>
       <link>https://jiayee.net/tidbits/ready-for-review/</link>
       <pubDate>Tue, 20 Oct 2020 15:25:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/tidbits/ready-for-review/</guid>
       <description>I&amp;rsquo;m ready for review.</description>
     </item>
-    
     <item>
       <title>Constants</title>
       <link>https://jiayee.net/2020/10/constants/</link>
       <pubDate>Mon, 19 Oct 2020 22:30:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/constants/</guid>
       <description>I thought consolidating constants was evil. Just two or three dozens of them were enough to become a huge headache for me. In Java, this practice is frowned upon. In JavaScript, it seemed alright.
 The answer which received the bounty recommended the following:
 // Warning: This answer was written in 2014. module.exports = Object.freeze({ MY_CONSTANT: &amp;#39;some value&amp;#39;, ANOTHER_CONSTANT: &amp;#39;another value&amp;#39; }); It was my first time encountering Object.freeze, so I went to google for the difference between Object.</description>
     </item>
-    
     <item>
       <title>Javascript heap limit</title>
       <link>https://jiayee.net/2020/10/javascript-heap-limit/</link>
       <pubDate>Tue, 13 Oct 2020 19:11:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/javascript-heap-limit/</guid>
       <description>For the past week, I couldn&amp;rsquo;t fathom why my diffs seemed to not be on hot reload. It turned out to be a JavaScript heap limit problem. As a result, the codebase didn&amp;rsquo;t rebuild and remained stale. This issue does not happen to everyone. I&amp;rsquo;m using a MacBook Air (13-inch, 2017) with 8 GB of RAM.
 Notice the line above the last which says, FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory.</description>
     </item>
-    
     <item>
       <title>String.format equivalent in TypeScript</title>
       <link>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</link>
       <pubDate>Wed, 07 Oct 2020 22:50:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/string.format-equivalent-in-typescript/</guid>
       <description>While working on a problem during work, I thought I needed a way to do a String.format equivalent operation in TypeScript (it turns out I didn&amp;rsquo;t need to). I didn&amp;rsquo;t want to install Lodash (50 kB for _.template alone) or sprintf (40 kB), so I came up with the following:
 // Warning: Untested code export const compileTemplate = (template: string, values: Map&amp;lt;string, string&amp;gt;) =&amp;gt; { const variables = Array.from(values.keys()).map(key =&amp;gt; &amp;#39;:&amp;#39; + key).</description>
     </item>
-    
     <item>
       <title>Calculator V2</title>
       <link>https://jiayee.net/2020/10/calculator-v2/</link>
       <pubDate>Sun, 04 Oct 2020 22:32:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/calculator-v2/</guid>
       <description>I made some changes to my compound interest calculator after reading up on &amp;ldquo;future value&amp;rdquo;. My calculator will allow users to specify regular deposits. This is so that they can see for themselves the importance of every dollar added to their savings.
 import nerdamer from &amp;#39;nerdamer/nerdamer.core&amp;#39;; import Algebra from &amp;#39;nerdamer/Algebra&amp;#39;; import Calculus from &amp;#39;nerdamer/Calculus&amp;#39;; import Solve from &amp;#39;nerdamer/Solve&amp;#39;; const totalMonthsPerYear = 12; export const calcCompoundInterest = ({ principal, depositAmountPerMonth = 0, interestRatePerAnnum, compoundRatePerMonth = 1, totalMonths, }) =&amp;gt; { const totalAmount = solveForOneUnknownVariable( &amp;#39;a=(p*(1+(r/n))^(n*t))+(q*(((1+(r/n))^(n*t)-1)/(r/n)))&amp;#39;, { p: principal.</description>
     </item>
-    
     <item>
       <title>TypeScript Shortcuts</title>
       <link>https://jiayee.net/2020/10/typescript-shortcuts/</link>
       <pubDate>Thu, 01 Oct 2020 19:01:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/10/typescript-shortcuts/</guid>
       <description>TL;DR: I learnt how to (invert a map) and (copy a map and override the values of the copy) in TypeScript. Ctrl+F TYPESCRIPT_SHORTCUT_1 and TYPESCRIPT_SHORTCUT_2 to get to the code.
 Context: Yesterday, I didn&amp;rsquo;t invest time into inverting a TypeScript Map&amp;lt;string, string&amp;gt;. Today, I received feedback that I should extract the encode logic into a function of its own. I decided to put in more effort.
 Here&amp;rsquo;s the new original code:</description>
     </item>
-    
     <item>
       <title>CryptoJS and URL</title>
       <link>https://jiayee.net/2020/09/cryptojs-and-url/</link>
       <pubDate>Wed, 30 Sep 2020 19:17:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/09/cryptojs-and-url/</guid>
       <description>Like this Stack Overflow thread, I needed to encrypt some string which will become part of a URL. However, there was a slash in one of the encrypted strings, like c3ViamVjdHM/X2Q9MQ==. Feel free to decode this. It&amp;rsquo;s something I copied from the internet.
 I thought there would be a lot of symbols in the Base64 alphabet at first (I was wrong). I didn&amp;rsquo;t want to deal with them and set up a giant substitution map, like a Map&amp;lt;string, string&amp;gt;.</description>
     </item>
-    
     <item>
       <title>Writing Calculators</title>
       <link>https://jiayee.net/2020/09/writing-calculators/</link>
       <pubDate>Fri, 25 Sep 2020 21:23:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/09/writing-calculators/</guid>
       <description>My friends needed an interest calculator. For the simple interest calculator, the parameters are:
 The principal (P), Annual interest rate (r), Number of months (t), and An optional parameter to represent a periodic top-up amount. Here&amp;rsquo;s v1 of my simple interest calculator:
 /** * Calculates simple interest. * * Uses the formula A = P(1 + rt). * * @param {Object} param Object containing parameters. * @param {Number} param.principal Principal amount.</description>
     </item>
-    
     <item>
       <title>Rule: no-var-requires</title>
       <link>https://jiayee.net/tidbits/no-var-requires/</link>
       <pubDate>Sun, 13 Sep 2020 22:12:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/tidbits/no-var-requires/</guid>
       <description>My pre-commit hook complained because the original code had an import that looked like var module = require(&amp;quot;module&amp;quot;). The permitted ways to import are: import foo = require(&#39;foo&#39;) and &amp;ldquo;ES2015-style imports&amp;rdquo; which (I think) is defined in this part of the MDN web docs. I wonder when this rule was inserted&amp;hellip;</description>
     </item>
-    
     <item>
       <title>My first yarn package</title>
       <link>https://jiayee.net/2020/09/my-first-yarn-package/</link>
       <pubDate>Thu, 10 Sep 2020 23:59:00 +0800</pubDate>
-      
       <guid>https://jiayee.net/2020/09/my-first-yarn-package/</guid>
       <description>I wrote my first yarn package (kind of for fun) yesterday. It&amp;rsquo;s strange how I&amp;rsquo;ve been consuming packages but never went to the other side of the table: Writing a package. As of now, I haven&amp;rsquo;t published my package, but I&amp;rsquo;m omw. So, how did I create a package? It just felt like the usual&amp;hellip; I followed the yarn docs.
 One difference (compared to my usual activities) was I couldn&amp;rsquo;t do import { .</description>
     </item>
-    
   </channel>
 </rss>

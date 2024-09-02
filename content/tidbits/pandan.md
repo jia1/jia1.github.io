@@ -56,7 +56,7 @@ Meringue mix:
 
 Weight | Item             | Notes
 ------ | ---------------- | ---
-105g   | Egg white        | Approx. 2 x 50g eggs' worth of egg white
+105g   | Egg white        | Approx. 3 x 50g eggs' worth of egg white
 1.5g   | Cream of Tartar
 71.5g  | Castor sugar
 
